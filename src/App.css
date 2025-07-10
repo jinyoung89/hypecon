@@ -784,29 +784,6 @@ body {
   line-height: 1.4;
 }
 
-/* 텍스트 그라데이션 효과 제거 - 충돌 해결 */
-/* .hero-below-box:first-child, 
-.hero-below-box:nth-child(4) {
-  background: linear-gradient(135deg, 
-    var(--waterbomb-neon-green) 0%, 
-    var(--waterbomb-electric-blue) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 900;
-  position: relative;
-}
-
-.hero-below-box:first-child::before, 
-.hero-below-box:nth-child(4)::before {
-  background: linear-gradient(135deg, 
-    var(--waterbomb-neon-green) 0%, 
-    var(--waterbomb-electric-blue) 100%);
-  -webkit-background-clip: initial;
-  -webkit-text-fill-color: initial;
-  background-clip: initial;
-} */
-
 /* 반응형 디자인 개선 */
 @media (max-width: 900px) {
   .hero-below-section {
