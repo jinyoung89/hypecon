@@ -54,13 +54,13 @@ function App() {
     }
   }
 
-  if (isLoading) {
-    return (
-      <div className="waterbomb-loading">
-        <div className="waterbomb-loading-text">HYPECON</div>
-      </div>
-    )
-  }
+  // if (isLoading) {
+  //   return (
+  //     <div className="waterbomb-loading">
+  //       <div className="waterbomb-loading-text">HYPECON</div>
+  //     </div>
+  //   )
+  // }
 
   return (
     <div className="min-h-screen">
