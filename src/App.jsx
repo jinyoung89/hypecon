@@ -54,25 +54,17 @@ function App() {
     }
   }
 
-  // if (isLoading) {
-  //   return (
-  //     <div className="waterbomb-loading">
-  //       <div className="waterbomb-loading-text">HYPECON</div>
-  //     </div>
-  //   )
-  // }
+  if (isLoading) {
+    return (
+      <div className="waterbomb-loading">
+        <div className="waterbomb-loading-text">HYPECON</div>
+      </div>
+    )
+  }
 
-  return (
-    <div style={{color: 'red', fontSize: '2rem', textAlign: 'center', marginTop: '100px'}}>
-      HYPECON 테스트
-    </div>
-  )
-
-  // 원래 코드 (주석처리)
-  /*
   return (
     <div className="min-h-screen bg-black text-white">
-      // Navigation
+      {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-sm border-b border-blue-500/20">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -97,7 +89,7 @@ function App() {
         </div>
       </nav>
 
-      // Hero Section
+      {/* Hero Section */}
       <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
         <video
           autoPlay
@@ -129,7 +121,7 @@ function App() {
         </div>
       </section>
 
-      // Info Boxes
+      {/* Info Boxes */}
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -180,7 +172,7 @@ function App() {
         </div>
       </section>
 
-      // About Section
+      {/* About Section */}
       <section id="about" className="py-20 bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -209,7 +201,7 @@ function App() {
         </div>
       </section>
 
-      // Schedule Section
+      {/* Schedule Section */}
       <section id="schedule" className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-blue-400 fade-in">
@@ -258,7 +250,7 @@ function App() {
         </div>
       </section>
 
-      // Tickets Section
+      {/* Tickets Section */}
       <section id="tickets" className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-blue-400 fade-in">
@@ -329,7 +321,7 @@ function App() {
         </div>
       </section>
 
-      // Contact Section
+      {/* Contact Section */}
       <section id="contact" className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center fade-in">
@@ -353,7 +345,7 @@ function App() {
         </div>
       </section>
 
-      // Footer
+      {/* Footer */}
       <footer className="bg-gray-900 border-t border-blue-500/20 py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-gray-400">
@@ -363,7 +355,6 @@ function App() {
       </footer>
     </div>
   )
-  */
 }
 
 export default App
