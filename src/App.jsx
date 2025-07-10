@@ -63,294 +63,316 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-sm border-b border-blue-500/20">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-blue-400">HYPECON</div>
-            <div className="hidden md:flex space-x-8">
-              {['home', 'about', 'schedule', 'tickets', 'contact'].map((section) => (
-                <button
-                  key={section}
-                  onClick={() => scrollToSection(section)}
-                  className={`capitalize transition-colors ${
-                    activeSection === section ? 'text-blue-400' : 'text-gray-300 hover:text-blue-400'
-                  }`}
-                >
-                  {section}
-                </button>
-              ))}
+    <div className="min-h-screen">
+      {/* 워터밤 스타일 네비게이션 */}
+      <nav className="waterbomb-nav">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center">
+            <div className="waterbomb-title" style={{ fontSize: '1.5rem' }}>
+              HYPECON
             </div>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-              Get Tickets
-            </Button>
+            <div className="flex space-x-6">
+              <a 
+                href="#home" 
+                className={`waterbomb-nav-link ${activeSection === 'home' ? 'active' : ''}`}
+                onClick={() => scrollToSection('home')}
+              >
+                HOME
+              </a>
+              <a 
+                href="#about" 
+                className={`waterbomb-nav-link ${activeSection === 'about' ? 'active' : ''}`}
+                onClick={() => scrollToSection('about')}
+              >
+                ABOUT
+              </a>
+              <a 
+                href="#zones" 
+                className={`waterbomb-nav-link ${activeSection === 'zones' ? 'active' : ''}`}
+                onClick={() => scrollToSection('zones')}
+              >
+                ZONES
+              </a>
+              <a 
+                href="#awards" 
+                className={`waterbomb-nav-link ${activeSection === 'awards' ? 'active' : ''}`}
+                onClick={() => scrollToSection('awards')}
+              >
+                AWARDS
+              </a>
+              <a 
+                href="#partners" 
+                className={`waterbomb-nav-link ${activeSection === 'partners' ? 'active' : ''}`}
+                onClick={() => scrollToSection('partners')}
+              >
+                PARTNERS
+              </a>
+              <a 
+                href="#apply" 
+                className={`waterbomb-nav-link ${activeSection === 'apply' ? 'active' : ''}`}
+                onClick={() => scrollToSection('apply')}
+              >
+                APPLY
+              </a>
+            </div>
           </div>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
+      {/* 워터밤 스타일 히어로 섹션 */}
+      <section id="home" className="waterbomb-hero">
+        {/* 배경 영상 */}
+        <video 
+          className="hero-video"
+          autoPlay 
+          muted 
+          loop 
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          poster={heroImage}
         >
           <source src={heroVideo} type="video/mp4" />
+          Your browser does not support the video tag.
         </video>
         
-        <div className="absolute inset-0 bg-black/50"></div>
-        
-        <div className="relative z-10 text-center fade-in">
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            HYPECON 2024
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-2xl mx-auto">
-            The ultimate water festival experience. Join thousands of music lovers for an unforgettable weekend of beats, water, and pure energy.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-4">
-              Get Your Tickets
-            </Button>
-            <Button size="lg" variant="outline" className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white text-lg px-8 py-4">
-              Watch Trailer
-            </Button>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="hero-neon">Beyond Online, Experience Style</div>
+          <div className="hero-main-title">HYPECON</div>
+          <div className="hero-style-week">S T Y L E &nbsp; W E E K</div>
+          <div className="hero-seoul">SEOUL 2026</div>
+          <div className="hero-date">2026. 2.19~ 22 @ COEX HALL C</div>
+          <div className="waterbomb-subtitle mb-12">
+            Z세대와 브랜드가 함께하는 스타일 페어
           </div>
+          <button className="waterbomb-btn">
+            <span>JOIN HYPECON</span>
+          </button>
         </div>
       </section>
 
-      {/* Info Boxes */}
-      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="bg-black/50 border-blue-500/20 hover:border-blue-400/40 transition-all duration-300 fade-in">
-              <CardHeader>
-                <CardTitle className="text-blue-400">🎫 Early Bird Tickets</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-300">
-                  Limited time offer! Get your tickets now before prices go up.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-black/50 border-blue-500/20 hover:border-blue-400/40 transition-all duration-300 fade-in">
-              <CardHeader>
-                <CardTitle className="text-blue-400">🔔 Stay Updated</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-300">
-                  Get notified about lineup announcements and special offers.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-black/50 border-blue-500/20 hover:border-blue-400/40 transition-all duration-300 fade-in">
-              <CardHeader>
-                <CardTitle className="text-blue-400">🎵 Join the Waitlist</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-300">
-                  Be the first to know when registration opens for HYPECON 2024.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-black/50 border-blue-500/20 hover:border-blue-400/40 transition-all duration-300 fade-in">
-              <CardHeader>
-                <CardTitle className="text-blue-400">📧 Newsletter</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-300">
-                  Subscribe for exclusive content, behind-the-scenes, and more.
-                </CardDescription>
-              </CardContent>
-            </Card>
+      {/* 티켓/알림/참가신청/등록 박스 레이아웃 */}
+      <section className="hero-below-section">
+        <div className="hero-below-container">
+          {/* 왼쪽 세로 박스 */}
+          <div className="hero-below-left">
+            <div className="hero-below-box">입장권 티켓 오픈<br/>알림 신청</div>
+            <div className="hero-below-box">NOTICE</div>
+            <div className="hero-below-box">뉴스레터 등록</div>
           </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="py-20 bg-gray-900">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="fade-in">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-blue-400">About HYPECON</h2>
-              <p className="text-lg text-gray-300 mb-6">
-                HYPECON is more than just a music festival - it's a celebration of life, energy, and pure joy. 
-                Experience the perfect blend of electronic music, water activities, and unforgettable moments.
-              </p>
-              <p className="text-lg text-gray-300 mb-8">
-                Join thousands of festival-goers for three days of non-stop entertainment, 
-                featuring world-class DJs, immersive art installations, and the most epic water battles you've ever seen.
-              </p>
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-                Learn More
-              </Button>
-            </div>
-            <div className="fade-in">
-              <img 
-                src={blueCrowd} 
-                alt="Festival crowd" 
-                className="rounded-lg shadow-2xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Schedule Section */}
-      <section id="schedule" className="py-20 bg-black">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-blue-400 fade-in">
-            Festival Schedule
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="bg-gray-900 border-blue-500/20 fade-in">
-              <CardHeader>
-                <CardTitle className="text-blue-400">Day 1 - Opening</CardTitle>
-                <CardDescription className="text-gray-300">Friday, July 15th</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300">
-                  Kick off the festival with explosive opening ceremonies, 
-                  featuring special guest performances and the grand water cannon salute.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gray-900 border-blue-500/20 fade-in">
-              <CardHeader>
-                <CardTitle className="text-blue-400">Day 2 - Peak</CardTitle>
-                <CardDescription className="text-gray-300">Saturday, July 16th</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300">
-                  The main event featuring headlining acts, massive water battles, 
-                  and the most intense energy of the entire festival.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gray-900 border-blue-500/20 fade-in">
-              <CardHeader>
-                <CardTitle className="text-blue-400">Day 3 - Closing</CardTitle>
-                <CardDescription className="text-gray-300">Sunday, July 17th</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300">
-                  Epic closing ceremonies with special collaborations, 
-                  final water battles, and unforgettable farewell moments.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Tickets Section */}
-      <section id="tickets" className="py-20 bg-gradient-to-b from-gray-900 to-black">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-blue-400 fade-in">
-            Get Your Tickets
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <Card className="bg-black/50 border-blue-500/20 hover:border-blue-400/40 transition-all duration-300 fade-in">
-              <CardHeader>
-                <CardTitle className="text-blue-400">Single Day</CardTitle>
-                <CardDescription className="text-gray-300">Perfect for a taste of HYPECON</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="text-3xl font-bold text-white mb-4">$89</div>
-                <ul className="text-gray-300 space-y-2 mb-6">
-                  <li>✓ Access to all stages</li>
-                  <li>✓ Water activities</li>
-                  <li>✓ Food & drinks</li>
-                </ul>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                  Buy Now
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-black/50 border-blue-500/20 hover:border-blue-400/40 transition-all duration-300 fade-in relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-bold">
-                  MOST POPULAR
-                </span>
+          {/* 오른쪽 2x2 그리드 */}
+          <div className="hero-below-right">
+            <div className="hero-below-grid">
+              <div className="hero-below-box hero-below-box-lg">
+                열리 참가신청<br/>OPEN<br/><span style={{fontSize:'1rem',fontWeight:400}}>부스 소진 시 마감</span>
               </div>
-              <CardHeader>
-                <CardTitle className="text-blue-400">Weekend Pass</CardTitle>
-                <CardDescription className="text-gray-300">Full festival experience</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="text-3xl font-bold text-white mb-4">$199</div>
-                <ul className="text-gray-300 space-y-2 mb-6">
-                  <li>✓ All 3 days access</li>
-                  <li>✓ VIP water zones</li>
-                  <li>✓ Exclusive merch</li>
-                  <li>✓ Priority entry</li>
-                </ul>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                  Buy Now
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-black/50 border-blue-500/20 hover:border-blue-400/40 transition-all duration-300 fade-in">
-              <CardHeader>
-                <CardTitle className="text-blue-400">VIP Experience</CardTitle>
-                <CardDescription className="text-gray-300">Ultimate festival luxury</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="text-3xl font-bold text-white mb-4">$399</div>
-                <ul className="text-gray-300 space-y-2 mb-6">
-                  <li>✓ Premium viewing areas</li>
-                  <li>✓ Exclusive lounges</li>
-                  <li>✓ Meet & greet passes</li>
-                  <li>✓ Luxury amenities</li>
-                </ul>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                  Buy Now
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-black">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-blue-400">Stay Connected</h2>
-            <p className="text-lg text-gray-300 mb-8">
-              Follow us on social media for the latest updates, behind-the-scenes content, 
-              and exclusive announcements about HYPECON 2024.
-            </p>
-            <div className="flex justify-center space-x-6">
-              <Button variant="outline" className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white">
-                Instagram
-              </Button>
-              <Button variant="outline" className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white">
-                Twitter
-              </Button>
-              <Button variant="outline" className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white">
-                Facebook
-              </Button>
+              <div className="hero-below-box hero-below-box-lg">
+                Early TICKET OPEN<br/><span style={{fontSize:'1rem',fontWeight:400}}>2025. 10. 15.</span>
+              </div>
+              <div className="hero-below-box hero-below-box-lg">Influencer<br/>등록</div>
+              <div className="hero-below-box hero-below-box-lg">BUYER/PRESS<br/>등록</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 border-t border-blue-500/20 py-8">
+      {/* ABOUT 섹션 */}
+      <section id="about" className="waterbomb-wave-section">
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="waterbomb-section-title mb-8" style={{ color: '#000' }}>
+            ABOUT HYPECON
+          </div>
+          <div className="waterbomb-subtitle mb-12" style={{ color: '#000' }}>
+            10만 명 관람객, 1,000명 인플루언서, 120개 브랜드가 함께하는 스타일 플랫폼
+          </div>
+          
+          <div className="stats-container">
+            <div className="stats-item">
+              <div className="text-6xl font-bold text-black mb-4">10만+</div>
+              <div className="text-xl font-semibold text-black mb-2">관람객</div>
+              <div className="text-black">Z세대 실소비자와 직접 연결</div>
+            </div>
+            <div className="stats-item">
+              <div className="text-6xl font-bold text-black mb-4">1,000+</div>
+              <div className="text-xl font-semibold text-black mb-2">인플루언서</div>
+              <div className="text-black">SNS 릴스, 숏폼 콘텐츠 확산</div>
+            </div>
+            <div className="stats-item">
+              <div className="text-6xl font-bold text-black mb-4">120+</div>
+              <div className="text-xl font-semibold text-black mb-2">브랜드</div>
+              <div className="text-black">실질적 터치포인트 제공</div>
+            </div>
+          </div>
+
+          <div className="mt-12">
+            <button className="waterbomb-btn">
+              <span>LEARN MORE</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* ZONES 섹션 */}
+      <section id="zones" className="waterbomb-section dark">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 fade-in">
+            <div className="waterbomb-section-title mb-6">HYPECON ZONES</div>
+            <div className="waterbomb-body max-w-3xl mx-auto">
+              8개의 특별한 존에서 당신만의 스타일을 발견하고 표현하세요
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { name: 'HYPESHY', desc: '스트릿/유니섹스/그래픽\n말 없는 간지, 조용히 센 스트릿' },
+              { name: 'COOLSHY', desc: '미니멀/시크/감성\n무심하고 정제된 도시 감성 룩' },
+              { name: 'SUPERSHY', desc: '컬러풀/Y2K/키치\n튀고 싶은 유스 룩, 릴스 특화' },
+              { name: 'FITSHY', desc: '스포츠·애슬레저\n퍼포먼스/요가 브랜드 중심' },
+              { name: 'PICKSHY', desc: '주얼리·가방·슈즈\n스타일을 완성하는 아이템' },
+              { name: 'BEAUTYSHY', desc: '대표 브랜드\nMZ 인기 코스메틱' },
+              { name: 'SKINSHY', desc: '기초 스킨케어\n선크림, 앰플, 진정/보습' },
+              { name: 'GLOWSHY', desc: '색조 화장품\n향수, 네일 등 표현 중심' }
+            ].map((zone, index) => (
+              <div key={index} className="waterbomb-card fade-in">
+                <h3>{zone.name}</h3>
+                <p style={{ whiteSpace: 'pre-line' }}>{zone.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AWARDS 섹션 */}
+      <section id="awards" className="waterbomb-section green">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 fade-in">
+            <div className="waterbomb-section-title mb-6" style={{ color: '#000' }}>
+              K-STYLE AWARDS
+            </div>
+            <div className="waterbomb-body max-w-3xl mx-auto" style={{ color: '#000' }}>
+              스타일을 만든 모든 이들을 위한, 하입콘 K-스타일 어워즈
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { name: 'HYPE STYLE ICON', desc: '행사 참여 셀럽 대상\n가장 주목받은 스타일 셀럽' },
+              { name: 'K-FASHION CREATOR', desc: '셀럽 스타일리스트, 무대 디렉터\nZ세대 트렌드 반영 창조자' },
+              { name: 'K-STYLE BRAND', desc: '참가 브랜드 중 1곳\n스타일 감성 + 부스 경험' },
+              { name: 'VIRAL MOMENT', desc: 'SNS 가장 확산 콘텐츠\n도달률, 참여도 기준' },
+              { name: 'NEXT GENERATION', desc: '콘텐츠 기획자, 디자이너\n참신한 아이디어 시도' },
+              { name: 'GEN-Z PICK!', desc: '일반 관람객 인기 투표\n가장 스타일리시한 순간' }
+            ].map((award, index) => (
+              <div key={index} className="bg-black bg-opacity-20 border-2 border-black p-6 text-center fade-in">
+                <h3 className="text-xl font-bold text-black mb-4">{award.name}</h3>
+                <p className="text-black" style={{ whiteSpace: 'pre-line' }}>{award.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PARTNERS 섹션 */}
+      <section id="partners" className="waterbomb-section dark">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 fade-in">
+            <div className="waterbomb-section-title mb-6">PARTNERS</div>
+            <div className="waterbomb-body max-w-3xl mx-auto">
+              브랜드와 연결되는 가장 스타일리시한 접점
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { name: 'SPOTLIGHT SPONSOR', desc: '메인 스폰서\n브랜드 메인 타이틀 공동노출' },
+              { name: 'TRENDSETTER SPONSOR', desc: '특정 존 명칭 후원\n체험 콘텐츠 연계' },
+              { name: 'EXPERIENCE SPONSOR', desc: '포토존, 스타일링존\n특정 체험 콘텐츠 네이밍' },
+              { name: 'COMMUNITY SPONSOR', desc: '굿즈 제작 협업\n서포터즈 캠페인' }
+            ].map((partner, index) => (
+              <div key={index} className="waterbomb-card fade-in">
+                <h3>{partner.name}</h3>
+                <p style={{ whiteSpace: 'pre-line' }}>{partner.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <button className="waterbomb-btn">
+              <span>BECOME A PARTNER</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* APPLY 섹션 */}
+      <section id="apply" className="waterbomb-wave-section">
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="waterbomb-section-title mb-8" style={{ color: '#000' }}>
+            BRAND BOOTH APPLY
+          </div>
+          <div className="waterbomb-subtitle mb-12" style={{ color: '#000' }}>
+            브랜드 부스 참가 신청
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+            <div className="bg-black bg-opacity-20 p-8 text-left">
+              <h3 className="text-2xl font-bold text-black mb-4">기본 부스</h3>
+              <div className="text-black mb-4">
+                <div className="text-3xl font-bold mb-2">₩3,800,000</div>
+                <div className="text-sm line-through">₩4,800,000</div>
+                <div className="text-sm">(8/31까지 조기 신청 시)</div>
+              </div>
+              <ul className="text-black space-y-2">
+                <li>• 1~4부스 가능</li>
+                <li>• 구조물 제공</li>
+                <li>• 공용 탈의실 사용</li>
+              </ul>
+            </div>
+            
+            <div className="bg-black bg-opacity-20 p-8 text-left">
+              <h3 className="text-2xl font-bold text-black mb-4">독립 부스</h3>
+              <div className="text-black mb-4">
+                <div className="text-3xl font-bold mb-2">₩6,400,000</div>
+                <div className="text-sm line-through">₩8,000,000</div>
+                <div className="text-sm">(8/31까지 조기 신청 시)</div>
+              </div>
+              <ul className="text-black space-y-2">
+                <li>• 2~12부스 (짝수 단위)</li>
+                <li>• 자체 시공</li>
+                <li>• 부스 내 탈의실 필수</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="button-container">
+            <button className="waterbomb-btn">
+              <span>부스 신청하기</span>
+            </button>
+            <button className="waterbomb-btn">
+              <span>파트너십 문의</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* 푸터 */}
+      <footer className="waterbomb-section dark border-t border-gray-800">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-400">
-            © 2024 HYPECON. All rights reserved. | Privacy Policy | Terms of Service
-          </p>
+          <div className="waterbomb-title mb-4" style={{ fontSize: '2rem' }}>
+            HYPECON
+          </div>
+          <div className="waterbomb-body mb-8">
+            HYPECON STYLE WEEK 2025<br />
+            Z세대를 위한 패션 뷰티 페스티벌<br />
+            partner@hypeconweek.com | 02-567-5109
+          </div>
+          <div className="flex justify-center space-x-8">
+            <a href="#" className="waterbomb-nav-link">Instagram</a>
+            <a href="#" className="waterbomb-nav-link">TikTok</a>
+            <a href="#" className="waterbomb-nav-link">YouTube</a>
+            <a href="#" className="waterbomb-nav-link">Twitter</a>
+          </div>
+          <div className="mt-8 text-sm text-gray-400">
+            © 2025 HYPECON STYLE WEEK. All rights reserved.
+          </div>
         </div>
       </footer>
     </div>
