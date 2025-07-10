@@ -140,8 +140,8 @@ function App() {
           <div className="hero-style-week">S T Y L E &nbsp; W E E K</div>
           <div className="hero-seoul">SEOUL 2026</div>
           <div className="hero-date">2026. 2.19~ 22 @ COEX HALL C</div>
-          <div className="waterbomb-subtitle mb-12">
-            Z세대와 브랜드가 함께하는 스타일 페어
+          <div className="waterbomb-subtitle mb-12" style={{ fontSize: '1rem' }}>
+          Z세대와 브랜드가 감각을 공유하고 반응으로 세계를 여는 스타일 패션 · 뷰티  페어
           </div>
           <button className="waterbomb-btn">
             <span>JOIN HYPECON</span>
