@@ -11,6 +11,7 @@ import neonStage from './assets/images/neon-green-stage.jpg'
 
 // Import video (여기에 영상 파일명을 넣으세요)
 import heroVideo from './assets/videos/hypecon.mp4'
+import { FaInstagram, FaYoutube, FaFacebookF, FaTiktok } from 'react-icons/fa';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home')
@@ -87,32 +88,34 @@ function App() {
                 ABOUT
               </a>
               <a 
-                href="#zones" 
-                className={`waterbomb-nav-link ${activeSection === 'zones' ? 'active' : ''}`}
-                onClick={() => scrollToSection('zones')}
-              >
-                ZONES
-              </a>
-              <a 
-                href="#awards" 
-                className={`waterbomb-nav-link ${activeSection === 'awards' ? 'active' : ''}`}
-                onClick={() => scrollToSection('awards')}
-              >
-                AWARDS
-              </a>
-              <a 
                 href="#partners" 
                 className={`waterbomb-nav-link ${activeSection === 'partners' ? 'active' : ''}`}
                 onClick={() => scrollToSection('partners')}
               >
                 PARTNERS
               </a>
-              <a 
-                href="#apply" 
-                className={`waterbomb-nav-link ${activeSection === 'apply' ? 'active' : ''}`}
-                onClick={() => scrollToSection('apply')}
-              >
-                APPLY
+            </div>
+            {/* 소셜 아이콘 버튼 */}
+            <div className="flex flex-row items-center space-x-5 ml-8">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram"
+                style={{ width:36, height:36, borderRadius:'50%', background:'#fff', display:'flex', alignItems:'center', justifyContent:'center', boxShadow:'0 1px 4px rgba(0,0,0,0.06)', transition:'background 0.2s', marginRight:'1.25rem' }}
+                className="hover:bg-pink-100">
+                <FaInstagram size={20} color="#E1306C" />
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube"
+                style={{ width:36, height:36, borderRadius:'50%', background:'#fff', display:'flex', alignItems:'center', justifyContent:'center', boxShadow:'0 1px 4px rgba(0,0,0,0.06)', transition:'background 0.2s', marginRight:'1.25rem' }}
+                className="hover:bg-red-100">
+                <FaYoutube size={20} color="#FF0000" />
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook"
+                style={{ width:36, height:36, borderRadius:'50%', background:'#fff', display:'flex', alignItems:'center', justifyContent:'center', boxShadow:'0 1px 4px rgba(0,0,0,0.06)', transition:'background 0.2s', marginRight:'1.25rem' }}
+                className="hover:bg-blue-100">
+                <FaFacebookF size={18} color="#1877F3" />
+              </a>
+              <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" title="TikTok"
+                style={{ width:36, height:36, borderRadius:'50%', background:'#fff', display:'flex', alignItems:'center', justifyContent:'center', boxShadow:'0 1px 4px rgba(0,0,0,0.06)', transition:'background 0.2s' }}
+                className="hover:bg-gray-200">
+                <FaTiktok size={18} color="#000" />
               </a>
             </div>
           </div>
@@ -175,95 +178,70 @@ function App() {
       </section>
 
       {/* ABOUT 섹션 */}
-      <section id="about" className="waterbomb-wave-section">
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="waterbomb-section-title mb-8" style={{ color: '#000' }}>
-            ABOUT HYPECON
+      <section id="about" className="waterbomb-wave-section" style={{background:'#d32f2f', color:'#000', padding:'0'}}>
+        <div className="container mx-auto px-4 py-12" style={{maxWidth:'900px'}}>
+          {/* WHY HYPECON 타이틀 */}
+          <div className="text-center mb-2">
+            <div style={{fontWeight:'900', fontSize:'2.5rem', letterSpacing:'-1px'}}>WHY HYPECON</div>
+            <div style={{fontWeight:'700', fontSize:'1.4rem', marginTop:'0.5rem'}}>입고, 퍼지고, 팔리는 브랜드의 리얼 무대</div>
           </div>
-          <div className="waterbomb-subtitle mb-12" style={{ color: '#000' }}>
-            10만 명 관람객, 1,000명 인플루언서, 120개 브랜드가 함께하는 스타일 플랫폼
+          {/* WHY HYPECON 설명 */}
+          <div className="text-center mb-6" style={{fontSize:'1.05rem', lineHeight:'1.7'}}>
+            <span style={{fontWeight:'bold'}}>HYPECON</span>은 브랜드가 단순히 보여지는 곳이 아닙니다.<br/>
+            입혀지고, 반응이 콘텐츠가 되고, 판매로 이어지며, 국내외 팬과 브랜드가 직접 연결되는 오프라인 플랫폼입니다.
           </div>
-          
-          <div className="stats-container">
-            <div className="stats-item">
-              <div className="text-6xl font-bold text-black mb-4">10만+</div>
-              <div className="text-xl font-semibold text-black mb-2">관람객</div>
-              <div className="text-black">Z세대 실소비자와 직접 연결</div>
-            </div>
-            <div className="stats-item">
-              <div className="text-6xl font-bold text-black mb-4">1,000+</div>
-              <div className="text-xl font-semibold text-black mb-2">인플루언서</div>
-              <div className="text-black">SNS 릴스, 숏폼 콘텐츠 확산</div>
-            </div>
-            <div className="stats-item">
-              <div className="text-6xl font-bold text-black mb-4">120+</div>
-              <div className="text-xl font-semibold text-black mb-2">브랜드</div>
-              <div className="text-black">실질적 터치포인트 제공</div>
-            </div>
-          </div>
-
-          <div className="mt-12">
-            <button className="waterbomb-btn">
-              <span>LEARN MORE</span>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* ZONES 섹션 */}
-      <section id="zones" className="waterbomb-section dark">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 fade-in">
-            <div className="waterbomb-section-title mb-6">HYPECON ZONES</div>
-            <div className="waterbomb-body max-w-3xl mx-auto">
-              8개의 특별한 존에서 당신만의 스타일을 발견하고 표현하세요
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* 5가지 특징 박스 */}
+          <div
+            className="flex flex-row gap-3 mb-10 md:gap-3 gap-4"
+            style={{width:'100%', flexWrap:'wrap'}}>
+            {/* 반응형: 모바일에서는 세로로 쌓이게 */}
+            <style>{`
+              @media (max-width: 768px) {
+                .hypecon-feature-card-wrap { flex-direction: column !important; gap: 1rem !important; }
+                .hypecon-feature-card { min-width: 0 !important; width: 100% !important; max-width: 100% !important; }
+              }
+            `}</style>
             {[
-              { name: 'HYPESHY', desc: '스트릿/유니섹스/그래픽\n말 없는 간지, 조용히 센 스트릿' },
-              { name: 'COOLSHY', desc: '미니멀/시크/감성\n무심하고 정제된 도시 감성 룩' },
-              { name: 'SUPERSHY', desc: '컬러풀/Y2K/키치\n튀고 싶은 유스 룩, 릴스 특화' },
-              { name: 'FITSHY', desc: '스포츠·애슬레저\n퍼포먼스/요가 브랜드 중심' },
-              { name: 'PICKSHY', desc: '주얼리·가방·슈즈\n스타일을 완성하는 아이템' },
-              { name: 'BEAUTYSHY', desc: '대표 브랜드\nMZ 인기 코스메틱' },
-              { name: 'SKINSHY', desc: '기초 스킨케어\n선크림, 앰플, 진정/보습' },
-              { name: 'GLOWSHY', desc: '색조 화장품\n향수, 네일 등 표현 중심' }
-            ].map((zone, index) => (
-              <div key={index} className="waterbomb-card fade-in">
-                <h3>{zone.name}</h3>
-                <p style={{ whiteSpace: 'pre-line' }}>{zone.desc}</p>
+              {title:'Z세대 큐레이션', desc:'Z세대가 지금 가장 사랑하는 브랜드만 선택'},
+              {title:'피팅 기반 쇼핑', desc:'직접 입어보고 결정하는 “피팅” 기반 소비 경험'},
+              {title:'실구매 전환', desc:'전시와 소비가 동시에 일어나는 체험형 플랫폼'},
+              {title:'SNS 콘텐츠 허브', desc:'찍고 공유하며 자발적 바이럴 생성'},
+              {title:'글로벌 유통 파급력', desc:'K-브랜드가 콘텐츠로 퍼지고, 리얼로 판매되고, 바이어와 연결되는 K-브랜드 실전형 유통 무대'},
+            ].map((item, idx) => (
+              <div
+                key={item.title}
+                className="hypecon-feature-card"
+                style={{
+                  border:'2px solid #000', borderRadius:'10px', background:'#fff', padding:'18px 10px', minHeight:'130px', height:'100%', flex:'1 1 0', flexBasis:'210px', minWidth:'210px', maxWidth:'100%', display:'flex', flexDirection:'column', justifyContent:'flex-start', alignItems:'center', wordBreak:'keep-all',
+                }}>
+                <div style={{fontWeight:'bold', fontSize:'1.08rem', marginBottom:'0.3rem', textAlign:'center', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis', height:'32px', lineHeight:'32px', display:'flex', alignItems:'center', justifyContent:'center', width:'100%'}}>{item.title}</div>
+                <div style={{fontSize:'0.97rem', textAlign:'center', whiteSpace:'normal', flex:1, display:'flex', alignItems:'flex-start', justifyContent:'center', width:'100%'}}>{item.desc}</div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* AWARDS 섹션 */}
-      <section id="awards" className="waterbomb-section green">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 fade-in">
-            <div className="waterbomb-section-title mb-6" style={{ color: '#000' }}>
-              K-STYLE AWARDS
-            </div>
-            <div className="waterbomb-body max-w-3xl mx-auto" style={{ color: '#000' }}>
-              스타일을 만든 모든 이들을 위한, 하입콘 K-스타일 어워즈
-            </div>
+          {/* 구분선 */}
+          <div style={{borderTop:'4px solid #fff', margin:'40px 0 30px 0'}}></div>
+          {/* 두번째 타이틀 */}
+          <div className="text-center mb-2">
+            <div style={{fontWeight:'900', fontSize:'1.5rem', letterSpacing:'-1px'}}>좋아하는 브랜드를 마주하고, 입고, 즐기는 순간</div>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* 두번째 설명 */}
+          <div className="text-center mb-8" style={{fontSize:'1.05rem', lineHeight:'1.7'}}>
+            내가 좋아하던 브랜드를 한자리에 만나 입어보고, 스타일링 받고, 포토존에서 찍고, 챌린지를 즐기고, 릴스로 퍼뜨리고, 셀럽과 인플루언서를 직접 마주하고 패션쇼까지 함께하는 Z세대만의 실감형 스타일 플레이그라운드입니다.
+          </div>
+          {/* 6 ZONE 라인업 */}
+          <div className="mb-2" style={{maxWidth:'700px', margin:'0 auto'}}>
             {[
-              { name: 'HYPE STYLE ICON', desc: '행사 참여 셀럽 대상\n가장 주목받은 스타일 셀럽' },
-              { name: 'K-FASHION CREATOR', desc: '셀럽 스타일리스트, 무대 디렉터\nZ세대 트렌드 반영 창조자' },
-              { name: 'K-STYLE BRAND', desc: '참가 브랜드 중 1곳\n스타일 감성 + 부스 경험' },
-              { name: 'VIRAL MOMENT', desc: 'SNS 가장 확산 콘텐츠\n도달률, 참여도 기준' },
-              { name: 'NEXT GENERATION', desc: '콘텐츠 기획자, 디자이너\n참신한 아이디어 시도' },
-              { name: 'GEN-Z PICK!', desc: '일반 관람객 인기 투표\n가장 스타일리시한 순간' }
-            ].map((award, index) => (
-              <div key={index} className="bg-black bg-opacity-20 border-2 border-black p-6 text-center fade-in">
-                <h3 className="text-xl font-bold text-black mb-4">{award.name}</h3>
-                <p className="text-black" style={{ whiteSpace: 'pre-line' }}>{award.desc}</p>
+              {num:'01.', title:'TRY-ON ZONE', desc:'입고 스타일링 받기'},
+              {num:'02.', title:'CUSTOMIZING', desc:'패치, 데코로 나만의 스타일 만들기'},
+              {num:'03.', title:'PHOTO ZONE', desc:'인생네컷 & 바이럴 포토 콘텐츠'},
+              {num:'04.', title:'SELFIE RANKING', desc:'베스트 셀피 선정 콘텐츠'},
+              {num:'05.', title:'STYLE QUEST', desc:'미션 클리어 & 굿즈 리워드'},
+              {num:'06.', title:'CELEB STAGE', desc:'셀럽 퍼포먼스'},
+            ].map((item, idx) => (
+              <div key={item.num} style={{display:'flex', alignItems:'center', padding:'18px 0', borderBottom: idx!==5 ? '2px solid #000' : 'none'}}>
+                <div style={{width:'320px', fontWeight:'900', fontSize:'1.5rem', color:'#000', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis', lineHeight:'1.2'}}>{item.num} <span style={{fontWeight:'900', fontSize:'1.5rem'}}>{item.title}</span></div>
+                <div style={{flex:1, fontSize:'1.05rem', color:'#000', fontWeight:'400', marginLeft:'18px'}}>{item.desc}</div>
               </div>
             ))}
           </div>
@@ -275,8 +253,12 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 fade-in">
             <div className="waterbomb-section-title mb-6">PARTNERS</div>
-            <div className="waterbomb-body max-w-3xl mx-auto">
-              브랜드와 연결되는 가장 스타일리시한 접점
+            <div
+              className="waterbomb-body"
+              style={{ display: 'flex', justifyContent: 'center', width: '100%', marginBottom: '2rem' }}>
+              <span style={{ display: 'block', textAlign: 'center', width: '100%' }}>
+                브랜드와 연결되는 가장 스타일리시한 접점
+              </span>
             </div>
           </div>
 
@@ -294,60 +276,9 @@ function App() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center" style={{ marginTop: '2.5rem' }}>
             <button className="waterbomb-btn">
               <span>BECOME A PARTNER</span>
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* APPLY 섹션 */}
-      <section id="apply" className="waterbomb-wave-section">
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="waterbomb-section-title mb-8" style={{ color: '#000' }}>
-            BRAND BOOTH APPLY
-          </div>
-          <div className="waterbomb-subtitle mb-12" style={{ color: '#000' }}>
-            브랜드 부스 참가 신청
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
-            <div className="bg-black bg-opacity-20 p-8 text-left">
-              <h3 className="text-2xl font-bold text-black mb-4">기본 부스</h3>
-              <div className="text-black mb-4">
-                <div className="text-3xl font-bold mb-2">₩3,800,000</div>
-                <div className="text-sm line-through">₩4,800,000</div>
-                <div className="text-sm">(8/31까지 조기 신청 시)</div>
-              </div>
-              <ul className="text-black space-y-2">
-                <li>• 1~4부스 가능</li>
-                <li>• 구조물 제공</li>
-                <li>• 공용 탈의실 사용</li>
-              </ul>
-            </div>
-            
-            <div className="bg-black bg-opacity-20 p-8 text-left">
-              <h3 className="text-2xl font-bold text-black mb-4">독립 부스</h3>
-              <div className="text-black mb-4">
-                <div className="text-3xl font-bold mb-2">₩6,400,000</div>
-                <div className="text-sm line-through">₩8,000,000</div>
-                <div className="text-sm">(8/31까지 조기 신청 시)</div>
-              </div>
-              <ul className="text-black space-y-2">
-                <li>• 2~12부스 (짝수 단위)</li>
-                <li>• 자체 시공</li>
-                <li>• 부스 내 탈의실 필수</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="button-container">
-            <button className="waterbomb-btn">
-              <span>부스 신청하기</span>
-            </button>
-            <button className="waterbomb-btn">
-              <span>파트너십 문의</span>
             </button>
           </div>
         </div>
