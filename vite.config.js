@@ -6,7 +6,15 @@ import path from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   base: '/hypecon/',
-  build: { outDir: 'docs' },
+  build: { 
+    outDir: 'docs',
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
   plugins: [react(),tailwindcss()],
   resolve: {
     alias: {

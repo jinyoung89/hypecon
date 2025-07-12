@@ -134,7 +134,6 @@ function App() {
         {/* 라우트별 화면 */}
         <Routes>
           {/* /hypecon/ 또는 /로 접근 시 Home으로 리다이렉트 */}
-          <Route path="/hypecon" element={<Navigate to="/" replace />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/partners" element={<PartnersPage />} />
