@@ -157,4 +157,4 @@ Z세대의 시선이 닿는 브랜드, 찍는 제품, 사고 싶은 룩이
             font-size: 1.5rem !important;
           }
         }
-      `})]})}J0.createRoot(document.getElementById("root")).render(r.jsx(M.StrictMode,{children:r.jsx(o1,{children:r.jsx(X1,{})})}));
+      `})]})}J0.createRoot(document.getElementById("root")).render(r.jsx(M.StrictMode,{children:r.jsx(o1,{basename:"/hypecon",children:r.jsx(X1,{})})}));
