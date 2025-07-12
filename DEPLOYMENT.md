@@ -42,11 +42,24 @@ export default defineConfig({
 ### 3. 자주 발생하는 문제와 해결방법
 
 #### 문제 1: 흰색 화면 또는 `/src/main.jsx` 404 에러
-**원인**: 개발용 `index.html`이 배포되었거나 빌드되지 않은 파일이 참조됨
+**원인**: 
+- 개발용 `index.html`이 배포되었거나 빌드되지 않은 파일이 참조됨
+- **React Router basename 설정 누락** (가장 흔한 원인)
 **해결**: 
+- **중요**: `src/main.jsx`에서 `<BrowserRouter basename="/hypecon">` 확인
 - `npm run build` 재실행
 - 브라우저 캐시 지우기 (Ctrl+Shift+Delete)
 - 시크릿 모드에서 접속 테스트
+
+**React Router 설정 예시**:
+```javascript
+// src/main.jsx
+import { BrowserRouter } from 'react-router-dom';
+
+<BrowserRouter basename="/hypecon">  // 이 부분이 핵심!
+  <App />
+</BrowserRouter>
+```
 
 #### 문제 2: GitHub Actions에서 "dist: Cannot open: No such file or directory"
 **원인**: 워크플로우가 `dist` 폴더를 찾지만 실제로는 `docs` 폴더에 빌드됨
@@ -60,6 +73,7 @@ export default defineConfig({
 
 - [ ] `vite.config.js`에서 `base: '/hypecon/'` 확인
 - [ ] `vite.config.js`에서 `build: { outDir: 'docs' }` 확인
+- [ ] **`src/main.jsx`에서 `<BrowserRouter basename="/hypecon">` 확인** ⭐ 중요!
 - [ ] `package.json`에서 `postbuild` 스크립트 확인
 - [ ] `.github/workflows/deploy.yml`에서 `path: './docs'` 확인
 - [ ] 로컬에서 `npm run build` 테스트
@@ -94,9 +108,13 @@ git push origin main
 # 로컬 테스트
 npm run build && cd docs && python3 -m http.server 8000
 
-# 캐시 문제 해결
-# 브라우저에서 Ctrl+Shift+Delete (캐시 지우기)
-# 또는 시크릿 모드에서 접속
+# 흰화면 문제 해결 (순서대로 시도)
+# 1. React Router basename 확인
+# src/main.jsx에서 <BrowserRouter basename="/hypecon"> 있는지 확인
+# 2. 재빌드 및 배포
+npm run build && git add . && git commit -m "Fix routing issue" && git push origin main
+# 3. 브라우저 캐시 지우기 (Ctrl+Shift+Delete)
+# 4. 시크릿 모드에서 접속 테스트
 ```
 
 ---
