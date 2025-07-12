@@ -4,15 +4,17 @@
 @import "tw-animate-css";
 
 :root {
-  /* 워터밤 정확한 색상 팔레트 */
-  --waterbomb-neon-green: #00FF00;
-  --waterbomb-electric-blue: #0080FF;
-  --waterbomb-purple: #8A2BE2;
-  --waterbomb-dark: #000000;
-  --waterbomb-gray: #1a1a1a;
-  --waterbomb-white: #FFFFFF;
-  --waterbomb-yellow: #FFFF00;
-  --waterbomb-pink: #FF1493;
+  /* HYPECON 공식 팔레트 */
+  --hypecon-main: #FF96C5;
+  --hypecon-point-green: #CFFF00;
+  --hypecon-point-mint: #8DD7BF;
+  --hypecon-cyan: #00A5E3;
+  --hypecon-vivid-red: #FF5768;
+  --hypecon-soft-yellow: #FFBF65;
+  --hypecon-bright-green: #00CDAC;
+  --hypecon-fluorescent-pink: #FF60A8;
+  --hypecon-dark: #000000;
+  --hypecon-white: #FFFFFF;
 }
 
 * {
@@ -23,8 +25,8 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: var(--waterbomb-dark);
-  color: var(--waterbomb-white);
+  background-color: var(--hypecon-main);
+  color: var(--hypecon-dark);
   overflow-x: hidden;
 }
 
@@ -36,7 +38,7 @@ body {
   line-height: 0.9;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  color: var(--waterbomb-white);
+  color: var(--hypecon-white);
   text-shadow: 
     0 0 20px rgba(0, 255, 0, 0.5),
     0 0 40px rgba(0, 255, 0, 0.3),
@@ -47,7 +49,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: clamp(1rem, 3vw, 1.5rem);
-  color: var(--waterbomb-white);
+  color: var(--hypecon-white);
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -57,7 +59,7 @@ body {
   font-weight: 900;
   font-size: clamp(8rem, 20vw, 20rem);
   line-height: 0.8;
-  color: var(--waterbomb-white);
+  color: var(--hypecon-white);
   text-shadow: 
     0 0 30px rgba(0, 255, 0, 0.8),
     0 0 60px rgba(0, 255, 0, 0.5),
@@ -70,7 +72,7 @@ body {
   font-weight: 800;
   font-size: clamp(2rem, 5vw, 4rem);
   text-transform: uppercase;
-  color: var(--waterbomb-white);
+  color: var(--hypecon-dark);
   text-shadow: 
     0 0 15px rgba(0, 255, 0, 0.6),
     0 0 30px rgba(0, 255, 0, 0.4);
@@ -81,16 +83,13 @@ body {
   font-weight: 500;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
   line-height: 1.6;
-  color: var(--waterbomb-white);
+  color: var(--hypecon-dark);
 }
 
 /* 워터밤 히어로 섹션 */
 .waterbomb-hero {
   height: 100vh;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.3),
-    rgba(0, 0, 0, 0.5)
-  ), url('./assets/images/waterbomb-hero.jpg');
+  background: linear-gradient(135deg, var(--hypecon-main) 0%, var(--hypecon-point-mint) 100%);
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
@@ -169,7 +168,7 @@ body {
 /* 워터밤 카드 스타일 */
 .waterbomb-card {
   background: rgba(0, 0, 0, 0.8);
-  border: 2px solid var(--waterbomb-neon-green);
+  border: 2px solid var(--hypecon-point-green);
   border-radius: 0;
   padding: 2rem;
   text-align: center;
@@ -211,7 +210,7 @@ body {
   font-weight: 800;
   font-size: 1.5rem;
   text-transform: uppercase;
-  color: var(--waterbomb-neon-green);
+  color: var(--hypecon-point-green);
   margin-bottom: 1rem;
   text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
 }
@@ -219,18 +218,15 @@ body {
 .waterbomb-card p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  color: var(--waterbomb-white);
+  color: var(--hypecon-white);
   line-height: 1.6;
 }
 
 /* 워터밤 버튼 스타일 */
 .waterbomb-btn {
-  background: linear-gradient(45deg, 
-    var(--waterbomb-neon-green), 
-    var(--waterbomb-electric-blue)
-  );
+  background: linear-gradient(45deg, var(--hypecon-point-green), var(--hypecon-point-mint));
   border: none;
-  color: var(--waterbomb-dark);
+  color: var(--hypecon-dark);
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 1rem;
@@ -280,15 +276,15 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: var(--hypecon-main);
   backdrop-filter: blur(10px);
   z-index: 1000;
   padding: 1rem 0;
-  border-bottom: 1px solid var(--waterbomb-neon-green);
+  border-bottom: 2px solid var(--hypecon-point-green);
 }
 
 .waterbomb-nav-link {
-  color: var(--waterbomb-white);
+  color: var(--hypecon-dark);
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
@@ -307,7 +303,7 @@ body {
   left: 50%;
   width: 0;
   height: 2px;
-  background: var(--waterbomb-neon-green);
+  background: var(--hypecon-point-green);
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -319,7 +315,7 @@ body {
 
 .waterbomb-nav-link:hover,
 .waterbomb-nav-link.active {
-  color: var(--waterbomb-neon-green);
+  color: var(--hypecon-point-green);
   text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
 }
 
@@ -329,22 +325,23 @@ body {
   position: relative;
 }
 
+/* 섹션 배경 */
 .waterbomb-section.dark {
-  background: var(--waterbomb-dark);
+  background: var(--hypecon-main);
+  color: var(--hypecon-dark);
 }
-
 .waterbomb-section.green {
-  background: var(--waterbomb-neon-green);
-  color: var(--waterbomb-dark);
+  background: var(--hypecon-point-green);
+  color: var(--hypecon-dark);
 }
 
 .waterbomb-section.green .waterbomb-section-title {
-  color: var(--waterbomb-dark);
+  color: var(--hypecon-dark);
   text-shadow: none;
 }
 
 .waterbomb-section.green .waterbomb-body {
-  color: var(--waterbomb-dark);
+  color: var(--hypecon-dark);
 }
 
 /* 반응형 디자인 */
@@ -560,7 +557,7 @@ body {
   margin-top: 0.5rem;
 }
 .hero-neon {
-  background: linear-gradient(90deg, var(--waterbomb-neon-green), var(--waterbomb-electric-blue));
+  background: linear-gradient(90deg, var(--hypecon-point-green), var(--hypecon-point-mint));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
