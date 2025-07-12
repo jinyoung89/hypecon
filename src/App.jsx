@@ -45,11 +45,11 @@ function App() {
     <div className="min-h-screen">
         {/* 네비게이션 */}
       <nav className="waterbomb-nav">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4" style={{position:'relative'}}>
             {/* 상단: 로고 + 소셜 + EN + 햄버거 */}
             <div className="flex justify-between items-center" style={{paddingTop:'0.7rem'}}>
               {/* 왼쪽: 로고 */}
-              <div className="waterbomb-title" style={{ display: 'flex', alignItems: 'center', minWidth: '130px' }}>
+              <div className="waterbomb-title" style={{ display: 'flex', alignItems: 'center', minWidth: '100px' }}>
                 <Link to="/" style={{display:'block'}}>
                   <img src={hypeconLogo} alt="HYPECON STYLE WEEK" style={{ height: '38px', width: 'auto', display: 'block' }} />
                 </Link>
@@ -57,36 +57,35 @@ function App() {
               {/* 오른쪽: 소셜 + EN + 햄버거 */}
               <div className="flex flex-row items-center">
                 {/* 소셜 아이콘 */}
-                <div className="flex flex-row items-center nav-social-wrap" style={{gap:'0.7rem', marginRight:'1.5rem'}}>
+                <div className="flex flex-row items-center nav-social-wrap" style={{gap:'0.4rem', marginRight:'1rem'}}>
                   <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram"
-                    style={{ width:36, height:36, borderRadius:'50%', background:'#fff', display:'flex', alignItems:'center', justifyContent:'center', boxShadow:'0 1px 4px rgba(0,0,0,0.06)', transition:'background 0.2s' }}
+                    style={{ width:28, height:28, borderRadius:'50%', background:'#fff', display:'flex', alignItems:'center', justifyContent:'center', boxShadow:'0 1px 4px rgba(0,0,0,0.06)', transition:'background 0.2s' }}
                     className="hover:bg-pink-100">
-                    <FaInstagram size={20} color="#E1306C" />
+                    <FaInstagram size={16} color="#E1306C" />
                   </a>
                   <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube"
-                    style={{ width:36, height:36, borderRadius:'50%', background:'#fff', display:'flex', alignItems:'center', justifyContent:'center', boxShadow:'0 1px 4px rgba(0,0,0,0.06)', transition:'background 0.2s' }}
+                    style={{ width:28, height:28, borderRadius:'50%', background:'#fff', display:'flex', alignItems:'center', justifyContent:'center', boxShadow:'0 1px 4px rgba(0,0,0,0.06)', transition:'background 0.2s' }}
                     className="hover:bg-red-100">
-                    <FaYoutube size={20} color="#FF0000" />
+                    <FaYoutube size={16} color="#FF0000" />
                   </a>
                   <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook"
-                    style={{ width:36, height:36, borderRadius:'50%', background:'#fff', display:'flex', alignItems:'center', justifyContent:'center', boxShadow:'0 1px 4px rgba(0,0,0,0.06)', transition:'background 0.2s' }}
+                    style={{ width:28, height:28, borderRadius:'50%', background:'#fff', display:'flex', alignItems:'center', justifyContent:'center', boxShadow:'0 1px 4px rgba(0,0,0,0.06)', transition:'background 0.2s' }}
                     className="hover:bg-blue-100">
-                    <FaFacebookF size={18} color="#1877F3" />
+                    <FaFacebookF size={14} color="#1877F3" />
                   </a>
                   <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" title="TikTok"
-                    style={{ width:36, height:36, borderRadius:'50%', background:'#fff', display:'flex', alignItems:'center', justifyContent:'center', boxShadow:'0 1px 4px rgba(0,0,0,0.06)', transition:'background 0.2s' }}
+                    style={{ width:28, height:28, borderRadius:'50%', background:'#fff', display:'flex', alignItems:'center', justifyContent:'center', boxShadow:'0 1px 4px rgba(0,0,0,0.06)', transition:'background 0.2s' }}
                     className="hover:bg-gray-200">
-                    <FaTiktok size={18} color="#000" />
+                    <FaTiktok size={14} color="#000" />
                   </a>
                 </div>
                 {/* EN */}
-                <span style={{fontWeight:600, fontSize:'1.08rem', marginLeft:'1.2rem', marginRight:'1.2rem'}}>EN</span>
-                {/* 햄버거 메뉴 (빨간색 3줄) - 모바일에서만 보임 */}
+                {/* 햄버거 메뉴 (네온그린 3줄) - 모바일에서만 보임 */}
                 <div className="nav-hamburger-wrap" style={{display:'none'}}>
                   <div onClick={()=>setIsMobileMenuOpen(v=>!v)} style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', cursor:'pointer', marginLeft:'0.5rem'}}>
-                    <div style={{width:'28px', height:'4px', background:'#FF2D2D', borderRadius:'2px', margin:'2.5px 0'}}></div>
-                    <div style={{width:'28px', height:'4px', background:'#FF2D2D', borderRadius:'2px', margin:'2.5px 0'}}></div>
-                    <div style={{width:'28px', height:'4px', background:'#FF2D2D', borderRadius:'2px', margin:'2.5px 0'}}></div>
+                    <div style={{width:'22px', height:'3px', background:'#CFFF00', borderRadius:'2px', margin:'2px 0'}}></div>
+                    <div style={{width:'22px', height:'3px', background:'#CFFF00', borderRadius:'2px', margin:'2px 0'}}></div>
+                    <div style={{width:'22px', height:'3px', background:'#CFFF00', borderRadius:'2px', margin:'2px 0'}}></div>
                   </div>
                 </div>
               </div>
@@ -102,19 +101,31 @@ function App() {
               <Link to="/award" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1.13rem', padding:'0 0.2em'}}>Award</Link>
               <Link to="/contact" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1.13rem', padding:'0 0.2em'}}>Contact</Link>
             </div>
-            {/* 모바일 메뉴 오버레이 */}
+            {/* 모바일 메뉴 드롭다운 */}
             {isMobileMenuOpen && (
-              <div className="fixed inset-0 z-50 bg-black bg-opacity-40 flex flex-col" onClick={()=>setIsMobileMenuOpen(false)}>
-                <div style={{background:'#fff', borderRadius:'0 0 18px 18px', boxShadow:'0 8px 32px rgba(0,0,0,0.13)', margin:'0 auto', marginTop:'0.5rem', minWidth:'220px', maxWidth:'90vw', padding:'1.5rem 1.2rem', display:'flex', flexDirection:'column', alignItems:'center'}} onClick={e=>e.stopPropagation()}>
-                  <Link to="/about" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>About</Link>
-                  <Link to="/exhibition" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>Exhibition</Link>
-                  <Link to="/brand" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>Brand</Link>
-                  <Link to="/ticket" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>Ticket</Link>
-                  <Link to="/buyer" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>Buyer</Link>
-                  <Link to="/influencer" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>Influencer</Link>
-                  <Link to="/award" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>Award</Link>
-                  <Link to="/contact" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>Contact</Link>
-                </div>
+              <div className="mobile-menu-dropdown" style={{
+                position: 'absolute',
+                top: '100%',
+                left: 0,
+                right: 0,
+                background: '#fff',
+                borderRadius: '0 0 18px 18px',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.13)',
+                padding: '1.5rem 1.2rem',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                zIndex: 1000,
+                borderTop: '2px solid #CFFF00'
+              }}>
+                <Link to="/about" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>About</Link>
+                <Link to="/exhibition" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>Exhibition</Link>
+                <Link to="/brand" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>Brand</Link>
+                <Link to="/ticket" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>Ticket</Link>
+                <Link to="/buyer" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>Buyer</Link>
+                <Link to="/influencer" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>Influencer</Link>
+                <Link to="/award" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>Award</Link>
+                <Link to="/contact" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>Contact</Link>
               </div>
             )}
             {/* 반응형 CSS */}
@@ -173,14 +184,14 @@ function Footer() {
               </div>
       <div className="container mx-auto px-4 footer-flex-wrap" style={{display:'flex', justifyContent:'space-between', alignItems:'flex-start', flexWrap:'wrap', padding:'0 0 2.2rem 0'}}>
         {/* 좌측 정보 */}
-        <div style={{fontSize:'0.97rem', color:'#111', lineHeight:'1.7', fontWeight:400, maxWidth:'60vw'}}>
+        <div style={{fontSize:'0.97rem', color:'#111', lineHeight:'1.7', fontWeight:400, maxWidth:'80vw'}}>
           <div>HYPECON STYLE WEEK 운영사무국</div>
           <div>서울시 강남구 테헤란로 142 아크플레이스 5F</div>
           <div>문의. hello@hypeconweek.com</div>
           <div style={{fontSize:'0.93rem', marginTop:'0.3rem'}}>Copyright(c) HYPECON STYLE WEEK All Rights Reserved.</div>
         </div>
         {/* 우측 로고 텍스트 */}
-        <div style={{fontWeight:'900', color:'#111', textAlign:'right', lineHeight:'1.05', letterSpacing:'-1px', minWidth:'180px'}}>
+        <div style={{fontWeight:'900', color:'#111', textAlign:'right', lineHeight:'1.05', letterSpacing:'-1px', minWidth:'120px'}}>
           <span style={{fontSize:'2.7rem', display:'block', lineHeight:'1.05'}}>HYPECON</span>
           <span style={{fontSize:'2.1rem', display:'block', lineHeight:'1.05'}}>STYLE WEEK</span>
         </div>
@@ -189,15 +200,16 @@ function Footer() {
         @media (max-width: 600px) {
           .footer-flex-wrap {
             flex-direction: column !important;
-            align-items: flex-start !important;
+            align-items: center !important;
             gap: 1.2rem;
+            text-align: center !important;
           }
           .footer-flex-wrap > div {
             width: 100% !important;
-            text-align: left !important;
+            text-align: center !important;
           }
           .footer-flex-wrap > div:last-child {
-            text-align: left !important;
+            text-align: center !important;
             min-width: 0 !important;
           }
           .footer-flex-wrap > div span {

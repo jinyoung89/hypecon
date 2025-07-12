@@ -33,7 +33,7 @@ function ExhibitionPage() {
               행사 개요
               </div>
               
-            <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'1.5rem', marginBottom:'1.5rem'}}>
+            <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'1.5rem', marginBottom:'1.5rem'}} className="exhibition-overview-grid">
               {/* 왼쪽 열 */}
               <div>
                 <div style={{marginBottom:'1rem'}}>
@@ -416,6 +416,24 @@ function ExhibitionPage() {
               .program-content-section {
                 min-width: 0 !important;
               }
+              .exhibition-overview-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+              }
+              .exhibition-overview-grid > div {
+                margin-bottom: 0.5rem !important;
+              }
+              .exhibition-overview-grid > div > div {
+                margin-bottom: 0.8rem !important;
+              }
+              .why-join-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+              }
+              .why-join-grid > div {
+                min-height: auto !important;
+                padding: 1.5rem 1rem !important;
+              }
             }
           `}</style>
     
@@ -424,7 +442,7 @@ function ExhibitionPage() {
             <div style={{fontWeight:'bold', fontSize:'1.35rem', marginBottom:'1.2rem', color:'#222'}}>WHY JOIN</div>
             
             {/* 2x2 그리드 레이아웃 */}
-            <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(400px, 1fr))', gap:'1.5rem'}}>
+            <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(300px, 1fr))', gap:'1.5rem'}} className="why-join-grid">
               {[
                 {
                   title: 'For Brands',

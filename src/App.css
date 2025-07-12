@@ -550,7 +550,7 @@ body {
   letter-spacing: -0.02em;
 }
 .hero-style-week {
-  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 700;
   letter-spacing: 0.5em;
   margin-bottom: 1.2rem;
@@ -579,7 +579,7 @@ body {
 }
 @media (max-width: 600px) {
   .hero-main-title { font-size: 2.2rem; }
-  .hero-style-week { font-size: 1.2rem; }
+  .hero-style-week { font-size: 1rem; }
   .hero-neon { font-size: 1.1rem; }
   .hero-seoul { font-size: 1rem; }
   .hero-date { font-size: 0.9rem; }
