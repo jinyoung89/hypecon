@@ -5,7 +5,7 @@
 
 :root {
   /* HYPECON 공식 팔레트 */
-  --hypecon-main: #FF96C5;
+  --hypecon-main: #CFFF00;
   --hypecon-point-green: #CFFF00;
   --hypecon-point-mint: #8DD7BF;
   --hypecon-cyan: #00A5E3;
@@ -28,6 +28,8 @@ body {
   background-color: var(--hypecon-main);
   color: var(--hypecon-dark);
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 /* 워터밤 스타일 타이포그래피 */
@@ -272,15 +274,16 @@ body {
 
 /* 워터밤 네비게이션 */
 .waterbomb-nav {
-  position: fixed;
+  position: static;
   top: 0;
   left: 0;
   right: 0;
   background: var(--hypecon-main);
   backdrop-filter: blur(10px);
   z-index: 1000;
-  padding: 1rem 0;
-  border-bottom: 2px solid var(--hypecon-point-green);
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 
 .waterbomb-nav-link {

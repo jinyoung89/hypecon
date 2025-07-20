@@ -45,62 +45,57 @@ function App() {
     <div className="min-h-screen">
         {/* 네비게이션 */}
       <nav className="waterbomb-nav">
-        <div className="container mx-auto px-4" style={{position:'relative'}}>
-            {/* 상단: 로고 + 소셜 + EN + 햄버거 */}
-            <div className="flex justify-between items-center" style={{paddingTop:'0.7rem'}}>
-              {/* 왼쪽: 로고 */}
-              <div className="waterbomb-title" style={{ display: 'flex', alignItems: 'center', minWidth: '100px' }}>
-                <Link to="/" style={{display:'block'}}>
-                  <img src={hypeconLogo} alt="HYPECON STYLE WEEK" style={{ height: '38px', width: 'auto', display: 'block' }} />
-                </Link>
-            </div>
-              {/* 오른쪽: 소셜 + EN + 햄버거 */}
-              <div className="flex flex-row items-center">
-                {/* 소셜 아이콘 */}
-                <div className="flex flex-row items-center nav-social-wrap" style={{gap:'0.4rem', marginRight:'1rem'}}>
-                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram"
-                    style={{ width:28, height:28, borderRadius:'50%', background:'#fff', display:'flex', alignItems:'center', justifyContent:'center', boxShadow:'0 1px 4px rgba(0,0,0,0.06)', transition:'background 0.2s' }}
-                    className="hover:bg-pink-100">
-                    <FaInstagram size={16} color="#E1306C" />
-                  </a>
-                  <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube"
-                    style={{ width:28, height:28, borderRadius:'50%', background:'#fff', display:'flex', alignItems:'center', justifyContent:'center', boxShadow:'0 1px 4px rgba(0,0,0,0.06)', transition:'background 0.2s' }}
-                    className="hover:bg-red-100">
-                    <FaYoutube size={16} color="#FF0000" />
-                  </a>
-                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook"
-                    style={{ width:28, height:28, borderRadius:'50%', background:'#fff', display:'flex', alignItems:'center', justifyContent:'center', boxShadow:'0 1px 4px rgba(0,0,0,0.06)', transition:'background 0.2s' }}
-                    className="hover:bg-blue-100">
-                    <FaFacebookF size={14} color="#1877F3" />
-                  </a>
-                  <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" title="TikTok"
-                    style={{ width:28, height:28, borderRadius:'50%', background:'#fff', display:'flex', alignItems:'center', justifyContent:'center', boxShadow:'0 1px 4px rgba(0,0,0,0.06)', transition:'background 0.2s' }}
-                    className="hover:bg-gray-200">
-                    <FaTiktok size={14} color="#000" />
-                  </a>
-                </div>
-                {/* EN */}
-                {/* 햄버거 메뉴 (네온그린 3줄) - 모바일에서만 보임 */}
-                <div className="nav-hamburger-wrap" style={{display:'none'}}>
-                  <div onClick={()=>setIsMobileMenuOpen(v=>!v)} style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', cursor:'pointer', marginLeft:'0.5rem'}}>
-                    <div style={{width:'22px', height:'3px', background:'#CFFF00', borderRadius:'2px', margin:'2px 0'}}></div>
-                    <div style={{width:'22px', height:'3px', background:'#CFFF00', borderRadius:'2px', margin:'2px 0'}}></div>
-                    <div style={{width:'22px', height:'3px', background:'#CFFF00', borderRadius:'2px', margin:'2px 0'}}></div>
-                  </div>
+        {/* 상단: 네온 옐로우 헤더 */}
+        <div style={{
+          background: '#CFFF00',
+          padding: '0.3rem 0',
+          margin: 0
+        }}>
+          <div className="container mx-auto px-4" style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+            {/* 중앙: 로고 */}
+            <Link to="/" style={{textDecoration: 'none'}}>
+              <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                <div style={{fontWeight: '900', fontSize: '1.7rem', color: '#000', lineHeight: '1'}}>HYPECON</div>
+                <div style={{fontWeight: '500', fontSize: '1.35rem', color: '#000', lineHeight: '1'}}>STYLE WEEK</div>
+              </div>
+            </Link>
+          </div>
+        </div>
+        
+        {/* 하단: 검은색 네비게이션 바 */}
+        <div style={{
+          background: '#000',
+          padding: '0.3rem 0',
+          margin: 0
+        }}>
+          <div className="container mx-auto px-4" style={{position:'relative'}}>
+            {/* 햄버거 메뉴 + 네비게이션 링크 */}
+            <div className="flex items-center justify-between">
+              {/* 왼쪽: 햄버거 메뉴 */}
+              <div className="nav-hamburger-wrap" style={{display:'flex', width: '100px'}}>
+                <div onClick={()=>setIsMobileMenuOpen(v=>!v)} style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', cursor:'pointer'}}>
+                  <div style={{width:'22px', height:'3px', background:'#fff', borderRadius:'2px', margin:'2px 0'}}></div>
+                  <div style={{width:'22px', height:'3px', background:'#fff', borderRadius:'2px', margin:'2px 0'}}></div>
+                  <div style={{width:'22px', height:'3px', background:'#fff', borderRadius:'2px', margin:'2px 0'}}></div>
                 </div>
               </div>
+              
+              {/* 중앙: 네비게이션 링크들 */}
+              <div className="nav-menu-bar flex items-center justify-center" style={{gap:'2rem', flex: 1}}>
+                <Link to="/about" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color:'#CFFF00', padding:'0 0.2em'}}>ABOUT</Link>
+                <Link to="/exhibition" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color:'#fff', padding:'0 0.2em'}}>EXHIBITION</Link>
+                <Link to="/brand" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color:'#fff', padding:'0 0.2em'}}>BRAND</Link>
+                <Link to="/ticket" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color:'#fff', padding:'0 0.2em'}}>TICKET</Link>
+                <Link to="/buyer" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color:'#fff', padding:'0 0.2em'}}>BUYER</Link>
+                <Link to="/influencer" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color:'#fff', padding:'0 0.2em'}}>INFLUENCER</Link>
+                <Link to="/award" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color:'#fff', padding:'0 0.2em'}}>AWARD</Link>
+                <Link to="/contact" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color:'#fff', padding:'0 0.2em'}}>CONTACT</Link>
+              </div>
+              
+              {/* 오른쪽: 빈 공간 (균형 맞추기) */}
+              <div style={{width: '100px'}}></div>
             </div>
-            {/* 하단: 메뉴 바 (PC에서만 보임) */}
-            <div className="nav-menu-bar flex justify-center items-center mt-6" style={{gap:'2.7rem', marginTop:'2rem'}}>
-              <Link to="/about" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1.13rem', padding:'0 0.2em'}}>About</Link>
-              <Link to="/exhibition" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1.13rem', padding:'0 0.2em'}}>Exhibition</Link>
-              <Link to="/brand" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1.13rem', padding:'0 0.2em'}}>Brand</Link>
-              <Link to="/ticket" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1.13rem', padding:'0 0.2em'}}>Ticket</Link>
-              <Link to="/buyer" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1.13rem', padding:'0 0.2em'}}>Buyer</Link>
-              <Link to="/influencer" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1.13rem', padding:'0 0.2em'}}>Influencer</Link>
-              <Link to="/award" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1.13rem', padding:'0 0.2em'}}>Award</Link>
-              <Link to="/contact" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1.13rem', padding:'0 0.2em'}}>Contact</Link>
-            </div>
+            
             {/* 모바일 메뉴 드롭다운 */}
             {isMobileMenuOpen && (
               <div className="mobile-menu-dropdown" style={{
@@ -128,20 +123,21 @@ function App() {
                 <Link to="/contact" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>Contact</Link>
               </div>
             )}
+            
             {/* 반응형 CSS */}
             <style>{`
               @media (max-width: 768px) {
                 .nav-menu-bar { display: none !important; }
                 .nav-hamburger-wrap { display: flex !important; }
-                .nav-social-wrap { margin-right: 0.5rem !important; }
               }
               @media (min-width: 769px) {
                 .nav-menu-bar { display: flex !important; }
-                .nav-hamburger-wrap { display: none !important; }
+                .nav-hamburger-wrap { display: flex !important; }
               }
             `}</style>
           </div>
-        </nav>
+        </div>
+      </nav>
         {/* 라우트별 화면 */}
         <Routes>
           {/* /hypecon/ 또는 /로 접근 시 Home으로 리다이렉트 */}
@@ -176,50 +172,115 @@ function EmptyPage({ title }) {
 // Footer 컴포넌트
 function Footer() {
   return (
-    <footer style={{width:'100%', background:'#FF96C5', marginTop:'3.5rem'}}>
-      {/* 상단 라인 + 동그라미 */}
-      <div style={{position:'relative', height:'18px', marginBottom:'1.2rem'}}>
-        <div style={{borderTop:'2px solid #111', width:'100%', position:'absolute', top:'9px', left:0}}></div>
-        <div style={{position:'absolute', top:'2px', right:0, width:'10px', height:'10px', borderRadius:'50%', background:'#111'}}></div>
-              </div>
-      <div className="container mx-auto px-4 footer-flex-wrap" style={{display:'flex', justifyContent:'space-between', alignItems:'flex-start', flexWrap:'wrap', padding:'0 0 2.2rem 0'}}>
-        {/* 좌측 정보 */}
-        <div style={{fontSize:'0.97rem', color:'#111', lineHeight:'1.7', fontWeight:400, maxWidth:'80vw'}}>
-          <div>HYPECON STYLE WEEK 운영사무국</div>
-          <div>서울시 강남구 테헤란로 142 아크플레이스 5F</div>
-          <div>문의. hello@hypeconweek.com</div>
-          <div style={{fontSize:'0.93rem', marginTop:'0.3rem'}}>Copyright(c) HYPECON STYLE WEEK All Rights Reserved.</div>
+    <footer style={{width:'100%', background:'#000', marginTop:'0', padding: '4rem 0 2rem 0', textAlign: 'center'}}>
+      <div className="container mx-auto px-4">
+        {/* 메인 타이틀 */}
+        <div style={{marginBottom: '2rem'}}>
+          <div style={{fontSize: '3rem', fontWeight: '900', color: '#CFFF00', marginBottom: '0rem', lineHeight: '0.8'}}>
+            HYPECON
+          </div>
+          <div style={{fontSize: '2.5rem', fontWeight: '900', color: '#CFFF00', marginBottom: '0rem', lineHeight: '0.8'}}>
+            STYLE WEEK
+          </div>
+          <div style={{fontSize: '1.5rem', fontWeight: '700', color: '#CFFF00'}}>
+            SEOUL 2026
+          </div>
         </div>
-        {/* 우측 로고 텍스트 */}
-        <div style={{fontWeight:'900', color:'#111', textAlign:'right', lineHeight:'1.05', letterSpacing:'-1px', minWidth:'120px'}}>
-          <span style={{fontSize:'2.7rem', display:'block', lineHeight:'1.05'}}>HYPECON</span>
-          <span style={{fontSize:'2.1rem', display:'block', lineHeight:'1.05'}}>STYLE WEEK</span>
+        
+        {/* 소셜 미디어 아이콘 */}
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          gap: '1.5rem',
+          marginBottom: '3rem'
+        }}>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" style={{
+            width: '50px',
+            height: '50px',
+            background: '#CFFF00',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            transition: 'transform 0.3s'
+          }} className="hover:scale-110">
+            <FaYoutube size={20} color="#FF0000" />
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style={{
+            width: '50px',
+            height: '50px',
+            background: '#CFFF00',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            transition: 'transform 0.3s'
+          }} className="hover:scale-110">
+            <FaFacebookF size={18} color="#1877F3" />
+          </a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" style={{
+            width: '50px',
+            height: '50px',
+            background: '#CFFF00',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            transition: 'transform 0.3s'
+          }} className="hover:scale-110">
+            <FaTiktok size={18} color="#000" />
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{
+            width: '50px',
+            height: '50px',
+            background: '#CFFF00',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            transition: 'transform 0.3s'
+          }} className="hover:scale-110">
+            <FaInstagram size={20} color="#E1306C" />
+          </a>
+        </div>
+        
+        {/* 연락처 정보 */}
+        <div style={{
+          marginBottom: '2rem',
+          lineHeight: '1.2'
+        }}>
+          <div style={{fontSize: '1.1rem', fontWeight: '600', marginBottom: '0.2rem', color: '#fff'}}>
+            HYPECON STYLE WEEK 운영사무국
+          </div>
+          <div style={{fontSize: '1rem', marginBottom: '0.2rem', color: '#fff'}}>
+            서울시 강남구 테헤란로 142 아크플레이스 5F
+          </div>
+          <div style={{fontSize: '1rem', color: '#fff'}}>
+            문의. hello@hypeconweek.com
+          </div>
+        </div>
+        
+        {/* 저작권 */}
+        <div style={{
+          fontSize: '0.9rem',
+          color: '#999',
+        
+        }}>
+          Copyright(c) HYPECON STYLE WEEK All Rights Reserved.
         </div>
       </div>
+      
       <style>{`
-        @media (max-width: 600px) {
-          .footer-flex-wrap {
-            flex-direction: column !important;
-            align-items: center !important;
-            gap: 1.2rem;
-            text-align: center !important;
-          }
-          .footer-flex-wrap > div {
-            width: 100% !important;
-            text-align: center !important;
-          }
-          .footer-flex-wrap > div:last-child {
-            text-align: center !important;
-            min-width: 0 !important;
-          }
-          .footer-flex-wrap > div span {
-            font-size: 1.5rem !important;
-          }
+        .hover\\:scale-110:hover {
+          transform: scale(1.1);
         }
       `}</style>
-      </footer>
+    </footer>
   );
 }
 
 export default App
-
