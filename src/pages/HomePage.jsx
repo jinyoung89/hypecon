@@ -28,6 +28,8 @@ function HomePage() {
           autoPlay
           muted
           loop
+          playsInline
+          preload="auto"
           style={{
             position: 'absolute',
             top: 0,
@@ -37,8 +39,10 @@ function HomePage() {
             objectFit: 'cover',
             zIndex: 0
           }}
+          onError={(e) => console.error('Video error:', e)}
         >
           <source src={heroVideo} type="video/mp4" />
+          Your browser does not support the video tag.
         </video>
         
         {/* 오버레이 */}
