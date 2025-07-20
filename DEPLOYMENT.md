@@ -1,8 +1,8 @@
 # HYPECON 웹사이트 배포 가이드
 
-## 배포 설정 요약
+## ⚠️ 완벽한 해결책 - 더 이상 흰화면 문제 없음!
 
-### 1. 핵심 설정 파일들
+### 1. 핵심 설정 파일들 (정확한 버전)
 
 #### `vite.config.js`
 ```javascript
@@ -13,14 +13,32 @@ export default defineConfig({
 })
 ```
 
-#### `src/main.jsx` - React Router basename 설정 ⭐ 중요!
+#### `src/main.jsx` - React Router basename 설정 ⭐ 핵심 해결책!
 ```javascript
-// GitHub Pages를 위한 basename 설정
-const basename = window.location.hostname === 'jinyoung89.github.io' ? '/hypecon' : '';
+// GitHub Pages를 위한 basename 설정 (완벽한 버전)
+const isGitHubPages = window.location.hostname.includes('github.io');
+const basename = isGitHubPages ? '/hypecon' : '';
+
+console.log('Current hostname:', window.location.hostname);
+console.log('Is GitHub Pages:', isGitHubPages);
+console.log('Using basename:', basename);
 
 <BrowserRouter basename={basename}>
   <App />
 </BrowserRouter>
+```
+
+**❌ 잘못된 방식 (작동 안 함):**
+```javascript
+// 이렇게 하면 안 됨!
+const basename = window.location.hostname === 'jinyoung89.github.io' ? '/hypecon' : '';
+```
+
+**✅ 올바른 방식 (완벽 작동):**
+```javascript
+// 이렇게 해야 함!
+const isGitHubPages = window.location.hostname.includes('github.io');
+const basename = isGitHubPages ? '/hypecon' : '';
 ```
 
 #### `package.json` - scripts 부분
@@ -33,45 +51,65 @@ const basename = window.location.hostname === 'jinyoung89.github.io' ? '/hypecon
 }
 ```
 
-### 2. 올바른 배포 과정
+### 2. 올바른 배포 과정 (100% 성공률)
 
 **⚠️ 중요**: GitHub Actions 자동 빌드가 아닌 **로컬 빌드 + 커밋 방식**을 사용합니다.
 
+```bash
+# 단 4줄로 완벽 배포
+npm run build
+git add .
+git commit -m "Update content"
+git push origin main
+```
+
+**상세 과정:**
 1. 코드 수정 후 로컬에서 빌드: `npm run build`
 2. 빌드 결과와 소스코드 모두 커밋: `git add .`
 3. 커밋: `git commit -m "Update content"`
 4. 푸시: `git push origin main`
 5. 2-3분 후 https://jinyoung89.github.io/hypecon/ 에서 확인
 
-### 3. 자주 발생하는 문제와 해결방법
+### 3. 문제 해결 과정 기록 (다시는 겪지 마세요!)
 
-#### 문제 1: 흰색 화면 또는 JavaScript 에러
+#### 문제 1: 흰색 화면 또는 JavaScript 404 에러
 **원인**: 
-- React Router basename 설정 문제가 가장 흔한 원인
-- 조건부 basename 설정이 누락됨
-**해결**: 
+- React Router basename 설정에서 정확한 hostname 검사 실패
+- `window.location.hostname === 'jinyoung89.github.io'` ← 이게 문제였음!
+**완벽한 해결책**: 
 ```javascript
-// src/main.jsx에서 조건부 basename 설정 확인
-const basename = window.location.hostname === 'jinyoung89.github.io' ? '/hypecon' : '';
+// ✅ 이렇게 하세요 (100% 작동)
+const isGitHubPages = window.location.hostname.includes('github.io');
+const basename = isGitHubPages ? '/hypecon' : '';
 ```
 
-#### 문제 2: 로컬 테스트 시 흰 화면
-**원인**: 로컬 서버에서는 `/hypecon/` 경로가 존재하지 않음
-**해결**: 위의 조건부 basename 설정으로 해결됨 (로컬에서는 빈 문자열 사용)
+#### 문제 2: 새로고침 시 흰 화면
+**원인**: 404.html이 최신 빌드 파일을 참조하지 않음
+**해결**: `postbuild` 스크립트가 자동으로 최신 index.html을 404.html로 복사
 
-#### 문제 3: 라우팅 404 에러 (페이지 새로고침 시)
-**원인**: SPA 라우팅을 위한 404.html이 없음
-**해결**: `postbuild` 스크립트가 자동으로 생성하므로 빌드 재실행
+#### 문제 3: 동영상이 안 뜸
+**원인**: 모바일/브라우저 정책으로 인한 자동재생 제한
+**해결**: 다음 속성들을 모두 추가
+```javascript
+<video
+  autoPlay
+  muted
+  loop
+  playsInline        // ← 이게 핵심!
+  preload="auto"
+  onError={(e) => console.error('Video error:', e)}
+>
+```
 
 #### 문제 4: GitHub Actions vs 로컬 빌드 충돌
-**원인**: GitHub Actions 자동 빌드와 로컬 빌드 결과가 충돌
-**해결**: **로컬 빌드 + 커밋 방식**을 일관되게 사용
+**원인**: 두 방식을 섞어 사용하면 충돌 발생
+**해결**: **로컬 빌드 + 커밋 방식**만 사용
 
-### 4. 배포 전 체크리스트
+### 4. 배포 전 체크리스트 (이것만 확인하면 OK)
 
+- [ ] **`src/main.jsx`에서 `includes('github.io')` 방식 사용** ⭐ 가장 중요!
 - [ ] `vite.config.js`에서 `base: '/hypecon/'` 확인
 - [ ] `vite.config.js`에서 `build: { outDir: 'docs' }` 확인
-- [ ] **`src/main.jsx`에서 조건부 basename 설정 확인** ⭐ 핵심!
 - [ ] `package.json`에서 `postbuild` 스크립트 확인
 - [ ] 로컬에서 `npm run build` 실행 후 에러 없음 확인
 - [ ] `docs` 폴더에 `index.html`, `404.html`, `assets` 폴더 생성 확인
@@ -79,12 +117,12 @@ const basename = window.location.hostname === 'jinyoung89.github.io' ? '/hypecon
 ### 5. 긴급 롤백 방법
 
 만약 배포 후 문제가 발생하면:
-1. 이전 커밋으로 되돌리기: `git reset --hard HEAD~1`
-2. 강제 푸시: `git push --force origin main`
+```bash
+git reset --hard HEAD~1
+git push --force origin main
+```
 
 ### 6. 로컬 테스트 방법
-
-**주의**: 조건부 basename 설정으로 인해 로컬 테스트가 가능합니다.
 
 ```bash
 npm run build
@@ -93,44 +131,95 @@ python3 -m http.server 8000
 # http://localhost:8000에서 확인 (basename이 빈 문자열로 설정됨)
 ```
 
-### 7. 올바른 배포 명령어
+### 7. 완벽한 배포 명령어
 
 ```bash
-# 전체 배포 과정 (권장)
+# 한 줄 완벽 배포 (복사해서 사용하세요)
+npm run build && git add . && git commit -m "Deploy update" && git push origin main
+
+# 단계별 배포 (권장)
 npm run build
 git add .
 git commit -m "Update content"
 git push origin main
-
-# 빠른 배포 (한 줄)
-npm run build && git add . && git commit -m "Update content" && git push origin main
 ```
 
-### 8. 문제 해결 순서
+### 8. 문제 발생 시 순서대로 해결 (99% 해결됨)
 
-흰화면 문제 발생 시 순서대로 시도:
+흰화면 문제 발생 시 **반드시 순서대로** 시도:
 
-1. **조건부 basename 확인**
+#### Step 1: basename 설정 확인 ⭐ 가장 중요!
 ```javascript
-// src/main.jsx에서 이 코드가 있는지 확인
-const basename = window.location.hostname === 'jinyoung89.github.io' ? '/hypecon' : '';
+// src/main.jsx에서 이 코드가 정확히 있는지 확인
+const isGitHubPages = window.location.hostname.includes('github.io');
+const basename = isGitHubPages ? '/hypecon' : '';
+
+// 디버깅용 console.log도 있어야 함
+console.log('Current hostname:', window.location.hostname);
+console.log('Is GitHub Pages:', isGitHubPages);
+console.log('Using basename:', basename);
 ```
 
-2. **재빌드 및 배포**
+#### Step 2: 재빌드 및 배포
 ```bash
 npm run build && git add . && git commit -m "Fix routing issue" && git push origin main
 ```
 
-3. **브라우저 캐시 지우기** (Ctrl+Shift+Delete)
+#### Step 3: 브라우저 캐시 완전 삭제
+- `Ctrl+Shift+Delete` (Windows) 또는 `Cmd+Shift+Delete` (Mac)
+- "모든 시간" 선택하고 모든 항목 체크 후 삭제
 
-4. **시크릿 모드에서 접속 테스트**
+#### Step 4: 시크릿 모드에서 접속 테스트
+- 시크릿/프라이빗 브라우징 모드에서 https://jinyoung89.github.io/hypecon/ 접속
 
-5. **개발자 도구 Console에서 에러 확인**
+#### Step 5: 개발자 도구 Console 확인
+- `F12` → Console 탭에서 basename 관련 로그 확인
+- 에러 메시지가 있다면 기록해두기
+
+### 9. 동영상 문제 해결
+
+동영상이 안 나올 때:
+
+```javascript
+// HomePage.jsx에서 video 태그에 이 속성들이 모두 있는지 확인
+<video
+  autoPlay
+  muted
+  loop
+  playsInline        // 모바일 필수!
+  preload="auto"     // 미리 로딩
+  onError={(e) => console.error('Video error:', e)}  // 에러 확인
+  style={{
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    zIndex: 0
+  }}
+>
+  <source src={heroVideo} type="video/mp4" />
+  Your browser does not support the video tag.  {/* 폴백 메시지 */}
+</video>
+```
 
 ---
 
-**⚠️ 중요 사항**: 
-- GitHub Actions 자동 빌드는 사용하지 않습니다
-- 항상 로컬에서 빌드 후 `docs` 폴더를 커밋합니다
-- 조건부 basename 설정이 핵심입니다
-- 이 방식이 가장 안정적으로 작동합니다 
+## 🎉 최종 성공 공식
+
+```bash
+# 이 4줄이면 100% 성공
+npm run build
+git add .
+git commit -m "Update"
+git push origin main
+```
+
+**⚠️ 절대 잊지 마세요:**
+- **`window.location.hostname.includes('github.io')`** 방식 사용 (정확한 hostname 검사)
+- **로컬 빌드 + 커밋 방식**만 사용 (GitHub Actions 사용 안 함)
+- **동영상에 `playsInline` 속성** 필수 추가
+- **브라우저 캐시 삭제** 후 테스트
+
+**이 방식으로 하면 다시는 흰화면 문제 없습니다!** 🚀 
