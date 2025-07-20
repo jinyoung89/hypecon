@@ -1,6 +1,6 @@
 import React from 'react';
 import heroImage from '../assets/images/waterbomb-hero.jpg';
-import heroVideo from '../assets/videos/hypecon.mp4';
+import heroVideo from '../assets/videos/video_1.mp4';
 import { FaInstagram, FaYoutube, FaFacebookF, FaTiktok } from 'react-icons/fa';
 
 function HomePage() {
