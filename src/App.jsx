@@ -28,6 +28,12 @@ import HomePage from './pages/HomePage';
 function App() {
   // 모바일 메뉴 상태
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  // 현재 경로에 따라 메뉴 활성화 상태 확인
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
 
   // 모바일 메뉴 오픈 시 스크롤 방지
   useEffect(() => {
@@ -44,7 +50,7 @@ function App() {
     <>
     <div className="min-h-screen">
         {/* 네비게이션 */}
-      <nav className="waterbomb-nav">
+      <nav className="waterbomb-nav" style={{position: 'relative', zIndex: 9999}}>
         {/* 상단: 네온 옐로우 헤더 */}
         <div style={{
           background: '#CFFF00',
@@ -82,14 +88,14 @@ function App() {
               
               {/* 중앙: 네비게이션 링크들 */}
               <div className="nav-menu-bar flex items-center justify-center" style={{gap:'2rem', flex: 1}}>
-                <Link to="/about" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color:'#CFFF00', padding:'0 0.2em'}}>ABOUT</Link>
-                <Link to="/exhibition" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color:'#fff', padding:'0 0.2em'}}>EXHIBITION</Link>
-                <Link to="/brand" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color:'#fff', padding:'0 0.2em'}}>BRAND</Link>
-                <Link to="/ticket" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color:'#fff', padding:'0 0.2em'}}>TICKET</Link>
-                <Link to="/buyer" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color:'#fff', padding:'0 0.2em'}}>BUYER</Link>
-                <Link to="/influencer" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color:'#fff', padding:'0 0.2em'}}>INFLUENCER</Link>
-                <Link to="/award" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color:'#fff', padding:'0 0.2em'}}>AWARD</Link>
-                <Link to="/contact" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color:'#fff', padding:'0 0.2em'}}>CONTACT</Link>
+                <Link to="/about" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/about') ? '#CFFF00' : '#fff', padding:'0 0.2em'}}>ABOUT</Link>
+                <Link to="/exhibition" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/exhibition') ? '#CFFF00' : '#fff', padding:'0 0.2em'}}>EXHIBITION</Link>
+                <Link to="/brand" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/brand') ? '#CFFF00' : '#fff', padding:'0 0.2em'}}>BRAND</Link>
+                <Link to="/ticket" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/ticket') ? '#CFFF00' : '#fff', padding:'0 0.2em'}}>TICKET</Link>
+                <Link to="/buyer" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/buyer') ? '#CFFF00' : '#fff', padding:'0 0.2em'}}>BUYER</Link>
+                <Link to="/influencer" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/influencer') ? '#CFFF00' : '#fff', padding:'0 0.2em'}}>INFLUENCER</Link>
+                <Link to="/award" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/award') ? '#CFFF00' : '#fff', padding:'0 0.2em'}}>AWARD</Link>
+                <Link to="/contact" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/contact') ? '#CFFF00' : '#fff', padding:'0 0.2em'}}>CONTACT</Link>
               </div>
               
               {/* 오른쪽: 빈 공간 (균형 맞추기) */}
@@ -110,17 +116,19 @@ function App() {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                zIndex: 1000,
-                borderTop: '2px solid #CFFF00'
+                zIndex: 10000,
+                borderTop: '2px solid #CFFF00',
+                maxHeight: '80vh',
+                overflowY: 'auto'
               }}>
-                <Link to="/about" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>About</Link>
-                <Link to="/exhibition" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>Exhibition</Link>
-                <Link to="/brand" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>Brand</Link>
-                <Link to="/ticket" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>Ticket</Link>
-                <Link to="/buyer" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>Buyer</Link>
-                <Link to="/influencer" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>Influencer</Link>
-                <Link to="/award" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>Award</Link>
-                <Link to="/contact" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1.13rem'}} onClick={()=>setIsMobileMenuOpen(false)}>Contact</Link>
+                <Link to="/about" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/about') ? '#CFFF00' : '#000'}} onClick={()=>setIsMobileMenuOpen(false)}>About</Link>
+                <Link to="/exhibition" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/exhibition') ? '#CFFF00' : '#000'}} onClick={()=>setIsMobileMenuOpen(false)}>Exhibition</Link>
+                <Link to="/brand" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/brand') ? '#CFFF00' : '#000'}} onClick={()=>setIsMobileMenuOpen(false)}>Brand</Link>
+                <Link to="/ticket" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/ticket') ? '#CFFF00' : '#000'}} onClick={()=>setIsMobileMenuOpen(false)}>Ticket</Link>
+                <Link to="/buyer" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/buyer') ? '#CFFF00' : '#000'}} onClick={()=>setIsMobileMenuOpen(false)}>Buyer</Link>
+                <Link to="/influencer" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/influencer') ? '#CFFF00' : '#000'}} onClick={()=>setIsMobileMenuOpen(false)}>Influencer</Link>
+                <Link to="/award" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/award') ? '#CFFF00' : '#000'}} onClick={()=>setIsMobileMenuOpen(false)}>Award</Link>
+                <Link to="/contact" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/contact') ? '#CFFF00' : '#000'}} onClick={()=>setIsMobileMenuOpen(false)}>Contact</Link>
               </div>
             )}
             

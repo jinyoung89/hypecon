@@ -3,9 +3,13 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import path from 'path'
 
+// 환경에 따른 base 설정
+const isGitHubPages = process.env.NODE_ENV === 'production' || process.env.GITHUB_PAGES === 'true';
+const base = isGitHubPages ? '/hypecon/' : '/';
+
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/hypecon/',
+  base: base,
   build: { 
     outDir: 'docs',
     assetsDir: 'assets',
