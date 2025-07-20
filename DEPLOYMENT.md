@@ -2,13 +2,32 @@
 
 ## ⚠️ 완벽한 해결책 - 더 이상 흰화면 문제 없음!
 
+### 0. GitHub Pages 설정 (가장 중요!) ⭐
+
+**반드시 먼저 확인하세요:**
+
+1. **GitHub 저장소** → **Settings** → **Pages**
+2. **Source**: "Deploy from a branch" 선택
+3. **Branch**: "main" 선택  
+4. **Folder**: "/docs" 선택 ← 이게 핵심!
+5. **Save** 버튼 클릭
+
+**❌ 잘못된 설정:**
+- Source: "GitHub Actions" ← 이거 안 됨!
+- Folder: "/ (root)" ← 이것도 안 됨!
+
+**✅ 올바른 설정:**
+- Source: "Deploy from a branch" 
+- Branch: "main"
+- Folder: "/docs" ← 반드시 이걸로!
+
 ### 1. 핵심 설정 파일들 (정확한 버전)
 
 #### `vite.config.js`
 ```javascript
 export default defineConfig({
   base: '/hypecon/',           // GitHub Pages 서브패스
-  build: { outDir: 'docs' },   // 빌드 결과물을 docs 폴더에 생성
+  build: { outDir: 'docs' },   // 빌드 결과물을 docs 폴더에 생성 ← 중요!
   // ... 기타 설정
 })
 ```
@@ -83,11 +102,18 @@ const isGitHubPages = window.location.hostname.includes('github.io');
 const basename = isGitHubPages ? '/hypecon' : '';
 ```
 
-#### 문제 2: 새로고침 시 흰 화면
+#### 문제 2: "File not found" 또는 GitHub Pages 404 페이지
+**원인**: GitHub Pages 설정이 잘못됨
+**해결**: 
+1. GitHub 저장소 → Settings → Pages
+2. Source: "Deploy from a branch" 
+3. Branch: "main", Folder: "/docs" ← 이게 핵심!
+
+#### 문제 3: 새로고침 시 흰 화면
 **원인**: 404.html이 최신 빌드 파일을 참조하지 않음
 **해결**: `postbuild` 스크립트가 자동으로 최신 index.html을 404.html로 복사
 
-#### 문제 3: 동영상이 안 뜸
+#### 문제 4: 동영상이 안 뜸
 **원인**: 모바일/브라우저 정책으로 인한 자동재생 제한
 **해결**: 다음 속성들을 모두 추가
 ```javascript
@@ -101,13 +127,14 @@ const basename = isGitHubPages ? '/hypecon' : '';
 >
 ```
 
-#### 문제 4: GitHub Actions vs 로컬 빌드 충돌
+#### 문제 5: GitHub Actions vs 로컬 빌드 충돌
 **원인**: 두 방식을 섞어 사용하면 충돌 발생
 **해결**: **로컬 빌드 + 커밋 방식**만 사용
 
 ### 4. 배포 전 체크리스트 (이것만 확인하면 OK)
 
-- [ ] **`src/main.jsx`에서 `includes('github.io')` 방식 사용** ⭐ 가장 중요!
+- [ ] **GitHub Pages 설정: Source "Deploy from a branch", Folder "/docs"** ⭐ 가장 중요!
+- [ ] **`src/main.jsx`에서 `includes('github.io')` 방식 사용** ⭐ 핵심!
 - [ ] `vite.config.js`에서 `base: '/hypecon/'` 확인
 - [ ] `vite.config.js`에서 `build: { outDir: 'docs' }` 확인
 - [ ] `package.json`에서 `postbuild` 스크립트 확인
@@ -146,9 +173,15 @@ git push origin main
 
 ### 8. 문제 발생 시 순서대로 해결 (99% 해결됨)
 
-흰화면 문제 발생 시 **반드시 순서대로** 시도:
+흰화면/404 문제 발생 시 **반드시 순서대로** 시도:
 
-#### Step 1: basename 설정 확인 ⭐ 가장 중요!
+#### Step 0: GitHub Pages 설정 확인 ⭐ 제일 먼저!
+1. GitHub 저장소 → Settings → Pages
+2. Source: "Deploy from a branch" 확인
+3. Branch: "main", Folder: "/docs" 확인
+4. 잘못되었다면 수정하고 Save
+
+#### Step 1: basename 설정 확인
 ```javascript
 // src/main.jsx에서 이 코드가 정확히 있는지 확인
 const isGitHubPages = window.location.hostname.includes('github.io');
@@ -172,7 +205,11 @@ npm run build && git add . && git commit -m "Fix routing issue" && git push orig
 #### Step 4: 시크릿 모드에서 접속 테스트
 - 시크릿/프라이빗 브라우징 모드에서 https://jinyoung89.github.io/hypecon/ 접속
 
-#### Step 5: 개발자 도구 Console 확인
+#### Step 5: 직접 파일 URL 확인
+- https://jinyoung89.github.io/hypecon/assets/index-[해시].js 직접 접속
+- 404가 나오면 GitHub Pages 설정 문제
+
+#### Step 6: 개발자 도구 Console 확인
 - `F12` → Console 탭에서 basename 관련 로그 확인
 - 에러 메시지가 있다면 기록해두기
 
@@ -217,9 +254,10 @@ git push origin main
 ```
 
 **⚠️ 절대 잊지 마세요:**
+- **GitHub Pages 설정: Source "Deploy from a branch", Folder "/docs"** (가장 중요!)
 - **`window.location.hostname.includes('github.io')`** 방식 사용 (정확한 hostname 검사)
 - **로컬 빌드 + 커밋 방식**만 사용 (GitHub Actions 사용 안 함)
 - **동영상에 `playsInline` 속성** 필수 추가
 - **브라우저 캐시 삭제** 후 테스트
 
-**이 방식으로 하면 다시는 흰화면 문제 없습니다!** 🚀 
+**이 방식으로 하면 다시는 흰화면/404 문제 없습니다!** 🚀 
