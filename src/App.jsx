@@ -24,6 +24,10 @@ import PartnersPage from './pages/PartnersPage';
 import AboutPage from './pages/AboutPage';
 import ExhibitionPage from './pages/ExhibitionPage';
 import HomePage from './pages/HomePage';
+import footerSnsFace from './assets/images/footer_sns_face.png';
+import footerSnsIns from './assets/images/footer_sns_ins.png';
+import footerSnsTic from './assets/images/footer_sns_tic.png';
+import footerSnsYoutube from './assets/images/footer_sns_youtube.png';
 
 function App() {
   // 모바일 메뉴 상태
@@ -48,9 +52,9 @@ function App() {
   // 로딩 애니메이션 등은 생략(라우팅 구조에 집중)
   return (
     <>
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{paddingTop: '72px'}}>
         {/* 네비게이션 */}
-      <nav className="waterbomb-nav" style={{position: 'relative', zIndex: 9999}}>
+      <nav className="waterbomb-nav" style={{position: 'fixed', top: 0, left: 0, right: 0, zIndex: 10000, width: '100%'}}>
         {/* 상단: 네온 옐로우 헤더 */}
         <div style={{
           background: '#CFFF00',
@@ -205,54 +209,54 @@ function Footer() {
           <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" style={{
             width: '50px',
             height: '50px',
-            background: '#CFFF00',
-            borderRadius: '50%',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             cursor: 'pointer',
-            transition: 'transform 0.3s'
+            transition: 'transform 0.3s',
+            background: 'transparent',
+            borderRadius: '50%'
           }} className="hover:scale-110">
-            <FaYoutube size={20} color="#FF0000" />
+            <img src={footerSnsYoutube} alt="YouTube" style={{width:'38px', height:'38px', objectFit:'contain'}} />
           </a>
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style={{
             width: '50px',
             height: '50px',
-            background: '#CFFF00',
-            borderRadius: '50%',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             cursor: 'pointer',
-            transition: 'transform 0.3s'
+            transition: 'transform 0.3s',
+            background: 'transparent',
+            borderRadius: '50%'
           }} className="hover:scale-110">
-            <FaFacebookF size={18} color="#1877F3" />
+            <img src={footerSnsFace} alt="Facebook" style={{width:'38px', height:'38px', objectFit:'contain'}} />
           </a>
           <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" style={{
             width: '50px',
             height: '50px',
-            background: '#CFFF00',
-            borderRadius: '50%',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             cursor: 'pointer',
-            transition: 'transform 0.3s'
+            transition: 'transform 0.3s',
+            background: 'transparent',
+            borderRadius: '50%'
           }} className="hover:scale-110">
-            <FaTiktok size={18} color="#000" />
+            <img src={footerSnsTic} alt="TikTok" style={{width:'38px', height:'38px', objectFit:'contain'}} />
           </a>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{
             width: '50px',
             height: '50px',
-            background: '#CFFF00',
-            borderRadius: '50%',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             cursor: 'pointer',
-            transition: 'transform 0.3s'
+            transition: 'transform 0.3s',
+            background: 'transparent',
+            borderRadius: '50%'
           }} className="hover:scale-110">
-            <FaInstagram size={20} color="#E1306C" />
+            <img src={footerSnsIns} alt="Instagram" style={{width:'38px', height:'38px', objectFit:'contain'}} />
           </a>
         </div>
         

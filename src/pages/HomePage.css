@@ -1,0 +1,403 @@
+/* HomePage 반응형 및 공통 스타일 */
+
+.home-hero-section {
+  height: 100vh;
+  background: linear-gradient(135deg, var(--hypecon-main) 0%, var(--hypecon-point-mint) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.home-hero-video {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.home-hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 1;
+}
+.home-hero-text {
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  position: relative;
+  padding: 0 1rem;
+}
+.home-hero-date {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  line-height: 0.9;
+}
+.home-hero-title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  line-height: 0.8;
+}
+.home-hero-subtitle {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  line-height: 0.9;
+}
+.home-hero-desc {
+  font-size: clamp(0.9rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.home-section-block {
+  padding: clamp(2rem, 5vw, 4rem) 0;
+  background: #F0F0F0;
+}
+.home-block-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: center;
+}
+.home-block-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 900;
+  color: #000;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.home-block-desc {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+.home-block-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.home-btn-main {
+  background: #CFFF00;
+  color: #000;
+  border: none;
+  padding: clamp(1rem, 3vw, 1.2rem) clamp(1.5rem, 4vw, 2.5rem);
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  cursor: pointer;
+  transition: transform 0.3s;
+  min-height: 48px;
+}
+.home-btn-black {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: clamp(1rem, 3vw, 1.2rem) clamp(1.5rem, 4vw, 2.5rem);
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  cursor: pointer;
+  transition: transform 0.3s;
+  min-height: 48px;
+}
+.home-block-img {
+  border-radius: 12px;
+  height: clamp(250px, 50vw, 400px);
+  cursor: pointer;
+  transition: transform 0.3s;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+}
+.home-block-img-el {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 공통 hover 효과 */
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+/* 모바일 최적화 */
+@media (max-width: 768px) {
+  .home-block-grid {
+    grid-template-columns: 1fr !important;
+  }
+  button {
+    min-height: 48px !important;
+  }
+  h1, h2, h3, p {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-hero-title {
+    font-size: clamp(2.2rem, 10vw, 3.2rem) !important;
+  }
+  .home-section-block {
+    padding: 1.2rem 0.5rem !important;
+  }
+  .home-block-img {
+    height: 180px !important;
+  }
+  .home-block-title {
+    font-size: 1.2rem !important;
+  }
+  .home-block-desc {
+    font-size: 0.95rem !important;
+  }
+} 
+
+/* THAT'S WHERE HYPECON BEGINS 섹션 */
+.home-begins-section {
+  padding: clamp(3rem, 6vw, 6rem) 0;
+  background: #fff;
+  color: #000;
+  position: relative;
+  overflow: hidden;
+}
+.home-begins-container {
+  position: relative;
+  z-index: 2;
+}
+.home-begins-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(2rem, 4vw, 3rem);
+  align-items: center;
+}
+.home-begins-left {
+  max-width: 600px;
+}
+.home-begins-desc {
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  font-weight: 700;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  color: #000;
+  line-height: 1.5;
+}
+.home-begins-title {
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  font-weight: 700;
+  margin-top: clamp(3rem, 6vw, 6rem);
+  margin-bottom: clamp(3rem, 6vw, 6rem);
+  line-height: 0.8;
+  color: #000;
+  letter-spacing: -0.05em;
+  transform: scaleY(1.5);
+}
+.home-begins-highlight {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  line-height: 1.5;
+  color: #000;
+  font-weight: 700;
+}
+.home-begins-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.home-begins-img-block {
+  border-radius: 12px;
+  height: clamp(180px, 40vw, 270px);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+  display: flex;
+  align-items: stretch;
+}
+.home-begins-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home-begins-img-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(1rem, 3vw, 2rem);
+  text-align: center;
+}
+.home-begins-img-title {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s;
+}
+.home-begins-img-underline {
+  width: clamp(40px, 8vw, 60px);
+  height: 2px;
+  background: #fff;
+  margin-bottom: 0.5rem;
+  transition: background 0.3s;
+}
+.home-begins-img-date {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  color: #fff;
+  transition: color 0.3s;
+}
+.image-overlay:hover .home-begins-img-title {
+  color: #CFFF00 !important;
+}
+.image-overlay:hover .home-begins-img-underline {
+  background: #CFFF00 !important;
+}
+
+/* 인플루언서/바이어/프레스 섹션 */
+.home-influencer-section {
+  padding: clamp(4rem, 12vw, 13rem) 0;
+  position: relative;
+  overflow: hidden;
+  background-size: cover !important;
+  background-position: center !important;
+}
+.home-influencer-container {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.home-influencer-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* 공지/NOTICE 뷰 */
+.notice-section {
+  background: var(--hypecon-main);
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+.notice-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  max-width: 900px;
+  width: 100%;
+  gap: 2.5rem;
+  background: var(--hypecon-main);
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  padding: 2.2rem 1.5rem;
+}
+.notice-img-col {
+  flex: 0 0 420px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  height: 100%;
+}
+.notice-img-col img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  object-fit: cover;
+  height: 100%;
+}
+.notice-text-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1.5rem;
+  height: 100%;
+}
+.notice-text-col ul {
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 1.5rem;
+  padding-left: 1.2em;
+  list-style: disc;
+}
+.notice-text-col li {
+  border-bottom: 1px solid #000;
+  padding: 0.5em 0;
+  font-weight: 700;
+}
+.notice-text-col li:last-child {
+  border-bottom: none;
+}
+.notice-text-col a {
+  display: inline-block;
+  background: #000;
+  color: var(--hypecon-main);
+  font-weight: 900;
+  font-size: 1.15rem;
+  border-radius: 30px;
+  padding: 0.9rem 2.5rem;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 0.5rem;
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+
+/* 반응형 */
+@media (max-width: 900px) {
+  .home-begins-section {
+    padding: 2rem 0.5rem !important;
+  }
+  .home-begins-title {
+    font-size: 2.2rem !important;
+  }
+  .home-begins-img-block {
+    height: 150px !important;
+  }
+}
+@media (max-width: 768px) {
+  .home-begins-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .notice-inner {
+    flex-direction: column !important;
+    gap: 1.2rem !important;
+    padding: 1.2rem 0.5rem !important;
+    border-radius: 10px !important;
+  }
+  .notice-img-col {
+    max-width: 100% !important;
+    margin-bottom: 1.2rem !important;
+    height: auto !important;
+  }
+  .notice-text-col {
+    padding: 0 0.5rem !important;
+  }
+  .home-influencer-section {
+    padding: 2rem 0.5rem !important;
+  }
+}
+@media (max-width: 600px) {
+  .home-begins-title {
+    font-size: 1.3rem !important;
+    transform: scaleY(1.1) !important;
+  }
+  .home-begins-img-block {
+    height: 90px !important;
+  }
+  .home-influencer-btns {
+    gap: 0.7rem !important;
+  }
+} 

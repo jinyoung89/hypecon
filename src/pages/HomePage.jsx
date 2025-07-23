@@ -2,6 +2,12 @@ import React from 'react';
 import heroImage from '../assets/images/waterbomb-hero.jpg';
 import heroVideo from '../assets/videos/video_1.mp4';
 import { FaInstagram, FaYoutube, FaFacebookF, FaTiktok } from 'react-icons/fa';
+import sec2Img from '../assets/images/sec2_img.png';
+import sec3Img from '../assets/images/sec3_img.png';
+import sec3Img2 from '../assets/images/sec3_img_2.png';
+import sec5Img from '../assets/images/sec5_img.png';
+import sec4Img from '../assets/images/sec4_img.png';
+import './HomePage.css';
 
 function HomePage() {
   // 카드 클릭 핸들러
@@ -12,17 +18,7 @@ function HomePage() {
   return (
     <>
       {/* 메인 히어로 섹션 */}
-      <section style={{
-        height: '100vh',
-        background: 'linear-gradient(135deg, #CFFF00 0%, #8DD7BF 100%)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        position: 'relative',
-        overflow: 'hidden',
-        margin: 0,
-        padding: 0
-      }}>
+      <section className="home-hero-section">
         {/* 배경 비디오 */}
         <video
           autoPlay
@@ -30,15 +26,7 @@ function HomePage() {
           loop
           playsInline
           preload="auto"
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            zIndex: 0
-          }}
+          className="home-hero-video"
           onError={(e) => console.error('Video error:', e)}
         >
           <source src={heroVideo} type="video/mp4" />
@@ -46,276 +34,105 @@ function HomePage() {
         </video>
         
         {/* 오버레이 */}
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: 'rgba(0,0,0,0.3)',
-          zIndex: 1
-        }}></div>
+        <div className="home-hero-overlay"></div>
         
         {/* 텍스트 오버레이 */}
-        <div style={{textAlign: 'center', color: '#fff', zIndex: 2, position: 'relative', padding: '0 1rem'}}>
-          <div style={{fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', fontWeight: '700', marginBottom: '0.8rem', lineHeight: '0.9'}}>SEOUL 2026</div>
-          <div style={{fontSize: 'clamp(3rem, 8vw, 6rem)', fontWeight: '900', marginBottom: '0.5rem', textShadow: '0 4px 20px rgba(0,0,0,0.5)', lineHeight: '0.8'}}>
-            HYPECON
-          </div>
-          <div style={{fontSize: 'clamp(2rem, 5vw, 4rem)', fontWeight: '700', marginBottom: '0.8rem', textShadow: '0 4px 20px rgba(0,0,0,0.5)', lineHeight: '0.9'}}>
-            STYLE WEEK
-          </div>
-          <div style={{fontSize: 'clamp(0.9rem, 2.5vw, 1.5rem)', fontWeight: '600', lineHeight: '1.2'}}>2026. 2.19 ~ 22 @ COEX HALL C</div>
+        <div className="home-hero-text">
+          <div className="home-hero-date">SEOUL 2026</div>
+          <div className="home-hero-title">HYPECON</div>
+          <div className="home-hero-subtitle">STYLE WEEK</div>
+          <div className="home-hero-desc">2026. 2.19 ~ 22 @ COEX HALL C</div>
         </div>
       </section>
 
       {/* 중간 콘텐츠 블록 */}
-      <section style={{padding: 'clamp(2rem, 5vw, 4rem) 0', background: '#F0F0F0'}}>
-        <div className="container mx-auto px-4" style={{
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-          gap: 'clamp(2rem, 4vw, 3rem)', 
-          alignItems: 'center'
-        }}>
+      <section className="home-section-block">
+        <div className="container home-block-grid">
           {/* 왼쪽 섹션 */}
           <div>
-            <h2 style={{
-              fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', 
-              fontWeight: '900', 
-              color: '#000', 
-              marginBottom: '1rem',
-              lineHeight: '1.2'
-            }}>
+            <h2 className="home-block-title">
               BEYOND ONLINE, EXPERIENCE STYLE
             </h2>
-            <p style={{
-              fontSize: 'clamp(1rem, 2.5vw, 1.1rem)', 
-              color: '#666', 
-              lineHeight: '1.6', 
-              marginBottom: '2rem'
-            }}>
+            <p className="home-block-desc">
               Z세대와 브랜드가 감각을 공유하고<br />
               반응으로 세계를 여는 스타일 패션·뷰티 페어
             </p>
-            <div style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
-              <button onClick={handleCardClick} style={{
-                background: '#CFFF00',
-                color: '#000',
-                border: 'none',
-                padding: 'clamp(1rem, 3vw, 1.2rem) clamp(1.5rem, 4vw, 2.5rem)',
-                borderRadius: '50px',
-                fontWeight: '700',
-                fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
-                cursor: 'pointer',
-                transition: 'transform 0.3s',
-                minHeight: '48px'
-              }} className="hover:scale-105">
+            <div className="home-block-btns">
+              <button onClick={handleCardClick} className="home-btn-main hover:scale-105">
                 입장권 티켓 오픈 알림 신청
               </button>
-              <button onClick={handleCardClick} style={{
-                background: '#000',
-                color: '#fff',
-                border: 'none',
-                padding: 'clamp(1rem, 3vw, 1.2rem) clamp(1.5rem, 4vw, 2.5rem)',
-                borderRadius: '50px',
-                fontWeight: '700',
-                fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
-                cursor: 'pointer',
-                transition: 'transform 0.3s',
-                minHeight: '48px'
-              }} className="hover:scale-105">
+              <button onClick={handleCardClick} className="home-btn-black hover:scale-105">
                 뉴스레터 등록
               </button>
             </div>
           </div>
           
           {/* 오른쪽 섹션 - 이미지 */}
-          <div style={{
-            borderRadius: '12px',
-            height: 'clamp(250px, 50vw, 400px)',
-            cursor: 'pointer',
-            transition: 'transform 0.3s',
-            overflow: 'hidden'
-          }} className="hover:scale-105">
+          <div className="home-block-img hover:scale-105">
             <img 
-              src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&h=400&fit=crop" 
+              src={sec2Img}
               alt="HYPECON Event"
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover'
-              }}
+              className="home-block-img-el"
             />
           </div>
         </div>
       </section>
 
       {/* "THAT'S WHERE HYPECON BEGINS" 섹션 */}
-      <section style={{
-        padding: 'clamp(3rem, 6vw, 6rem) 0',
-        background: '#fff',
-        color: '#000',
-        position: 'relative',
-        overflow: 'hidden'
-      }}>
-        <div className="container mx-auto px-4" style={{position: 'relative', zIndex: 2}}>
-          <div style={{
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-            gap: 'clamp(2rem, 4vw, 3rem)', 
-            alignItems: 'center'
-          }}>
+      <section className="home-begins-section">
+        <div className="container home-begins-container">
+          <div className="home-begins-grid">
             {/* 왼쪽 텍스트 섹션 */}
-            <div style={{maxWidth: '600px'}}>
-              <div style={{
-                fontSize: 'clamp(1.1rem, 3vw, 1.4rem)', 
-                fontWeight: '700', 
-                marginBottom: 'clamp(2rem, 4vw, 3rem)', 
-                color: '#000', 
-                lineHeight: '1.5'
-              }}>
+            <div className="home-begins-left">
+              <div className="home-begins-desc">
                 THE MOMENT WHEN BRANDS<br />
                 AND FANDOMS CONNECT DIRECTLY.
               </div>
-              <h2 style={{
-                fontSize: 'clamp(2.5rem, 8vw, 5.5rem)', 
-                fontWeight: '700', 
-                marginTop: 'clamp(3rem, 6vw, 6rem)', 
-                marginBottom: 'clamp(3rem, 6vw, 6rem)', 
-                lineHeight: '0.8', 
-                color: '#000', 
-                letterSpacing: '-0.05em', 
-                transform: 'scaleY(1.6)'
-              }}>
+              <h2 className="home-begins-title">
                 THAT'S<br />
                 WHERE<br />
                 HYPECON<br />
                 BEGINS.
               </h2>
-              <p style={{
-                fontSize: 'clamp(1.1rem, 3vw, 1.5rem)', 
-                lineHeight: '1.5', 
-                color: '#000', 
-                fontWeight: '700'
-              }}>
+              <p className="home-begins-highlight">
                 브랜드와 팬덤이 연결되는 순간,<br />
                 그 시작이 HYPECON입니다.
               </p>
             </div>
             
             {/* 오른쪽 이미지 블록들 */}
-            <div style={{display: 'flex', flexDirection: 'column', gap: '1.5rem'}}>
+            <div className="home-begins-right">
               {/* 상단 이미지 블록 */}
-              <div style={{
-                borderRadius: '12px',
-                height: 'clamp(180px, 40vw, 270px)',
-                position: 'relative',
-                overflow: 'hidden',
-                cursor: 'pointer',
-                transition: 'transform 0.3s'
-              }} className="hover:scale-105">
+              <div className="home-begins-img-block hover:scale-105">
                 <img 
-                  src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=180&fit=crop" 
+                  src={sec3Img}
                   alt="EARLY TICKET OPEN"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover'
-                  }}
+                  className="home-begins-img"
                 />
-                <div style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  background: 'rgba(0,0,0,0.4)',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  padding: 'clamp(1rem, 3vw, 2rem)',
-                  textAlign: 'center'
-                }} className="image-overlay">
-                  <div style={{
-                    fontSize: 'clamp(1.1rem, 3vw, 1.5rem)', 
-                    fontWeight: '700', 
-                    color: '#fff', 
-                    marginBottom: '0.5rem', 
-                    transition: 'color 0.3s'
-                  }} className="overlay-text">
+                <div className="image-overlay home-begins-img-overlay">
+                  <div className="overlay-text home-begins-img-title">
                     EARLY TICKET OPEN
                   </div>
-                  <div style={{
-                    width: 'clamp(40px, 8vw, 60px)', 
-                    height: '2px', 
-                    background: '#fff', 
-                    marginBottom: '0.5rem', 
-                    transition: 'background 0.3s'
-                  }} className="overlay-underline"></div>
-                  <div style={{
-                    fontSize: 'clamp(0.8rem, 2vw, 1rem)', 
-                    color: '#fff', 
-                    transition: 'color 0.3s'
-                  }} className="overlay-text">
+                  <div className="overlay-underline home-begins-img-underline"></div>
+                  <div className="overlay-text home-begins-img-date">
                     2025. 10. 15.
                   </div>
                 </div>
               </div>
               
               {/* 하단 이미지 블록 */}
-              <div style={{
-                borderRadius: '12px',
-                height: 'clamp(180px, 40vw, 270px)',
-                position: 'relative',
-                overflow: 'hidden',
-                cursor: 'pointer',
-                transition: 'transform 0.3s'
-              }} className="hover:scale-105">
+              <div className="home-begins-img-block hover:scale-105">
                 <img 
-                  src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=180&fit=crop" 
+                  src={sec3Img2}
                   alt="얼리 참가신청"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover'
-                  }}
+                  className="home-begins-img"
                 />
-                <div style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  background: 'rgba(0,0,0,0.4)',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  padding: 'clamp(1rem, 3vw, 2rem)',
-                  textAlign: 'center'
-                }} className="image-overlay">
-                  <div style={{
-                    fontSize: 'clamp(1.1rem, 3vw, 1.5rem)', 
-                    fontWeight: '700', 
-                    color: '#fff', 
-                    marginBottom: '0.5rem', 
-                    transition: 'color 0.3s'
-                  }} className="overlay-text">
+                <div className="image-overlay home-begins-img-overlay">
+                  <div className="overlay-text home-begins-img-title">
                     얼리 참가신청 OPEN
                   </div>
-                  <div style={{
-                    width: 'clamp(40px, 8vw, 60px)', 
-                    height: '2px', 
-                    background: '#fff', 
-                    marginBottom: '0.5rem', 
-                    transition: 'background 0.3s'
-                  }} className="overlay-underline"></div>
-                  <div style={{
-                    fontSize: 'clamp(0.8rem, 2vw, 1rem)', 
-                    color: '#fff', 
-                    transition: 'color 0.3s'
-                  }} className="overlay-text">
+                  <div className="overlay-underline home-begins-img-underline"></div>
+                  <div className="overlay-text home-begins-img-date">
                     부스 소진 시 마감
                   </div>
                 </div>
@@ -326,59 +143,92 @@ function HomePage() {
       </section>
 
       {/* 인플루언서/바이어/프레스 섹션 */}
-      <section style={{
-        padding: 'clamp(2rem, 5vw, 4rem) 0',
-        background: 'linear-gradient(135deg, #CFFF00 0%, #8DD7BF 100%)',
-        position: 'relative',
-        overflow: 'hidden'
-      }}>
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.046 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z\' fill=\'rgba(0,0,0,0.1)\'/%3E%3C/svg%3E")',
-          animation: 'pattern-move 20s linear infinite'
-        }}></div>
-        <div className="container mx-auto px-4" style={{textAlign: 'center', position: 'relative', zIndex: 2}}>
-          <div style={{
-            display: 'flex', 
-            flexDirection: 'column', 
-            gap: '1.5rem', 
-            maxWidth: '400px', 
-            margin: '0 auto'
-          }}>
-            <button onClick={handleCardClick} style={{
-              background: '#000',
-              color: '#fff',
-              border: 'none',
-              padding: 'clamp(1.2rem, 3vw, 1.5rem) clamp(1.5rem, 4vw, 2rem)',
-              borderRadius: '50px',
-              fontWeight: '700',
-              fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
-              cursor: 'pointer',
-              transition: 'transform 0.3s',
-              minHeight: '48px'
-            }} className="hover:scale-105">
+      <section className="home-influencer-section" style={{background: `url(${sec4Img}) center/cover no-repeat`}}>
+        <div className="container home-influencer-container">
+          <div className="home-influencer-btns">
+            <button onClick={handleCardClick} className="home-btn-black hover:scale-105">
               INFLUENCER 등록
             </button>
-            <button onClick={handleCardClick} style={{
-              background: '#CFFF00',
-              color: '#000',
-              border: 'none',
-              padding: 'clamp(1.2rem, 3vw, 1.5rem) clamp(1.5rem, 4vw, 2rem)',
-              borderRadius: '50px',
-              fontWeight: '700',
-              fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
-              cursor: 'pointer',
-              transition: 'transform 0.3s',
-              minHeight: '48px'
-            }} className="hover:scale-105">
+            <button onClick={handleCardClick} className="home-btn-main hover:scale-105">
               BUYER/PRESS 등록
             </button>
           </div>
         </div>
+      </section>
+
+      {/* 공지/NOTICE 뷰 */}
+      <section className="notice-section" style={{
+        background: 'var(--hypecon-main)',
+        padding: '3rem 0',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'stretch',
+      }}>
+        <div className="notice-inner" style={{
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'stretch',
+          maxWidth: '900px',
+          width: '100%',
+          gap: '2.5rem',
+          background: 'var(--hypecon-main)',
+          borderRadius: '18px',
+          boxShadow: '0 2px 16px rgba(0,0,0,0.04)',
+          padding: '2.2rem 1.5rem',
+        }}>
+          {/* 왼쪽 이미지 */}
+          <div className="notice-img-col" style={{flex: '0 0 420px', display: 'flex', alignItems: 'stretch', justifyContent: 'center', height: '100%'}}>
+            <img src={sec5Img} alt="Notice" style={{width: '100%', maxWidth: '420px', borderRadius: '12px', objectFit: 'cover', height: '100%'}} />
+          </div>
+          {/* 오른쪽 텍스트/버튼 */}
+          <div className="notice-text-col" style={{flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '0 1.5rem', height: '100%'}}>
+            <div style={{fontWeight: '900', fontSize: '2rem', lineHeight: '1.1', marginBottom: '0.2rem'}}>HYPECON</div>
+            <div style={{fontWeight: '700', fontSize: '1.3rem', lineHeight: '1.1', marginBottom: '0.2rem'}}>STYLE WEEK</div>
+            <div style={{fontWeight: '700', fontSize: '1.1rem', lineHeight: '1.1', marginBottom: '1.2rem'}}>SEOUL 2026</div>
+            <ul style={{fontSize: '1rem', color: '#222', marginBottom: '1.5rem', paddingLeft: '1.2em', listStyle: 'disc'}}>
+              <li style={{borderBottom: '1px solid #000', padding: '0.5em 0', fontWeight: 700}}>얼리버스 안내</li>
+              <li style={{borderBottom: '1px solid #000', padding: '0.5em 0', fontWeight: 700}}>바이어 전용 라운지 이용안내</li>
+              <li style={{borderBottom: '1px solid #000', padding: '0.5em 0', fontWeight: 700}}><b>COEX 3F C HALL</b> 평면도</li>
+              <li style={{padding: '0.5em 0', fontWeight: 700}}>글로벌 바이어 매칭 프로그램 안내</li>
+            </ul>
+            <a href="/notice" style={{
+              display: 'inline-block',
+              background: '#000',
+              color: 'var(--hypecon-main)',
+              fontWeight: '900',
+              fontSize: '1.15rem',
+              borderRadius: '30px',
+              padding: '0.9rem 2.5rem',
+              textDecoration: 'none',
+              textAlign: 'center',
+              marginTop: '0.5rem',
+              letterSpacing: '0.03em',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
+              transition: 'background 0.2s, color 0.2s'
+            }}>NOTICE &nbsp; &gt;</a>
+          </div>
+        </div>
+        <style>{`
+          @media (max-width: 600px) {
+            .notice-section {
+              padding: 1.2rem 0 !important;
+            }
+            .notice-inner {
+              flex-direction: column !important;
+              gap: 1.2rem !important;
+              padding: 1.2rem 0.5rem !important;
+              border-radius: 10px !important;
+            }
+            .notice-img-col {
+              max-width: 100% !important;
+              margin-bottom: 1.2rem !important;
+              height: auto !important;
+            }
+            .notice-text-col {
+              padding: 0 0.5rem !important;
+            }
+          }
+        `}</style>
       </section>
 
       {/* 애니메이션 CSS */}

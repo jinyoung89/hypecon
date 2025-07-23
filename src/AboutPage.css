@@ -1,0 +1,434 @@
+/* AboutPage 반응형 및 공통 스타일 */
+
+.about-section {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.about-section-intro {
+  min-height: 120vh;
+  background: var(--hypecon-dark);
+  color: var(--hypecon-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5rem;
+  text-align: center;
+  padding-top: 100px;
+}
+.about-title-main {
+  font-weight: 900;
+  font-size: clamp(1.3rem, 5vw, 2.7rem);
+  color: var(--hypecon-main);
+  margin-bottom: 1.1rem;
+  line-height: 1.25;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  word-break: keep-all;
+  white-space: normal;
+  hyphens: auto;
+}
+.about-title-strong {
+  font-weight: 700;
+  font-size: clamp(1.1rem, 4vw, 1.7rem);
+  color: var(--hypecon-main);
+}
+.about-intro-desc {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: clamp(1rem, 2.5vw, 1.13rem);
+  color: var(--hypecon-white);
+  font-weight: 400;
+  line-height: 1.8;
+  margin-top: 3.5rem;
+  margin-bottom: 2.2rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  word-break: keep-all;
+  white-space: normal;
+  hyphens: auto;
+}
+.about-intro-highlight {
+  font-weight: 700;
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  color: var(--hypecon-main);
+  margin-top: 1.5rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.about-section-why {
+  min-height: 850px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5rem;
+  text-align: center;
+  position: relative;
+}
+.about-why-title {
+  font-weight: 600;
+  font-size: clamp(2.5rem, 10vw, 7rem);
+  color: var(--hypecon-main);
+  margin-bottom: 2.2rem;
+  margin-top: 4.5rem;
+  line-height: 0.8;
+  letter-spacing: 0.06em;
+  word-spacing: 0.05em;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  font-family: 'Bebas Neue', 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  transform: scaleY(1.4);
+  word-break: keep-all;
+  white-space: normal;
+  hyphens: auto;
+}
+.about-why-desc {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: var(--hypecon-white);
+  font-weight: 500;
+  line-height: 0;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  word-break: keep-all;
+  white-space: normal;
+  hyphens: auto;
+}
+.about-why-highlight {
+  display: block;
+  font-size: clamp(1.1rem, 4vw, 1.5rem);
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1.1rem;
+  line-height: 1.3;
+}
+
+.about-section-experience {
+  background: #fff;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4.5rem 1.5rem 3.5rem 1.5rem;
+  text-align: center;
+}
+.about-experience-badge {
+  display: inline-block;
+  border: 2px solid #111;
+  border-radius: 2rem;
+  padding: 0.7rem 2.2rem;
+  font-weight: 700;
+  font-size: clamp(1rem, 3vw, 1.35rem);
+  background: #fff;
+  margin-bottom: 1.7rem;
+}
+.about-experience-badge span {
+  font-weight: 900;
+}
+.about-experience-title {
+  font-weight: 900;
+  font-size: clamp(1.2rem, 5vw, 2.1rem);
+  margin-bottom: 1.1rem;
+  color: #111;
+  word-break: keep-all;
+  white-space: normal;
+  hyphens: auto;
+}
+.about-experience-desc {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  color: #222;
+  font-weight: 400;
+  line-height: 1.7;
+  margin-bottom: 2.7rem;
+  word-break: keep-all;
+  white-space: normal;
+  hyphens: auto;
+}
+.about-experience-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+  margin-top: 1.5rem;
+}
+.about-card {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  font-weight: 700;
+  font-size: 1.08rem;
+  padding: 1.1rem 0.7rem;
+  line-height: 1.25;
+  text-align: center;
+  border: none;
+  white-space: pre-line;
+  margin: 0 0.2rem 0.7rem 0.2rem;
+}
+.about-card-dark {
+  background: var(--hypecon-dark);
+  color: var(--hypecon-white);
+}
+.about-card-main {
+  background: var(--hypecon-main);
+  color: var(--hypecon-dark);
+}
+.about-card-title {
+  font-weight: 900;
+  font-size: clamp(0.85rem, 3vw, 1.08rem);
+  margin-bottom: 0.3rem;
+  line-height: 1.2;
+  color: inherit;
+}
+.about-card-main .about-card-title {
+  color: var(--hypecon-dark);
+}
+.about-card-dark .about-card-title {
+  color: var(--hypecon-main);
+}
+.about-card-desc {
+  font-weight: 500;
+  font-size: clamp(0.7rem, 2vw, 0.85rem);
+  line-height: 1.3;
+  color: inherit;
+}
+
+.about-2col-section {
+  width: 100%;
+  background: #f7f7f7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 3.5rem 2.5rem;
+  gap: 0.1rem;
+}
+.about-2col-text {
+  flex: 1;
+  min-width: 340px;
+  max-width: 450px;
+  flex-basis: 420px;
+  flex-shrink: 0;
+  text-align: left;
+  padding: 0 2.5rem;
+}
+.about-dopamine-title {
+  font-weight: 400;
+  font-size: clamp(1.1rem, 4vw, 2rem);
+  color: #111;
+  margin-bottom: 0.2rem;
+  line-height: 1.4;
+  word-break: keep-all;
+  white-space: normal;
+  hyphens: auto;
+}
+.about-dopamine-strong {
+  font-weight: 900;
+  font-size: clamp(1.3rem, 6vw, 2.8rem);
+  color: #111;
+  line-height: 1;
+  word-break: keep-all;
+  white-space: normal;
+  hyphens: auto;
+}
+.about-2col-img {
+  flex: 1.2;
+  min-width: 260px;
+  max-width: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-2col-img img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.about-list-section {
+  background: #f7f7f7;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 0;
+}
+.about-list-wrap {
+  width: 100%;
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+.about-list-row {
+  position: relative;
+  width: 100%;
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  border-bottom: 1.5px solid #ddd;
+}
+.about-list-row:last-child {
+  border-bottom: none;
+}
+.about-list-title {
+  width: 220px;
+  min-width: 180px;
+  flex-shrink: 0;
+  font-weight: 900;
+  font-size: 1.33rem;
+  color: var(--hypecon-dark);
+  line-height: 1.3;
+  margin-right: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+}
+.about-list-title span {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  color: var(--hypecon-dark);
+}
+.about-list-desc {
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: 1.05rem;
+  color: var(--hypecon-gray, #222);
+  font-weight: 400;
+  margin-left: 0;
+  text-align: left;
+  line-height: 1.7;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  hyphens: auto;
+}
+
+.about-global-section {
+  width: 100%;
+  background: var(--hypecon-main);
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3.5rem 1.5rem 3.5rem 1.5rem;
+  text-align: center;
+}
+.about-global-desc {
+  font-weight: 400;
+  font-size: clamp(1.1rem, 4vw, 1.3rem);
+  margin-bottom: 1.7rem;
+  line-height: 1.7;
+  word-break: keep-all;
+  white-space: normal;
+  hyphens: auto;
+}
+.about-global-highlight {
+  font-weight: 700;
+  font-size: clamp(1.1rem, 4vw, 1.3rem);
+  margin-bottom: 1.7rem;
+  line-height: 1.7;
+  word-break: keep-all;
+  white-space: normal;
+  hyphens: auto;
+}
+.about-global-strong {
+  font-weight: 900;
+  font-size: clamp(1.3rem, 7vw, 3rem);
+  margin-top: 1.7rem;
+  line-height: 1.3;
+  word-break: keep-all;
+  white-space: normal;
+  hyphens: auto;
+}
+
+@media (max-width: 900px) {
+  .about-section-why {
+    min-height: 500px;
+  }
+  .about-2col-section {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    padding: 2.2rem 0.7rem !important;
+  }
+  .about-2col-img {
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+  }
+  .about-2col-text {
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 0 0.5rem !important;
+    text-align: center !important;
+  }
+}
+@media (max-width: 600px) {
+  .about-title-main {
+    font-size: clamp(1.1rem, 7vw, 1.7rem) !important;
+  }
+  .about-title-strong {
+    font-size: clamp(1rem, 6vw, 1.2rem) !important;
+  }
+  .about-section-padding {
+    padding: 1.2rem 0.5rem !important;
+  }
+  .about-card {
+    width: 120px !important;
+    height: 120px !important;
+    font-size: 0.9rem !important;
+    padding: 0.7rem 0.2rem !important;
+    margin: 0 0.2rem 1rem 0.2rem;
+  }
+  .about-experience-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .about-card-title {
+    font-size: 0.82rem !important;
+  }
+  .about-card-desc {
+    font-size: 0.68rem !important;
+  }
+  .about-list-title {
+    width: 110px !important;
+    font-size: 0.95rem !important;
+  }
+  .about-list-desc {
+    font-size: 0.92rem !important;
+    margin-left: 0.5rem !important;
+  }
+  .about-global-section {
+    font-size: 1.05rem !important;
+    padding: 1.5rem 0.5rem !important;
+  }
+}
+@media (min-width: 769px) {
+  .about-section-intro {
+    padding-top: 72px;
+  }
+  .about-list-desc {
+    min-width: 360px;
+  }
+  .about-list-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .about-dopamine-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+} 

@@ -1,12 +1,12 @@
 /* HYPECON - 워터밤 완전 복제 스타일 */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;700;900&family=Bebas+Neue&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
 :root {
   /* HYPECON 공식 팔레트 */
-  --hypecon-main: #CFFF00;
-  --hypecon-point-green: #CFFF00;
+  --hypecon-main: #e1f800;
+  --hypecon-point-green: #e1f800;
   --hypecon-point-mint: #8DD7BF;
   --hypecon-cyan: #00A5E3;
   --hypecon-vivid-red: #FF5768;
@@ -24,7 +24,7 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', 'Noto Sans KR', 'Bebas Neue', sans-serif;
   background-color: var(--hypecon-main);
   color: var(--hypecon-dark);
   overflow-x: hidden;
@@ -32,9 +32,10 @@ body {
   padding: 0;
 }
 
-/* 워터밤 스타일 타이포그래피 */
+
+/* 기본 타이틀(영문 우선, 한글은 Noto Sans KR) */
 .waterbomb-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
   font-weight: 900;
   font-size: clamp(3rem, 8vw, 8rem);
   line-height: 0.9;
@@ -47,8 +48,9 @@ body {
     0 0 60px rgba(0, 255, 0, 0.2);
 }
 
+/* 서브타이틀(영문 우선, 한글은 Noto Sans KR) */
 .waterbomb-subtitle {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
   font-weight: 600;
   font-size: clamp(1rem, 3vw, 1.5rem);
   color: var(--hypecon-white);
@@ -56,8 +58,9 @@ body {
   letter-spacing: 0.1em;
 }
 
+/* 연도 강조(영문 우선, 한글은 Noto Sans KR) */
 .waterbomb-year {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
   font-weight: 900;
   font-size: clamp(8rem, 20vw, 20rem);
   line-height: 0.8;
@@ -69,8 +72,9 @@ body {
   opacity: 0.9;
 }
 
+/* 섹션 타이틀(강조: Bebas Neue, 그 외 Montserrat/Noto Sans KR) */
 .waterbomb-section-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Bebas Neue', 'Montserrat', 'Noto Sans KR', sans-serif;
   font-weight: 800;
   font-size: clamp(2rem, 5vw, 4rem);
   text-transform: uppercase;
@@ -80,8 +84,9 @@ body {
     0 0 30px rgba(0, 255, 0, 0.4);
 }
 
+/* 본문(한글 우선, 영문은 Montserrat) */
 .waterbomb-body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Noto Sans KR', 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
   line-height: 1.6;
@@ -274,13 +279,14 @@ body {
 
 /* 워터밤 네비게이션 */
 .waterbomb-nav {
-  position: static;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  width: 100%;
   background: var(--hypecon-main);
   backdrop-filter: blur(10px);
-  z-index: 1000;
+  z-index: 10000;
   padding: 0;
   margin: 0;
   border: none;
