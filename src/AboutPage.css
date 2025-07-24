@@ -302,7 +302,7 @@
   flex: 1 1 0;
   min-width: 0;
   font-size: 1.05rem;
-  color: var(--hypecon-gray, #222);
+  color: var(--hypecon-dark);
   font-weight: 400;
   margin-left: 0;
   text-align: left;
