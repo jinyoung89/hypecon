@@ -1,0 +1,745 @@
+/* ExhibitionPage 반응형 및 공통 스타일 */
+
+.exhibition-page-root {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  color: #111;
+  box-sizing: border-box;
+}
+
+.exhibition-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 320px;
+  height: 38vw;
+  max-height: 420px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.exhibition-hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.38);
+  z-index: 1;
+}
+.exhibition-hero-text {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.exhibition-hero-title {
+  color: var(--hypecon-main);
+  font-size: clamp(1.3rem, 3vw, 2.6rem);
+  font-weight: 900;
+  line-height: 1.22;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.22);
+  letter-spacing: -1px;
+  padding: 0 1.5rem;
+  word-break: keep-all;
+}
+
+.exhibition-info-section {
+  background: var(--hypecon-gray);
+  padding: 3.5rem 0 3.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.exhibition-zone-section {
+  background: var(--hypecon-white);
+  padding: 3.5rem 0 3.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.exhibition-info-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2.5rem;
+  max-width: 980px;
+  width: 100%;
+  padding: 0 1.5rem;
+}
+.exhibition-info-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  border: 2px solid #222;
+  border-radius: 2rem;
+  padding: 0.7rem 2.2rem;
+  background: #fff;
+  color: #222;
+  width: 140px;
+  min-width: 140px;
+  text-align: center;
+  align-self: flex-start;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  white-space: nowrap;
+  margin: 0 2.5rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.exhibition-info-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 1.08rem;
+  color: #222;
+  font-weight: 400;
+  line-height: 1.7;
+  min-width: 0;
+}
+.exhibition-info-row,
+.exhibition-zone-row {
+  display: flex;
+  align-items: flex-start;
+  font-size: 1.13rem;
+  line-height: 1.7;
+  margin-bottom: 0.2rem;
+  color: #111;
+}
+.exhibition-info-row b,
+.exhibition-zone-row b {
+  font-weight: 900;
+  font-size: 1.13rem;
+  color: #111;
+  letter-spacing: 0.01em;
+  display: inline-block;
+  white-space: nowrap;
+}
+.exhibition-info-row b::after,
+.exhibition-zone-row b::after {
+  content: ':';
+  font-weight: 400;
+  margin-right: 0.3em;
+}
+
+.exhibition-zone-table {
+  margin-top: 0.2rem;
+}
+
+/* 존 구성 섹션만 흰색 배경 */
+.exhibition-zone-section {
+  background: var(--hypecon-white) !important;
+}
+
+/* PROGRAMS HIGHLIGHT 섹션 */
+.exhibition-programs-section {
+  background: var(--hypecon-dark);
+  color: var(--hypecon-main);
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+}
+.exhibition-programs-inner {
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 2rem;
+  text-align: center;
+}
+.exhibition-programs-title {
+  font-size: clamp(3.5rem, 10vw, 6.5rem);
+  font-weight: 900;
+  color: var(--hypecon-main);
+  text-align: center;
+  margin-bottom: 3rem;
+  font-family: 'Bebas Neue', 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.exhibition-programs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+}
+.exhibition-programs-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(225, 248, 0, 0.2);
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+.exhibition-programs-item:last-child {
+  border-bottom: none;
+}
+.exhibition-programs-icon {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.exhibition-programs-icon img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+.exhibition-programs-content {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+}
+.exhibition-programs-date {
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+  font-weight: 900;
+  color: var(--hypecon-main);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  font-family: 'Bebas Neue', 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.exhibition-programs-subtitle {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  font-weight: 700;
+  color: var(--hypecon-white);
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+}
+.exhibition-programs-desc {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* HYPECON EXPERIENCE 섹션 */
+.exhibition-experience-section {
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+}
+.exhibition-experience-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+.exhibition-experience-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  width: 100%;
+  padding: 0 2rem;
+  text-align: center;
+  color: var(--hypecon-white);
+}
+.exhibition-experience-title {
+  font-size: clamp(3.5rem, 10vw, 6.5rem);
+  font-weight: 900;
+  color: var(--hypecon-main);
+  margin-bottom: 2rem;
+  font-family: 'Bebas Neue', 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.exhibition-experience-subtitle {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  font-weight: 400;
+  color: var(--hypecon-white);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+.exhibition-experience-subtitle .highlight {
+  color: var(--hypecon-main);
+  font-weight: 700;
+}
+.exhibition-experience-desc {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  font-weight: 600;
+  color: var(--hypecon-white);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+.exhibition-experience-button {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid var(--hypecon-white);
+  border-radius: 50px;
+  padding: 1rem 2.5rem;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  font-weight: 600;
+  color: var(--hypecon-white);
+  margin-bottom: 3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.exhibition-experience-button:hover {
+  background: var(--hypecon-white);
+  color: var(--hypecon-dark);
+}
+.exhibition-experience-zones {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.experience-zone {
+  background: var(--hypecon-main);
+  color: var(--hypecon-dark);
+  border-radius: 16px;
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+.zone-title {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-weight: 900;
+  color: var(--hypecon-dark);
+  margin-bottom: 0;
+  line-height: 1.2;
+  font-family: 'Bebas Neue', 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  min-width: 180px;
+  text-align: left;
+}
+.zone-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem 2rem;
+  flex: 1;
+  align-items: start;
+}
+.zone-list li {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  font-weight: 600;
+  color: var(--hypecon-dark);
+  padding: 0;
+  border-bottom: none;
+  white-space: normal;
+  text-align: left;
+}
+.zone-list li:last-child {
+  border-bottom: none;
+}
+.zone-list li::before {
+  content: '·';
+  margin-right: 0.5rem;
+  font-weight: 900;
+}
+.exhibition-experience-highlight {
+  text-align: center;
+}
+.highlight-title {
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  font-weight: 900;
+  color: var(--hypecon-main);
+  margin-bottom: 2rem;
+  line-height: 1.3;
+}
+.highlight-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+  align-items: center;
+}
+.highlight-item {
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  color: var(--hypecon-white);
+  line-height: 1.6;
+  text-align: center;
+  max-width: 600px;
+}
+.highlight-label {
+  color: var(--hypecon-main);
+  font-weight: 700;
+}
+
+/* HYPECON B2B 바이어 프로그램 섹션 */
+.exhibition-b2b-section {
+  background: var(--hypecon-white);
+  color: var(--hypecon-dark);
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+}
+.exhibition-b2b-inner {
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 2rem;
+}
+.exhibition-b2b-title {
+  display: inline-block;
+  background: var(--hypecon-dark);
+  color: var(--hypecon-white);
+  border-radius: 50px;
+  padding: 1rem 2.5rem;
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: fit-content;
+}
+.exhibition-b2b-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.b2b-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  padding: 2rem 0;
+}
+.b2b-item:last-child {
+  border-bottom: none;
+}
+.b2b-item-title {
+  flex-shrink: 0;
+  min-width: 200px;
+  font-size: clamp(1.2rem, 4vw, 1.4rem);
+  font-weight: 700;
+  color: var(--hypecon-dark);
+  line-height: 1.3;
+  text-align: left;
+}
+.b2b-item-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.b2b-item-desc {
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+  color: var(--hypecon-dark);
+  line-height: 1.6;
+  position: relative;
+  padding-left: 1rem;
+}
+.b2b-item-desc::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  font-weight: 900;
+  color: var(--hypecon-dark);
+}
+
+/* WHY JOIN 섹션 */
+.exhibition-why-join-section {
+  background: var(--hypecon-main);
+  color: var(--hypecon-dark);
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+.exhibition-why-join-inner {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.why-join-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.why-join-title {
+  font-size: clamp(5rem, 15vw, 10rem);
+  font-weight: 900;
+  color: var(--hypecon-dark);
+  line-height: 0.8;
+  text-align: left;
+  font-family: 'Bebas Neue', 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.why-join-image {
+  flex: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -2rem;
+}
+.why-join-image img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* FOR 섹션들 */
+.exhibition-for-section {
+  background: var(--hypecon-main);
+  color: var(--hypecon-dark);
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+}
+.exhibition-for-inner {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 2rem;
+}
+.for-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem 1rem;
+}
+.for-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+.for-item-full {
+  grid-column: 1 / -1;
+}
+.for-title {
+  background: var(--hypecon-dark);
+  color: var(--hypecon-main);
+  border-radius: 50px;
+  padding: 1rem 7rem;
+  font-size: clamp(1.3rem, 4vw, 1.6rem);
+  font-weight: 700;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.for-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+}
+.for-item-full .for-content {
+  max-width: 900px;
+}
+.for-content p {
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+  color: var(--hypecon-dark);
+  line-height: 1.6;
+  margin: 0;
+}
+.for-highlight {
+  font-weight: 700;
+  font-size: clamp(1rem, 2.8vw, 1.15rem) !important;
+  color: var(--hypecon-dark) !important;
+}
+
+@media (max-width: 900px) {
+  .exhibition-hero-section {
+    min-height: 180px;
+    height: 38vw;
+    max-height: 220px;
+  }
+  .exhibition-hero-title {
+    font-size: clamp(1.1rem, 5vw, 1.5rem);
+    padding: 0 0.7rem;
+  }
+  .exhibition-info-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 0 0.7rem;
+  }
+  .exhibition-info-title {
+    margin-right: 0;
+    margin-bottom: 1.2rem;
+    align-self: center;
+  }
+  .exhibition-info-table {
+    font-size: 0.98rem;
+  }
+  .exhibition-zone-row {
+    font-size: 0.98rem;
+    line-height: 1.5;
+  }
+  .exhibition-zone-row b {
+    font-size: 0.98rem;
+  }
+  .exhibition-programs-section {
+    padding: 3rem 0;
+  }
+  .exhibition-programs-inner {
+    padding: 0 1rem;
+  }
+  .exhibition-programs-title {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+    margin-bottom: 2rem;
+  }
+  .exhibition-programs-list {
+    gap: 2rem;
+  }
+  .exhibition-programs-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+  .exhibition-programs-icon {
+    width: 70px;
+    height: 70px;
+    margin-top: 0;
+  }
+  .exhibition-programs-icon img {
+    width: 70px;
+    height: 70px;
+  }
+  .exhibition-programs-content {
+    text-align: center;
+  }
+  .exhibition-experience-section {
+    min-height: auto;
+    background-attachment: scroll;
+    padding: 3rem 0;
+  }
+  .exhibition-experience-inner {
+    padding: 0 1rem;
+  }
+  .exhibition-experience-zones {
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+  .experience-zone {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+  }
+  .zone-title {
+    min-width: auto;
+    text-align: center;
+  }
+  .zone-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem 1rem;
+    text-align: left;
+  }
+  .zone-list li {
+    white-space: normal;
+  }
+  .highlight-content {
+    text-align: center;
+  }
+  .exhibition-b2b-section {
+    padding: 3rem 0;
+  }
+  .exhibition-b2b-inner {
+    padding: 0 1rem;
+  }
+  .exhibition-b2b-title {
+    margin-bottom: 2rem;
+    padding: 0.8rem 2rem;
+  }
+  .exhibition-b2b-list {
+    gap: 2rem;
+  }
+  .b2b-item {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 0;
+    text-align: center;
+  }
+  .b2b-item-title {
+    min-width: auto;
+    text-align: center;
+  }
+  .b2b-item-content {
+    text-align: left;
+  }
+  .exhibition-why-join-section {
+    min-height: auto;
+    padding: 3rem 0;
+  }
+  .exhibition-why-join-inner {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  .why-join-content {
+    text-align: center;
+  }
+  .why-join-title {
+    text-align: center;
+  }
+  .why-join-image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .why-join-image img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+  .exhibition-for-section {
+    padding: 3rem 0;
+  }
+  .exhibition-for-inner {
+    padding: 0 1rem;
+  }
+  .for-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .for-item-full {
+    grid-column: 1;
+  }
+  .for-content {
+    max-width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .exhibition-info-title {
+    font-size: 1.05rem;
+    padding: 0.5rem 1.2rem;
+    min-width: 100px;
+  }
+} 

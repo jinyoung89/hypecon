@@ -81,14 +81,8 @@ function App() {
           <div className="container mx-auto px-4" style={{position:'relative'}}>
             {/* 햄버거 메뉴 + 네비게이션 링크 */}
             <div className="flex items-center justify-between">
-              {/* 왼쪽: 햄버거 메뉴 */}
-              <div className="nav-hamburger-wrap" style={{display:'flex', width: '100px'}}>
-                <div onClick={()=>setIsMobileMenuOpen(v=>!v)} style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', cursor:'pointer'}}>
-                  <div style={{width:'22px', height:'3px', background:'#fff', borderRadius:'2px', margin:'2px 0'}}></div>
-                  <div style={{width:'22px', height:'3px', background:'#fff', borderRadius:'2px', margin:'2px 0'}}></div>
-                  <div style={{width:'22px', height:'3px', background:'#fff', borderRadius:'2px', margin:'2px 0'}}></div>
-                </div>
-              </div>
+              {/* 왼쪽: 빈 공간 (균형 맞추기) */}
+              <div style={{width: '100px'}}></div>
               
               {/* 중앙: 네비게이션 링크들 */}
               <div className="nav-menu-bar flex items-center justify-center" style={{gap:'2rem', flex: 1}}>
@@ -102,8 +96,14 @@ function App() {
                 <Link to="/contact" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/contact') ? '#CFFF00' : '#fff', padding:'0 0.2em'}}>CONTACT</Link>
               </div>
               
-              {/* 오른쪽: 빈 공간 (균형 맞추기) */}
-              <div style={{width: '100px'}}></div>
+              {/* 오른쪽: 햄버거 메뉴 */}
+              <div className="nav-hamburger-wrap" style={{display:'flex', width: '100px', justifyContent: 'flex-end'}}>
+                <div onClick={()=>setIsMobileMenuOpen(v=>!v)} style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', cursor:'pointer'}}>
+                  <div style={{width:'22px', height:'3px', background:'#fff', borderRadius:'2px', margin:'2px 0'}}></div>
+                  <div style={{width:'22px', height:'3px', background:'#fff', borderRadius:'2px', margin:'2px 0'}}></div>
+                  <div style={{width:'22px', height:'3px', background:'#fff', borderRadius:'2px', margin:'2px 0'}}></div>
+                </div>
+              </div>
             </div>
             
             {/* 모바일 메뉴 드롭다운 */}
@@ -144,7 +144,7 @@ function App() {
               }
               @media (min-width: 769px) {
                 .nav-menu-bar { display: flex !important; }
-                .nav-hamburger-wrap { display: flex !important; }
+                .nav-hamburger-wrap { display: none !important; }
               }
             `}</style>
           </div>
