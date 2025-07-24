@@ -353,8 +353,45 @@
 }
 
 @media (max-width: 900px) {
+  .about-section-intro {
+    min-height: 70vh !important;
+    padding-top: 70px !important;
+  }
   .about-section-why {
     min-height: 500px;
+  }
+  .about-list-section {
+    padding: 2rem 0 !important;
+  }
+  .about-list-wrap {
+    padding: 0 1rem !important;
+  }
+  .about-list-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.8rem !important;
+    padding: 1.2rem 0 !important;
+    text-align: left !important;
+  }
+  .about-list-title {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+    font-size: 1.1rem !important;
+    font-weight: 900 !important;
+    color: var(--hypecon-dark) !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+  }
+  .about-list-desc {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    text-align: left !important;
   }
   .about-2col-section {
     flex-direction: column !important;
@@ -379,20 +416,29 @@
     overflow: visible !important;
     text-overflow: unset !important;
   }
-  .about-list-title {
-    white-space: normal !important;
-    overflow: visible !important;
-    text-overflow: unset !important;
-    width: 110px !important;
-    font-size: 0.95rem !important;
-  }
-  .about-list-desc {
-    min-width: 0 !important;
-    font-size: 0.92rem !important;
-    margin-left: 0.5rem !important;
-  }
 }
 @media (max-width: 600px) {
+  .about-section-intro {
+    min-height: 60vh !important;
+    padding-top: 60px !important;
+  }
+  .about-list-section {
+    padding: 1.5rem 0 !important;
+  }
+  .about-list-wrap {
+    padding: 0 0.8rem !important;
+  }
+  .about-list-row {
+    padding: 1rem 0 !important;
+    gap: 0.6rem !important;
+  }
+  .about-list-title {
+    font-size: 1rem !important;
+  }
+  .about-list-desc {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
   .about-title-main {
     font-size: clamp(1.1rem, 7vw, 1.7rem) !important;
   }
@@ -419,14 +465,6 @@
   }
   .about-card-desc {
     font-size: 0.68rem !important;
-  }
-  .about-list-title {
-    width: 110px !important;
-    font-size: 0.95rem !important;
-  }
-  .about-list-desc {
-    font-size: 0.92rem !important;
-    margin-left: 0.5rem !important;
   }
   .about-global-section {
     font-size: 1.05rem !important;

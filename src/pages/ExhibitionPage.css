@@ -332,8 +332,8 @@
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.8rem 2rem;
+  grid-template-columns: 1fr !important;
+  gap: 0.6rem 1rem;
   flex: 1;
   align-items: start;
 }
@@ -589,16 +589,47 @@
     margin-right: 0;
     margin-bottom: 1.2rem;
     align-self: center;
+    width: auto !important;
+    min-width: auto !important;
+    padding: 0.6rem 1.8rem !important;
+    font-size: 1.1rem !important;
   }
   .exhibition-info-table {
-    font-size: 0.98rem;
+    font-size: 0.9rem !important;
+    text-align: left !important;
+    width: 100% !important;
+  }
+  .exhibition-info-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.3rem !important;
+    margin-bottom: 1rem !important;
+    padding: 0.5rem 0 !important;
+  }
+  .exhibition-info-row b {
+    font-size: 0.95rem !important;
+    font-weight: 800 !important;
+    margin-bottom: 0.2rem !important;
+    color: var(--hypecon-dark) !important;
+  }
+  .exhibition-info-row {
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
   }
   .exhibition-zone-row {
-    font-size: 0.98rem;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.3rem !important;
+    margin-bottom: 1rem !important;
+    padding: 0.5rem 0 !important;
+    font-size: 0.9rem !important;
     line-height: 1.5;
   }
   .exhibition-zone-row b {
-    font-size: 0.98rem;
+    font-size: 0.95rem !important;
+    font-weight: 800 !important;
+    margin-bottom: 0.2rem !important;
+    color: var(--hypecon-dark) !important;
   }
   .exhibition-programs-section {
     padding: 3rem 0;
@@ -656,7 +687,7 @@
     text-align: center;
   }
   .zone-list {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr !important;
     gap: 0.6rem 1rem;
     text-align: left;
   }
@@ -684,13 +715,28 @@
     gap: 1rem;
     padding: 1.5rem 0;
     text-align: center;
+    border-bottom: 1px solid #ddd !important;
+  }
+  .b2b-item:last-child {
+    border-bottom: none !important;
   }
   .b2b-item-title {
     min-width: auto;
-    text-align: center;
+    text-align: center !important;
+    font-size: 1.1rem !important;
+    padding: 0.8rem 1rem !important;
+    background: var(--hypecon-gray) !important;
+    border-radius: 12px !important;
+    margin-bottom: 0.5rem !important;
   }
   .b2b-item-content {
-    text-align: left;
+    text-align: left !important;
+    padding: 0 0.5rem !important;
+  }
+  .b2b-item-desc {
+    font-size: 0.95rem !important;
+    margin-bottom: 0.6rem !important;
+    padding-left: 0.8rem !important;
   }
   .exhibition-why-join-section {
     min-height: auto;
@@ -735,11 +781,75 @@
   .for-content {
     max-width: 100%;
   }
+  .for-title {
+    width: auto !important;
+    max-width: 90vw;
+    padding: 0.8rem 2rem !important;
+    font-size: clamp(1rem, 4vw, 1.2rem) !important;
+  }
+  .for-content p {
+    font-size: clamp(0.9rem, 2.2vw, 1rem) !important;
+  }
 }
 @media (max-width: 600px) {
   .exhibition-info-title {
     font-size: 1.05rem;
     padding: 0.5rem 1.2rem;
     min-width: 100px;
+  }
+  .exhibition-info-section,
+  .exhibition-zone-section {
+    padding: 2.5rem 0 !important;
+  }
+  .exhibition-info-inner {
+    padding: 0 0.5rem !important;
+    gap: 1rem !important;
+  }
+  .exhibition-info-table {
+    font-size: 0.85rem !important;
+  }
+  .exhibition-info-row,
+  .exhibition-zone-row {
+    margin-bottom: 0.9rem !important;
+    padding: 0.4rem 0 !important;
+  }
+  .exhibition-info-row b,
+  .exhibition-zone-row b {
+    font-size: 0.9rem !important;
+    font-weight: 800 !important;
+    color: var(--hypecon-dark) !important;
+  }
+  .exhibition-b2b-inner {
+    padding: 0 0.8rem !important;
+  }
+  .b2b-item-title {
+    font-size: 1rem !important;
+    padding: 0.7rem 0.8rem !important;
+  }
+  .b2b-item-desc {
+    font-size: 0.9rem !important;
+    padding-left: 0.6rem !important;
+  }
+  .exhibition-programs-title {
+    font-size: clamp(1.8rem, 7vw, 2rem) !important;
+  }
+  .exhibition-experience-title {
+    font-size: clamp(2.5rem, 8vw, 3rem) !important;
+  }
+  .why-join-title {
+    font-size: clamp(3rem, 12vw, 4rem) !important;
+  }
+  .for-title {
+    padding: 0.7rem 1.5rem !important;
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem) !important;
+  }
+  .for-content p {
+    font-size: clamp(0.85rem, 2vw, 0.95rem) !important;
+  }
+  .exhibition-experience-zones {
+    gap: 1.5rem;
+  }
+  .experience-zone {
+    padding: 1.2rem 0.8rem;
   }
 } 
