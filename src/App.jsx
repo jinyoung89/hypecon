@@ -24,10 +24,10 @@ import PartnersPage from './pages/PartnersPage';
 import AboutPage from './pages/AboutPage';
 import ExhibitionPage from './pages/ExhibitionPage';
 import HomePage from './pages/HomePage';
-import footerSnsFace from './assets/images/footer_sns_face.png';
-import footerSnsIns from './assets/images/footer_sns_ins.png';
-import footerSnsTic from './assets/images/footer_sns_tic.png';
-import footerSnsYoutube from './assets/images/footer_sns_youtube.png';
+import youtubeIcon from './assets/icons/youtube-icon.svg';
+import facebookIcon from './assets/icons/facebook-icon.svg';
+import tiktokIcon from './assets/icons/tiktok-icon.svg';
+import instagramIcon from './assets/icons/instagram-icon.svg';
 
 function App() {
   // 모바일 메뉴 상태
@@ -57,7 +57,7 @@ function App() {
       <nav className="waterbomb-nav" style={{position: 'fixed', top: 0, left: 0, right: 0, zIndex: 10000, width: '100%'}}>
         {/* 상단: 네온 옐로우 헤더 */}
         <div style={{
-          background: '#CFFF00',
+          background: 'var(--hypecon-main)',
           padding: '0.3rem 0',
           margin: 0
         }}>
@@ -65,8 +65,8 @@ function App() {
             {/* 중앙: 로고 */}
             <Link to="/" style={{textDecoration: 'none'}}>
               <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                <div style={{fontWeight: '900', fontSize: '1.7rem', color: '#000', lineHeight: '1'}}>HYPECON</div>
-                <div style={{fontWeight: '500', fontSize: '1.35rem', color: '#000', lineHeight: '1'}}>STYLE WEEK</div>
+                <div style={{fontWeight: '900', fontSize: '1.7rem', color: 'var(--hypecon-dark)', lineHeight: '1'}}>HYPECON</div>
+                <div style={{fontWeight: '500', fontSize: '1.35rem', color: 'var(--hypecon-dark)', lineHeight: '1'}}>STYLE WEEK</div>
               </div>
             </Link>
           </div>
@@ -74,7 +74,7 @@ function App() {
         
         {/* 하단: 검은색 네비게이션 바 */}
         <div style={{
-          background: '#000',
+          background: 'var(--hypecon-dark)',
           padding: '0.3rem 0',
           margin: 0
         }}>
@@ -86,22 +86,22 @@ function App() {
               
               {/* 중앙: 네비게이션 링크들 */}
               <div className="nav-menu-bar flex items-center justify-center" style={{gap:'2rem', flex: 1}}>
-                <Link to="/about" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/about') ? '#CFFF00' : '#fff', padding:'0 0.2em'}}>ABOUT</Link>
-                <Link to="/exhibition" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/exhibition') ? '#CFFF00' : '#fff', padding:'0 0.2em'}}>EXHIBITION</Link>
-                <Link to="/brand" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/brand') ? '#CFFF00' : '#fff', padding:'0 0.2em'}}>BRAND</Link>
-                <Link to="/ticket" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/ticket') ? '#CFFF00' : '#fff', padding:'0 0.2em'}}>TICKET</Link>
-                <Link to="/buyer" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/buyer') ? '#CFFF00' : '#fff', padding:'0 0.2em'}}>BUYER</Link>
-                <Link to="/influencer" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/influencer') ? '#CFFF00' : '#fff', padding:'0 0.2em'}}>INFLUENCER</Link>
-                <Link to="/award" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/award') ? '#CFFF00' : '#fff', padding:'0 0.2em'}}>AWARD</Link>
-                <Link to="/contact" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/contact') ? '#CFFF00' : '#fff', padding:'0 0.2em'}}>CONTACT</Link>
+                <Link to="/about" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/about') ? 'var(--hypecon-main)' : 'var(--hypecon-white)', padding:'0 0.2em'}}>ABOUT</Link>
+                <Link to="/exhibition" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/exhibition') ? 'var(--hypecon-main)' : 'var(--hypecon-white)', padding:'0 0.2em'}}>EXHIBITION</Link>
+                <Link to="/brand" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/brand') ? 'var(--hypecon-main)' : 'var(--hypecon-white)', padding:'0 0.2em'}}>BRAND</Link>
+                <Link to="/ticket" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/ticket') ? 'var(--hypecon-main)' : 'var(--hypecon-white)', padding:'0 0.2em'}}>TICKET</Link>
+                <Link to="/buyer" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/buyer') ? 'var(--hypecon-main)' : 'var(--hypecon-white)', padding:'0 0.2em'}}>BUYER</Link>
+                <Link to="/influencer" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/influencer') ? 'var(--hypecon-main)' : 'var(--hypecon-white)', padding:'0 0.2em'}}>INFLUENCER</Link>
+                <Link to="/award" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/award') ? 'var(--hypecon-main)' : 'var(--hypecon-white)', padding:'0 0.2em'}}>AWARD</Link>
+                <Link to="/contact" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/contact') ? 'var(--hypecon-main)' : 'var(--hypecon-white)', padding:'0 0.2em'}}>CONTACT</Link>
               </div>
               
               {/* 오른쪽: 햄버거 메뉴 */}
               <div className="nav-hamburger-wrap" style={{display:'flex', width: '100px', justifyContent: 'flex-end'}}>
                 <div onClick={()=>setIsMobileMenuOpen(v=>!v)} style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', cursor:'pointer'}}>
-                  <div style={{width:'22px', height:'3px', background:'#fff', borderRadius:'2px', margin:'2px 0'}}></div>
-                  <div style={{width:'22px', height:'3px', background:'#fff', borderRadius:'2px', margin:'2px 0'}}></div>
-                  <div style={{width:'22px', height:'3px', background:'#fff', borderRadius:'2px', margin:'2px 0'}}></div>
+                  <div style={{width:'22px', height:'3px', background:'var(--hypecon-white)', borderRadius:'2px', margin:'2px 0'}}></div>
+                  <div style={{width:'22px', height:'3px', background:'var(--hypecon-white)', borderRadius:'2px', margin:'2px 0'}}></div>
+                  <div style={{width:'22px', height:'3px', background:'var(--hypecon-white)', borderRadius:'2px', margin:'2px 0'}}></div>
                 </div>
               </div>
             </div>
@@ -113,7 +113,7 @@ function App() {
                 top: '100%',
                 left: 0,
                 right: 0,
-                background: '#fff',
+                background: 'var(--hypecon-white)',
                 borderRadius: '0 0 18px 18px',
                 boxShadow: '0 8px 32px rgba(0,0,0,0.13)',
                 padding: '1.5rem 1.2rem',
@@ -121,18 +121,18 @@ function App() {
                 flexDirection: 'column',
                 alignItems: 'center',
                 zIndex: 10000,
-                borderTop: '2px solid #CFFF00',
+                borderTop: '2px solid var(--hypecon-main)',
                 maxHeight: '80vh',
                 overflowY: 'auto'
               }}>
-                <Link to="/about" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/about') ? '#CFFF00' : '#000'}} onClick={()=>setIsMobileMenuOpen(false)}>About</Link>
-                <Link to="/exhibition" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/exhibition') ? '#CFFF00' : '#000'}} onClick={()=>setIsMobileMenuOpen(false)}>Exhibition</Link>
-                <Link to="/brand" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/brand') ? '#CFFF00' : '#000'}} onClick={()=>setIsMobileMenuOpen(false)}>Brand</Link>
-                <Link to="/ticket" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/ticket') ? '#CFFF00' : '#000'}} onClick={()=>setIsMobileMenuOpen(false)}>Ticket</Link>
-                <Link to="/buyer" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/buyer') ? '#CFFF00' : '#000'}} onClick={()=>setIsMobileMenuOpen(false)}>Buyer</Link>
-                <Link to="/influencer" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/influencer') ? '#CFFF00' : '#000'}} onClick={()=>setIsMobileMenuOpen(false)}>Influencer</Link>
-                <Link to="/award" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/award') ? '#CFFF00' : '#000'}} onClick={()=>setIsMobileMenuOpen(false)}>Award</Link>
-                <Link to="/contact" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/contact') ? '#CFFF00' : '#000'}} onClick={()=>setIsMobileMenuOpen(false)}>Contact</Link>
+                <Link to="/about" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/about') ? 'var(--hypecon-main)' : 'var(--hypecon-dark)'}} onClick={()=>setIsMobileMenuOpen(false)}>About</Link>
+                <Link to="/exhibition" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/exhibition') ? 'var(--hypecon-main)' : 'var(--hypecon-dark)'}} onClick={()=>setIsMobileMenuOpen(false)}>Exhibition</Link>
+                <Link to="/brand" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/brand') ? 'var(--hypecon-main)' : 'var(--hypecon-dark)'}} onClick={()=>setIsMobileMenuOpen(false)}>Brand</Link>
+                <Link to="/ticket" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/ticket') ? 'var(--hypecon-main)' : 'var(--hypecon-dark)'}} onClick={()=>setIsMobileMenuOpen(false)}>Ticket</Link>
+                <Link to="/buyer" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/buyer') ? 'var(--hypecon-main)' : 'var(--hypecon-dark)'}} onClick={()=>setIsMobileMenuOpen(false)}>Buyer</Link>
+                <Link to="/influencer" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/influencer') ? 'var(--hypecon-main)' : 'var(--hypecon-dark)'}} onClick={()=>setIsMobileMenuOpen(false)}>Influencer</Link>
+                <Link to="/award" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/award') ? 'var(--hypecon-main)' : 'var(--hypecon-dark)'}} onClick={()=>setIsMobileMenuOpen(false)}>Award</Link>
+                <Link to="/contact" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/contact') ? 'var(--hypecon-main)' : 'var(--hypecon-dark)'}} onClick={()=>setIsMobileMenuOpen(false)}>Contact</Link>
               </div>
             )}
             
@@ -184,18 +184,15 @@ function EmptyPage({ title }) {
 // Footer 컴포넌트
 function Footer() {
   return (
-    <footer style={{width:'100%', background:'#000', marginTop:'0', padding: '4rem 0 2rem 0', textAlign: 'center'}}>
+    <footer style={{width:'100%', background:'var(--hypecon-dark)', marginTop:'0', padding: '4rem 0 2rem 0', textAlign: 'center'}}>
       <div className="container mx-auto px-4">
         {/* 메인 타이틀 */}
         <div style={{marginBottom: '2rem'}}>
-          <div style={{fontSize: '3rem', fontWeight: '900', color: '#CFFF00', marginBottom: '0rem', lineHeight: '0.8'}}>
+          <div style={{fontSize: 'clamp(2.5rem, 26vw, 4.5rem)', fontWeight: '900', color: 'var(--hypecon-main)', marginBottom: '0rem', lineHeight: '0.8'}}>
             HYPECON
           </div>
-          <div style={{fontSize: '2.5rem', fontWeight: '900', color: '#CFFF00', marginBottom: '0rem', lineHeight: '0.8'}}>
+          <div style={{fontSize: 'clamp(2rem, 21vw, 3.8rem)', fontWeight: '500', color: 'var(--hypecon-main)', marginBottom: '0rem', lineHeight: '0.8'}}>
             STYLE WEEK
-          </div>
-          <div style={{fontSize: '1.5rem', fontWeight: '700', color: '#CFFF00'}}>
-            SEOUL 2026
           </div>
         </div>
         
@@ -207,8 +204,8 @@ function Footer() {
           marginBottom: '3rem'
         }}>
           <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" style={{
-            width: '50px',
-            height: '50px',
+            width: '70px',
+            height: '70px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -217,11 +214,11 @@ function Footer() {
             background: 'transparent',
             borderRadius: '50%'
           }} className="hover:scale-110">
-            <img src={footerSnsYoutube} alt="YouTube" style={{width:'38px', height:'38px', objectFit:'contain'}} />
+            <img src={youtubeIcon} alt="YouTube" style={{width:'70px', height:'70px', objectFit:'contain'}} />
           </a>
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style={{
-            width: '50px',
-            height: '50px',
+            width: '70px',
+            height: '70px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -230,11 +227,11 @@ function Footer() {
             background: 'transparent',
             borderRadius: '50%'
           }} className="hover:scale-110">
-            <img src={footerSnsFace} alt="Facebook" style={{width:'38px', height:'38px', objectFit:'contain'}} />
+            <img src={facebookIcon} alt="Facebook" style={{width:'70px', height:'70px', objectFit:'contain'}} />
           </a>
           <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" style={{
-            width: '50px',
-            height: '50px',
+            width: '70px',
+            height: '70px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -243,11 +240,11 @@ function Footer() {
             background: 'transparent',
             borderRadius: '50%'
           }} className="hover:scale-110">
-            <img src={footerSnsTic} alt="TikTok" style={{width:'38px', height:'38px', objectFit:'contain'}} />
+            <img src={tiktokIcon} alt="TikTok" style={{width:'70px', height:'70px', objectFit:'contain'}} />
           </a>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{
-            width: '50px',
-            height: '50px',
+            width: '70px',
+            height: '70px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -256,7 +253,7 @@ function Footer() {
             background: 'transparent',
             borderRadius: '50%'
           }} className="hover:scale-110">
-            <img src={footerSnsIns} alt="Instagram" style={{width:'38px', height:'38px', objectFit:'contain'}} />
+            <img src={instagramIcon} alt="Instagram" style={{width:'70px', height:'70px', objectFit:'contain'}} />
           </a>
         </div>
         
@@ -265,22 +262,22 @@ function Footer() {
           marginBottom: '2rem',
           lineHeight: '1.2'
         }}>
-          <div style={{fontSize: '1.1rem', fontWeight: '600', marginBottom: '0.2rem', color: '#fff'}}>
+          <div style={{fontSize: '1.25rem', fontWeight: '500', marginBottom: '1rem', color: '#DDDDDD', fontFamily: 'Noto Sans KR'}}>
             HYPECON STYLE WEEK 운영사무국
           </div>
-          <div style={{fontSize: '1rem', marginBottom: '0.2rem', color: '#fff'}}>
-            서울시 강남구 테헤란로 142 아크플레이스 5F
-          </div>
-          <div style={{fontSize: '1rem', color: '#fff'}}>
+          <div style={{fontSize: '1.25rem', fontWeight: '350', color: '#DDDDDD', fontFamily: 'Noto Sans KR', lineHeight: 1.5}}>
+            서울시 강남구 테헤란로 142 아크플레이스 5F<br/>
             문의. hello@hypeconweek.com
           </div>
         </div>
         
         {/* 저작권 */}
         <div style={{
-          fontSize: '0.9rem',
-          color: '#999',
-        
+          fontSize: '1.25rem',
+          fontWeight: '350',
+          color: '#DDDDDD',
+          fontFamily: 'Noto Sans KR',
+          marginTop: '1rem'
         }}>
           Copyright(c) HYPECON STYLE WEEK All Rights Reserved.
         </div>

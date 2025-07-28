@@ -8,25 +8,6 @@ function AboutPage() {
     <>
       {/* 상단 소개 섹션 */}
       <section className="about-section about-section-intro">
-        <div className="about-title-main">
-          ‘HYPECON STYLE WEEK SEOUL 2026’은<br/>
-          <span className="about-title-strong">Z세대가 ‘입고, 꾸미고, 찍고, 퍼뜨리는’<br/></span>
-          진짜 반응이 터지는 체험형 스타일 패션·뷰티 페어입니다.
-        </div>
-        <div className="about-intro-desc">
-          120여 개의 트렌디한 패션·뷰티 브랜드가<br/>
-          Z세대 중심의 콘텐츠, 커머스, 테크와 함께 어우러져<br/>
-          온라인에선 불가능한 실시간 스타일 경험을 만듭니다.<br/><br/>
-          10만 명의 관람객은 스타일을 직접 입어보고,<br/>
-          즉각적인 반응을 SNS에 퍼뜨리며, 구매로 이어지는<br/>
-          실시간 소비의 흐름을 만들어냅니다.<br/><br/>
-          브랜드는 현장에서 팬덤과 매출 성장을 확인하고,<br/>
-          바이어는 진짜 반응을 직접 체감합니다.<br/>
-        </div>
-        <div className="about-intro-highlight">
-          이곳이 바로,<br/>
-          ‘HYPECON STYLE WEEK SEOUL 2026’ 입니다.
-        </div>
       </section>
 
       {/* WHY BRANDS CHOOSE HYPECON 섹션 */}
