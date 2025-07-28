@@ -243,10 +243,10 @@ function Footer() {
       <div className="container mx-auto px-4">
         {/* 메인 타이틀 */}
         <div style={{marginBottom: '2rem'}}>
-          <div style={{fontSize: 'clamp(2.5rem, 26vw, 4.5rem)', fontWeight: '900', color: 'var(--hypecon-main)', marginBottom: '0rem', lineHeight: '0.8'}}>
+          <div style={{fontSize: 'clamp(1.4rem, 14vw, 2.5rem)', fontWeight: '900', color: 'var(--hypecon-main)', marginBottom: '0rem', lineHeight: '0.8'}}>
             HYPECON
           </div>
-          <div style={{fontSize: 'clamp(2rem, 21vw, 3.8rem)', fontWeight: '500', color: 'var(--hypecon-main)', marginBottom: '0rem', lineHeight: '0.8'}}>
+          <div style={{fontSize: 'clamp(1.1rem, 12vw, 2.2rem)', fontWeight: '500', color: 'var(--hypecon-main)', marginBottom: '0rem', lineHeight: '0.8'}}>
             STYLE WEEK
           </div>
         </div>
@@ -259,8 +259,8 @@ function Footer() {
           marginBottom: '3rem'
         }}>
           <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" style={{
-            width: '70px',
-            height: '70px',
+            width: '40px',
+            height: '40px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -269,11 +269,11 @@ function Footer() {
             background: 'transparent',
             borderRadius: '50%'
           }} className="hover:scale-110">
-            <img src={youtubeIcon} alt="YouTube" style={{width:'70px', height:'70px', objectFit:'contain'}} />
+            <img src={youtubeIcon} alt="YouTube" style={{width:'40px', height:'40px', objectFit:'contain'}} />
           </a>
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style={{
-            width: '70px',
-            height: '70px',
+            width: '40px',
+            height: '40px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -282,11 +282,11 @@ function Footer() {
             background: 'transparent',
             borderRadius: '50%'
           }} className="hover:scale-110">
-            <img src={facebookIcon} alt="Facebook" style={{width:'70px', height:'70px', objectFit:'contain'}} />
+            <img src={facebookIcon} alt="Facebook" style={{width:'40px', height:'40px', objectFit:'contain'}} />
           </a>
           <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" style={{
-            width: '70px',
-            height: '70px',
+            width: '40px',
+            height: '40px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -295,11 +295,11 @@ function Footer() {
             background: 'transparent',
             borderRadius: '50%'
           }} className="hover:scale-110">
-            <img src={tiktokIcon} alt="TikTok" style={{width:'70px', height:'70px', objectFit:'contain'}} />
+            <img src={tiktokIcon} alt="TikTok" style={{width:'40px', height:'40px', objectFit:'contain'}} />
           </a>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{
-            width: '70px',
-            height: '70px',
+            width: '40px',
+            height: '40px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -308,7 +308,7 @@ function Footer() {
             background: 'transparent',
             borderRadius: '50%'
           }} className="hover:scale-110">
-            <img src={instagramIcon} alt="Instagram" style={{width:'70px', height:'70px', objectFit:'contain'}} />
+            <img src={instagramIcon} alt="Instagram" style={{width:'40px', height:'40px', objectFit:'contain'}} />
           </a>
         </div>
         
@@ -317,10 +317,10 @@ function Footer() {
           marginBottom: '2rem',
           lineHeight: '1.2'
         }}>
-          <div style={{fontSize: '1.25rem', fontWeight: '500', marginBottom: '1rem', color: '#DDDDDD', fontFamily: 'Noto Sans KR'}}>
+          <div style={{fontSize: '1rem', fontWeight: '500', marginBottom: '1rem', color: '#DDDDDD', fontFamily: 'Noto Sans KR'}}>
             HYPECON STYLE WEEK 운영사무국
           </div>
-          <div style={{fontSize: '1.25rem', fontWeight: '350', color: '#DDDDDD', fontFamily: 'Noto Sans KR', lineHeight: 1.5}}>
+          <div style={{fontSize: '1rem', fontWeight: '350', color: '#DDDDDD', fontFamily: 'Noto Sans KR', lineHeight: 1.5}}>
             서울시 강남구 테헤란로 142 아크플레이스 5F<br/>
             문의. hello@hypeconweek.com
           </div>
@@ -328,7 +328,7 @@ function Footer() {
         
         {/* 저작권 */}
         <div style={{
-          fontSize: '1.25rem',
+          fontSize: '0.9rem',
           fontWeight: '350',
           color: '#DDDDDD',
           fontFamily: 'Noto Sans KR',
