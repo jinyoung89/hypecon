@@ -1,0 +1,200 @@
+/* ContactPage 반응형 및 공통 스타일 */
+
+.contact-page-root {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  color: #111;
+  box-sizing: border-box;
+}
+
+/* CONTACT US 섹션 */
+.contact-hero-section {
+  background: #000;
+  padding: clamp(3rem, 4.17vw, 5rem) 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: clamp(400px, 50vh, 600px);
+}
+
+.contact-hero-inner {
+  max-width: clamp(800px, 52.08vw, 1000px);
+  width: 100%;
+  padding: 0 clamp(1rem, 2.08vw, 2rem);
+  text-align: center;
+}
+
+.contact-hero-title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  color: #E1F800;
+  margin-bottom: clamp(2rem, 3.13vw, 3rem);
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  line-height: 0.9;
+}
+
+.contact-hero-subtitle {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.5rem, 0.78vw, 1rem);
+}
+
+.contact-hero-subtitle p {
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  line-height: 1.6;
+  color: #fff;
+  margin: 0;
+  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-weight: 400;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 900px) {
+  .contact-hero-section {
+    min-height: clamp(300px, 40vh, 500px);
+  }
+  
+  .contact-hero-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+  }
+  
+  .contact-hero-subtitle p {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-hero-section {
+    min-height: clamp(250px, 35vh, 400px);
+  }
+  
+  .contact-hero-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+  
+  .contact-hero-subtitle p {
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+  }
+}
+
+/* 연락처 정보 섹션 */
+.contact-info-section {
+  background: #fff;
+  padding: clamp(3rem, 4.17vw, 5rem) 0;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-info-inner {
+  max-width: clamp(800px, 52.08vw, 1000px);
+  width: 100%;
+  padding: 0 clamp(1rem, 2.08vw, 2rem);
+}
+
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 3.13vw, 3rem);
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 1.56vw, 1.5rem);
+  padding: clamp(1.5rem, 2.08vw, 2rem);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.contact-info-icon {
+  width: clamp(40px, 2.08vw, 50px);
+  height: clamp(40px, 2.08vw, 50px);
+  flex-shrink: 0;
+}
+
+.contact-info-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.contact-info-label {
+  font-size: clamp(1.1rem, 1.67vw, 1.3rem);
+  font-weight: 700;
+  color: #45B176;
+  font-family: 'Noto Sans CJK KR', sans-serif;
+  min-width: clamp(120px, 8.33vw, 150px);
+}
+
+.contact-info-separator {
+  width: 1px;
+  height: clamp(40px, 3.13vw, 50px);
+  background: #ddd;
+  margin: 0 clamp(1rem, 1.56vw, 1.5rem);
+}
+
+.contact-info-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.5rem, 0.52vw, 0.8rem);
+}
+
+.contact-info-details div {
+  font-size: clamp(1rem, 1.25vw, 1.2rem);
+  line-height: 1.5;
+  color: #000;
+  font-family: 'Noto Sans CJK KR', sans-serif;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+  .contact-info-item {
+    flex-direction: column;
+    text-align: center;
+    gap: clamp(1rem, 1.56vw, 1.5rem);
+  }
+  
+  .contact-info-label {
+    min-width: auto;
+  }
+  
+  .contact-info-separator {
+    display: none;
+  }
+}
+
+/* 마지막 메시지 섹션 */
+.contact-message-section {
+  background: #45B176;
+  padding: clamp(3rem, 4.17vw, 5rem) 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: clamp(200px, 25vh, 300px);
+}
+
+.contact-message-inner {
+  max-width: clamp(800px, 52.08vw, 1000px);
+  width: 100%;
+  padding: 0 clamp(1rem, 2.08vw, 2rem);
+  text-align: center;
+}
+
+.contact-message-content {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 1.56vw, 1.5rem);
+}
+
+.contact-message-content p {
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  line-height: 1.6;
+  color: #fff;
+  margin: 0;
+  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-weight: 400;
+} 

@@ -1,0 +1,177 @@
+import React from 'react';
+import './TicketPage.css';
+import ticketImg from '../assets/images/ticket.png';
+import { useLanguage } from '../contexts/LanguageContext';
+
+function TicketPage() {
+  const { t } = useLanguage();
+  
+  return (
+    <div className="ticket-page-root">
+      {/* 상단 배경 이미지 섹션 */}
+      <section className="ticket-hero-section" style={{backgroundImage: `url(${ticketImg})`}}>
+        <div className="ticket-hero-overlay"></div>
+        <div className="ticket-hero-text">
+          <div className="ticket-hero-title">
+            {t('ticket.hero.subtitle')}
+          </div>
+        </div>
+      </section>
+
+      {/* TICKET INFORMATION 섹션 */}
+      <section className="ticket-info-section">
+        <div className="ticket-info-inner">
+          <h2 className="ticket-info-title">{t('ticket.info.title')}</h2>
+          <div className="ticket-info-content">
+            <p className="ticket-info-text">
+              {t('ticket.info.text').split('\n').map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 온몸으로 즐기는 스타일 페어 섹션 */}
+      <section className="ticket-play-section">
+        <div className="ticket-play-inner">
+          <div className="ticket-play-content">
+            <div className="ticket-play-left">
+              <h3 className="ticket-play-subtitle">{t('ticket.play.subtitle')}</h3>
+              <div className="ticket-play-title">
+                {t('ticket.play.title').map((word, index) => (
+                  <span key={index}>{word}</span>
+                ))}
+              </div>
+            </div>
+            <div className="ticket-play-separator"></div>
+            <div className="ticket-play-right">
+              <ul className="ticket-play-list">
+                {t('ticket.play.list').map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 이런 분들에게 추천해요 섹션 */}
+      <section className="ticket-recommend-section">
+        <div className="ticket-recommend-inner">
+          <div className="ticket-recommend-header">
+            <h2 className="ticket-recommend-title">{t('ticket.recommend.title')}</h2>
+          </div>
+          <div className="ticket-recommend-desc">
+            {t('ticket.recommend.desc').map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+          <div className="ticket-recommend-box">
+            <ul className="ticket-recommend-list">
+              {t('ticket.recommend.list').map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* When & Where 섹션 */}
+      <section className="ticket-whenwhere-section">
+        <div className="ticket-whenwhere-inner">
+          <div className="ticket-whenwhere-header">
+            <h2 className="ticket-whenwhere-title">{t('ticket.whenWhere.title')}</h2>
+          </div>
+          <div className="ticket-whenwhere-box">
+            <div className="ticket-whenwhere-content">
+              <div className="ticket-whenwhere-left">
+                <div className="ticket-whenwhere-dates">{t('ticket.whenWhere.dates')}</div>
+                <div className="ticket-whenwhere-location">{t('ticket.whenWhere.location')}</div>
+              </div>
+              <div className="ticket-whenwhere-right">
+                <div className="ticket-whenwhere-schedule">
+                  {t('ticket.whenWhere.schedule').map((item, index) => (
+                    <div className="schedule-item" key={index}>
+                      <span className="schedule-date">{item.date}</span>
+                      <span className="schedule-time">{item.time}</span>
+                      <span className="schedule-last">{item.last}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 티켓 가격 & 혜택 섹션 */}
+      <section className="ticket-price-section">
+        <div className="ticket-price-inner">
+          <div className="ticket-price-header">
+            <h2 className="ticket-price-title">{t('ticket.price.title')}</h2>
+          </div>
+          <div className="ticket-price-box">
+            <div className="ticket-price-table-container">
+              <table className="ticket-price-table">
+                <thead>
+                  <tr>
+                    {t('ticket.price.table.headers').map((header, index) => (
+                      <th key={index}>{header}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {t('ticket.price.table.rows').map((row, rowIndex) => (
+                    <tr key={rowIndex}>
+                      {row.map((cell, cellIndex) => (
+                        <td key={cellIndex}>{cell}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="ticket-price-note">
+              {t('ticket.price.note').split('\n').map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}
+            </p>
+
+            <h3 className="ticket-refund-title">{t('ticket.refund.title')}</h3>
+            <p className="ticket-refund-intro">
+              {t('ticket.refund.intro')}
+            </p>
+            <ul className="ticket-refund-list">
+              {t('ticket.refund.list').map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+
+            <h3 className="ticket-notes-title">{t('ticket.notes.title')}</h3>
+            <ul className="ticket-notes-list">
+              {t('ticket.notes.list').map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+
+            <h3 className="ticket-booking-title">{t('ticket.booking.title')}</h3>
+            <ol className="ticket-booking-list">
+              {t('ticket.booking.list').map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+export default TicketPage; 

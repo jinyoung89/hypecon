@@ -6,12 +6,30 @@ import sec2Img from '../assets/images/sec2_img.png';
 import sec3Img from '../assets/images/sec3_img.png';
 import sec3Img2 from '../assets/images/sec3_img_2.png';
 import sec4Img from '../assets/images/sec4_img.png';
+import { useLanguage } from '../contexts/LanguageContext';
 import './HomePage.css';
 
 function HomePage() {
-  // 카드 클릭 핸들러
+  const { t } = useLanguage();
+
+  // 카드 클릭 핸들러 (네이버로 이동)
   const handleCardClick = () => {
     window.open('https://www.naver.com', '_blank');
+  };
+
+  // 인플루언서 등록 핸들러 (Google Forms로 이동)
+  const handleInfluencerClick = () => {
+    window.open('https://docs.google.com/forms/d/1ot0y2q8LRFzkeql-lvd3On5gwk-8pq6IB9l2ejKWq_Y/edit', '_blank');
+  };
+
+  // 바이어 등록 핸들러 (Google Forms로 이동)
+  const handleBuyerClick = () => {
+    window.open('https://docs.google.com/forms/d/1e0V1BkDvqMTnu5_ghtbpp7cb5pu5me_Is0MCf8jOo0g/edit', '_blank');
+  };
+
+  // 티켓 알림 신청 핸들러 (Google Forms로 이동)
+  const handleTicketClick = () => {
+    window.open('https://docs.google.com/forms/d/1qloDsLH1ODQeTmSJQoUrPKQ1fGNs5yi6vw1gbh-IYfM/edit', '_blank');
   };
 
   return (
@@ -37,10 +55,9 @@ function HomePage() {
         
         {/* 텍스트 오버레이 */}
         <div className="home-hero-text">
-          <div className="home-hero-date">SEOUL 2026</div>
-          <div className="home-hero-title">HYPECON</div>
-          <div className="home-hero-subtitle">STYLE WEEK</div>
-          <div className="home-hero-desc">2026. 2.19 ~ 22 @ COEX HALL C</div>
+          <div className="home-hero-title">{t('home.hero.title')}</div>
+          <div className="home-hero-subtitle">{t('home.hero.subtitle')}</div>
+          <div className="home-hero-desc">{t('home.hero.desc')}</div>
         </div>
       </section>
 
@@ -55,15 +72,14 @@ function HomePage() {
             {/* 컨텐츠 영역 */}
             <div>
               <h2 className="home-block-title">
-                BEYOND ONLINE EXPERIENCE STYLE
+                {t('home.section1.title')}
               </h2>
               <p className="home-block-desc">
-                Z세대와 브랜드가 감각을 공유하고<br />
-                반응으로 세계를 여는 스타일 패션·뷰티 페어
+                {t('home.section1.desc')}
               </p>
               <div className="home-block-btns">
-                <button onClick={handleCardClick} className="home-btn-main hover:scale-105">
-                  입장권 티켓 오픈 알림 신청
+                <button onClick={handleTicketClick} className="home-btn-main hover:scale-105">
+                  {t('home.section1.button')}
                 </button>
               </div>
             </div>
@@ -92,18 +108,13 @@ function HomePage() {
               {/* 컨텐츠 영역 */}
               <div>
               <div className="home-begins-desc">
-                THE MOMENT WHEN BRANDS<br />
-                AND FANDOMS CONNECT DIRECTLY.
+                {t('home.section2.desc')}
               </div>
               <h2 className="home-begins-title">
-                THAT'S<br />
-                WHERE<br />
-                HYPECON<br />
-                BEGINS.
+                {t('home.section2.title')}
               </h2>
               <p className="home-begins-highlight">
-                브랜드와 팬덤이 연결되는 순간,<br />
-                그 시작이 HYPECON입니다.
+                {t('home.section2.highlight')}
               </p>
               </div>
             </div>
@@ -119,10 +130,10 @@ function HomePage() {
                 />
                 <div className="image-overlay home-begins-img-overlay">
                   <div className="overlay-text home-begins-img-title">
-                    얼리 부스 참가 신청
+                    {t('home.section2.earlyBooth')}
                   </div>
                   <div className="overlay-text home-begins-img-date">
-                    부스 소진 시 마감
+                    {t('home.section2.deadline')}
                   </div>
                 </div>
               </div>
@@ -136,10 +147,10 @@ function HomePage() {
                 />
                 <div className="image-overlay home-begins-img-overlay">
                   <div className="overlay-text home-begins-img-title" style={{color: 'var(--hypecon-pink)'}}>
-                    얼리 참가신청 OPEN
+                    {t('home.section2.earlyApply')}
                   </div>
                   <div className="overlay-text home-begins-img-date" style={{color: 'var(--hypecon-pink)'}}>
-                    부스 소진 시 마감
+                    {t('home.section2.deadline')}
                   </div>
                 </div>
                 </div>
@@ -152,11 +163,11 @@ function HomePage() {
       <section className="home-influencer-section" style={{background: `url(${sec4Img}) center/cover no-repeat`}}>
         <div className="container home-influencer-container">
           <div className="home-influencer-btns">
-            <button onClick={handleCardClick} className="home-btn-black hover:scale-105">
-              INFLUENCER 등록
+            <button onClick={handleInfluencerClick} className="home-btn-black hover:scale-105">
+              {t('home.section3.influencer')}
             </button>
-            <button onClick={handleCardClick} className="home-btn-main hover:scale-105">
-              BUYER/PRESS 등록
+            <button onClick={handleBuyerClick} className="home-btn-main hover:scale-105">
+              {t('home.section3.buyer')}
             </button>
           </div>
         </div>

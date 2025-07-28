@@ -6,7 +6,7 @@
 }
 
 .about-section-intro {
-  min-height: 120vh;
+  min-height: clamp(600px, 44.5vw, 854px);
   background: var(--hypecon-dark);
   color: var(--hypecon-white);
   display: flex;
@@ -14,8 +14,50 @@
   justify-content: center;
   align-items: center;
   padding: 0 1.5rem;
-  text-align: center;
+  text-align: left;
   padding-top: 100px;
+}
+.about-intro-content {
+  width: 100%;
+  max-width: 1920px;
+  height: clamp(600px, 44.5vw, 854px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 clamp(2rem, 5vw, 4rem);
+  padding-left: max(clamp(2rem, 5vw, 4rem), calc(50% - 500px)); /* 텍스트 블록을 화면 중앙에 배치 */
+}
+.about-intro-main-title {
+  width: 100%;
+  max-width: 1000px;
+  color: #00E5A8;
+  font-size: clamp(2rem, 3.3vw, 4rem);
+  font-family: 'Noto Sans CJK KR';
+  font-weight: 700;
+  line-height: 1;
+  word-wrap: break-word;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.about-intro-subtitle {
+  font-size: clamp(1.5rem, 2.1vw, 2.5rem);
+  font-weight: 700;
+  line-height: 0.82;
+}
+.about-intro-description {
+  color: #00E5A8;
+  font-size: clamp(1rem, 1.35vw, 1.625rem);
+  font-family: 'Noto Sans CJK KR';
+  font-weight: 400;
+  line-height: 1.15;
+  word-wrap: break-word;
+  text-align: left;
+  max-width: 800px;
+}
+.about-intro-bold {
+  font-weight: 700;
 }
 .about-title-main {
   font-weight: 900;
@@ -57,7 +99,8 @@
 }
 
 .about-section-why {
-  min-height: 850px;
+  min-height: 640px;
+  height: 640px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,9 +112,9 @@
 .about-why-title {
   font-weight: 600;
   font-size: clamp(2.5rem, 10vw, 7rem);
-  color: var(--hypecon-main);
-  margin-bottom: 2.2rem;
-  margin-top: 4.5rem;
+  color: var(--hypecon-yellow);
+  margin-bottom: 1rem;
+  margin-top: 0;
   line-height: 0.8;
   letter-spacing: 0.06em;
   word-spacing: 0.05em;
@@ -177,7 +220,7 @@
   color: var(--hypecon-white);
 }
 .about-card-main {
-  background: var(--hypecon-main);
+  background: var(--hypecon-purple);
   color: var(--hypecon-dark);
 }
 .about-card-title {
@@ -191,7 +234,7 @@
   color: var(--hypecon-dark);
 }
 .about-card-dark .about-card-title {
-  color: var(--hypecon-main);
+  color: var(--hypecon-purple);
 }
 .about-card-desc {
   font-weight: 500;
@@ -238,6 +281,27 @@
   white-space: normal;
   hyphens: auto;
 }
+
+/* 새로운 클래스 추가 */
+.about-content-title {
+  font-weight: 400;
+  font-size: clamp(1.1rem, 4vw, 2rem);
+  color: #111;
+  margin-bottom: 0.2rem;
+  line-height: 1.4;
+  word-break: keep-all;
+  white-space: normal;
+  hyphens: auto;
+}
+.about-content-strong {
+  font-weight: 900;
+  font-size: clamp(1.3rem, 6vw, 2.8rem);
+  color: #111;
+  line-height: 1;
+  word-break: keep-all;
+  white-space: normal;
+  hyphens: auto;
+}
 .about-2col-img {
   flex: 1.2;
   min-width: 260px;
@@ -262,36 +326,36 @@
 }
 .about-list-wrap {
   width: 100%;
-  max-width: 840px;
+  max-width: clamp(800px, 56.25vw, 1080px);
   margin: 0 auto;
   padding: 0 2.5rem;
 }
 .about-list-row {
   position: relative;
   width: 100%;
-  padding: 18px 0;
+  padding: clamp(1rem, 0.94vw, 1.8rem) 0;
   display: flex;
-  align-items: center;
-  gap: 1.2rem;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: clamp(0.8rem, 1vw, 1.2rem);
   border-bottom: 1.5px solid #ddd;
+  justify-content: center;
 }
 .about-list-row:last-child {
   border-bottom: none;
 }
 .about-list-title {
-  width: 220px;
-  min-width: 180px;
   flex-shrink: 0;
   font-weight: 900;
-  font-size: 1.33rem;
+  font-size: clamp(1rem, 1.2vw, 1.33rem);
   color: var(--hypecon-dark);
   line-height: 1.3;
-  margin-right: 12px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: flex;
-  align-items: center;
+  margin-right: clamp(10px, 1vw, 20px);
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  text-align: center;
+  margin-bottom: clamp(5px, 0.5vw, 10px);
 }
 .about-list-title span {
   font-size: 1.5rem;
@@ -311,6 +375,10 @@
   overflow-wrap: break-word;
   white-space: normal;
   hyphens: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .about-global-section {
@@ -322,25 +390,52 @@
   align-items: center;
   justify-content: center;
   padding: 3.5rem 1.5rem 3.5rem 1.5rem;
+  text-align: left;
+}
+.about-global-content {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
   text-align: center;
 }
 .about-global-desc {
-  font-weight: 400;
-  font-size: clamp(1.1rem, 4vw, 1.3rem);
+  width: 100%;
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(1.2rem, 1.56vw, 30px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: clamp(1.3rem, 1.67vw, 32px);
+  letter-spacing: -1.14px;
   margin-bottom: 1.7rem;
-  line-height: 1.7;
   word-break: keep-all;
   white-space: normal;
   hyphens: auto;
+  text-align: left;
+  width: auto;
 }
 .about-global-highlight {
-  font-weight: 700;
-  font-size: clamp(1.1rem, 4vw, 1.3rem);
+  width: 100%;
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(1.2rem, 1.56vw, 30px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: clamp(1.3rem, 1.67vw, 32px);
+  letter-spacing: -1.14px;
   margin-bottom: 1.7rem;
-  line-height: 1.7;
   word-break: keep-all;
   white-space: normal;
   hyphens: auto;
+  text-align: left;
+  width: auto;
+  display: block;
+  margin-left: 0;
 }
 .about-global-strong {
   font-weight: 900;
@@ -351,14 +446,23 @@
   white-space: normal;
   hyphens: auto;
 }
+.about-global-desc span,
+.about-global-highlight span {
+  color: inherit;
+  font-weight: inherit;
+}
 
 @media (max-width: 900px) {
   .about-section-intro {
-    min-height: 70vh !important;
+    min-height: clamp(500px, 60vh, 700px) !important;
     padding-top: 70px !important;
   }
+  .about-intro-content {
+    padding-left: clamp(2rem, 8vw, 6rem) !important;
+  }
   .about-section-why {
-    min-height: 500px;
+    min-height: clamp(400px, 50vh, 640px) !important;
+    height: auto !important;
   }
   .about-list-section {
     padding: 2rem 0 !important;
@@ -368,30 +472,29 @@
   }
   .about-list-row {
     flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 0.8rem !important;
-    padding: 1.2rem 0 !important;
-    text-align: left !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+    padding: 2rem 0 !important;
+    text-align: center !important;
   }
   .about-list-title {
-    width: 100% !important;
     min-width: 0 !important;
     margin-right: 0 !important;
-    text-align: left !important;
-    font-size: 1.1rem !important;
+    text-align: center !important;
     font-weight: 900 !important;
     color: var(--hypecon-dark) !important;
     white-space: normal !important;
     overflow: visible !important;
     text-overflow: unset !important;
+    height: auto !important;
   }
   .about-list-desc {
-    width: 100% !important;
+    width: clamp(350px, 90%, 700px) !important;
+    height: auto !important;
     min-width: 0 !important;
     margin-left: 0 !important;
-    font-size: 0.95rem !important;
     line-height: 1.6 !important;
-    text-align: left !important;
+    text-align: center !important;
   }
   .about-2col-section {
     flex-direction: column !important;
@@ -416,11 +519,28 @@
     overflow: visible !important;
     text-overflow: unset !important;
   }
+  .about-content-title {
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+  }
+  .about-global-content {
+    width: 80% !important;
+    max-width: 450px !important;
+  }
 }
 @media (max-width: 600px) {
   .about-section-intro {
-    min-height: 60vh !important;
+    min-height: clamp(400px, 50vh, 600px) !important;
     padding-top: 60px !important;
+  }
+  .about-intro-content {
+    padding-left: 1.5rem !important;
+  }
+  .about-section-why {
+    min-height: 350px !important;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
   }
   .about-list-section {
     padding: 1.5rem 0 !important;
@@ -436,7 +556,6 @@
     font-size: 1rem !important;
   }
   .about-list-desc {
-    font-size: 0.9rem !important;
     line-height: 1.5 !important;
   }
   .about-title-main {
@@ -466,9 +585,17 @@
   .about-card-desc {
     font-size: 0.68rem !important;
   }
+  .about-global-desc,
+  .about-global-highlight {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    line-height: 1.3;
+  }
   .about-global-section {
-    font-size: 1.05rem !important;
     padding: 1.5rem 0.5rem !important;
+  }
+  .about-global-content {
+    width: 85% !important;
+    max-width: 350px !important;
   }
 }
 @media (min-width: 769px) {
@@ -484,6 +611,11 @@
     text-overflow: ellipsis;
   }
   .about-dopamine-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .about-content-title {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

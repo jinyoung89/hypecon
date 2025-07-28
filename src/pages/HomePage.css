@@ -6,7 +6,8 @@
 }
 
 .home-hero-section {
-  height: 100vh;
+  min-height: clamp(600px, 44.5vw, 854px);
+  height: clamp(600px, 44.5vw, 854px);
   background: linear-gradient(135deg, var(--hypecon-main) 0%, var(--hypecon-point-mint) 100%);
   display: flex;
   align-items: center;

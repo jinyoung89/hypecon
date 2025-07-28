@@ -1,0 +1,1164 @@
+/* BrandPage 반응형 및 공통 스타일 */
+
+.brand-page-root {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  color: #111;
+  box-sizing: border-box;
+}
+
+.brand-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: clamp(600px, 44.5vw, 854px);
+  height: clamp(600px, 44.5vw, 854px);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.brand-hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.38);
+  z-index: 1;
+}
+
+.brand-hero-text {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-hero-title {
+  color: var(--hypecon-main);
+  font-size: clamp(1.3rem, 3vw, 2.6rem);
+  font-weight: 900;
+  line-height: 1.22;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.22);
+  letter-spacing: -1px;
+  padding: 0 1.5rem;
+  word-break: keep-all;
+}
+
+/* ENGAGEMENT GUIDE 섹션 */
+.brand-engagement-section {
+  background: #000;
+  color: #fff;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.brand-engagement-inner {
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.brand-engagement-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 900;
+  color: #E1F800;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.brand-engagement-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.brand-engagement-text {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  line-height: 1.6;
+  color: #fff;
+  margin: 0;
+  word-break: keep-all;
+  text-align: left;
+}
+
+/* 브랜드 큐레이션 기준 섹션 */
+.brand-curation-section {
+  background: #DAFFCB;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.brand-curation-inner {
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.brand-curation-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 900;
+  color: #000;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border-radius: 50px;
+  padding: 0.8rem 2.5rem;
+  margin: 0 auto 2.5rem;
+  display: block;
+  width: fit-content;
+}
+
+.brand-curation-desc {
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  color: #000;
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.brand-curation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.curation-card {
+  background: #45B176;
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  height: 100%;
+}
+
+.curation-card-title {
+  font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 1.5rem;
+  background: #000;
+  color: #fff;
+  border-radius: 50px;
+  padding: 0.7rem 1.5rem;
+  display: inline-block;
+}
+
+.curation-card-desc {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  color: #000;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 얼리버드 오퍼 섹션 */
+.brand-earlybird-section {
+  background: #000;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.brand-earlybird-inner {
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.brand-earlybird-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  color: #E1F800;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+}
+
+.brand-earlybird-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.brand-earlybird-info {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  line-height: 1.8;
+  color: #fff;
+  text-align: left;
+  margin: 0;
+  word-break: keep-all;
+  display: inline-block;
+}
+
+/* 부스 타입 및 참가비 안내 섹션 */
+.brand-booth-section {
+  background: #75D19F;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.brand-booth-inner {
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.brand-booth-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 900;
+  color: #000;
+  margin-bottom: 3rem;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  border-radius: 50px;
+  padding: 0.8rem 2.5rem;
+  margin: 0 auto 2.5rem;
+  display: block;
+  width: fit-content;
+}
+
+.brand-booth-table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 3rem;
+}
+
+.brand-booth-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  background: transparent;
+}
+
+.brand-booth-table th {
+  background: transparent;
+  color: #000;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid #000;
+}
+
+.brand-booth-table td {
+  padding: 0.8rem 1rem;
+  border: 1px solid #000;
+  text-align: center;
+  background: transparent;
+}
+
+.brand-booth-table tr:nth-child(even) {
+  background: transparent;
+}
+
+.brand-booth-info {
+  margin-top: 2rem;
+}
+
+.brand-booth-subtitle {
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  font-weight: 700;
+  color: #000;
+  margin: 2rem 0 1rem;
+}
+
+.brand-booth-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+
+.brand-booth-list li {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+/* 부스 배치도 섹션 */
+.brand-layout-section {
+  background: #F2F2F2;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.brand-layout-inner {
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.brand-layout-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 900;
+  color: #000;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.brand-layout-image {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.brand-layout-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* 환불 규정 섹션 */
+.brand-refund-section {
+  background: #75D19F;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.brand-refund-inner {
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.brand-refund-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 900;
+  color: #000;
+  margin-bottom: 3rem;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  border-radius: 50px;
+  padding: 0.8rem 2.5rem;
+  margin: 0 auto 2.5rem;
+  display: block;
+  width: fit-content;
+}
+
+.brand-refund-table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 3rem;
+}
+
+.brand-refund-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  background: transparent;
+}
+
+.brand-refund-table th {
+  background: transparent;
+  color: #000;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid #000;
+}
+
+.brand-refund-table td {
+  padding: 0.8rem 1rem;
+  border: 1px solid #000;
+  text-align: center;
+  background: transparent;
+}
+
+.brand-refund-table tr:nth-child(even) {
+  background: transparent;
+}
+
+.brand-refund-info {
+  margin-top: 2rem;
+}
+
+.brand-refund-subtitle {
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  font-weight: 700;
+  color: #000;
+  margin: 2rem 0 1rem;
+}
+
+.brand-refund-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+
+.brand-refund-list li {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+/* 얼리버드 혜택 섹션 */
+.brand-earlybird-benefit-section {
+  background: #000;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.brand-earlybird-benefit-inner {
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.brand-earlybird-benefit-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 900;
+  color: #E1F800;
+  margin-bottom: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+}
+
+.brand-earlybird-benefit-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.brand-earlybird-benefit-header {
+  flex-shrink: 0;
+}
+
+.brand-earlybird-benefit-subtitle {
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  font-weight: 700;
+  color: #00E5A8;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.brand-earlybird-benefit-separator {
+  width: 1px;
+  background: #fff;
+  height: 200px;
+  flex-shrink: 0;
+}
+
+.brand-earlybird-benefit-list {
+  flex: 1;
+}
+
+.brand-earlybird-benefit-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.brand-earlybird-benefit-list li {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 0.8rem;
+  padding-left: 0;
+}
+
+/* 참가 신청 절차 섹션 */
+.brand-process-section {
+  background: #fff;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.brand-process-inner {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.brand-process-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 900;
+  color: #000;
+  margin-bottom: 3rem;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  border-radius: 50px;
+  padding: 0.8rem 2.5rem;
+  margin: 0 auto 2.5rem;
+  display: block;
+  width: fit-content;
+}
+
+.brand-process-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.process-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.process-row:first-child {
+  max-width: 600px;
+}
+
+.process-row:last-child {
+  max-width: 900px;
+}
+
+.process-step {
+  flex: 1;
+  min-width: 200px;
+  max-width: 220px;
+  text-align: center;
+  background: transparent;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: none;
+}
+
+.process-step:first-child {
+  max-width: 300px;
+}
+
+.process-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.process-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.process-step-title {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.process-step-details {
+  text-align: left;
+}
+
+.process-step-details p {
+  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+  line-height: 1.4;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.process-step-details ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+.process-step-details li {
+  font-size: clamp(0.7rem, 1.3vw, 0.8rem);
+  line-height: 1.4;
+  color: #666;
+  margin-bottom: 0.3rem;
+  padding-left: 0;
+}
+
+.process-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5rem;
+  margin-top: 2rem;
+}
+
+.process-arrow img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 900px) {
+  .brand-hero-section {
+    min-height: clamp(500px, 60vh, 700px) !important;
+    height: clamp(500px, 60vh, 700px) !important;
+  }
+  
+  .brand-hero-title {
+    font-size: clamp(1.1rem, 5vw, 1.5rem);
+    padding: 0 0.7rem;
+  }
+
+  .brand-engagement-section {
+    padding: 4rem 0;
+  }
+  
+  .brand-engagement-title {
+    margin-bottom: 2rem;
+  }
+  
+  .brand-engagement-text {
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
+  }
+
+  .brand-curation-section {
+    padding: 4rem 0;
+  }
+  
+  .brand-curation-title {
+    margin-bottom: 2rem;
+  }
+  
+  .brand-curation-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 1rem;
+  }
+  
+  .curation-card-title {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    padding: 0.6rem 1.2rem;
+  }
+
+  .brand-earlybird-section {
+    padding: 4rem 0;
+  }
+  
+  .brand-earlybird-title {
+    margin-bottom: 2rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+  
+  .brand-earlybird-info {
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
+    line-height: 1.7;
+  }
+
+  .brand-booth-section {
+    padding: 4rem 0;
+  }
+  
+  .brand-booth-title {
+    margin-bottom: 2rem;
+  }
+  
+  .brand-booth-table th,
+  .brand-booth-table td {
+    padding: 0.7rem 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .brand-hero-section {
+    min-height: clamp(400px, 50vh, 600px) !important;
+    height: clamp(400px, 50vh, 600px) !important;
+  }
+
+  .brand-engagement-section {
+    padding: 3rem 0;
+  }
+  
+  .brand-engagement-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1.5rem;
+  }
+  
+  .brand-engagement-text {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    line-height: 1.5;
+  }
+
+  .brand-curation-section {
+    padding: 3rem 0;
+  }
+  
+  .brand-curation-title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 1.5rem;
+    padding: 0.7rem 1.5rem;
+  }
+  
+  .brand-curation-desc {
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    margin-bottom: 2rem;
+  }
+  
+  .brand-curation-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 1rem;
+  }
+
+  .brand-earlybird-section {
+    padding: 3rem 0;
+  }
+  
+  .brand-earlybird-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1.5rem;
+  }
+  
+  .brand-earlybird-info {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    line-height: 1.6;
+  }
+
+  .brand-booth-section {
+    padding: 3rem 0;
+  }
+  
+  .brand-booth-title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 1.5rem;
+    padding: 0.7rem 1.5rem;
+  }
+  
+  .brand-booth-table th,
+  .brand-booth-table td {
+    padding: 0.6rem 0.4rem;
+    font-size: 0.8rem;
+  }
+  
+  .brand-booth-subtitle {
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    margin: 1.5rem 0 0.8rem;
+  }
+  
+  .brand-booth-list li {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.5;
+  }
+
+  .brand-layout-section {
+    padding: 4rem 0;
+  }
+  
+  .brand-layout-title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 2rem;
+    padding: 0.7rem 1.5rem;
+  }
+  
+  .brand-layout-image {
+    max-width: 90%;
+  }
+  
+  .brand-layout-image img {
+    border-radius: 10px;
+  }
+
+  .brand-earlybird-benefit-section {
+    padding: 4rem 0;
+  }
+  
+  .brand-earlybird-benefit-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 2rem;
+  }
+  
+  .brand-earlybird-benefit-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .brand-earlybird-benefit-separator {
+    width: 100%;
+    height: 1px;
+  }
+
+  .brand-earlybird-benefit-subtitle {
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+  }
+  
+  .brand-earlybird-benefit-list li {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.5;
+    margin-bottom: 0.6rem;
+  }
+
+  .brand-process-section {
+    padding: 3rem 0;
+  }
+  
+  .brand-process-title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 2rem;
+    padding: 0.7rem 1.5rem;
+  }
+  
+  .process-step {
+    min-width: 150px;
+    max-width: 180px;
+    padding: 1rem;
+  }
+  
+  .process-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 0.5rem;
+  }
+  
+  .process-step-title {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    margin-bottom: 0.5rem;
+  }
+  
+  .process-step-details p {
+    font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+    margin-bottom: 0.3rem;
+  }
+  
+  .process-step-details ul {
+    margin: 0.3rem 0 0;
+  }
+  
+  .process-step-details li {
+    font-size: clamp(0.6rem, 1.3vw, 0.7rem);
+    margin-bottom: 0.2rem;
+  }
+  
+  .process-arrow {
+    margin-top: 1.5rem;
+  }
+  
+  .process-arrow img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .brand-refund-section {
+    padding: 3rem 0;
+  }
+  
+  .brand-refund-title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 1.5rem;
+    padding: 0.7rem 1.5rem;
+  }
+  
+  .brand-refund-table th,
+  .brand-refund-table td {
+    padding: 0.6rem 0.4rem;
+    font-size: 0.8rem;
+  }
+  
+  .brand-refund-subtitle {
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    margin: 1.5rem 0 0.8rem;
+  }
+  
+  .brand-refund-list li {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.5;
+  }
+} 
+
+/* 참가비 납부 안내 섹션 */
+.brand-payment-section {
+  background: #fff;
+  padding: clamp(3rem, 4.17vw, 5rem) 0;
+  display: flex;
+  justify-content: center;
+}
+
+.brand-payment-inner {
+  max-width: clamp(500px, 52.08vw, 1000px);
+  width: 100%;
+  padding: 0 clamp(1rem, 2.08vw, 2rem);
+  display: flex;
+  justify-content: center;
+}
+
+.brand-payment-container {
+  width: clamp(500px, 52.08vw, 1000px);
+  height: clamp(200px, 18.49vw, 355px);
+  position: relative;
+  border-radius: clamp(15px, 1.56vw, 30px);
+  border: 2px solid #000;
+  background: #fff;
+  display: flex;
+  align-items: flex-start;
+  padding: clamp(20px, 1.77vw, 34px) clamp(30px, 3.23vw, 62px);
+  box-sizing: border-box;
+}
+
+.brand-payment-content {
+  width: 100%;
+}
+
+.brand-payment-title {
+  color: #000;
+  font-size: clamp(2rem, 2.4vw, 3rem);
+  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: clamp(10px, 1.04vw, 20px);
+}
+
+.brand-payment-subtitle {
+  color: #000;
+  font-size: clamp(1.5rem, 1.56vw, 2rem);
+  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: clamp(5px, 0.52vw, 10px);
+}
+
+.brand-payment-text {
+  color: #000;
+  font-size: clamp(1.5rem, 1.56vw, 2rem);
+  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: clamp(10px, 1.04vw, 20px);
+}
+
+/* 반응형 스타일 */
+@media (max-width: 900px) {
+  .brand-payment-container {
+    width: 100%;
+    height: auto;
+    min-height: clamp(150px, 20vw, 250px);
+    padding: clamp(20px, 3vw, 30px) clamp(25px, 4vw, 40px);
+  }
+  
+  .brand-payment-title {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    line-height: 1.2;
+  }
+  
+  .brand-payment-subtitle,
+  .brand-payment-text {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    line-height: 1.3;
+  }
+}
+
+@media (max-width: 600px) {
+  .brand-payment-container {
+    padding: clamp(15px, 4vw, 25px) clamp(20px, 5vw, 30px);
+    border-radius: clamp(10px, 2.5vw, 20px);
+  }
+  
+  .brand-payment-title {
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+  }
+  
+  .brand-payment-subtitle,
+  .brand-payment-text {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+  }
+} 
+
+/* FAQ 섹션 */
+.brand-faq-section {
+  background: #F2F2F2;
+  padding: clamp(3rem, 4.17vw, 5rem) 0;
+  display: flex;
+  justify-content: center;
+}
+
+.brand-faq-inner {
+  max-width: clamp(800px, 52.08vw, 1000px);
+  width: 100%;
+  padding: 0 clamp(1rem, 2.08vw, 2rem);
+  position: relative;
+}
+
+.brand-faq-title {
+  font-size: clamp(4rem, 10.42vw, 12rem);
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  line-height: 0.82;
+  color: #000;
+  text-align: center;
+  margin-bottom: clamp(2rem, 3.13vw, 4rem);
+}
+
+.brand-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 1.56vw, 2rem);
+}
+
+.brand-faq-item {
+  border-bottom: 1px solid #000;
+  padding: clamp(1.5rem, 2.08vw, 2.5rem) 0;
+}
+
+.brand-faq-item:last-child {
+  border-bottom: none;
+}
+
+.brand-faq-question {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(1rem, 1.56vw, 1.5rem);
+  margin-bottom: clamp(1rem, 1.56vw, 1.5rem);
+}
+
+.brand-faq-q-circle {
+  width: clamp(30px, 2.08vw, 40px);
+  height: clamp(30px, 2.08vw, 40px);
+  border-radius: 50%;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: clamp(2px, 0.26vw, 4px);
+}
+
+.brand-faq-q-text {
+  font-size: clamp(1.5rem, 1.46vw, 1.8rem);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #000;
+  line-height: 1;
+}
+
+.brand-faq-question-title {
+  font-size: clamp(1.2rem, 1.46vw, 1.8rem);
+  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.2;
+  flex: 1;
+}
+
+.brand-faq-answer {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(1rem, 1.56vw, 1.5rem);
+  padding-left: 0;
+}
+
+.brand-faq-a-circle {
+  width: clamp(30px, 2.08vw, 40px);
+  height: clamp(30px, 2.08vw, 40px);
+  border-radius: 50%;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: clamp(2px, 0.26vw, 4px);
+}
+
+.brand-faq-a-text {
+  font-size: clamp(1.5rem, 1.46vw, 1.8rem);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #000;
+  line-height: 1;
+}
+
+.brand-faq-answer-text {
+  font-size: clamp(1rem, 1.25vw, 1.5rem);
+  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.98);
+  line-height: 1.2;
+  flex: 1;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 900px) {
+  .brand-faq-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    margin-bottom: clamp(1.5rem, 4vw, 3rem);
+  }
+  
+  .brand-faq-question,
+  .brand-faq-answer {
+    gap: clamp(0.8rem, 2vw, 1.2rem);
+  }
+  
+  .brand-faq-answer {
+    padding-left: 0;
+  }
+  
+  .brand-faq-question-title {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+  }
+  
+  .brand-faq-answer-text {
+    font-size: clamp(0.9rem, 2.2vw, 1.3rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .brand-faq-title {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+    margin-bottom: clamp(1rem, 5vw, 2rem);
+  }
+  
+  .brand-faq-question,
+  .brand-faq-answer {
+    gap: clamp(0.6rem, 3vw, 1rem);
+  }
+  
+  .brand-faq-answer {
+    padding-left: 0;
+  }
+  
+  .brand-faq-q-circle,
+  .brand-faq-a-circle {
+    width: clamp(25px, 6vw, 35px);
+    height: clamp(25px, 6vw, 35px);
+  }
+  
+  .brand-faq-q-text,
+  .brand-faq-a-text {
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+  }
+  
+  .brand-faq-question-title {
+    font-size: clamp(0.9rem, 4vw, 1.3rem);
+  }
+  
+  .brand-faq-answer-text {
+    font-size: clamp(0.8rem, 3.5vw, 1.1rem);
+  }
+} 

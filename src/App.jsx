@@ -24,14 +24,23 @@ import PartnersPage from './pages/PartnersPage';
 import AboutPage from './pages/AboutPage';
 import ExhibitionPage from './pages/ExhibitionPage';
 import HomePage from './pages/HomePage';
+import TicketPage from './pages/TicketPage';
+import BuyerPage from './pages/BuyerPage';
+import InfluencerPage from './pages/InfluencerPage';
+import AwardPage from './pages/AwardPage';
+import ContactPage from './pages/ContactPage';
 import youtubeIcon from './assets/icons/youtube-icon.svg';
 import facebookIcon from './assets/icons/facebook-icon.svg';
 import tiktokIcon from './assets/icons/tiktok-icon.svg';
 import instagramIcon from './assets/icons/instagram-icon.svg';
 
-function App() {
+// Import Language Context
+import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
+
+function AppContent() {
   // 모바일 메뉴 상태
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, toggleLanguage } = useLanguage();
   const location = useLocation();
 
   // 현재 경로에 따라 메뉴 활성화 상태 확인
@@ -61,14 +70,34 @@ function App() {
           padding: '0.3rem 0',
           margin: 0
         }}>
-          <div className="container mx-auto px-4" style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+          <div className="container mx-auto px-4" style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
             {/* 중앙: 로고 */}
+            <div style={{flex: 1}}></div>
             <Link to="/" style={{textDecoration: 'none'}}>
               <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <div style={{fontWeight: '900', fontSize: '1.7rem', color: 'var(--hypecon-dark)', lineHeight: '1'}}>HYPECON</div>
                 <div style={{fontWeight: '500', fontSize: '1.35rem', color: 'var(--hypecon-dark)', lineHeight: '1'}}>STYLE WEEK</div>
               </div>
             </Link>
+            {/* 오른쪽: 언어 변경 버튼 */}
+            <div style={{flex: 1, display: 'flex', justifyContent: 'flex-end'}}>
+              <button 
+                onClick={toggleLanguage}
+                style={{
+                  background: 'transparent',
+                  border: '1px solid var(--hypecon-dark)',
+                  color: 'var(--hypecon-dark)',
+                  padding: '0.3rem 0.8rem',
+                  borderRadius: '4px',
+                  fontSize: '0.8rem',
+                  fontWeight: '600',
+                  cursor: 'pointer',
+                  fontFamily: 'Noto Sans CJK KR, sans-serif'
+                }}
+              >
+                {language}
+              </button>
+            </div>
           </div>
         </div>
         
@@ -80,12 +109,12 @@ function App() {
         }}>
           <div className="container mx-auto px-4" style={{position:'relative'}}>
             {/* 햄버거 메뉴 + 네비게이션 링크 */}
-            <div className="flex items-center justify-between">
-              {/* 왼쪽: 빈 공간 (균형 맞추기) */}
-              <div style={{width: '100px'}}></div>
+            <div className="flex items-center justify-between" style={{position: 'relative', minHeight: '40px'}}>
+              {/* 왼쪽: 빈 공간 (균형 맞추기) - 데스크톱에서만 */}
+              <div className="nav-left-space" style={{width: '100px'}}></div>
               
               {/* 중앙: 네비게이션 링크들 */}
-              <div className="nav-menu-bar flex items-center justify-center" style={{gap:'2rem', flex: 1}}>
+              <div className="nav-menu-bar flex items-center justify-center" style={{gap:'2rem', position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)'}}>
                 <Link to="/about" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/about') ? 'var(--hypecon-main)' : 'var(--hypecon-white)', padding:'0 0.2em'}}>ABOUT</Link>
                 <Link to="/exhibition" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/exhibition') ? 'var(--hypecon-main)' : 'var(--hypecon-white)', padding:'0 0.2em'}}>EXHIBITION</Link>
                 <Link to="/brand" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1rem', color: isActive('/brand') ? 'var(--hypecon-main)' : 'var(--hypecon-white)', padding:'0 0.2em'}}>BRAND</Link>
@@ -97,7 +126,7 @@ function App() {
               </div>
               
               {/* 오른쪽: 햄버거 메뉴 */}
-              <div className="nav-hamburger-wrap" style={{display:'flex', width: '100px', justifyContent: 'flex-end'}}>
+              <div className="nav-hamburger-wrap" style={{display:'flex', width: '100px', justifyContent: 'flex-end', alignItems: 'center', position: 'absolute', right: '1rem', top: '50%', transform: 'translateY(-50%)'}}>
                 <div onClick={()=>setIsMobileMenuOpen(v=>!v)} style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', cursor:'pointer'}}>
                   <div style={{width:'22px', height:'3px', background:'var(--hypecon-white)', borderRadius:'2px', margin:'2px 0'}}></div>
                   <div style={{width:'22px', height:'3px', background:'var(--hypecon-white)', borderRadius:'2px', margin:'2px 0'}}></div>
@@ -132,7 +161,25 @@ function App() {
                 <Link to="/buyer" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/buyer') ? 'var(--hypecon-main)' : 'var(--hypecon-dark)'}} onClick={()=>setIsMobileMenuOpen(false)}>Buyer</Link>
                 <Link to="/influencer" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/influencer') ? 'var(--hypecon-main)' : 'var(--hypecon-dark)'}} onClick={()=>setIsMobileMenuOpen(false)}>Influencer</Link>
                 <Link to="/award" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/award') ? 'var(--hypecon-main)' : 'var(--hypecon-dark)'}} onClick={()=>setIsMobileMenuOpen(false)}>Award</Link>
-                <Link to="/contact" className="waterbomb-nav-link" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/contact') ? 'var(--hypecon-main)' : 'var(--hypecon-dark)'}} onClick={()=>setIsMobileMenuOpen(false)}>Contact</Link>
+                <Link to="/contact" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/contact') ? 'var(--hypecon-main)' : 'var(--hypecon-dark)'}} onClick={()=>setIsMobileMenuOpen(false)}>Contact</Link>
+                <div className="language-toggle-mobile" style={{marginTop: '1rem'}}>
+                  <button 
+                    onClick={toggleLanguage}
+                    style={{
+                      background: 'transparent',
+                      border: '1px solid var(--hypecon-dark)',
+                      color: 'var(--hypecon-dark)',
+                      padding: '0.5rem 1rem',
+                      borderRadius: '4px',
+                      fontSize: '1rem',
+                      fontWeight: '600',
+                      cursor: 'pointer',
+                      fontFamily: 'Noto Sans CJK KR, sans-serif'
+                    }}
+                  >
+                    {language}
+                  </button>
+                </div>
               </div>
             )}
             
@@ -140,10 +187,18 @@ function App() {
             <style>{`
               @media (max-width: 768px) {
                 .nav-menu-bar { display: none !important; }
-                .nav-hamburger-wrap { display: flex !important; }
+                .nav-left-space { display: none !important; }
+                .nav-hamburger-wrap { 
+                  display: flex !important; 
+                  width: 100px !important;
+                  justify-content: flex-end !important;
+                  align-items: center !important;
+                  margin-left: auto !important;
+                }
               }
               @media (min-width: 769px) {
                 .nav-menu-bar { display: flex !important; }
+                .nav-left-space { display: block !important; }
                 .nav-hamburger-wrap { display: none !important; }
               }
             `}</style>
@@ -159,11 +214,11 @@ function App() {
           {/* 추가: 빈 페이지용 임시 컴포넌트 */}
           <Route path="/exhibition" element={<ExhibitionPage />} />
           <Route path="/brand" element={<BrandPage />} />
-          <Route path="/ticket" element={<EmptyPage title="TICKET" />} />
-          <Route path="/buyer" element={<EmptyPage title="BUYER" />} />
-          <Route path="/influencer" element={<EmptyPage title="INFLUENCER" />} />
-          <Route path="/contact" element={<EmptyPage title="CONTACT" />} />
-          <Route path="/award" element={<EmptyPage title="AWARD" />} />
+          <Route path="/ticket" element={<TicketPage />} />
+          <Route path="/buyer" element={<BuyerPage />} />
+          <Route path="/influencer" element={<InfluencerPage />} />
+          <Route path="/award" element={<AwardPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
         </div>
       <Footer />
@@ -289,6 +344,14 @@ function Footer() {
         }
       `}</style>
     </footer>
+  );
+}
+
+function App() {
+  return (
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
   );
 }
 

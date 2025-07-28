@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
 import path from 'path'
 
 // 환경에 따른 base 설정
@@ -19,7 +18,7 @@ export default defineConfig({
       },
     },
   },
-  plugins: [react(),tailwindcss()],
+  plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
