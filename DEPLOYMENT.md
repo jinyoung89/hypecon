@@ -89,7 +89,21 @@ git push origin main
 4. 푸시: `git push origin main`
 5. 2-3분 후 https://jinyoung89.github.io/hypecon/ 에서 확인
 
-### 3. 문제 해결 과정 기록 (다시는 겪지 마세요!)
+### 3. `public` 폴더와 `docs` 폴더의 관계
+
+**`public` 폴더**: 개발 중 정적 파일을 저장하는 소스 폴더
+- 빌드 전 원본 정적 파일 위치
+- 여기에 있는 파일들은 빌드 시 자동으로 `docs` 폴더로 복사됨
+- 예: favicon.ico, CNAME, 404.html 등
+
+**`docs` 폴더**: 빌드 결과물이 저장되는 배포 폴더
+- `vite.config.js`의 `outDir: 'docs'` 설정으로 지정
+- 빌드 시 생성되는 모든 파일(HTML, JS, CSS, 이미지 등)이 여기에 저장
+- GitHub Pages가 이 폴더의 내용을 웹사이트로 제공
+
+**중요**: `public` 폴더의 파일은 개발/소스용이고, `docs` 폴더는 빌드된 배포 파일입니다. 두 폴더의 일부 파일이 동일한 것은 정상입니다.
+
+### 4. 문제 해결 과정 기록 (다시는 겪지 마세요!)
 
 #### 문제 1: 흰색 화면 또는 JavaScript 404 에러
 **원인**: 
@@ -131,7 +145,7 @@ const basename = isGitHubPages ? '/hypecon' : '';
 **원인**: 두 방식을 섞어 사용하면 충돌 발생
 **해결**: **로컬 빌드 + 커밋 방식**만 사용
 
-### 4. 배포 전 체크리스트 (이것만 확인하면 OK)
+### 5. 배포 전 체크리스트 (이것만 확인하면 OK)
 
 - [ ] **GitHub Pages 설정: Source "Deploy from a branch", Folder "/docs"** ⭐ 가장 중요!
 - [ ] **`src/main.jsx`에서 `includes('github.io')` 방식 사용** ⭐ 핵심!
@@ -141,7 +155,7 @@ const basename = isGitHubPages ? '/hypecon' : '';
 - [ ] 로컬에서 `npm run build` 실행 후 에러 없음 확인
 - [ ] `docs` 폴더에 `index.html`, `404.html`, `assets` 폴더 생성 확인
 
-### 5. 긴급 롤백 방법
+### 6. 긴급 롤백 방법
 
 만약 배포 후 문제가 발생하면:
 ```bash
@@ -149,16 +163,20 @@ git reset --hard HEAD~1
 git push --force origin main
 ```
 
-### 6. 로컬 테스트 방법
+### 7. 로컬 테스트 방법
 
 ```bash
+# Vite 개발 서버로 테스트 (권장)
+npm run dev
+
+# 또는 빌드 후 테스트
 npm run build
 cd docs
 python3 -m http.server 8000
 # http://localhost:8000에서 확인 (basename이 빈 문자열로 설정됨)
 ```
 
-### 7. 완벽한 배포 명령어
+### 8. 완벽한 배포 명령어
 
 ```bash
 # 한 줄 완벽 배포 (복사해서 사용하세요)
@@ -171,7 +189,7 @@ git commit -m "Update content"
 git push origin main
 ```
 
-### 8. 문제 발생 시 순서대로 해결 (99% 해결됨)
+### 9. 문제 발생 시 순서대로 해결 (99% 해결됨)
 
 흰화면/404 문제 발생 시 **반드시 순서대로** 시도:
 
@@ -213,7 +231,7 @@ npm run build && git add . && git commit -m "Fix routing issue" && git push orig
 - `F12` → Console 탭에서 basename 관련 로그 확인
 - 에러 메시지가 있다면 기록해두기
 
-### 9. 동영상 문제 해결
+### 10. 동영상 문제 해결
 
 동영상이 안 나올 때:
 
