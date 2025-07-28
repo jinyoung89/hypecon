@@ -1,0 +1,61 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+
+# Your rule content
+# Size Conversion Rule for Figma Design
+
+## 피그마 디자인 기준 (Base: 1920px)
+
+사용자가 피그마에서 확인한 고정 사이즈를 요청할 때, 다음 규칙에 따라 반응형으로 변환:
+
+### 기본 공식
+```css
+/* 피그마 사이즈 → 반응형 변환 */
+font-size: clamp(최소값, (피그마값/1920)*100vw, 최대값);
+width: clamp(최소값, (피그마값/1920)*100vw, 최대값);
+height: clamp(최소값, (피그마값/1920)*100vw, 최대값);
+padding: clamp(최소값, (피그마값/1920)*100vw, 최대값);
+margin: clamp(최소값, (피그마값/1920)*100vw, 최대값);
+```
+
+### 변환 예시
+- **피그마 font-size: 48px** → `clamp(2rem, 2.5vw, 3rem)` (48/1920 = 2.5vw)
+- **피그마 width: 640px** → `clamp(300px, 33.33vw, 640px)` (640/1920 = 33.33vw)
+- **피그마 height: 400px** → `clamp(200px, 20.83vw, 400px)` (400/1920 = 20.83vw)
+- **피그마 padding: 80px** → `clamp(2rem, 4.17vw, 5rem)` (80/1920 = 4.17vw)
+
+### 최소/최대값 가이드라인
+- **폰트 크기**: 최소 0.8rem~1rem, 최대는 피그마값의 rem 변환
+- **너비/높이**: 최소는 피그마값의 50~60%, 최대는 피그마값 그대로
+- **여백**: 최소는 피그마값의 25~50%, 최대는 피그마값의 125%
+
+### 자주 사용하는 변환표
+| 피그마 (px) | vw 계산 | clamp 예시 |
+|------------|---------|------------|
+| 24px | 1.25vw | `clamp(1rem, 1.25vw, 1.5rem)` |
+| 48px | 2.5vw | `clamp(2rem, 2.5vw, 3rem)` |
+| 96px | 5vw | `clamp(3rem, 5vw, 6rem)` |
+| 320px | 16.67vw | `clamp(200px, 16.67vw, 320px)` |
+| 640px | 33.33vw | `clamp(300px, 33.33vw, 640px)` |
+| 1200px | 62.5vw | `clamp(600px, 62.5vw, 1200px)` |
+
+### 모바일 최적화
+600px 이하에서는 추가 조정:
+```css
+@media (max-width: 600px) {
+  /* 폰트 크기 더 작게 */
+  font-size: clamp(0.8rem, 4vw, 1.2rem) !important;
+  /* 여백 더 작게 */
+  padding: clamp(1rem, 3vw, 2rem) !important;
+}
+```
+
+### 적용 방법
+사용자가 "width: 640, height: 400" 요청 시:
+1. 640/1920 = 33.33vw 계산
+2. 400/1920 = 20.83vw 계산
+3. `clamp(300px, 33.33vw, 640px)` 형태로 변환
+4. 모바일 최적화 추가 
