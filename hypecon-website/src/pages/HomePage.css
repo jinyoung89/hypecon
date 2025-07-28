@@ -5,6 +5,13 @@
   --hypecon-teal: #00E5A8;
 }
 
+/* 모바일 가로 스크롤 방지 */
+.home-page-root {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
 .home-hero-section {
   min-height: clamp(600px, 44.5vw, 854px);
   height: clamp(600px, 44.5vw, 854px);
@@ -16,6 +23,8 @@
   overflow: hidden;
   margin: 0;
   padding: 0;
+  width: 100%;
+  max-width: 100%;
 }
 .home-hero-video {
   position: absolute;

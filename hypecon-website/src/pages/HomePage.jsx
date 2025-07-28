@@ -33,7 +33,7 @@ function HomePage() {
   };
 
   return (
-    <>
+    <div className="home-page-root">
       {/* 메인 히어로 섹션 */}
       <section className="home-hero-section">
         {/* 배경 비디오 */}
@@ -223,7 +223,7 @@ function HomePage() {
           }
         }
       `}</style>
-    </>
+    </div>
   );
 }
 
