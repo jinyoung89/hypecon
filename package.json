@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://www.hypeconweek.com",
+  "homepage": "https://jinyoung89.github.io/hypecon/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
