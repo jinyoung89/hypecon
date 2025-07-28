@@ -148,7 +148,12 @@ function BuyerPage() {
                     <span className="buyer-faq-a-text">A</span>
                   </div>
                   <div className="buyer-faq-answer-text">
-                    {item.a}
+                    {item.a.split('\n').map((line, i) => (
+                      <React.Fragment key={i}>
+                        {line}
+                        <br />
+                      </React.Fragment>
+                    ))}
                   </div>
                 </div>
               </div>
