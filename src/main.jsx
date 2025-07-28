@@ -4,7 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom';
 
-// GitHub Pages를 위한 basename 설정
+// 커스텀 도메인 사용 시 basename 제거
 const isGitHubPages = window.location.hostname.includes('github.io');
 const basename = isGitHubPages ? '/hypecon' : '';
 
