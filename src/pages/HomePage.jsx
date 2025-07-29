@@ -6,6 +6,7 @@ import sec2Img from '../assets/images/sec2_img.png';
 import sec3Img from '../assets/images/sec3_img.png';
 import sec3Img2 from '../assets/images/sec3_img_2.png';
 import sec4Img from '../assets/images/sec4_img.png';
+import homeImg from '../assets/images/home.png';
 import { useLanguage } from '../contexts/LanguageContext';
 import './HomePage.css';
 
@@ -54,43 +55,212 @@ function HomePage() {
         <div className="home-hero-overlay"></div>
         
         {/* 텍스트 오버레이 */}
-        <div className="home-hero-text">
-          <div className="home-hero-title">{t('home.hero.title')}</div>
-          <div className="home-hero-subtitle">{t('home.hero.subtitle')}</div>
-          <div className="home-hero-desc">{t('home.hero.desc')}</div>
+        <div className="home-hero-text" style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          textAlign: 'center',
+          gap: 'clamp(1rem, 2vw, 2rem)'
+        }}>
+          <img 
+            src={homeImg}
+            alt="HYPECON STYLE WEEK"
+            style={{
+              width: 'clamp(300px, 31.25vw, 600px)',
+              height: 'clamp(150px, 13.65vw, 262px)',
+              objectFit: 'contain'
+            }}
+          />
+          <div className="home-hero-subtitle" style={{
+            color: '#FFF',
+            fontFamily: 'Inter, sans-serif',
+            fontSize: 'clamp(1.5rem, 1.67vw, 2rem)',
+            fontStyle: 'normal',
+            fontWeight: '700',
+            lineHeight: 'clamp(2rem, 2.5vw, 3rem)',
+            textAlign: 'center'
+          }}>2026. 2.19 ~ 22 @ COEX C HALL</div>
         </div>
       </section>
 
       {/* 중간 콘텐츠 블록 */}
-      <section className="home-section-block">
-        <div className="container home-block-grid">
+      <section className="home-section-block" style={{
+        width: '100vw',
+        height: 'clamp(400px, 33.33vw, 640px)',
+        position: 'relative',
+        background: '#F2F2F2',
+        margin: '0',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        '@media (max-width: 768px)': {
+          flexDirection: 'column',
+          height: 'auto',
+          minHeight: 'clamp(600px, 80vw, 800px)',
+          padding: 'clamp(2rem, 4vw, 3rem) 0'
+        }
+      }}>
+        <div style={{
+          position: 'relative',
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '0 clamp(1rem, 3vw, 2rem)',
+          margin: '0 auto',
+          gap: 'clamp(2rem, 4vw, 4rem)',
+          '@media (max-width: 768px)': {
+            flexDirection: 'column',
+            height: 'auto',
+            gap: 'clamp(1.5rem, 3vw, 2rem)'
+          }
+        }}>
           {/* 왼쪽 섹션 */}
-          <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', minHeight: 'clamp(300px, 24vw, 460px)'}}>
-            {/* 상단 여백을 위한 빈 공간 */}
-            <div style={{flex: 1}}></div>
+          <div style={{
+            position: 'relative',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'flex-start',
+            height: '100%',
+            gap: 'clamp(1rem, 2vw, 2rem)',
+            '@media (max-width: 768px)': {
+              alignItems: 'center',
+              textAlign: 'center',
+              height: 'auto',
+              gap: 'clamp(0.8rem, 2vw, 1.5rem)'
+            }
+          }}>
+            {/* BEYOND ONLINE EXPERIENCE STYLE 타이틀 */}
+            <div className="home-block-title" style={{
+              width: 'clamp(300px, 31.61vw, 607px)',
+              height: 'clamp(100px, 10.73vw, 206px)',
+              justifyContent: 'center',
+              display: 'flex',
+              flexDirection: 'column',
+              color: 'black',
+              fontSize: 'clamp(3rem, 5.21vw, 6.25rem)',
+              fontFamily: 'Bebas Neue, sans-serif',
+              fontWeight: '400',
+              lineHeight: 'clamp(2.5rem, 4.69vw, 5.625rem)',
+              wordWrap: 'break-word',
+              '@media (max-width: 768px)': {
+                width: '100%',
+                height: 'auto',
+                fontSize: 'clamp(2rem, 8vw, 4rem)',
+                lineHeight: 'clamp(1.8rem, 7vw, 3.5rem)'
+              }
+            }}>
+              {t('home.section1.title')}
+            </div>
             
-            {/* 컨텐츠 영역 */}
-            <div>
-              <h2 className="home-block-title">
-                {t('home.section1.title')}
-              </h2>
-              <p className="home-block-desc">
-                {t('home.section1.desc')}
-              </p>
-              <div className="home-block-btns">
-                <button onClick={handleTicketClick} className="home-btn-main hover:scale-105">
-                  {t('home.section1.button')}
-                </button>
-              </div>
+            {/* 설명 텍스트 */}
+            <div style={{
+              width: 'clamp(300px, 27.03vw, 519px)',
+              height: 'clamp(30px, 2.97vw, 57px)',
+              justifyContent: 'center',
+              display: 'flex',
+              flexDirection: 'column',
+              color: 'black',
+              fontSize: 'clamp(0.75rem, 1.3vw, 1.563rem)',
+              fontFamily: 'Noto Sans, sans-serif',
+              fontWeight: '400',
+              lineHeight: 'clamp(1.5rem, 1.56vw, 1.875rem)',
+              wordWrap: 'break-word',
+              '@media (max-width: 768px)': {
+                width: '100%',
+                height: 'auto',
+                fontSize: 'clamp(0.9rem, 3vw, 1.2rem)',
+                lineHeight: 'clamp(1.2rem, 3.5vw, 1.5rem)'
+              }
+            }}>
+              {t('home.section1.desc').split('\n').map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  {index < t('home.section1.desc').split('\n').length - 1 && <br />}
+                </React.Fragment>
+              ))}
+            </div>
+            
+            {/* 버튼 컨테이너 */}
+            <div style={{
+              position: 'relative',
+              width: 'clamp(300px, 28.13vw, 540px)',
+              height: 'clamp(50px, 4.69vw, 90px)',
+              '@media (max-width: 768px)': {
+                width: '100%',
+                maxWidth: 'clamp(280px, 80vw, 400px)',
+                height: 'clamp(45px, 12vw, 60px)'
+              }
+            }}>
+              {/* 버튼 배경 */}
+              <div style={{
+                width: '100%',
+                height: '100%',
+                position: 'absolute',
+                background: '#00E5A8',
+                borderRadius: '40px'
+              }} />
+              
+              {/* 버튼 텍스트 */}
+              <button 
+                onClick={handleTicketClick} 
+                className="home-btn-main hover:scale-105"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  position: 'absolute',
+                  background: 'transparent',
+                  border: 'none',
+                  textAlign: 'center',
+                  justifyContent: 'center',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  color: 'black',
+                  fontSize: 'clamp(1.575rem, 2.19vw, 2.625rem)',
+                  fontFamily: 'Noto Sans, sans-serif',
+                  fontWeight: '700',
+                  lineHeight: 'clamp(2rem, 2.63vw, 3.15rem)',
+                  wordWrap: 'break-word',
+                  cursor: 'pointer',
+                  '@media (max-width: 768px)': {
+                    fontSize: 'clamp(1rem, 4vw, 1.5rem)',
+                    lineHeight: 'clamp(1.2rem, 4.5vw, 1.8rem)'
+                  }
+                }}
+              >
+                {t('home.section1.button')}
+              </button>
             </div>
           </div>
           
           {/* 오른쪽 섹션 - 이미지 */}
-          <div className="home-block-img">
+          <div style={{
+            width: 'clamp(300px, 33.33vw, 640px)',
+            height: 'clamp(200px, 23.96vw, 460px)',
+            borderRadius: '12px',
+            overflow: 'hidden',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            cursor: 'pointer',
+            transition: 'transform 0.3s',
+            '@media (max-width: 768px)': {
+              width: '100%',
+              maxWidth: 'clamp(280px, 80vw, 400px)',
+              height: 'clamp(180px, 50vw, 250px)'
+            }
+          }}>
             <img 
               src={sec2Img}
               alt="HYPECON Event"
-              className="home-block-img-el"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover'
+              }}
             />
           </div>
         </div>
@@ -99,34 +269,127 @@ function HomePage() {
       {/* "THAT'S WHERE HYPECON BEGINS" 섹션 */}
       <section className="home-begins-section">
         <div className="container home-begins-container">
-          <div className="home-begins-grid">
+          <div style={{
+            position: 'relative',
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '0 clamp(1rem, 3vw, 2rem)',
+            margin: '0 auto',
+            gap: 'clamp(2rem, 4vw, 4rem)'
+          }}>
             {/* 왼쪽 텍스트 섹션 */}
-            <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', minHeight: 'clamp(300px, 24vw, 460px)'}}>
-              {/* 상단 여백을 위한 빈 공간 */}
-              <div style={{flex: 1}}></div>
-              
+            <div style={{
+              position: 'relative',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'flex-start',
+              height: '100%',
+              gap: 'clamp(1rem, 2vw, 2rem)',
+              '@media (max-width: 768px)': {
+                alignItems: 'center',
+                textAlign: 'center',
+                width: '100%'
+              }
+            }}>
               {/* 컨텐츠 영역 */}
-              <div>
-              <div className="home-begins-desc">
-                {t('home.section2.desc')}
+              <div style={{
+                '@media (max-width: 768px)': {
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  textAlign: 'center'
+                }
+              }}>
+              <div className="home-begins-desc" style={{
+                width: 'clamp(300px, 34.38vw, 660px)',
+                height: 'auto',
+                minHeight: 'clamp(30px, 3.02vw, 58px)',
+                justifyContent: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                color: 'black',
+                fontSize: 'clamp(1.125rem, 1.56vw, 1.875rem)',
+                fontFamily: 'Montserrat, sans-serif',
+                fontWeight: '700',
+                lineHeight: 'clamp(2rem, 2.08vw, 2.5rem)',
+                wordWrap: 'break-word',
+                textAlign: 'left',
+                alignItems: 'flex-start',
+                '@media (max-width: 768px)': {
+                  width: '100%',
+                  textAlign: 'center',
+                  alignItems: 'center'
+                }
+              }}>
+                {t('home.section2.desc').split('\n').map((line, index) => (
+                  <React.Fragment key={index}>
+                    {line}
+                    {index < t('home.section2.desc').split('\n').length - 1 && <br />}
+                  </React.Fragment>
+                ))}
               </div>
               <h2 className="home-begins-title">
-                {t('home.section2.title')}
+                {t('home.section2.title').split('\n').map((line, index) => (
+                  <React.Fragment key={index}>
+                    {line}
+                    {index < t('home.section2.title').split('\n').length - 1 && <br />}
+                  </React.Fragment>
+                ))}
               </h2>
-              <p className="home-begins-highlight">
+              <p className="home-begins-highlight" style={{
+                width: 'clamp(300px, 25.42vw, 488px)',
+                height: 'clamp(50px, 4.84vw, 93px)',
+                justifyContent: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                color: 'black',
+                fontSize: 'clamp(1.313rem, 1.82vw, 2.188rem)',
+                fontFamily: 'Noto Sans, sans-serif',
+                fontWeight: '700',
+                lineHeight: 'clamp(2.2rem, 2.19vw, 2.625rem)',
+                wordWrap: 'break-word',
+                '@media (max-width: 768px)': {
+                  width: '100%',
+                  textAlign: 'center',
+                  alignItems: 'center'
+                }
+              }}>
                 {t('home.section2.highlight')}
               </p>
               </div>
             </div>
             
             {/* 오른쪽 이미지 블록들 */}
-            <div className="home-begins-right">
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 'clamp(1rem, 2vw, 2rem)'
+            }}>
               {/* 상단 이미지 블록 */}
-              <div className="home-begins-img-block">
+              <div style={{
+                width: 'clamp(300px, 33.33vw, 640px)',
+                height: 'clamp(200px, 23.96vw, 460px)',
+                borderRadius: '12px',
+                position: 'relative',
+                overflow: 'hidden',
+                cursor: 'pointer',
+                transition: 'transform 0.3s',
+                display: 'flex',
+                alignItems: 'stretch'
+              }}>
                 <img 
                   src={sec3Img}
                   alt="얼리 부스 참가 신청"
-                  className="home-begins-img"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
                 />
                 <div className="image-overlay home-begins-img-overlay">
                   <div className="overlay-text home-begins-img-title">
@@ -139,11 +402,25 @@ function HomePage() {
               </div>
               
               {/* 하단 이미지 블록 */}
-              <div className="home-begins-img-block">
+              <div style={{
+                width: 'clamp(300px, 33.33vw, 640px)',
+                height: 'clamp(200px, 23.96vw, 460px)',
+                borderRadius: '12px',
+                position: 'relative',
+                overflow: 'hidden',
+                cursor: 'pointer',
+                transition: 'transform 0.3s',
+                display: 'flex',
+                alignItems: 'stretch'
+              }}>
                 <img 
                   src={sec3Img2}
                   alt="얼리 참가신청"
-                  className="home-begins-img"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
                 />
                 <div className="image-overlay home-begins-img-overlay">
                   <div className="overlay-text home-begins-img-title" style={{color: 'var(--hypecon-pink)'}}>
@@ -153,20 +430,79 @@ function HomePage() {
                     {t('home.section2.deadline')}
                   </div>
                 </div>
-                </div>
               </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* 인플루언서/바이어/프레스 섹션 */}
-      <section className="home-influencer-section" style={{background: `url(${sec4Img}) center/cover no-repeat`}}>
-        <div className="container home-influencer-container">
-          <div className="home-influencer-btns">
-            <button onClick={handleInfluencerClick} className="home-btn-black hover:scale-105">
+      <section className="home-influencer-section" style={{
+        background: `url(${sec4Img}) center/cover no-repeat`,
+        height: 'clamp(400px, 39.53vw, 759px)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}>
+        <div style={{
+          textAlign: 'center',
+          position: 'relative',
+          zIndex: 2,
+          width: '100%'
+        }}>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 'clamp(1rem, 2vw, 2rem)',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            <button 
+              onClick={handleInfluencerClick} 
+              style={{
+                width: 'clamp(400px, 45.3vw, 869.84px)',
+                height: 'clamp(60px, 5.78vw, 111px)',
+                borderRadius: '40px',
+                background: 'black',
+                color: 'white',
+                border: 'none',
+                textAlign: 'center',
+                justifyContent: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                fontSize: 'clamp(1.688rem, 2.34vw, 2.8125rem)',
+                fontFamily: 'Noto Sans, sans-serif',
+                fontWeight: '700',
+                lineHeight: 'clamp(2rem, 2.81vw, 3.375rem)',
+                wordWrap: 'break-word',
+                cursor: 'pointer',
+                transition: 'transform 0.3s'
+              }}
+            >
               {t('home.section3.influencer')}
             </button>
-            <button onClick={handleBuyerClick} className="home-btn-main hover:scale-105">
+            <button 
+              onClick={handleBuyerClick} 
+              style={{
+                width: 'clamp(400px, 45.3vw, 869.84px)',
+                height: 'clamp(60px, 5.78vw, 111px)',
+                borderRadius: '40px',
+                background: '#00E5A8',
+                color: 'black',
+                border: 'none',
+                textAlign: 'center',
+                justifyContent: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                fontSize: 'clamp(1.688rem, 2.34vw, 2.8125rem)',
+                fontFamily: 'Noto Sans, sans-serif',
+                fontWeight: '700',
+                lineHeight: 'clamp(2rem, 2.81vw, 3.375rem)',
+                wordWrap: 'break-word',
+                cursor: 'pointer',
+                transition: 'transform 0.3s'
+              }}
+            >
               {t('home.section3.buyer')}
             </button>
           </div>

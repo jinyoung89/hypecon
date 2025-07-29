@@ -34,7 +34,7 @@
   max-width: 1000px;
   color: #00E5A8;
   font-size: clamp(2rem, 3.3vw, 4rem);
-  font-family: 'Noto Sans CJK KR';
+  font-family: 'Noto Sans';
   font-weight: 700;
   line-height: 1;
   word-wrap: break-word;
@@ -49,7 +49,7 @@
 .about-intro-description {
   color: #00E5A8;
   font-size: clamp(1rem, 1.35vw, 1.625rem);
-  font-family: 'Noto Sans CJK KR';
+  font-family: 'Noto Sans';
   font-weight: 400;
   line-height: 1.15;
   word-wrap: break-word;
@@ -99,96 +99,86 @@
 }
 
 .about-section-why {
-  min-height: 640px;
-  height: 640px;
+  background: var(--hypecon-dark);
+  color: var(--hypecon-white);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 0 1.5rem;
+  justify-content: center;
+  padding: 3rem 2rem;
   text-align: center;
-  position: relative;
+  min-height: clamp(300px, 33.33vw, 640px);
 }
 .about-why-title {
-  font-weight: 600;
-  font-size: clamp(2.5rem, 10vw, 7rem);
-  color: var(--hypecon-yellow);
-  margin-bottom: 1rem;
-  margin-top: 0;
-  line-height: 0.8;
-  letter-spacing: 0.06em;
-  word-spacing: 0.05em;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.18);
-  font-family: 'Bebas Neue', 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  transform: scaleY(1.4);
-  word-break: keep-all;
-  white-space: normal;
-  hyphens: auto;
+  font-size: clamp(4rem, 10.42vw, 12.5rem);
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  line-height: clamp(3rem, 8.54vw, 10.25rem);
+  color: #E1F800;
+  margin-bottom: 2rem;
+  word-wrap: break-word;
+  text-align: center;
 }
 .about-why-desc {
-  max-width: 600px;
-  margin: 0 auto;
-  font-size: clamp(1rem, 2.5vw, 1.3rem);
-  color: var(--hypecon-white);
+  width: clamp(400px, 48.13vw, 924px);
+  height: clamp(60px, 6.09vw, 117px);
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: clamp(1.5rem, 2.08vw, 2.5rem);
+  font-family: 'Noto Sans', sans-serif;
   font-weight: 500;
-  line-height: 0;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
-  word-break: keep-all;
-  white-space: normal;
-  hyphens: auto;
+  line-height: clamp(1.8rem, 2.6vw, 3.125rem);
+  word-wrap: break-word;
 }
 .about-why-highlight {
-  display: block;
-  font-size: clamp(1.1rem, 4vw, 1.5rem);
+  color: #E1F800;
   font-weight: 700;
-  margin-top: 2.5rem;
-  margin-bottom: 1.1rem;
-  line-height: 1.3;
 }
 
 .about-section-experience {
-  background: #fff;
-  color: #111;
+  background: var(--hypecon-white);
+  color: var(--hypecon-dark);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4.5rem 1.5rem 3.5rem 1.5rem;
+  justify-content: center;
+  padding: 3rem 2rem;
   text-align: center;
 }
 .about-experience-badge {
-  display: inline-block;
-  border: 2px solid #111;
-  border-radius: 2rem;
-  padding: 0.7rem 2.2rem;
-  font-weight: 700;
-  font-size: clamp(1rem, 3vw, 1.35rem);
-  background: #fff;
-  margin-bottom: 1.7rem;
+  background: var(--hypecon-purple);
+  color: var(--hypecon-white);
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 .about-experience-badge span {
-  font-weight: 900;
+  color: var(--hypecon-white);
 }
 .about-experience-title {
-  font-weight: 900;
-  font-size: clamp(1.2rem, 5vw, 2.1rem);
-  margin-bottom: 1.1rem;
-  color: #111;
-  word-break: keep-all;
-  white-space: normal;
-  hyphens: auto;
+  font-size: clamp(2rem, 3.13vw, 3.75rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: clamp(1.8rem, 2.6vw, 3.125rem);
+  word-wrap: break-word;
+  text-align: center;
 }
 .about-experience-desc {
-  max-width: 1000px;
-  margin: 0 auto;
-  font-size: clamp(0.95rem, 2vw, 1.05rem);
-  color: #222;
-  font-weight: 400;
-  line-height: 1.7;
-  margin-bottom: 2.7rem;
-  word-break: keep-all;
-  white-space: normal;
-  hyphens: auto;
+  font-size: clamp(1.2rem, 1.67vw, 2rem);
+  font-weight: 700;
+  line-height: clamp(1.8rem, 2.6vw, 3.125rem);
+  word-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 .about-experience-cards {
   display: flex;
@@ -348,224 +338,457 @@
   flex-shrink: 0;
   font-weight: 900;
   font-size: clamp(1rem, 1.2vw, 1.33rem);
-  color: var(--hypecon-dark);
-  line-height: 1.3;
-  margin-right: clamp(10px, 1vw, 20px);
-  white-space: normal;
-  overflow: visible;
-  text-overflow: unset;
-  text-align: center;
-  margin-bottom: clamp(5px, 0.5vw, 10px);
-}
-.about-list-title span {
-  font-size: 1.5rem;
-  margin-right: 0.5rem;
-  color: var(--hypecon-dark);
-}
-.about-list-desc {
-  flex: 1 1 0;
-  min-width: 0;
-  font-size: 1.05rem;
-  color: var(--hypecon-dark);
-  font-weight: 400;
-  margin-left: 0;
-  text-align: left;
-  line-height: 1.7;
-  word-break: break-word;
-  overflow-wrap: break-word;
-  white-space: normal;
-  hyphens: auto;
-  width: 100%;
+  line-height: clamp(1.2rem, 1.44vw, 1.6rem);
+  color: #111;
+  padding: clamp(1rem, 1.56vw, 1.875rem) clamp(1rem, 2.5vw, 3rem);
+  background: #111;
+  border-radius: 30px;
+  border: 2px solid #111;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  gap: clamp(1rem, 1.56vw, 1.875rem);
+  min-width: clamp(200px, 18.23vw, 350px);
+  max-width: clamp(200px, 18.23vw, 350px);
+  height: clamp(80px, 7.81vw, 150px);
+  word-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.about-list-title span {
+  color: #00E5A8;
+  font-weight: 700;
+}
+.about-list-desc {
+  flex: 1;
+  font-weight: 500;
+  font-size: clamp(0.8rem, 1.67vw, 2rem);
+  line-height: clamp(1.2rem, 2.6vw, 3.125rem);
+  color: #111;
+  padding: clamp(1rem, 1.35vw, 1.625rem) clamp(2rem, 5.31vw, 6.375rem);
+  background: #fff;
+  border-radius: 30px;
+  border: 2px solid #111;
+  display: flex;
+  align-items: center;
+  min-width: clamp(400px, 45.52vw, 874px);
+  max-width: clamp(400px, 45.52vw, 874px);
+  height: clamp(80px, 7.81vw, 150px);
+  word-wrap: break-word;
+  margin-left: clamp(1rem, 2vw, 2rem);
 }
 
 .about-global-section {
-  width: 100%;
-  background: var(--hypecon-main);
+  background: #00E5A8;
   color: #111;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 3.5rem 1.5rem 3.5rem 1.5rem;
-  text-align: left;
+  padding: 3rem 2rem;
+  text-align: center;
+  min-height: clamp(300px, 40vw, 600px);
 }
 .about-global-content {
   width: 100%;
-  max-width: 500px;
-  position: relative;
+  max-width: clamp(600px, 80vw, 1200px);
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  text-align: center;
 }
 .about-global-desc {
-  width: 100%;
-  color: #000;
-  font-family: "Noto Sans CJK KR";
-  font-size: clamp(1.2rem, 1.56vw, 30px);
-  font-style: normal;
+  font-size: clamp(1.5rem, 1.98vw, 2.375rem);
+  font-family: 'Noto Sans', sans-serif;
   font-weight: 500;
-  line-height: clamp(1.3rem, 1.67vw, 32px);
-  letter-spacing: -1.14px;
-  margin-bottom: 1.7rem;
-  word-break: keep-all;
-  white-space: normal;
-  hyphens: auto;
+  line-height: clamp(1.6rem, 2.08vw, 2.5rem);
+  word-wrap: break-word;
   text-align: left;
-  width: auto;
+  padding: 0 clamp(1rem, 3vw, 2rem);
 }
 .about-global-highlight {
-  width: 100%;
-  color: #000;
-  font-family: "Noto Sans CJK KR";
-  font-size: clamp(1.2rem, 1.56vw, 30px);
-  font-style: normal;
-  font-weight: 500;
-  line-height: clamp(1.3rem, 1.67vw, 32px);
-  letter-spacing: -1.14px;
-  margin-bottom: 1.7rem;
-  word-break: keep-all;
-  white-space: normal;
-  hyphens: auto;
+  color: #111;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 1.98vw, 2.375rem);
+  font-family: 'Noto Sans', sans-serif;
+  line-height: clamp(1.6rem, 2.08vw, 2.5rem);
+  word-wrap: break-word;
   text-align: left;
-  width: auto;
-  display: block;
-  margin-left: 0;
+  padding: 0 clamp(1rem, 3vw, 2rem);
 }
 .about-global-strong {
+  color: #111;
   font-weight: 900;
-  font-size: clamp(1.3rem, 7vw, 3rem);
-  margin-top: 1.7rem;
-  line-height: 1.3;
-  word-break: keep-all;
-  white-space: normal;
-  hyphens: auto;
+  font-size: clamp(1.5rem, 1.98vw, 2.375rem);
+  font-family: 'Noto Sans', sans-serif;
+  line-height: clamp(1.6rem, 2.08vw, 2.5rem);
+  word-wrap: break-word;
+  text-align: left;
+  padding: 0 clamp(1rem, 3vw, 2rem);
 }
 .about-global-desc span,
-.about-global-highlight span {
-  color: inherit;
-  font-weight: inherit;
+.about-global-highlight span,
+.about-global-strong span {
+  color: #111;
+}
+
+/* 768px 이하 모바일 최적화 - 강력한 우선순위 */
+@media (max-width: 768px) {
+  /* 전체 섹션 모바일 최적화 */
+  .about-section {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 상단 소개 섹션 */
+  .about-section-intro {
+    height: auto !important;
+    min-height: clamp(600px, 80vw, 800px) !important;
+    padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem) !important;
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  /* WHY BRANDS CHOOSE HYPECON 섹션 */
+  .about-section-why {
+    height: auto !important;
+    min-height: clamp(400px, 60vw, 600px) !important;
+    padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem) !important;
+    flex-direction: column !important;
+  }
+
+  .about-why-title {
+    font-size: clamp(2.5rem, 12vw, 6rem) !important;
+    line-height: clamp(2rem, 10vw, 5rem) !important;
+    margin-bottom: clamp(2rem, 4vw, 3rem) !important;
+    text-align: center !important;
+  }
+
+  .about-why-desc {
+    width: 100% !important;
+    height: auto !important;
+    font-size: clamp(1.2rem, 4vw, 2rem) !important;
+    line-height: clamp(1.5rem, 4.5vw, 2.5rem) !important;
+    padding: 0 clamp(1rem, 3vw, 2rem) !important;
+    text-align: center !important;
+  }
+
+  /* Z세대 경험 소비 강조 섹션 */
+  .about-section-experience {
+    padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem) !important;
+    flex-direction: column !important;
+  }
+
+  .about-experience-badge {
+    font-size: clamp(0.8rem, 3vw, 1.2rem) !important;
+    padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 3vw, 2rem) !important;
+    margin-bottom: clamp(1.5rem, 4vw, 2.5rem) !important;
+    text-align: center !important;
+  }
+
+  .about-experience-title {
+    width: 100% !important;
+    height: auto !important;
+    font-size: clamp(1.5rem, 6vw, 3rem) !important;
+    line-height: clamp(1.8rem, 6.5vw, 3.5rem) !important;
+    margin-bottom: clamp(1rem, 3vw, 2rem) !important;
+    text-align: center !important;
+  }
+
+  .about-experience-desc {
+    width: 100% !important;
+    height: auto !important;
+    font-size: clamp(1rem, 4vw, 1.5rem) !important;
+    line-height: clamp(1.3rem, 4.5vw, 1.8rem) !important;
+    white-space: normal !important;
+    margin-bottom: clamp(2rem, 5vw, 3rem) !important;
+    text-align: center !important;
+  }
+
+  /* 카드 섹션 모바일 최적화 */
+  .about-experience-cards {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: clamp(0.5rem, 2vw, 1rem) !important;
+    padding: 0 clamp(1rem, 3vw, 2rem) !important;
+    justify-content: center !important;
+  }
+
+  .about-card {
+    width: clamp(120px, 25vw, 150px) !important;
+    height: clamp(120px, 25vw, 150px) !important;
+    min-height: auto !important;
+    padding: clamp(0.8rem, 2vw, 1.1rem) clamp(0.5rem, 1.5vw, 0.7rem) !important;
+    border-radius: 50% !important;
+    text-align: center !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .about-card-title {
+    font-size: clamp(0.8rem, 3vw, 1.08rem) !important;
+    line-height: clamp(1rem, 3.5vw, 1.3rem) !important;
+    margin-bottom: clamp(0.2rem, 1vw, 0.3rem) !important;
+    text-align: center !important;
+  }
+
+  .about-card-desc {
+    font-size: clamp(0.7rem, 2.5vw, 0.85rem) !important;
+    line-height: clamp(0.9rem, 3vw, 1.1rem) !important;
+    text-align: center !important;
+  }
+
+  /* 도파민 쇼핑+콘텐츠 스타일 페어 섹션 */
+  .about-2col-section {
+    height: auto !important;
+    min-height: clamp(1200px, 150vw, 2000px) !important;
+    padding: clamp(2rem, 4vw, 3rem) 0 !important;
+    overflow: visible !important;
+    flex-direction: column !important;
+  }
+
+  /* 상단 텍스트와 이미지 영역 */
+  .about-2col-section > div:first-child {
+    flex-direction: column !important;
+    height: auto !important;
+    min-height: clamp(400px, 60vw, 600px) !important;
+    gap: clamp(2rem, 4vw, 3rem) !important;
+    padding: clamp(1rem, 3vw, 2rem) !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* 왼쪽 텍스트 섹션 */
+  .about-2col-section > div:first-child > div:first-child {
+    width: 100% !important;
+    height: auto !important;
+    min-height: clamp(200px, 40vw, 300px) !important;
+    text-align: center !important;
+    align-items: center !important;
+    gap: clamp(1rem, 2vw, 1.5rem) !important;
+    order: 1 !important;
+  }
+
+  /* 오른쪽 이미지 */
+  .about-2col-section > div:first-child > div:last-child {
+    width: 100% !important;
+    max-width: clamp(300px, 80vw, 500px) !important;
+    height: clamp(200px, 50vw, 300px) !important;
+    border-radius: 8px !important;
+    order: 2 !important;
+  }
+
+  /* 텍스트 스타일 */
+  .about-2col-section > div:first-child > div:first-child > span {
+    font-size: clamp(1.8rem, 7vw, 3.5rem) !important;
+    line-height: clamp(2rem, 7.5vw, 4rem) !important;
+    text-align: center !important;
+  }
+
+  /* 카드 컨테이너 */
+  .about-cards-container {
+    gap: clamp(1.5rem, 4vw, 2.5rem) !important;
+    margin-top: clamp(2rem, 5vw, 3rem) !important;
+    padding: 0 clamp(1rem, 3vw, 2rem) !important;
+  }
+
+  /* 카드 아이템 - 세로 배치 강화 */
+  .about-card-item {
+    width: 100% !important;
+    height: auto !important;
+    min-height: clamp(120px, 30vw, 200px) !important;
+    flex-direction: column !important;
+    gap: clamp(1rem, 3vw, 2rem) !important;
+    align-items: center !important;
+  }
+
+  /* 카드 제목 박스 */
+  .about-card-title-box {
+    width: 100% !important;
+    max-width: clamp(250px, 70vw, 400px) !important;
+    height: auto !important;
+    min-height: clamp(60px, 15vw, 100px) !important;
+    padding: clamp(1rem, 3vw, 1.5rem) !important;
+    border-radius: clamp(20px, 5vw, 25px) !important;
+    order: 1 !important;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .about-card-title-text {
+    font-size: clamp(1rem, 4vw, 1.5rem) !important;
+    line-height: clamp(1.2rem, 4.5vw, 1.8rem) !important;
+    white-space: normal !important;
+    text-align: center !important;
+  }
+
+  /* 카드 내용 박스 */
+  .about-card-content-box {
+    width: 100% !important;
+    height: auto !important;
+    min-height: clamp(80px, 20vw, 120px) !important;
+    padding: clamp(1rem, 3vw, 1.5rem) !important;
+    border-radius: clamp(20px, 5vw, 25px) !important;
+    margin-left: 0 !important;
+    order: 2 !important;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .about-card-content-text {
+    font-size: clamp(0.9rem, 3.5vw, 1.2rem) !important;
+    line-height: clamp(1.2rem, 4vw, 1.6rem) !important;
+    text-align: center !important;
+  }
+
+  /* 글로벌 브랜드 어필 섹션 */
+  .about-global-section {
+    padding: clamp(2rem, 6vw, 3rem) clamp(1rem, 3vw, 2rem) !important;
+    min-height: clamp(200px, 50vw, 400px) !important;
+    flex-direction: column !important;
+  }
+
+  .about-global-desc,
+  .about-global-highlight,
+  .about-global-strong {
+    font-size: clamp(1.2rem, 4vw, 1.8rem) !important;
+    line-height: clamp(1.5rem, 4.5vw, 2.2rem) !important;
+    text-align: center !important;
+    padding: 0 !important;
+  }
 }
 
 @media (max-width: 900px) {
   .about-section-intro {
-    min-height: clamp(500px, 60vh, 700px) !important;
-    padding-top: 70px !important;
+    padding-top: 72px;
   }
   .about-intro-content {
-    padding-left: clamp(2rem, 8vw, 6rem) !important;
+    padding-left: clamp(2rem, 5vw, 4rem);
   }
   .about-section-why {
-    min-height: clamp(400px, 50vh, 640px) !important;
-    height: auto !important;
+    padding: 2rem 1rem;
   }
   .about-list-section {
-    padding: 2rem 0 !important;
+    padding: 2rem 0;
   }
   .about-list-wrap {
-    padding: 0 1rem !important;
+    padding: 0 1.5rem;
   }
   .about-list-row {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 1.5rem !important;
-    padding: 2rem 0 !important;
-    text-align: center !important;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
   }
   .about-list-title {
-    min-width: 0 !important;
-    margin-right: 0 !important;
-    text-align: center !important;
-    font-weight: 900 !important;
-    color: var(--hypecon-dark) !important;
-    white-space: normal !important;
-    overflow: visible !important;
-    text-overflow: unset !important;
-    height: auto !important;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    min-height: 60px;
+    padding: 1rem;
+    border-radius: 20px;
+    white-space: normal;
+    text-align: center;
   }
   .about-list-desc {
-    width: clamp(350px, 90%, 700px) !important;
-    height: auto !important;
-    min-width: 0 !important;
-    margin-left: 0 !important;
-    line-height: 1.6 !important;
-    text-align: center !important;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    min-height: 80px;
+    padding: 1rem;
+    border-radius: 20px;
+    margin-left: 0;
+    text-align: center;
   }
   .about-2col-section {
-    flex-direction: column !important;
-    gap: 1.5rem !important;
-    padding: 2.2rem 0.7rem !important;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
   }
   .about-2col-img {
-    max-width: 100% !important;
-    min-width: 0 !important;
-    padding: 0 !important;
+    width: 100%;
+    max-width: 400px;
   }
   .about-2col-text {
-    max-width: 100% !important;
-    min-width: 0 !important;
-    flex-basis: auto !important;
-    flex-shrink: 1 !important;
-    padding: 0 0.5rem !important;
-    text-align: center !important;
+    width: 100%;
+    max-width: none;
+    padding: 0 1rem;
+    text-align: center;
   }
   .about-dopamine-title {
-    white-space: normal !important;
-    overflow: visible !important;
-    text-overflow: unset !important;
+    white-space: normal;
+    text-align: center;
   }
   .about-content-title {
-    white-space: normal !important;
-    overflow: visible !important;
-    text-overflow: unset !important;
+    white-space: normal;
+    text-align: center;
   }
   .about-global-content {
-    width: 80% !important;
-    max-width: 450px !important;
+    width: 90%;
+    max-width: 500px;
   }
 }
 @media (max-width: 600px) {
   .about-section-intro {
-    min-height: clamp(400px, 50vh, 600px) !important;
-    padding-top: 60px !important;
+    padding-top: 60px;
+    padding: 1rem;
   }
   .about-intro-content {
-    padding-left: 1.5rem !important;
+    padding: 0 1rem;
   }
   .about-section-why {
-    min-height: 350px !important;
-    padding-top: 40px !important;
-    padding-bottom: 40px !important;
+    padding: 1.5rem 0.5rem;
   }
   .about-list-section {
-    padding: 1.5rem 0 !important;
+    padding: 1.5rem 0;
   }
   .about-list-wrap {
-    padding: 0 0.8rem !important;
+    padding: 0 1rem;
   }
   .about-list-row {
-    padding: 1rem 0 !important;
-    gap: 0.6rem !important;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+    text-align: center;
   }
   .about-list-title {
-    font-size: 1rem !important;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    min-height: 50px;
+    padding: 0.8rem;
+    border-radius: 15px;
+    white-space: normal;
+    text-align: center;
   }
   .about-list-desc {
-    line-height: 1.5 !important;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    min-height: 70px;
+    padding: 0.8rem;
+    border-radius: 15px;
+    margin-left: 0;
+    text-align: center;
   }
   .about-title-main {
-    font-size: clamp(1.1rem, 7vw, 1.7rem) !important;
+    font-size: clamp(1rem, 4vw, 1.5rem);
   }
   .about-title-strong {
-    font-size: clamp(1rem, 6vw, 1.2rem) !important;
+    font-size: clamp(0.9rem, 3.5vw, 1.3rem);
   }
   .about-section-padding {
-    padding: 1.2rem 0.5rem !important;
+    padding: 1rem;
   }
   .about-card {
     width: 120px !important;

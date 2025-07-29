@@ -19,9 +19,16 @@ function ExhibitionPage() {
       <section className="exhibition-hero-section" style={{backgroundImage: `url(${exSec01Img})`}}>
         <div className="exhibition-hero-overlay"></div>
         <div className="exhibition-hero-text">
-          <div className="exhibition-hero-title" style={{color: "var(--hypecon-yellow)"}}>
-            {t('exhibition.hero.subtitle')}<br/>
-            <span style={{color: "var(--hypecon-teal)"}}>{t('exhibition.hero.desc')}</span>
+          <div className="exhibition-hero-content">
+            <span className="exhibition-hero-subtitle">
+              {t('exhibition.hero.subtitle')}
+            </span>
+            <span className="exhibition-hero-title">
+              <br/>
+            </span>
+            <span className="exhibition-hero-desc">
+              {t('exhibition.hero.desc')}
+            </span>
           </div>
         </div>
       </section>
@@ -79,7 +86,7 @@ function ExhibitionPage() {
       {/* PROGRAMS HIGHLIGHT 섹션 */}
       <section className="exhibition-programs-section">
         <div className="exhibition-programs-inner">
-          <h2 className="exhibition-programs-title" style={{color: "var(--hypecon-yellow)"}}>PROGRAMS HIGHLIGHT</h2>
+          <h2 className="exhibition-programs-title">PROGRAMS HIGHLIGHT</h2>
           <div className="exhibition-programs-list">
             <div className="exhibition-programs-item">
               <div className="exhibition-programs-icon">
@@ -304,7 +311,11 @@ function ExhibitionPage() {
                 <p>
                   {t('exhibition.conclusion.brand').map((line, index) => (
                     <React.Fragment key={index}>
-                      {line}
+                      {index === 0 ? (
+                        <span className="brand-dream-title">{line}</span>
+                      ) : (
+                        line
+                      )}
                       <br />
                     </React.Fragment>
                   ))}
@@ -318,7 +329,11 @@ function ExhibitionPage() {
                 <p>
                   {t('exhibition.conclusion.visitor').slice(0, 5).map((line, index) => (
                     <React.Fragment key={index}>
-                      {line}
+                      {index === 0 ? (
+                        <span className="guest-title">{line}</span>
+                      ) : (
+                        line
+                      )}
                       <br />
                     </React.Fragment>
                   ))}
@@ -330,7 +345,12 @@ function ExhibitionPage() {
               <div className="for-title for-buyer-title">FOR BUYER</div>
               <div className="for-content">
                 <p>
-                  {t('exhibition.conclusion.visitor').slice(5, 9).map((line, index) => (
+                  <span className="buyer-title">
+                    {t('exhibition.conclusion.visitor')[5]}<br/>
+                    {t('exhibition.conclusion.visitor')[6]}
+                  </span>
+                  <br />
+                  {t('exhibition.conclusion.visitor').slice(7, 9).map((line, index) => (
                     <React.Fragment key={index}>
                       {line}
                       <br />
@@ -344,7 +364,12 @@ function ExhibitionPage() {
               <div className="for-title for-influencer-title">FOR INFLUENCER</div>
               <div className="for-content">
                 <p>
-                  {t('exhibition.conclusion.visitor').slice(9, 15).map((line, index) => (
+                  <span className="influencer-title">
+                    {t('exhibition.conclusion.visitor')[9]}<br/>
+                    {t('exhibition.conclusion.visitor')[10]}
+                  </span>
+                  <br />
+                  {t('exhibition.conclusion.visitor').slice(11, 15).map((line, index) => (
                     <React.Fragment key={index}>
                       {line}
                       <br />
@@ -356,8 +381,6 @@ function ExhibitionPage() {
           </div>
         </div>
       </section>
-
-      {/* ExhibitionPage 새 작업 시작: 여기에 섹션별 className을 부여해 추가하세요 */}
     </div>
   );
 }

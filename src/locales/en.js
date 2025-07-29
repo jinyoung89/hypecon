@@ -45,7 +45,13 @@ const en = {
   intro: {
     mainTitle: 'The first brand-driven, hands-on style fair powering K-fashion\'s global expansion.',
     subtitle: 'K-fashion takes off with K-beauty.',
-    description: 'Gen Z\'s favorite brands meet content, commerce, and tech\nto create real-time style experiences that no screen can replicate.\n\nTry it.\nShare it.\nBuy it.\nReal-time commerce happens as visitors experience fashion,\nreact on social, and shop instantly.\n\nThis wave of excitement rides on social media,\nexpanding into global fandom and brand awareness.\nBuyers feel the buzz live on site,\nas brands prove their potential for global reach.'
+    description: 'Gen Z\'s favorite brands meet content, commerce, and tech\nto create real-time style experiences that no screen can replicate.\n\nTry it.\nShare it.\nBuy it.\nReal-time commerce happens as visitors experience fashion,\nreact on social, and shop instantly.\n\nThis wave of excitement rides on social media,\nexpanding into global fandom and brand awareness.\nBuyers feel the buzz live on site,\nas brands prove their potential for global reach.',
+    highlightKeywords: [
+      'real-time commerce',
+      'real-time style experiences',
+      'global fandom and brand awareness',
+      'potential for global reach'
+    ]
   },
   why: {
     title: 'WHY BRANDS\nCHOOSE HYPECON',
@@ -697,7 +703,7 @@ const en = {
     },
     info: {
       criteria: {
-        title: '▲ Selection Criteria & Precautions',
+        title: '⚠ Selection Criteria & Precautions',
         list: [
           'Application alone does not guarantee selection.',
           'The HYPECON team directly evaluates SNS channels, content sensitivity, activity consistency, etc.',

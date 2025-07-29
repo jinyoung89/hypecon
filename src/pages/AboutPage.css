@@ -1,0 +1,509 @@
+/* AboutPage 반응형 및 공통 스타일 */
+
+:root {
+  --hypecon-pink: #E447AF;
+  --hypecon-teal: #00E5A8;
+}
+
+/* 모바일 가로 스크롤 방지 */
+.about-page-root {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* 상단 소개 섹션 */
+.about-section-intro {
+  min-height: clamp(600px, 44.5vw, 854px);
+  height: clamp(600px, 44.5vw, 854px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* WHY BRANDS CHOOSE HYPECON 섹션 */
+.about-section-why {
+  min-height: clamp(400px, 33vw, 640px);
+  background: var(--hypecon-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(2rem, 5vw, 4rem) 0;
+}
+
+.about-why-title {
+  font-size: clamp(4rem, 10.42vw, 12.5rem);
+  line-height: clamp(3rem, 8.54vw, 10.25rem);
+  color: #E1F800;
+  text-align: center;
+  font-family: 'Bebas Neue, sans-serif';
+  font-weight: 400;
+  letter-spacing: clamp(-0.5rem, -0.52vw, -0.625rem);
+  margin-bottom: clamp(1.5rem, 2.08vw, 2.5rem);
+  word-wrap: break-word;
+}
+
+.about-why-desc {
+  width: clamp(400px, 48.13vw, 924px);
+  height: clamp(60px, 6.09vw, 117px);
+  text-align: center;
+  color: white;
+  font-size: clamp(1.5rem, 2.08vw, 2.5rem);
+  font-family: 'Noto Sans, sans-serif';
+  font-weight: 500;
+  line-height: clamp(1.8rem, 2.6vw, 3.125rem);
+  word-wrap: break-word;
+}
+
+/* Z세대 경험 섹션 */
+.about-section-experience {
+  padding: clamp(2rem, 5vw, 4rem) 0;
+  background: white;
+  min-height: clamp(400px, 50vw, 800px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-experience-title {
+  width: clamp(400px, 55.83vw, 1072px);
+  height: clamp(40px, 3.91vw, 75.09px);
+  text-align: center;
+  color: black;
+  font-size: clamp(2rem, 3.13vw, 3.75rem);
+  font-family: 'Noto Sans, sans-serif';
+  font-weight: 700;
+  line-height: clamp(1.8rem, 2.6vw, 3.125rem);
+  word-wrap: break-word;
+  margin-bottom: clamp(1rem, 2vw, 2rem);
+}
+
+.about-experience-desc {
+  width: clamp(600px, 80vw, 1600px);
+  height: clamp(30px, 2.66vw, 51.06px);
+  text-align: center;
+  color: black;
+  font-size: clamp(1.2rem, 1.67vw, 2rem);
+  font-family: 'Noto Sans, sans-serif';
+  font-weight: 700;
+  line-height: clamp(1.8rem, 2.6vw, 3.125rem);
+  word-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+/* 도파민 섹션 */
+.about-2col-section {
+  width: 100vw;
+  height: auto;
+  min-height: clamp(800px, 91.04vw, 1748px);
+  background: #F2F2F2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: clamp(2rem, 4vw, 4rem) 0;
+  overflow: visible;
+  position: static;
+}
+
+/* 글로벌 브랜드 어필 섹션 */
+.about-global-section {
+  padding: clamp(2rem, 5vw, 4rem) 0;
+  background: #00E5A8;
+  min-height: clamp(300px, 40vw, 600px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative !important;
+  z-index: 10 !important;
+  width: 100%;
+  margin: 0;
+}
+
+.about-global-desc {
+  text-align: center;
+  color: black;
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  font-family: 'Noto Sans, sans-serif';
+  font-weight: 400;
+  line-height: 1.6;
+  word-wrap: break-word;
+  max-width: clamp(600px, 80vw, 1200px);
+  padding: 0 clamp(1rem, 3vw, 2rem);
+}
+
+/* 카드 컨테이너 */
+.about-cards-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 2rem);
+  margin-top: clamp(2rem, 4vw, 4rem);
+  padding: 0 clamp(2rem, 4vw, 3rem);
+}
+
+/* 카드 아이템 */
+.about-card-item {
+  width: clamp(600px, 66.15vw, 1270px);
+  height: clamp(80px, 7.64vw, 146.64px);
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* 카드 제목 박스 */
+.about-card-title-box {
+  width: clamp(200px, 18.23vw, 350px);
+  height: clamp(80px, 7.81vw, 150px);
+  padding: clamp(1rem, 1.56vw, 1.875rem) clamp(1rem, 2.5vw, 3rem);
+  background: black;
+  border-radius: 30px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1rem, 1.56vw, 1.875rem);
+}
+
+/* 카드 제목 텍스트 */
+.about-card-title-text {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(1rem, 1.88vw, 2.25rem);
+  font-family: 'Noto Sans, sans-serif';
+  font-weight: 700;
+  line-height: clamp(1.2rem, 2.08vw, 2.5rem);
+  word-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 카드 내용 박스 */
+.about-card-content-box {
+  width: clamp(400px, 45.52vw, 874px);
+  height: clamp(80px, 7.81vw, 150px);
+  background: white;
+  border-radius: 30px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  padding: clamp(1rem, 1.35vw, 1.625rem) clamp(2rem, 5.31vw, 6.375rem);
+  margin-left: clamp(1rem, 2vw, 2rem);
+}
+
+/* 카드 내용 텍스트 */
+.about-card-content-text {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  font-size: clamp(0.8rem, 1.67vw, 2rem);
+  font-family: 'Noto Sans, sans-serif';
+  font-weight: 500;
+  line-height: clamp(1.2rem, 2.6vw, 3.125rem);
+  word-wrap: break-word;
+}
+
+/* 모바일 최적화 */
+@media (max-width: 768px) {
+  /* 상단 소개 섹션 모바일 */
+  .about-section-intro {
+    height: auto !important;
+    min-height: clamp(600px, 80vw, 800px) !important;
+    padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem) !important;
+  }
+  
+  .about-section-intro > div {
+    width: 100% !important;
+    height: auto !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: clamp(1rem, 3vw, 2rem) !important;
+  }
+  
+  .about-section-intro > div > span {
+    text-align: center !important;
+  }
+  
+  .about-section-intro > div > span:nth-child(1) {
+    font-size: clamp(1.2rem, 5vw, 2.5rem) !important;
+    line-height: clamp(1.4rem, 5.5vw, 2.8rem) !important;
+  }
+  
+  .about-section-intro > div > span:nth-child(3) {
+    font-size: clamp(0.9rem, 3vw, 1.8rem) !important;
+    line-height: clamp(1.1rem, 3.5vw, 2rem) !important;
+  }
+  
+  .about-section-intro > div > span:nth-child(4) {
+    font-size: clamp(0.8rem, 2.5vw, 1.2rem) !important;
+    line-height: clamp(1rem, 2.8vw, 1.4rem) !important;
+    margin-bottom: clamp(1.5rem, 4vw, 2.5rem) !important;
+  }
+  
+  /* WHY BRANDS CHOOSE HYPECON 섹션 모바일 */
+  .about-section-why {
+    height: auto !important;
+    min-height: clamp(400px, 60vw, 600px) !important;
+    padding: clamp(2rem, 4vw, 3rem) 0 !important;
+  }
+  
+  .about-why-title {
+    font-size: clamp(2rem, 8vw, 4rem) !important;
+    line-height: clamp(1.8rem, 7vw, 3.5rem) !important;
+  }
+  
+  .about-why-desc {
+    width: 100% !important;
+    height: auto !important;
+    font-size: clamp(1rem, 3vw, 1.5rem) !important;
+    line-height: clamp(1.3rem, 3.5vw, 1.8rem) !important;
+  }
+  
+  /* Z세대 경험 섹션 모바일 */
+  .about-experience-title {
+    width: 100% !important;
+    height: auto !important;
+    font-size: clamp(1.5rem, 4vw, 2.5rem) !important;
+    line-height: clamp(1.8rem, 4.5vw, 2.8rem) !important;
+  }
+  
+  .about-experience-desc {
+    width: 100% !important;
+    height: auto !important;
+    font-size: clamp(1rem, 3vw, 1.5rem) !important;
+    line-height: clamp(1.3rem, 3.5vw, 1.8rem) !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+  }
+  
+  /* 도파민 섹션 모바일 */
+  .about-2col-section {
+    height: auto !important;
+    min-height: clamp(1200px, 150vw, 2000px) !important;
+    padding: clamp(2rem, 4vw, 3rem) 0 !important;
+  }
+  
+  .about-2col-section > div:first-child {
+    flex-direction: column !important;
+    height: auto !important;
+    gap: clamp(1.5rem, 3vw, 2rem) !important;
+  }
+  
+  .about-2col-section > div:first-child > div:first-child {
+    align-items: center !important;
+    text-align: center !important;
+    height: auto !important;
+    gap: clamp(0.8rem, 2vw, 1.5rem) !important;
+  }
+  
+  .about-2col-section > div:first-child > div:first-child > span {
+    width: 100% !important;
+    height: auto !important;
+    font-size: clamp(1.5rem, 6vw, 3rem) !important;
+    line-height: clamp(1.8rem, 6.5vw, 3.5rem) !important;
+    text-align: center !important;
+    align-items: center !important;
+  }
+  
+  .about-2col-section > div:first-child > div:last-child {
+    width: 100% !important;
+    max-width: clamp(280px, 80vw, 400px) !important;
+    height: clamp(180px, 50vw, 250px) !important;
+  }
+  
+  .about-2col-section > div:last-child {
+    gap: clamp(1.5rem, 3vw, 2rem) !important;
+    padding: 0 clamp(1rem, 3vw, 2rem) !important;
+  }
+  
+  .about-2col-section > div:last-child > div {
+    width: 100% !important;
+    height: auto !important;
+    flex-direction: column !important;
+    gap: clamp(1rem, 2vw, 1.5rem) !important;
+    background: white !important;
+    border-radius: 20px !important;
+    border: 2px solid black !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+    padding: clamp(1rem, 2vw, 1.5rem) !important;
+  }
+  
+  .about-2col-section > div:last-child > div > div:first-child {
+    width: 100% !important;
+    height: auto !important;
+    min-height: clamp(50px, 12vw, 60px) !important;
+    padding: clamp(0.8rem, 2vw, 1rem) !important;
+    max-width: 100% !important;
+    border-radius: 15px !important;
+    border: none !important;
+  }
+  
+  .about-2col-section > div:last-child > div > div:first-child > div {
+    font-size: clamp(1rem, 3vw, 1.5rem) !important;
+    line-height: clamp(1.2rem, 3.5vw, 1.8rem) !important;
+    word-wrap: break-word !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+    color: black !important;
+    text-align: center !important;
+  }
+  
+  .about-2col-section > div:last-child > div > div:last-child {
+    width: 100% !important;
+    height: auto !important;
+    min-height: clamp(60px, 15vw, 80px) !important;
+    margin-left: 0 !important;
+    padding: clamp(1rem, 2vw, 1.5rem) !important;
+    max-width: 100% !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+  
+  .about-2col-section > div:last-child > div > div:last-child > div {
+    font-size: clamp(0.8rem, 2.5vw, 1.2rem) !important;
+    line-height: clamp(1.2rem, 3vw, 1.5rem) !important;
+    text-align: center !important;
+  }
+  
+  /* 글로벌 섹션 모바일 */
+  .about-global-section {
+    padding: clamp(2rem, 4vw, 3rem) 0 !important;
+    min-height: clamp(200px, 50vw, 400px) !important;
+  }
+  
+  .about-global-desc {
+    font-size: clamp(1rem, 3vw, 1.5rem) !important;
+    line-height: 1.6 !important;
+    padding: 0 clamp(1rem, 3vw, 2rem) !important;
+  }
+
+  /* 카드 컨테이너 모바일 */
+  .about-cards-container {
+    gap: clamp(2rem, 4vw, 3rem) !important;
+    padding: 0 clamp(1rem, 3vw, 2rem) !important;
+    width: 100vw !important;
+  }
+  
+  /* 카드 아이템 모바일 */
+  .about-card-item {
+    width: 100% !important;
+    height: auto !important;
+    flex-direction: column !important;
+    gap: clamp(1rem, 2vw, 1.5rem) !important;
+    padding: clamp(1rem, 2vw, 1.5rem) !important;
+    max-width: 100% !important;
+    background: white !important;
+    border-radius: 20px !important;
+    border: 2px solid black !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+  }
+  
+  /* 카드 제목 박스 모바일 */
+  .about-card-title-box {
+    width: 100% !important;
+    height: auto !important;
+    min-height: clamp(50px, 12vw, 60px) !important;
+    padding: clamp(0.8rem, 2vw, 1rem) !important;
+    max-width: 100% !important;
+    border-radius: 15px !important;
+    border: none !important;
+  }
+  
+  /* 카드 제목 박스 모바일 (홀수) */
+  .about-card-title-box:nth-child(odd) {
+    background: #00E5A8 !important;
+  }
+  
+  /* 카드 제목 박스 모바일 (짝수) */
+  .about-card-title-box:nth-child(even) {
+    background: #E1F800 !important;
+  }
+  
+  /* 카드 제목 텍스트 모바일 */
+  .about-card-title-text {
+    font-size: clamp(1rem, 3vw, 1.5rem) !important;
+    line-height: clamp(1.2rem, 3.5vw, 1.8rem) !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+    width: 100% !important;
+    color: black !important;
+    text-align: center !important;
+  }
+  
+  /* 카드 내용 박스 모바일 */
+  .about-card-content-box {
+    width: 100% !important;
+    height: auto !important;
+    min-height: clamp(60px, 15vw, 80px) !important;
+    margin-left: 0 !important;
+    padding: clamp(1rem, 2vw, 1.5rem) !important;
+    max-width: 100% !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+  
+  /* 카드 내용 텍스트 모바일 */
+  .about-card-content-text {
+    font-size: clamp(0.8rem, 2.5vw, 1.2rem) !important;
+    line-height: clamp(1.2rem, 3vw, 1.5rem) !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section-intro > div > span:nth-child(1) {
+    font-size: clamp(1rem, 4vw, 2rem) !important;
+    line-height: clamp(1.2rem, 4.5vw, 2.3rem) !important;
+  }
+  
+  .about-section-intro > div > span:nth-child(3) {
+    font-size: clamp(0.8rem, 2.5vw, 1.5rem) !important;
+    line-height: clamp(1rem, 3vw, 1.7rem) !important;
+  }
+  
+  .about-why-title {
+    font-size: clamp(1.5rem, 6vw, 3rem) !important;
+    line-height: clamp(1.3rem, 5.5vw, 2.5rem) !important;
+  }
+  
+  .about-2col-section > div:first-child > div:first-child > span {
+    font-size: clamp(1.2rem, 5vw, 2.5rem) !important;
+    line-height: clamp(1.5rem, 5.5vw, 2.8rem) !important;
+  }
+  
+  .about-2col-section > div:last-child > div > div:first-child > div {
+    font-size: clamp(0.8rem, 2.5vw, 1.1rem) !important;
+    line-height: clamp(1rem, 3vw, 1.3rem) !important;
+  }
+  
+  .about-2col-section > div:last-child > div > div:last-child > div {
+    font-size: clamp(0.7rem, 2vw, 1rem) !important;
+    line-height: clamp(1rem, 2.5vw, 1.2rem) !important;
+  }
+} 

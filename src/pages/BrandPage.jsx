@@ -32,11 +32,10 @@ function BrandPage() {
           <div className="brand-engagement-content">
             <p className="brand-engagement-text">
               {t('brand.engagement.text').split('\n').map((line, index) => (
-                <React.Fragment key={index}>
-                  {index === 0 && <span style={{color: "#D5FFD2"}}>{line}</span>}
-                  {index !== 0 && line}
-                  <br />
-                </React.Fragment>
+                <span key={index} style={{color: index === 0 ? "#D5FFD2" : "white"}}>
+                  {line}
+                  {index < t('brand.engagement.text').split('\n').length - 1 && <br />}
+                </span>
               ))}
             </p>
           </div>
@@ -53,14 +52,16 @@ function BrandPage() {
             {t('brand.curation.cards').map((card, index) => (
               <div className="curation-card" key={index}>
                 <h3 className="curation-card-title">{card.title}</h3>
-                <p className="curation-card-desc">
-                  {card.desc.split('\n').map((line, i) => (
-                    <React.Fragment key={i}>
-                      {line}
-                      <br />
-                    </React.Fragment>
-                  ))}
-                </p>
+                <div className="curation-card-content">
+                  <p className="curation-card-desc">
+                    {card.desc.split('\n').map((line, i) => (
+                      <React.Fragment key={i}>
+                        {line}
+                        <br />
+                      </React.Fragment>
+                    ))}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -225,7 +226,13 @@ function BrandPage() {
                 <h3 className="process-step-title">{t('brand.process.steps.0.title')}</h3>
                 <div className="process-step-details">
                   {t('brand.process.steps.0.details').map((detail, index) => (
-                    <p key={index}>{detail}</p>
+                    <p key={index}>
+                      {detail.includes('접수 마감일') || detail.includes('신청 방식') || detail.includes('→ 내부 큐레이션 심사') || detail.includes('→ 개별 참가 확정 안내') ? (
+                        <strong>{detail}</strong>
+                      ) : (
+                        detail
+                      )}
+                    </p>
                   ))}
                   <ul>
                     {t('brand.process.steps.0.notes').map((note, index) => (
@@ -246,7 +253,13 @@ function BrandPage() {
                 <h3 className="process-step-title">{t('brand.process.steps.1.title')}</h3>
                 <div className="process-step-details">
                   {t('brand.process.steps.1.details').map((detail, index) => (
-                    <p key={index}>{detail}</p>
+                    <p key={index}>
+                      {detail.includes('인보이스 수신 후 일주일 이내') || detail.includes('부스비 총액의 50% 납부') ? (
+                        <strong>{detail}</strong>
+                      ) : (
+                        detail
+                      )}
+                    </p>
                   ))}
                   <ul>
                     {t('brand.process.steps.1.notes').map((note, index) => (
@@ -254,6 +267,10 @@ function BrandPage() {
                     ))}
                   </ul>
                 </div>
+              </div>
+              
+              <div className="process-arrow">
+                <img src={arrow} alt="다음 단계" />
               </div>
             </div>
             
@@ -265,7 +282,13 @@ function BrandPage() {
                 <h3 className="process-step-title">{t('brand.process.steps.2.title')}</h3>
                 <div className="process-step-details">
                   {t('brand.process.steps.2.details').map((detail, index) => (
-                    <p key={index}>{detail}</p>
+                    <p key={index}>
+                      {detail.includes('기한 : 인보이스 수신 후 60일 이내 완납') ? (
+                        <strong>{detail}</strong>
+                      ) : (
+                        detail
+                      )}
+                    </p>
                   ))}
                   <ul>
                     {t('brand.process.steps.2.notes').map((note, index) => (
@@ -322,9 +345,11 @@ function BrandPage() {
           <div className="brand-payment-container">
             <div className="brand-payment-content">
               <h2 className="brand-payment-title">{t('brand.payment.title')}</h2>
-              <div className="brand-payment-subtitle">{t('brand.payment.deposit.title')}</div>
+              <div className="brand-payment-spacer"></div>
+              <div className="brand-payment-subtitle">• {t('brand.payment.deposit.title')}</div>
               <div className="brand-payment-text">{t('brand.payment.deposit.desc')}</div>
-              <div className="brand-payment-subtitle">{t('brand.payment.balance.title')}</div>
+              <div className="brand-payment-spacer"></div>
+              <div className="brand-payment-subtitle">• {t('brand.payment.balance.title')}</div>
               <div className="brand-payment-text">{t('brand.payment.balance.desc')}</div>
             </div>
           </div>

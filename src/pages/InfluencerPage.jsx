@@ -6,6 +6,11 @@ import { useLanguage } from '../contexts/LanguageContext';
 function InfluencerPage() {
   const { t } = useLanguage();
   
+  // 인플로언서 등록 핸들러 (Google Forms로 이동)
+  const handleInfluencerApply = () => {
+    window.open('https://docs.google.com/forms/d/1ot0y2q8LRFzkeql-lvd3On5gwk-8pq6IB9l2ejKWq_Y/edit', '_blank');
+  };
+  
   return (
     <div className="influencer-page-root">
       {/* 상단 배경 이미지 섹션 */}
@@ -113,7 +118,7 @@ function InfluencerPage() {
 
           {/* 참여 신청하기 버튼 */}
           <div className="influencer-apply-button-container">
-            <button className="influencer-apply-button">{t('influencer.info.apply.button')}</button>
+            <button className="influencer-apply-button" onClick={handleInfluencerApply}>{t('influencer.info.apply.button')}</button>
           </div>
 
           {/* 문의 */}
@@ -124,6 +129,26 @@ function InfluencerPage() {
                 <li key={index}>{item}</li>
               ))}
             </ul>
+          </div>
+        </div>
+      </section>
+
+   {/* WHAT IT TAKES 섹션 */}
+   <section className="influencer-what-it-takes-section">
+        <div className="influencer-what-it-takes-inner">
+          <h2 className="influencer-what-it-takes-title">{t('influencer.whatItTakes.title')}</h2>
+          <div className="influencer-what-it-takes-content">
+            <p className="influencer-what-it-takes-text">
+              {t('influencer.whatItTakes.text')}
+            </p>
+            <div className="influencer-what-it-takes-list">
+              {t('influencer.whatItTakes.list').map((item, index) => (
+                <p key={index}>{item}</p>
+              ))}
+            </div>
+            <p className="influencer-what-it-takes-ending">
+              {t('influencer.whatItTakes.ending')}
+            </p>
           </div>
         </div>
       </section>
@@ -160,25 +185,7 @@ function InfluencerPage() {
         </div>
       </section>
 
-      {/* WHAT IT TAKES 섹션 */}
-      <section className="influencer-what-it-takes-section">
-        <div className="influencer-what-it-takes-inner">
-          <h2 className="influencer-what-it-takes-title">{t('influencer.whatItTakes.title')}</h2>
-          <div className="influencer-what-it-takes-content">
-            <p className="influencer-what-it-takes-text">
-              {t('influencer.whatItTakes.text')}
-            </p>
-            <div className="influencer-what-it-takes-list">
-              {t('influencer.whatItTakes.list').map((item, index) => (
-                <p key={index}>{item}</p>
-              ))}
-            </div>
-            <p className="influencer-what-it-takes-ending">
-              {t('influencer.whatItTakes.ending')}
-            </p>
-          </div>
-        </div>
-      </section>
+   
     </div>
   );
 }

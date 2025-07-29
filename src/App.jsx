@@ -85,14 +85,16 @@ function AppContent() {
                 onClick={toggleLanguage}
                 style={{
                   background: 'transparent',
-                  border: '1px solid var(--hypecon-dark)',
-                  color: 'var(--hypecon-dark)',
+                  border: 'none',
+                  color: '#000',
                   padding: '0.3rem 0.8rem',
                   borderRadius: '4px',
-                  fontSize: '0.8rem',
+                  fontSize: 'clamp(1rem, 0.94vw, 1.125rem)',
                   fontWeight: '600',
                   cursor: 'pointer',
-                  fontFamily: 'Noto Sans CJK KR, sans-serif'
+                  fontFamily: 'Montserrat, sans-serif',
+                  fontStyle: 'normal',
+                  lineHeight: '150%'
                 }}
               >
                 {language}
@@ -162,24 +164,6 @@ function AppContent() {
                 <Link to="/influencer" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/influencer') ? 'var(--hypecon-main)' : 'var(--hypecon-dark)'}} onClick={()=>setIsMobileMenuOpen(false)}>Influencer</Link>
                 <Link to="/award" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/award') ? 'var(--hypecon-main)' : 'var(--hypecon-dark)'}} onClick={()=>setIsMobileMenuOpen(false)}>Award</Link>
                 <Link to="/contact" className="waterbomb-nav-link mb-3" style={{fontWeight:600, fontSize:'1.13rem', color: isActive('/contact') ? 'var(--hypecon-main)' : 'var(--hypecon-dark)'}} onClick={()=>setIsMobileMenuOpen(false)}>Contact</Link>
-                <div className="language-toggle-mobile" style={{marginTop: '1rem'}}>
-                  <button 
-                    onClick={toggleLanguage}
-                    style={{
-                      background: 'transparent',
-                      border: '1px solid var(--hypecon-dark)',
-                      color: 'var(--hypecon-dark)',
-                      padding: '0.5rem 1rem',
-                      borderRadius: '4px',
-                      fontSize: '1rem',
-                      fontWeight: '600',
-                      cursor: 'pointer',
-                      fontFamily: 'Noto Sans CJK KR, sans-serif'
-                    }}
-                  >
-                    {language}
-                  </button>
-                </div>
               </div>
             )}
             
