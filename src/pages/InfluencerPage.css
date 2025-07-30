@@ -11,8 +11,8 @@
 .influencer-hero-section {
   position: relative;
   width: 100%;
-  min-height: clamp(600px, 44.5vw, 854px);
-  height: clamp(600px, 44.5vw, 854px);
+  min-height: clamp(427px, (854/1920)*100vw, 854px);
+  height: clamp(427px, (854/1920)*100vw, 854px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -38,136 +38,58 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: clamp(1rem, 2.08vw, 2rem);
 }
 
-.influencer-hero-title {
-  color: #E1F800;
-  font-size: clamp(1.5rem, 3.5vw, 3rem);
-  font-weight: 900;
-  line-height: 1.3;
-  text-shadow: 0 2px 16px rgba(0,0,0,0.5);
-  letter-spacing: -1px;
-  padding: 0 1.5rem;
+.influencer-hero-main-title {
+  color: var(--hypecon-white);
+  text-align: center;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(1.7rem, (45/1920)*100vw, 2.8rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: clamp(-0.17rem, (-4.5/1920)*100vw, -0.28rem);
   word-break: keep-all;
-  font-family: 'Noto Sans', sans-serif;
+  white-space: pre-line;
 }
 
-/* 반응형 스타일 */
-@media (max-width: 900px) {
-  .influencer-hero-section {
-    min-height: clamp(500px, 60vh, 700px) !important;
-    height: clamp(500px, 60vh, 700px) !important;
-  }
-  
-  .influencer-hero-title {
-    font-size: clamp(1.1rem, 5vw, 1.5rem);
-    line-height: clamp(1.5rem, 6.25vw, 2rem);
-    letter-spacing: clamp(-0.05rem, -0.25vw, -1.5px);
-    padding: 0 0.7rem;
-  }
-
-  .influencer-registration-section {
-    padding: 5rem 0;
-  }
-  
-  .influencer-registration-title {
-    font-size: clamp(2.5rem, 10vw, 3.5rem);
-    line-height: 82%;
-    letter-spacing: clamp(-0.15rem, -1vw, -2px);
-    margin-bottom: clamp(1rem, 5vw, 2rem);
-  }
-  
-  .influencer-registration-text {
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-    line-height: 1.4;
-  }
-  
-  .influencer-registration-subtext {
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-  }
-}
-
-@media (max-width: 600px) {
-  .influencer-hero-section {
-    min-height: clamp(400px, 50vh, 600px) !important;
-    height: clamp(400px, 50vh, 600px) !important;
-  }
-  
-  .influencer-hero-title {
-    font-size: clamp(0.9rem, 4vw, 1.2rem);
-    line-height: clamp(1.2rem, 5vw, 1.6rem);
-    letter-spacing: clamp(-0.03rem, -0.15vw, -1px);
-    padding: 0 0.4rem;
-  }
-
-  .influencer-registration-section {
-    padding: 5rem 0;
-  }
-  
-  .influencer-registration-title {
-    font-size: clamp(2.5rem, 10vw, 3.5rem);
-    line-height: 82%;
-    letter-spacing: clamp(-0.15rem, -1vw, -2px);
-    margin-bottom: clamp(1rem, 5vw, 2rem);
-  }
-  
-  .influencer-registration-text {
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-    line-height: 1.4;
-  }
-  
-  .influencer-registration-subtext {
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-  }
-}
-
-@media (max-width: 768px) {
-  .influencer-hero-section {
-    min-height: clamp(450px, 55vh, 600px) !important;
-    height: clamp(450px, 55vh, 600px) !important;
-  }
-  
-  .influencer-hero-title {
-    font-size: clamp(1rem, 4.5vw, 1.3rem);
-    line-height: clamp(1.3rem, 5.5vw, 1.8rem);
-    letter-spacing: clamp(-0.04rem, -0.2vw, -1.2px);
-    padding: 0 0.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .influencer-hero-section {
-    min-height: clamp(400px, 50vh, 500px) !important;
-    height: clamp(400px, 50vh, 500px) !important;
-  }
-  
-  .influencer-hero-title {
-    font-size: clamp(0.8rem, 3.5vw, 1.1rem);
-    line-height: clamp(1.1rem, 4.5vw, 1.5rem);
-    letter-spacing: clamp(-0.02rem, -0.1vw, -0.8px);
-    padding: 0 0.3rem;
-  }
-}
-
-/* INFLUENCER REGISTRATION 섹션 */
-.influencer-registration-section {
-  background: #000;
-  padding: 5rem 0;
+/* INFLUENCER INFORMATION 섹션 */
+.influencer-info-section {
+  background: var(--hypecon-dark);
+  min-height: clamp(420px, (840/1920)*100vw, 840px);
+  height: auto;
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: clamp(3rem, 4.17vw, 5rem) 0;
 }
 
-.influencer-registration-inner {
-  max-width: clamp(1200px, 75vw, 1400px);
+/* 선정 기준 & 주의사항, 일정 안내, 신청 방법, 문의 섹션 */
+.influencer-info-section.criteria-section {
+  background: var(--hypecon-white);
+}
+
+.influencer-info-section.criteria-section .influencer-info-text,
+.influencer-info-section.criteria-section .influencer-info-subtext {
+  color: var(--hypecon-dark);
+}
+
+.influencer-info-inner {
+  max-width: clamp(1000px, 62.5vw, 1200px);
   width: 100%;
   padding: 0 clamp(1rem, 2.08vw, 2rem);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.influencer-registration-title {
+.influencer-info-title {
   font-size: clamp(6rem, 10.42vw, 200px);
   font-weight: 400;
-  color: #E1F800;
+  color: var(--hypecon-dark);
   margin-bottom: clamp(2rem, 3.13vw, 3rem);
   text-transform: uppercase;
   font-family: 'Bebas Neue', sans-serif;
@@ -176,15 +98,15 @@
   letter-spacing: clamp(-0.3rem, -0.52vw, -10px);
 }
 
-.influencer-registration-content {
+.influencer-info-content {
   max-width: clamp(600px, 62.5vw, 800px);
   margin: 0 auto;
 }
 
-.influencer-registration-text {
+.influencer-info-text {
   font-size: clamp(1rem, 1.75vw, 32px);
   line-height: 143%;
-  color: #99F77F;
+  color: var(--hypecon-white);
   margin: 0 0 clamp(1rem, 1.56vw, 1.5rem) 0;
   word-break: keep-all;
   font-family: 'Noto Sans CJK KR', sans-serif;
@@ -193,10 +115,10 @@
   word-wrap: break-word;
 }
 
-.influencer-registration-subtext {
+.influencer-info-subtext {
   font-size: clamp(1rem, 1.75vw, 32px);
   line-height: 143%;
-  color: #fff;
+  color: var(--hypecon-white);
   margin: 0;
   word-break: keep-all;
   font-family: 'Noto Sans CJK KR', sans-serif;
@@ -207,7 +129,7 @@
 
 /* 이런 분들을 초청합니다 섹션 */
 .influencer-invite-section {
-  background: #E1F800;
+  background: var(--hypecon-white);
   padding: clamp(3rem, 4.17vw, 5rem) 0;
   display: flex;
   justify-content: center;
@@ -227,8 +149,7 @@
 .influencer-invite-title {
   font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   font-weight: 700;
-  color: #fff;
-  background: #000;
+  color: var(--hypecon-dark);
   border-radius: 60px;
   padding: clamp(0.8rem, 1.56vw, 1.2rem) clamp(3rem, 4.17vw, 4rem);
   display: inline-block;
@@ -262,9 +183,9 @@
 }
 
 .influencer-invite-box {
-  background: #fff;
+  background: var(--hypecon-dark);
   border-radius: 20px;
-  border: 1px solid #000;
+  border: 1px solid var(--hypecon-white);
   padding: clamp(2rem, 3.13vw, 3rem);
   text-align: center;
 }
@@ -278,7 +199,7 @@
 .influencer-invite-text-content p {
   font-size: clamp(1rem, 1.67vw, 1.2rem);
   line-height: 1.5;
-  color: #000;
+  color: var(--hypecon-white);
   font-family: 'Noto Sans', sans-serif;
   margin: 0;
   white-space: pre-line;
@@ -287,10 +208,12 @@
 
 /* 선정된 인플루언서에게 제공되는 혜택 섹션 */
 .influencer-benefit-section {
-  background: #45B176;
+  background: var(--hypecon-dark);
   padding: clamp(3rem, 4.17vw, 5rem) 0;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: clamp(690px, (1380/1920)*100vw, 1380px);
 }
 
 .influencer-benefit-inner {
@@ -298,6 +221,11 @@
   width: 100%;
   padding: 0 clamp(1rem, 2.08vw, 2rem);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .influencer-benefit-header {
@@ -307,14 +235,14 @@
 .influencer-benefit-title {
   font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   font-weight: 700;
-  color: #000;
-  background: #fff;
+  color: var(--hypecon-dark);
+  background: #00E5A8;
   border-radius: 60px;
   padding: clamp(0.8rem, 1.56vw, 1.2rem) clamp(3rem, 4.17vw, 4rem);
   display: inline-block;
   margin: 0;
   font-family: 'Noto Sans', sans-serif;
-  border: 2px solid #000;
+  border: none;
 }
 
 .influencer-benefit-content {
@@ -338,7 +266,7 @@
 .influencer-benefit-list li {
   font-size: clamp(1rem, 1.67vw, 1.2rem);
   line-height: 1.5;
-  color: #000;
+  color: var(--hypecon-white);
   font-family: 'Noto Sans', sans-serif;
   position: relative;
   padding-left: clamp(1.5rem, 2.08vw, 2rem);
@@ -349,153 +277,109 @@
   position: absolute;
   left: 0;
   top: 0;
-  color: #000;
+  color: var(--hypecon-white);
   font-weight: bold;
   font-size: clamp(1rem, 1.67vw, 1.2rem);
 }
 
 /* 선정 기준 & 주의사항, 일정 안내, 신청 방법, 문의 섹션 */
-.influencer-info-section {
-  background: #DAFFCB;
-  padding: clamp(3rem, 4.17vw, 5rem) 0;
-  display: flex;
-  justify-content: center;
-}
-
-.influencer-info-inner {
-  max-width: clamp(600px, 45vw, 800px);
+.influencer-criteria-section, 
+.influencer-schedule-section, 
+.influencer-apply-section, 
+.influencer-contact-section {
+  text-align: center;
+  margin-bottom: clamp(2rem, 3.13vw, 3rem);
+  max-width: clamp(600px, 62.5vw, 800px);
   width: 100%;
-  padding: 0 clamp(1rem, 2.08vw, 2rem) clamp(1rem, 6vw, 4rem) clamp(1rem, 2.08vw, 2rem);
-  display: flex;
-  flex-direction: column;
-  gap: clamp(2rem, 3.13vw, 3rem);
 }
 
-/* 선정 기준 & 주의사항 */
-.influencer-criteria-section {
-  text-align: left;
-}
-
-.influencer-criteria-title {
+.influencer-criteria-title,
+.influencer-schedule-title,
+.influencer-apply-title,
+.influencer-contact-title {
   font-size: clamp(1.2rem, 2.5vw, 1.6rem);
   font-weight: 700;
   color: #000;
   margin: 0 0 clamp(1rem, 1.56vw, 1.5rem) 0;
   font-family: 'Noto Sans', sans-serif;
   white-space: nowrap;
-}
-
-.influencer-criteria-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: clamp(0.8rem, 1.04vw, 1rem);
-}
-
-.influencer-criteria-list li {
-  font-size: clamp(1rem, 1.67vw, 1.2rem);
-  line-height: 1.5;
-  color: #000;
-  font-family: 'Noto Sans', sans-serif;
-  position: relative;
-  padding-left: clamp(1.5rem, 2.08vw, 2rem);
-}
-
-.influencer-criteria-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: clamp(0.5rem, 0.78vw, 0.8rem);
-  width: clamp(6px, 0.42vw, 8px);
-  height: clamp(6px, 0.42vw, 8px);
-  background: #000;
-  border-radius: 50%;
-}
-
-/* 일정 안내 */
-.influencer-schedule-section {
-  text-align: left;
-}
-
-.influencer-schedule-title {
-  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-  font-weight: 700;
-  color: #000;
-  margin: 0 0 clamp(1rem, 1.56vw, 1.5rem) 0;
-  font-family: 'Noto Sans', sans-serif;
-}
-
-.influencer-schedule-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: clamp(0.8rem, 1.04vw, 1rem);
-}
-
-.influencer-schedule-list li {
-  font-size: clamp(1rem, 1.67vw, 1.2rem);
-  line-height: 1.5;
-  color: #000;
-  font-family: 'Noto Sans', sans-serif;
-  position: relative;
-  padding-left: clamp(1.5rem, 2.08vw, 2rem);
-}
-
-.influencer-schedule-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: clamp(0.5rem, 0.78vw, 0.8rem);
-  width: clamp(6px, 0.42vw, 8px);
-  height: clamp(6px, 0.42vw, 8px);
-  background: #000;
-  border-radius: 50%;
-}
-
-/* 신청 방법 */
-.influencer-apply-section {
-  text-align: left;
+  text-align: center;
 }
 
 .influencer-apply-title {
-  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  width: clamp(480px, (960/1920)*100vw, 960px);
+  height: clamp(60px, (120/1920)*100vw, 120px);
+  flex-shrink: 0;
+  border-radius: 60px;
+  border: 0 solid #000;
+  background: #000;
+  color: #00E5A8;
+  font-size: clamp(1.35rem, (45/1920)*100vw, 2.8rem);
   font-weight: 700;
-  color: #000;
-  margin: 0 0 clamp(1rem, 1.56vw, 1.5rem) 0;
+  margin: 0 auto clamp(1rem, 1.56vw, 1.5rem) auto;
   font-family: 'Noto Sans', sans-serif;
+  white-space: nowrap;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.influencer-apply-list {
+.influencer-schedule-title {
+  width: clamp(480px, (960/1920)*100vw, 960px);
+  height: clamp(60px, (120/1920)*100vw, 120px);
+  flex-shrink: 0;
+  border-radius: 60px;
+  border: 0 solid #000;
+  background: #000;
+  color: #00E5A8;
+  font-size: clamp(1.35rem, (45/1920)*100vw, 2.8rem);
+  font-weight: 700;
+  margin: 0 auto clamp(1rem, 1.56vw, 1.5rem) auto;
+  font-family: 'Noto Sans', sans-serif;
+  white-space: nowrap;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.influencer-criteria-list,
+.influencer-schedule-list,
+.influencer-apply-list,
+.influencer-contact-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: clamp(0.8rem, 1.04vw, 1rem);
+  text-align: center;
+  width: fit-content;
 }
 
-.influencer-apply-list li {
+.influencer-criteria-list li,
+.influencer-schedule-list li,
+.influencer-apply-list li,
+.influencer-contact-list li {
   font-size: clamp(1rem, 1.67vw, 1.2rem);
   line-height: 1.5;
   color: #000;
   font-family: 'Noto Sans', sans-serif;
   position: relative;
-  padding-left: clamp(1.5rem, 2.08vw, 2rem);
+  padding-left: 0;
+  text-align: center;
+  white-space: pre-line;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
-.influencer-apply-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: clamp(0.5rem, 0.78vw, 0.8rem);
-  width: clamp(6px, 0.42vw, 8px);
-  height: clamp(6px, 0.42vw, 8px);
-  background: #000;
-  border-radius: 50%;
+.influencer-criteria-list li::before,
+.influencer-schedule-list li::before,
+.influencer-apply-list li::before,
+.influencer-contact-list li::before {
+  display: none;
 }
 
 /* 참여 신청하기 버튼 */
@@ -505,11 +389,12 @@
 }
 
 .influencer-apply-button {
-  background: #75D19F;
-  color: #000;
+  background: #00E5A8;
+  color: var(--hypecon-dark);
   border: none;
   border-radius: 60px;
-  padding: clamp(1rem, 2.08vw, 1.5rem) clamp(3rem, 4.17vw, 4rem);
+  width: clamp(327px, (654/1920)*100vw, 654px);
+  height: clamp(74px, (148/1920)*100vw, 148px);
   font-size: clamp(1.1rem, 2.5vw, 1.4rem);
   font-weight: 700;
   font-family: 'Noto Sans', sans-serif;
@@ -518,50 +403,8 @@
 }
 
 .influencer-apply-button:hover {
-  background: #45B176;
+  background: #00CDAC;
   transform: translateY(-2px);
-}
-
-/* 문의 */
-.influencer-contact-section {
-  text-align: left;
-}
-
-.influencer-contact-title {
-  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-  font-weight: 700;
-  color: #000;
-  margin: 0 0 clamp(1rem, 1.56vw, 1.5rem) 0;
-  font-family: 'Noto Sans', sans-serif;
-}
-
-.influencer-contact-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: clamp(0.8rem, 1.04vw, 1rem);
-}
-
-.influencer-contact-list li {
-  font-size: clamp(1rem, 1.67vw, 1.2rem);
-  line-height: 1.5;
-  color: #000;
-  font-family: 'Noto Sans', sans-serif;
-  position: relative;
-  padding-left: clamp(1.5rem, 2.08vw, 2rem);
-}
-
-.influencer-contact-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: clamp(0.5rem, 0.78vw, 0.8rem);
-  width: clamp(6px, 0.42vw, 8px);
-  height: clamp(6px, 0.42vw, 8px);
-  background: #000;
-  border-radius: 50%;
 }
 
 /* WHAT IT TAKES 섹션 */
@@ -582,7 +425,7 @@
 .influencer-what-it-takes-title {
   font-size: clamp(6rem, 10.42vw, 200px);
   font-weight: 400;
-  color: #E1F800;
+  color: #00E5A8;
   margin-bottom: clamp(2rem, 3.13vw, 3rem);
   text-transform: uppercase;
   font-family: 'Bebas Neue', sans-serif;
@@ -744,4 +587,114 @@
   color: rgba(0, 0, 0, 0.98);
   line-height: 1.2;
   flex: 1;
+}
+
+.influencer-registration-title {
+  color: var(--hypecon-main);
+  text-align: center;
+  font-family: "Bebas Neue";
+  font-size: clamp(5.4rem, (180/1920)*100vw, 11.25rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(5.28rem, (176/1920)*100vw, 11rem); /* 97.778% */
+  letter-spacing: clamp(-0.27rem, (-9/1920)*100vw, -0.56rem);
+  margin-bottom: clamp(2rem, 3.13vw, 3rem);
+  text-transform: uppercase;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 900px) {
+  .influencer-hero-section {
+    min-height: clamp(500px, 60vh, 700px) !important;
+    height: clamp(500px, 60vh, 700px) !important;
+  }
+  
+  .influencer-hero-main-title {
+    font-size: clamp(1.1rem, 5vw, 1.5rem);
+    line-height: clamp(1.5rem, 6.25vw, 2rem);
+    letter-spacing: clamp(-0.05rem, -0.25vw, -1.5px);
+    padding: 0 0.7rem;
+  }
+
+  .influencer-info-section {
+    padding: 5rem 0;
+  }
+  
+  .influencer-info-title {
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
+    line-height: 82%;
+    letter-spacing: clamp(-0.15rem, -1vw, -2px);
+    margin-bottom: clamp(1rem, 5vw, 2rem);
+  }
+  
+  .influencer-info-text {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    line-height: 1.4;
+  }
+  
+  .influencer-info-subtext {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .influencer-hero-section {
+    min-height: clamp(400px, 50vh, 600px) !important;
+    height: clamp(400px, 50vh, 600px) !important;
+  }
+  
+  .influencer-hero-main-title {
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+    line-height: clamp(1.2rem, 5vw, 1.6rem);
+    letter-spacing: clamp(-0.03rem, -0.15vw, -1px);
+    padding: 0 0.4rem;
+  }
+
+  .influencer-info-section {
+    padding: 5rem 0;
+  }
+  
+  .influencer-info-title {
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
+    line-height: 82%;
+    letter-spacing: clamp(-0.15rem, -1vw, -2px);
+    margin-bottom: clamp(1rem, 5vw, 2rem);
+  }
+  
+  .influencer-info-text {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    line-height: 1.4;
+  }
+  
+  .influencer-info-subtext {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .influencer-hero-section {
+    min-height: clamp(450px, 55vh, 600px) !important;
+    height: clamp(450px, 55vh, 600px) !important;
+  }
+  
+  .influencer-hero-main-title {
+    font-size: clamp(1rem, 4.5vw, 1.3rem);
+    line-height: clamp(1.3rem, 5.5vw, 1.8rem);
+    letter-spacing: clamp(-0.04rem, -0.2vw, -1.2px);
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .influencer-hero-section {
+    min-height: clamp(400px, 50vh, 500px) !important;
+    height: clamp(400px, 50vh, 500px) !important;
+  }
+  
+  .influencer-hero-main-title {
+    font-size: clamp(0.8rem, 3.5vw, 1.1rem);
+    line-height: clamp(1.1rem, 4.5vw, 1.5rem);
+    letter-spacing: clamp(-0.02rem, -0.1vw, -0.8px);
+    padding: 0 0.3rem;
+  }
 } 

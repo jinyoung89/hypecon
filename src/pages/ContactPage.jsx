@@ -23,7 +23,14 @@ function ContactPage() {
           <h1 className="contact-hero-title">{t('contact.hero.title')}</h1>
           <div className="contact-hero-subtitle">
             {t('contact.hero.subtitle').map((line, index) => (
-              <p key={index}>{line}</p>
+              <p key={index}>
+                {line.split('\n').map((textLine, lineIndex) => (
+                  <React.Fragment key={lineIndex}>
+                    {textLine}
+                    <br />
+                  </React.Fragment>
+                ))}
+              </p>
             ))}
           </div>
         </div>
@@ -42,7 +49,14 @@ function ContactPage() {
                 <div className="contact-info-separator"></div>
                 <div className="contact-info-details">
                   {item.details.map((detail, detailIndex) => (
-                    <div key={detailIndex}>{detail}</div>
+                    <div key={detailIndex}>
+                      {detail.split('\n').map((textLine, lineIndex) => (
+                        <React.Fragment key={lineIndex}>
+                          {textLine}
+                          <br />
+                        </React.Fragment>
+                      ))}
+                    </div>
                   ))}
                 </div>
               </div>
@@ -56,7 +70,14 @@ function ContactPage() {
         <div className="contact-message-inner">
           <div className="contact-message-content">
             {t('contact.message.content').map((line, index) => (
-              <p key={index}>{line}</p>
+              <p key={index}>
+                {line.split('\n').map((textLine, lineIndex) => (
+                  <React.Fragment key={lineIndex}>
+                    {textLine}
+                    <br />
+                  </React.Fragment>
+                ))}
+              </p>
             ))}
           </div>
         </div>

@@ -36,47 +36,50 @@ function ExhibitionPage() {
       {/* 포스터 이미지 섹션 */}
       <section className="exhibition-poster-section">
         <div className="exhibition-poster-inner">
-          <div className="exhibition-poster-image">
-            <img src={exPoster} alt="HYPECON STYLE WEEK SEOUL 2026 포스터" />
-          </div>
-          <div className="exhibition-poster-info">
-            <h2 className="poster-title">HYPECON STYLE WEEK SEOUL 2026</h2>
+          <div className="exhibition-poster-header">
+            <h2 className="poster-title">{t('exhibition.poster.title')}</h2>
             <h3 className="poster-date">{t('exhibition.hero.date')}</h3>
-            
-            <div className="poster-info-item">
-              <span className="info-label">🔷 {t('exhibition.organizer.title')}</span>
-              <div className="info-content">
-                {t('exhibition.organizer.host')}<br/>
-                {t('exhibition.organizer.coHost')}
-              </div>
+          </div>
+          <div className="exhibition-poster-content">
+            <div className="exhibition-poster-image">
+              <img src={exPoster} alt="HYPECON STYLE WEEK SEOUL 2026 포스터" />
             </div>
-            
-            <div className="poster-info-item">
-              <span className="info-label">🔹 {t('exhibition.participants.title')}</span>
-              <div className="info-content">
-                {t('exhibition.participants.list').map((item, index) => (
-                  <React.Fragment key={index}>
-                    • {item}<br/>
-                  </React.Fragment>
-                ))}
+            <div className="exhibition-poster-info">
+              <div className="poster-info-item">
+                <span className="info-label">🔷 {t('exhibition.organizer.title')}</span>
+                <div className="info-content">
+                  {t('exhibition.organizer.host')}<br/>
+                  {t('exhibition.organizer.coHost')}
+                </div>
               </div>
-            </div>
-            
-            <div className="poster-info-item">
-              <span className="info-label">🎟️ {t('exhibition.scale.title')}</span>
-              <div className="info-content">
-                {t('exhibition.scale.desc')}
+              
+              <div className="poster-info-item">
+                <span className="info-label">🔹 {t('exhibition.participants.title')}</span>
+                <div className="info-content">
+                  {t('exhibition.participants.list').map((item, index) => (
+                    <React.Fragment key={index}>
+                      • {item}<br/>
+                    </React.Fragment>
+                  ))}
+                </div>
               </div>
-            </div>
-            
-            <div className="poster-info-item">
-              <span className="info-label">🟣 {t('exhibition.categories.title')}</span>
-              <div className="info-content">
-                {t('exhibition.categories.list').map((item, index) => (
-                  <React.Fragment key={index}>
-                    {item}{index === 0 && <br/>}
-                  </React.Fragment>
-                ))}
+              
+              <div className="poster-info-item">
+                <span className="info-label">🎟️ {t('exhibition.scale.title')}</span>
+                <div className="info-content">
+                  {t('exhibition.scale.desc')}
+                </div>
+              </div>
+              
+              <div className="poster-info-item">
+                <span className="info-label">🟣 {t('exhibition.categories.title')}</span>
+                <div className="info-content">
+                  {t('exhibition.categories.list').map((item, index) => (
+                    <React.Fragment key={index}>
+                      {item}{index === 0 && <br/>}
+                    </React.Fragment>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -95,10 +98,10 @@ function ExhibitionPage() {
               <div className="exhibition-programs-content">
                 <h3 className="exhibition-programs-date">02.19 | OPENING DAY</h3>
                 <h4 className="exhibition-programs-subtitle">
-                  {t('exhibition.highlights').slice(0, 2).join(', ')}
+                  {t('exhibition.highlights.day1.title')}
                 </h4>
                 <p className="exhibition-programs-desc">
-                  {t('exhibition.highlights').slice(2, 4).join('\n')}
+                  {t('exhibition.highlights.day1.desc')}
                 </p>
               </div>
             </div>
@@ -109,10 +112,10 @@ function ExhibitionPage() {
               <div className="exhibition-programs-content">
                 <h3 className="exhibition-programs-date">02.20 | SIGNATURE SHOWCASE DAY</h3>
                 <h4 className="exhibition-programs-subtitle">
-                  {t('exhibition.highlights').slice(4, 5).join(', ')}
+                  {t('exhibition.highlights.day2.title')}
                 </h4>
                 <p className="exhibition-programs-desc">
-                  {t('exhibition.highlights').slice(5, 7).join('\n')}
+                  {t('exhibition.highlights.day2.desc')}
                 </p>
               </div>
             </div>
@@ -123,10 +126,10 @@ function ExhibitionPage() {
               <div className="exhibition-programs-content">
                 <h3 className="exhibition-programs-date">02.21 | FAN EXPERIENCE DAY</h3>
                 <h4 className="exhibition-programs-subtitle">
-                  {t('exhibition.highlights').slice(7, 9).join(', ')}
+                  {t('exhibition.highlights.day3.title')}
                 </h4>
                 <p className="exhibition-programs-desc">
-                  {t('exhibition.highlights').slice(9, 11).join('\n')}
+                  {t('exhibition.highlights.day3.desc')}
                 </p>
               </div>
             </div>
@@ -137,10 +140,10 @@ function ExhibitionPage() {
               <div className="exhibition-programs-content">
                 <h3 className="exhibition-programs-date">02.22 | FINAL DROP DAY</h3>
                 <h4 className="exhibition-programs-subtitle">
-                  {t('exhibition.highlights').slice(11, 12).join(', ')}
+                  {t('exhibition.highlights.day4.title')}
                 </h4>
                 <p className="exhibition-programs-desc">
-                  {t('exhibition.highlights').slice(12, 14).join('\n')}
+                  {t('exhibition.highlights.day4.desc')}
                 </p>
               </div>
             </div>
@@ -154,13 +157,13 @@ function ExhibitionPage() {
           <h2 className="exhibition-new-experience-title">HYPECON EXPERIENCE</h2>
           
           <div className="exhibition-new-experience-desc">
-            {t('exhibition.experience.title')}<br/>
-            {t('exhibition.experience.desc').join('\n')}
+            <div className="experience-title-text">{t('exhibition.experience.title')}</div>
+            <div className="experience-desc-text">{t('exhibition.experience.desc').join('\n')}</div>
           </div>
           
           <div className="exhibition-new-experience-grid">
             <div className="experience-card">
-              <h3 className="experience-card-title">EXPERIENCE<br/>ZONE</h3>
+              <h3 className="experience-card-title">{t('exhibition.experience.cards.zone')}</h3>
               <ul className="experience-card-list">
                 {t('exhibition.zones').slice(0, 4).map((zone, index) => (
                   <li key={index}>{zone}</li>
@@ -169,7 +172,7 @@ function ExhibitionPage() {
             </div>
             
             <div className="experience-card">
-              <h3 className="experience-card-title">INTERACTION &<br/>SHOW</h3>
+              <h3 className="experience-card-title">{t('exhibition.experience.cards.interaction')}</h3>
               <ul className="experience-card-list">
                 {t('exhibition.zones').slice(4, 8).map((zone, index) => (
                   <li key={index}>{zone}</li>
@@ -178,7 +181,7 @@ function ExhibitionPage() {
             </div>
             
             <div className="experience-card">
-              <h3 className="experience-card-title">SNS &<br/>CHALLENGE</h3>
+              <h3 className="experience-card-title">{t('exhibition.experience.cards.sns')}</h3>
               <ul className="experience-card-list">
                 {t('exhibition.zones').slice(8, 11).map((zone, index) => (
                   <li key={index}>{zone}</li>
@@ -187,7 +190,7 @@ function ExhibitionPage() {
             </div>
             
             <div className="experience-card">
-              <h3 className="experience-card-title">COMMERCE &<br/>QUEST</h3>
+              <h3 className="experience-card-title">{t('exhibition.experience.cards.commerce')}</h3>
               <ul className="experience-card-list">
                 {t('exhibition.zones').slice(11, 15).map((zone, index) => (
                   <li key={index}>{zone}</li>
@@ -201,7 +204,7 @@ function ExhibitionPage() {
       {/* KEY CONTENT POINTS 섹션 */}
       <section className="exhibition-key-points-section">
         <div className="exhibition-key-points-inner">
-          <h2 className="exhibition-key-points-title">3 KEY CONTENT POINTS</h2>
+          <h2 className="exhibition-key-points-title">{t('exhibition.features.title')}</h2>
           
           <div className="exhibition-key-points-grid">
             <div className="key-point-card">
@@ -236,9 +239,9 @@ function ExhibitionPage() {
                 {t('exhibition.b2b.program.title')}
               </div>
               <div className="b2b-item-content">
-                {t('exhibition.b2b.features').map((feature, index) => (
-                  <div key={index} className="b2b-item-desc">· {feature}</div>
-                ))}
+                <div className="b2b-item-desc">
+                  {t('exhibition.b2b.features')[0]}
+                </div>
               </div>
             </div>
             
@@ -247,9 +250,11 @@ function ExhibitionPage() {
                 {t('exhibition.b2b.lounge.title')}
               </div>
               <div className="b2b-item-content">
-                {t('exhibition.b2b.lounge.features').map((feature, index) => (
-                  <div key={index} className="b2b-item-desc">· {feature}</div>
-                ))}
+                <div className="b2b-item-desc">
+                  {t('exhibition.b2b.lounge.features').map((feature, index) => 
+                    index === 0 ? `· ${feature}` : `\n· ${feature}`
+                  ).join('')}
+                </div>
               </div>
             </div>
             
@@ -258,9 +263,11 @@ function ExhibitionPage() {
                 {t('exhibition.b2b.seminar.title')}
               </div>
               <div className="b2b-item-content">
-                {t('exhibition.b2b.seminar.features').map((feature, index) => (
-                  <div key={index} className="b2b-item-desc">· {feature}</div>
-                ))}
+                <div className="b2b-item-desc">
+                  {t('exhibition.b2b.seminar.features').map((feature, index) => 
+                    index === 0 ? `· ${feature}` : `\n· ${feature}`
+                  ).join('')}
+                </div>
               </div>
             </div>
             
@@ -269,9 +276,11 @@ function ExhibitionPage() {
                 {t('exhibition.b2b.showcase.title')}
               </div>
               <div className="b2b-item-content">
-                {t('exhibition.b2b.showcase.features').map((feature, index) => (
-                  <div key={index} className="b2b-item-desc">· {feature}</div>
-                ))}
+                <div className="b2b-item-desc">
+                  {t('exhibition.b2b.showcase.features').map((feature, index) => 
+                    index === 0 ? `· ${feature}` : `\n· ${feature}`
+                  ).join('')}
+                </div>
               </div>
             </div>
             
@@ -280,9 +289,11 @@ function ExhibitionPage() {
                 {t('exhibition.b2b.online.title')}
               </div>
               <div className="b2b-item-content">
-                {t('exhibition.b2b.online.features').map((feature, index) => (
-                  <div key={index} className="b2b-item-desc">· {feature}</div>
-                ))}
+                <div className="b2b-item-desc">
+                  {t('exhibition.b2b.online.features').map((feature, index) => 
+                    index === 0 ? `· ${feature}` : `\n· ${feature}`
+                  ).join('')}
+                </div>
               </div>
             </div>
           </div>

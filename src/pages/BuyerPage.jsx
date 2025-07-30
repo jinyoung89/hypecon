@@ -6,13 +6,22 @@ import { useLanguage } from '../contexts/LanguageContext';
 function BuyerPage() {
   const { t } = useLanguage();
   
+  // 화살표 SVG 컴포넌트
+  const ArrowDown = () => (
+    <div className="arrow-down-container">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="21" viewBox="0 0 26 21" fill="none">
+        <path d="M13 21L0.875647 -2.28386e-06L25.1244 -1.63974e-07L13 21Z" fill="#00E5A8"/>
+      </svg>
+    </div>
+  );
+  
   return (
     <div className="buyer-page-root">
       {/* 상단 배경 이미지 섹션 */}
       <section className="buyer-hero-section" style={{backgroundImage: `url(${buyerImg})`}}>
         <div className="buyer-hero-overlay"></div>
         <div className="buyer-hero-text">
-          <div className="buyer-hero-title">
+          <div className="buyer-hero-main-title">
             {t('buyer.hero.subtitle').split('\n').map((line, index) => (
               <React.Fragment key={index}>
                 {line}
@@ -24,11 +33,11 @@ function BuyerPage() {
       </section>
 
       {/* BUYER REGISTRATION 섹션 */}
-      <section className="buyer-registration-section">
-        <div className="buyer-registration-inner">
-          <h2 className="buyer-registration-title">{t('buyer.registration.title')}</h2>
-          <div className="buyer-registration-content">
-            <p className="buyer-registration-text">
+      <section className="buyer-info-section">
+        <div className="buyer-info-inner">
+          <h2 className="buyer-info-title">{t('buyer.registration.title')}</h2>
+          <div className="buyer-info-content">
+            <p className="buyer-info-text">
               {t('buyer.registration.text').split('\n').map((line, index) => (
                 <React.Fragment key={index}>
                   {line}
@@ -36,7 +45,7 @@ function BuyerPage() {
                 </React.Fragment>
               ))}
             </p>
-            <p className="buyer-registration-subtext">
+            <p className="buyer-info-subtext">
               {t('buyer.registration.subtext')}
             </p>
           </div>
@@ -87,11 +96,14 @@ function BuyerPage() {
           </div>
           <div className="buyer-method-content">
             <div className="buyer-method-text-container">
-              <ul className="buyer-method-list">
+              <div className="buyer-method-steps">
                 {t('buyer.method.list').map((item, index) => (
-                  <li key={index}>{item}</li>
+                  <React.Fragment key={index}>
+                    <div className="buyer-method-step">{item}</div>
+                    {index < t('buyer.method.list').length - 1 && <ArrowDown />}
+                  </React.Fragment>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -111,11 +123,11 @@ function BuyerPage() {
               
               <div className="buyer-register-notice">
                 <h3 className="buyer-register-notice-title">{t('buyer.register.notice.title')}</h3>
-                <ul className="buyer-register-notice-list">
+                <div className="buyer-register-notice-items">
                   {t('buyer.register.notice.list').map((item, index) => (
-                    <li key={index}>{item}</li>
+                    <p key={index} className="buyer-register-notice-item">{item}</p>
                   ))}
-                </ul>
+                </div>
               </div>
               
               <div className="buyer-register-contact">

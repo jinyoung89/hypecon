@@ -24,7 +24,7 @@ const en = {
     section1: {
       title: 'BEYOND ONLINE EXPERIENCE STYLE',
       desc: 'Where Gen Z and brands share their sensibilities\nand reactions spark new worlds. A fashion and beauty fair.',
-      button: 'Get notified when tickets go on sale'
+      button: 'Booth Registration Notification'
     },
     section2: {
       desc: 'THE MOMENT WHEN BRANDS\nAND FANDOMS CONNECT DIRECTLY.',
@@ -55,12 +55,21 @@ const en = {
   },
   why: {
     title: 'WHY BRANDS\nCHOOSE HYPECON',
-    desc: 'Korea\'s first integrated fashion and beauty fair\nbridging B2C sales and B2B export opportunities.'
+    desc: 'Korea\'s first integrated fashion and beauty fair\nbridging B2C sales and B2B export opportunities.',
+    highlightKeywords: [
+      'Korea\'s first',
+      'integrated fashion and beauty fair'
+    ]
   },
   experience: {
     badge: 'Wear it. Snap it. Share it. Sell it. Go global.\nThis is the real stage for your brand.',
     title: 'For Gen Z, experience is the product.',
     desc: 'HYPECON STYLE WEEK Seoul 2026 isn\'t just where brands get seen.',
+    highlightKeywords: [
+      'experience',
+      'product',
+      'brands get seen'
+    ],
     cards: [
       {
         title: 'Gen Z Brand\nCuration',
@@ -86,7 +95,9 @@ const en = {
   },
   content: {
     title: 'Dopamine-Charged',
-    strong: 'Content & Commerce\nStyle Fair'
+    strong1: 'Content & Commerce',
+    strong2: 'Style Fair',
+    imageAlt: 'Content + Commerce Style Fair'
   },
   list: [
     {
@@ -127,6 +138,9 @@ const en = {
       desc: 'Brands become the content. Visitors become the fandom.',
       date: 'February 19 (Thu) - 22 (Sun), 2026 | COEX C Hall, Seoul'
     },
+    poster: {
+      title: 'HYPECON STYLE WEEK SEOUL 2026'
+    },
     organizer: {
       title: 'Hosted / Organized by',
       host: 'Host: Planus Inc.',
@@ -153,22 +167,24 @@ const en = {
         'Accessories / Shoes / Bags / Beauty'
       ]
     },
-    highlights: [
-      'Opening Performance, AI Runway Show, VIP & Celebrity Guests',
-      'Hyper Photo Spots',
-      'A media- and content-driven launch day that maximizes attention from both brands and fans',
-      'Global mega-influencers lead content creation',
-      'Showcases and brand-led conferences',
-      'HYPECON\'s main stage spotlighting leading brands',
-      'Simultaneous business meetings and content creation',
-      'Influencer Fan Signings, Style Challenges, Selfie Events',
-      'Live Commerce with Chinese influencers (Wanghong), K-Style Awards',
-      'Audience-Driven Content Programming, Expanded fandom and user-generated content',
-      'Driving real purchase conversion from target consumers',
-      'Sample Sales, Limited-Edition Purchase Events, and Recap Content Production',
-      'Boost purchase engagement and secure high-retention content across the event',
-      'Follow-up B2B content including magazine shoots and archiving'
-    ],
+    highlights: {
+      day1: {
+        title: 'Opening Performance, AI Runway Show, VIP & Celebrity Guests\nHyper Photo Spots Open',
+        desc: 'A media- and content-driven launch day that maximizes attention from both brands and fans\nGlobal mega-influencers lead content creation'
+      },
+      day2: {
+        title: 'Showcases, Brand Conferences',
+        desc: 'Main stage led by top brands at HYPECON\nSimultaneous business meetings and content creation'
+      },
+      day3: {
+        title: 'Influencer Fan Signings, Style Challenges, Selfie Events\nLive Commerce with Wanghong, K-Style Awards',
+        desc: 'Audience-driven content programming, expanded fandom and user-generated content\nDriving real purchase conversion from target consumers'
+      },
+      day4: {
+        title: 'Sample Sales, Limited-Edition Purchase Events, Recap Content Production',
+        desc: 'Boost purchase engagement and secure high-retention content across the event\nFollow-up B2B content including magazine shoots and archiving'
+      }
+    },
     experience: {
       title: 'More than an experience',
       desc: [
@@ -177,7 +193,13 @@ const en = {
         'Spreads organically on social',
         'From hype to fandom',
         'Immersive style that drives real purchase'
-      ]
+      ],
+      cards: {
+        zone: 'EXPERIENCE\nZONE',
+        interaction: 'INTERACTION &\nSHOW',
+        sns: 'SNS &\nCHALLENGE',
+        commerce: 'COMMERCE &\nQUEST'
+      }
     },
     zones: [
       'Style Transformation Beauty Zone',
@@ -197,6 +219,7 @@ const en = {
       'Purchase-Linked Content'
     ],
     features: {
+      title: '3 KEY CONTENT POINTS',
       content: {
         title: '5-Second Content',
         desc: 'Stimulating Gen Z\'s instant urge to share\n→ Sharp, impactful content designed for social media virality.'
@@ -672,7 +695,7 @@ const en = {
   influencer: {
     hero: {
       title: 'INFLUENCER REGISTRATION',
-      subtitle: 'Being invited as a HYPECON influencer means\nyou\'ve become a name that leads the Gen Z style scene.\nAnyone can apply, but not everyone gets invited.'
+      subtitle: 'The real stage connecting brands, followers, and fandoms'
     },
     registration: {
       title: 'INFLUENCER REGISTRATION',

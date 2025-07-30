@@ -54,7 +54,7 @@
 }
 
 .exhibition-hero-subtitle {
-  color: #E1F800;
+  color: #FFFFFF;
   font-size: clamp(1.5rem, 2.71vw, 52px);
   font-family: 'Noto Sans', sans-serif;
   font-weight: 900;
@@ -63,7 +63,7 @@
 }
 
 .exhibition-hero-title {
-  color: #E1F800;
+  color: #FFFFFF;
   font-size: clamp(2rem, 3.33vw, 64px);
   font-family: 'Noto Sans', sans-serif;
   font-weight: 900;
@@ -72,7 +72,7 @@
 }
 
 .exhibition-hero-desc {
-  color: #00E5A8;
+  color: #FFFFFF;
   font-size: clamp(1.2rem, 2.08vw, 40px);
   font-family: 'Noto Sans', sans-serif;
   font-weight: 900;
@@ -86,6 +86,8 @@
   padding: clamp(2rem, 5vw, 4rem) 0;
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: clamp(800px, 70.83vw, 1360px);
 }
 
 .exhibition-poster-inner {
@@ -93,9 +95,28 @@
   width: 100%;
   padding: 0 clamp(1rem, 3vw, 2rem);
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(0.5rem, 1vw, 1rem);
+}
+
+.exhibition-poster-header {
+  text-align: left;
+  width: 100%;
+  margin-bottom: clamp(0.2rem, 0.5vw, 0.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 500px;
+  margin-left: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.exhibition-poster-content {
+  display: flex;
   flex-direction: row;
   align-items: flex-start;
   gap: clamp(2rem, 4vw, 3rem);
+  width: 100%;
 }
 
 .exhibition-poster-image {
@@ -103,6 +124,8 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  max-width: 500px;
+  width: 100%;
 }
 
 .exhibition-poster-image img {
@@ -113,10 +136,12 @@
 }
 
 .exhibition-poster-info {
-  flex: 1.2;
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: clamp(1rem, 2vw, 1.5rem);
+  width: 100%;
+  max-width: 600px;
 }
 
 .poster-title {
@@ -171,25 +196,27 @@
   padding: clamp(2rem, 5vw, 4rem) 0;
   display: flex;
   justify-content: center;
+  min-height: clamp(1200px, 111.46vw, 2140px);
 }
 
 .exhibition-programs-inner {
   max-width: 1400px;
-  width: 100%;
+  width: auto;
   padding: 0 clamp(1rem, 3vw, 2rem);
   text-align: center;
+  margin: 0 auto;
 }
 
 .exhibition-programs-title {
-  font-size: clamp(3rem, 10.42vw, 200px);
+  font-size: clamp(3rem, 9.375vw, 180px);
   font-weight: 400;
-  color: #E1F800;
+  color: #00E5A8;
   text-align: center;
   margin-bottom: clamp(2rem, 4vw, 3rem);
   font-family: 'Bebas Neue', sans-serif;
   font-style: normal;
   line-height: 82%;
-  letter-spacing: -6px;
+  letter-spacing: clamp(-1px, -0.28vw, -5.4px);
   text-transform: uppercase;
   white-space: nowrap;
   word-wrap: normal;
@@ -201,7 +228,8 @@
   display: flex;
   flex-direction: column;
   gap: clamp(2rem, 3vw, 2.5rem);
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .exhibition-programs-item {
@@ -211,8 +239,7 @@
   padding: clamp(1rem, 2vw, 1.5rem) 0;
   border-bottom: 1px solid rgba(225, 248, 0, 0.2);
   max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
+  width: 800px;
 }
 
 .exhibition-programs-item:last-child {
@@ -227,11 +254,15 @@
   align-items: center;
   justify-content: center;
   margin-top: 0.5rem;
+  background: #00E5A8;
+  border-radius: 50%;
+  width: clamp(80px, 12.03vw, 233px);
+  height: clamp(80px, 12.03vw, 233px);
 }
 
 .exhibition-programs-icon img {
-  width: clamp(80px, 12.03vw, 231px);
-  height: clamp(80px, 12.03vw, 231px);
+  width: clamp(60px, 9vw, 173px);
+  height: clamp(60px, 9vw, 173px);
   object-fit: contain;
 }
 
@@ -244,7 +275,7 @@
 .exhibition-programs-date {
   font-size: clamp(1.5rem, 2.6vw, 35px);
   font-weight: 700;
-  color: #E1F800;
+  color: #000000;
   margin-bottom: 0.5rem;
   line-height: 35px;
   font-family: 'Montserrat', sans-serif;
@@ -253,12 +284,16 @@
   letter-spacing: -4px;
   white-space: nowrap;
   max-width: 1200px;
+  background: #00E5A8;
+  border-radius: 500px;
+  padding: clamp(0.5rem, 1vw, 1rem) clamp(1rem, 2vw, 2rem);
+  display: inline-block;
 }
 
 .exhibition-programs-subtitle {
   font-size: clamp(1.2rem, 2.34vw, 32px);
   font-weight: 700;
-  color: #FF4CC3;
+  color: #FFFFFF;
   margin-bottom: 0.8rem;
   line-height: 120%;
   font-family: 'Noto Sans', sans-serif;
@@ -271,27 +306,29 @@
 }
 
 .exhibition-programs-desc {
-  font-size: clamp(1rem, 1.875vw, 28px);
+  font-size: clamp(1rem, 1.25vw, 24px);
   font-weight: 500;
-  color: #FFF;
-  line-height: 120%;
+  color: #00E5A8;
+  line-height: 134%;
   margin: 0;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Noto Sans CJK KR', sans-serif;
   font-style: normal;
   word-wrap: break-word;
   white-space: pre-line;
   word-break: keep-all;
-  letter-spacing: -1.8px;
+  letter-spacing: clamp(-0.2px, -0.0375vw, -0.72px);
   max-width: 1200px;
 }
 
 /* HYPECON EXPERIENCE 섹션 */
 .exhibition-new-experience-section {
-  background: #45B176;
+  background: #F2F2F2;
   padding: clamp(2rem, 5vw, 5rem) 0;
   display: flex;
   justify-content: center;
+  align-items: center;
   color: var(--hypecon-yellow);
+  min-height: clamp(1200px, 104.17vw, 2000px);
 }
 
 .exhibition-new-experience-inner {
@@ -302,24 +339,57 @@
 }
 
 .exhibition-new-experience-title {
-  font-size: clamp(3.5rem, 10vw, 6rem);
-  font-weight: 900;
-  color: var(--hypecon-yellow);
+  font-size: clamp(3rem, 9.375vw, 180px);
+  font-weight: 400;
+  color: #000;
+  text-align: center;
   margin-bottom: clamp(2rem, 4vw, 3rem);
-  font-family: 'Bebas Neue', 'Montserrat', sans-serif;
+  font-family: 'Bebas Neue', sans-serif;
+  font-style: normal;
+  line-height: 82%;
+  letter-spacing: clamp(-1px, -0.28vw, -5.4px);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
 .exhibition-new-experience-desc {
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
-  font-weight: 500;
-  color: var(--hypecon-white);
+  font-size: clamp(1.5rem, 2.34vw, 45px);
+  font-weight: 700;
+  color: #000;
+  text-align: center;
   margin-bottom: clamp(2rem, 4vw, 4rem);
-  line-height: 1.6;
+  line-height: clamp(1.8rem, 2.58vw, 62px);
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  white-space: pre-line;
+  word-wrap: break-word;
+  word-break: keep-all;
+  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-style: normal;
+  letter-spacing: clamp(-0.4px, -0.07vw, -1.35px);
+}
+
+.experience-title-text {
+  font-size: clamp(1.5rem, 2.34vw, 45px);
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  line-height: clamp(1.8rem, 2.58vw, 62px);
+  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-style: normal;
+  letter-spacing: clamp(-0.4px, -0.07vw, -1.35px);
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+.experience-desc-text {
+  font-size: clamp(1.2rem, 1.875vw, 36px);
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  line-height: normal;
+  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-style: normal;
+  letter-spacing: clamp(-0.3px, -0.056vw, -1.08px);
   white-space: pre-line;
   word-wrap: break-word;
   word-break: keep-all;
@@ -344,26 +414,34 @@
 }
 
 .experience-card-title {
-  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  font-size: clamp(1.5rem, 2.19vw, 42px);
   font-weight: 700;
-  color: #45B176;
+  color: #000;
   margin-bottom: clamp(1rem, 2vw, 1.5rem);
-  line-height: 1.2;
+  line-height: clamp(1.8rem, 2.6vw, 50px);
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  letter-spacing: clamp(-0.8px, -0.175vw, -3.36px);
+  white-space: pre-line;
 }
 
 .experience-card-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  color: #45B176;
+  color: #000;
 }
 
 .experience-card-list li {
-  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-size: clamp(1.1rem, 1.67vw, 32px);
   font-weight: 500;
   margin-bottom: 0.8rem;
   position: relative;
   padding-left: 1rem;
+  line-height: clamp(1.7rem, 2.6vw, 50px);
+  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-style: normal;
+  letter-spacing: clamp(-0.3px, -0.05vw, -0.96px);
 }
 
 .experience-card-list li::before {
@@ -379,31 +457,44 @@
   padding: clamp(2rem, 5vw, 4rem) 0;
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: clamp(600px, 50vw, 960px);
 }
 
 .exhibition-key-points-inner {
-  max-width: 1000px;
+  max-width: 1600px;
   width: 100%;
   padding: 0 clamp(1rem, 3vw, 2rem);
   text-align: center;
 }
 
 .exhibition-key-points-title {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-size: clamp(1.5rem, 2.34vw, 45px);
   font-weight: 700;
-  color: #3DC970;
+  color: #000;
   margin-bottom: clamp(2rem, 4vw, 3rem);
-  display: inline-block;
-  background: #fff;
+  display: flex;
+  background: #00E5A8;
   border-radius: 50px;
-  padding: 0.8rem 2rem;
+  padding: clamp(0.8rem, 2vw, 1rem) clamp(2rem, 3vw, 2.5rem);
+  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-style: normal;
+  line-height: clamp(1.7rem, 2.6vw, 50px);
+  letter-spacing: clamp(-0.6px, -0.117vw, -2.25px);
+  width: clamp(300px, 50vw, 960px);
+  height: clamp(60px, 6.25vw, 120px);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .exhibition-key-points-grid {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: clamp(1rem, 2vw, 1.5rem);
+  gap: clamp(2rem, 3vw, 3rem);
   flex-wrap: nowrap;
   width: 100%;
   max-width: 100%;
@@ -412,10 +503,12 @@
 
 .key-point-card {
   background: #fff;
-  border-radius: 20px;
-  padding: clamp(1.2rem, 2.5vw, 1.5rem);
-  min-width: 280px;
-  flex: 1;
+  border-radius: 30px;
+  padding: 0;
+  width: clamp(300px, 22.92vw, 440px);
+  height: clamp(180px, 16.93vw, 260px);
+  position: relative;
+  border: 2px solid #000;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -423,23 +516,51 @@
 }
 
 .key-point-number {
-  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-size: clamp(1.5rem, 3.13vw, 48px);
   font-weight: 700;
-  color: #3DC970;
-  margin-bottom: 0.5rem;
+  color: #00E5A8;
+  margin-bottom: 0;
+  line-height: clamp(1.2rem, 2.6vw, 40px);
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  position: absolute;
+  left: clamp(1rem, 2.08vw, 32px);
+  top: clamp(0.5rem, 1.04vw, 10px);
+  width: clamp(60px, 6.06vw, 93px);
+  height: clamp(80px, 8.21vw, 126px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .key-point-title {
-  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-size: clamp(1rem, 1.67vw, 28px);
   font-weight: 700;
-  color: #3DC970;
-  margin-bottom: 1rem;
+  color: #000;
+  margin-bottom: 0;
+  line-height: clamp(1.5rem, 2.6vw, 42px);
+  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-style: normal;
+  position: absolute;
+  left: clamp(5rem, 8.85vw, 170px);
+  top: clamp(1.8rem, 3.6vw, 55px);
+  word-wrap: break-word;
+  white-space: pre-line;
 }
 
 .key-point-desc {
-  font-size: clamp(0.9rem, 2vw, 1rem);
-  color: #3DC970;
-  line-height: 1.5;
+  font-size: clamp(0.7rem, 1.04vw, 16px);
+  color: #000;
+  line-height: clamp(1rem, 1.56vw, 24px);
+  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-weight: 400;
+  position: absolute;
+  left: clamp(1rem, 2.48vw, 38px);
+  top: clamp(4rem, 7.93vw, 129px);
+  word-wrap: break-word;
+  max-width: calc(100% - clamp(2rem, 4.96vw, 76px));
+  white-space: pre-line;
 }
 
 /* HYPECON B2B 바이어 프로그램 섹션 */
@@ -449,31 +570,36 @@
   padding: clamp(2rem, 5vw, 4rem) 0;
   display: flex;
   justify-content: center;
+  min-height: clamp(1200px, 93.75vw, 1800px);
 }
 
 .exhibition-b2b-inner {
-  max-width: clamp(600px, 62.5vw, 1200px);
+  max-width: clamp(800px, 75vw, 1400px);
   width: 100%;
   padding: 0 clamp(1rem, 3vw, 2rem);
   position: relative;
 }
 
 .exhibition-b2b-title {
-  display: inline-block;
-  background: var(--hypecon-dark);
-  color: var(--hypecon-white);
+  display: flex;
+  background: #000;
+  color: #00E5A8;
   border-radius: 60px;
   padding: clamp(0.8rem, 2vw, 1rem) clamp(2rem, 3vw, 2.5rem);
-  font-size: clamp(1rem, 2.5vw, 40px);
+  font-size: clamp(1.5rem, 2.19vw, 42px);
   font-weight: 700;
   margin-bottom: clamp(2rem, 4vw, 3rem);
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  display: block;
-  width: fit-content;
+  width: clamp(300px, 50vw, 960px);
+  height: clamp(60px, 6.25vw, 120px);
+  align-items: center;
+  justify-content: center;
   font-family: 'Noto Sans CJK KR', sans-serif;
-  line-height: 40px;
+  font-style: normal;
+  line-height: clamp(1.7rem, 2.6vw, 50px);
+  letter-spacing: clamp(-0.5px, -0.109vw, -2.1px);
 }
 
 .exhibition-b2b-list {
@@ -487,6 +613,19 @@
   align-items: flex-start;
   gap: clamp(2rem, 4vw, 3rem);
   padding: clamp(1.5rem, 3vw, 2rem) 0;
+  position: relative;
+}
+
+.b2b-item::after {
+  content: '';
+  position: absolute;
+  left: clamp(200px, 26.04vw, 250px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(2px, 0.156vw, 3px);
+  height: clamp(120px, 7.92vw, 152px);
+  background: #00E5A8;
+  flex-shrink: 0;
 }
 
 .b2b-item:last-child {
@@ -495,18 +634,20 @@
 
 .b2b-item-title {
   flex-shrink: 0;
-  width: 200px;
-  min-width: 200px;
-  font-size: clamp(1rem, 2vw, 32px);
+  width: 250px;
+  min-width: 250px;
+  font-size: clamp(1.5rem, 2.24vw, 43px);
   font-weight: 700;
-  color: var(--hypecon-dark);
-  line-height: 40px;
+  color: #000;
+  line-height: clamp(1.9rem, 2.86vw, 55px);
   text-align: left;
   white-space: pre-line;
   word-wrap: break-word;
   word-break: keep-all;
   overflow-wrap: break-word;
   font-family: 'Noto Sans CJK KR', sans-serif;
+  font-style: normal;
+  letter-spacing: clamp(-0.8px, -0.157vw, -3.01px);
 }
 
 .b2b-item-content {
@@ -518,16 +659,22 @@
 }
 
 .b2b-item-desc {
-  font-size: clamp(0.85rem, 1.8vw, 28px);
-  color: var(--hypecon-dark);
-  line-height: 32px;
-  font-family: 'Noto Sans CJK KR', sans-serif;
-  font-weight: 500;
+  color: #000;
+  font-family: "Noto Sans CJK KR", sans-serif;
+  font-size: clamp(1.2rem, 1.67vw, 32px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(1.8rem, 2.5vw, 48px);
+  letter-spacing: clamp(-0.6px, -0.083vw, -1.6px);
+  white-space: pre-line;
+  word-wrap: break-word;
+  word-break: keep-all;
+  margin-bottom: 0.5rem;
 }
 
 /* WHY JOIN 섹션 */
 .exhibition-why-join-section {
-  background: #E1F800;
+  background: #fff;
   color: var(--hypecon-dark);
   padding: clamp(2rem, 5vw, 4rem) 0 0 0;
   display: flex;
@@ -581,7 +728,7 @@
 
 /* FOR 섹션들 */
 .exhibition-for-section {
-  background: #E1F800;
+  background: #fff;
   color: var(--hypecon-dark);
   padding: 0 0 clamp(2rem, 5vw, 4rem) 0;
   display: flex;
@@ -627,18 +774,18 @@
 .for-item {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  align-items: center;
+  text-align: center;
   gap: clamp(1rem, 2vw, 1.5rem);
-  background: #45B176;
+  background: #000;
   border-radius: 20px;
   padding: clamp(1rem, 2vw, 1.5rem);
   height: 100%;
 }
 
 .for-title {
-  background: #000;
-  color: #fff;
+  background: #00E5A8;
+  color: #000;
   border-radius: 50px;
   padding: clamp(0.6rem, 1.5vw, 0.7rem) clamp(1.2rem, 2vw, 1.5rem);
   font-size: clamp(1rem, 3vw, 1.3rem);
@@ -662,7 +809,7 @@
 
 .for-content p {
   font-size: clamp(0.9rem, 2vw, 1rem);
-  color: var(--hypecon-dark);
+  color: #fff;
   line-height: 1.6;
   margin: 0;
   white-space: pre-line;
@@ -674,7 +821,7 @@
 .for-content p .guest-title,
 .for-content p .buyer-title,
 .for-content p .influencer-title {
-  color: #000;
+  color: #fff;
   font-family: "Noto Sans CJK KR", sans-serif;
   font-size: clamp(1rem, 1.5vw, 28px);
   font-style: normal;
@@ -687,7 +834,7 @@
 
 /* FOR 섹션 나머지 내용 스타일 */
 .for-content p {
-  color: #000;
+  color: #fff;
   font-family: "Noto Sans CJK KR", sans-serif;
   font-size: clamp(1rem, 1.4vw, 26px);
   font-style: normal;
@@ -698,6 +845,7 @@
   word-wrap: break-word;
   word-break: keep-all;
   overflow-wrap: break-word;
+  text-align: center;
 }
 
 /* 모바일 반응형 스타일 */
@@ -745,6 +893,23 @@
     flex-direction: column !important;
     gap: clamp(1.5rem, 3vw, 2rem) !important;
     align-items: center !important;
+  }
+
+  .exhibition-poster-header {
+    text-align: center !important;
+    width: 100% !important;
+    margin-bottom: clamp(1rem, 2vw, 1.5rem) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    max-width: 500px !important;
+    margin-left: 0 !important;
+  }
+
+  .exhibition-poster-content {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: clamp(1.5rem, 3vw, 2rem) !important;
   }
 
   .exhibition-poster-image {
@@ -801,6 +966,10 @@
     letter-spacing: -1px !important;
   }
 
+  .exhibition-programs-list {
+    align-items: flex-start !important;
+  }
+
   .exhibition-programs-item {
     flex-direction: column !important;
     align-items: center !important;
@@ -834,11 +1003,53 @@
   .exhibition-key-points-grid {
     flex-direction: column !important;
     align-items: center !important;
+    gap: clamp(1.5rem, 3vw, 2rem) !important;
   }
 
   .key-point-card {
     max-width: 100% !important;
-    width: 100% !important;
+    width: clamp(280px, 90vw, 400px) !important;
+    height: auto !important;
+    min-height: clamp(200px, 25vw, 300px) !important;
+    position: relative !important;
+    padding: clamp(1rem, 2vw, 1.5rem) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .key-point-number {
+    font-size: clamp(2rem, 6vw, 3rem) !important;
+    line-height: clamp(1.5rem, 4.5vw, 2.5rem) !important;
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    margin-bottom: clamp(0.5rem, 1vw, 1rem) !important;
+    text-align: center !important;
+  }
+
+  .key-point-title {
+    font-size: clamp(1.2rem, 3.5vw, 1.8rem) !important;
+    line-height: clamp(1.5rem, 4.5vw, 2.2rem) !important;
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    margin-bottom: clamp(0.8rem, 2vw, 1.2rem) !important;
+    text-align: center !important;
+  }
+
+  .key-point-desc {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem) !important;
+    line-height: clamp(1.3rem, 3.5vw, 1.6rem) !important;
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    max-width: 100% !important;
+    text-align: center !important;
   }
 
   /* B2B 섹션 모바일 */
@@ -848,6 +1059,10 @@
     padding: clamp(1rem, 2vw, 1.5rem) 0 !important;
     text-align: center !important;
     border-bottom: 1px solid #ddd !important;
+  }
+
+  .b2b-item::after {
+    display: none;
   }
 
   .b2b-item:last-child {

@@ -1,0 +1,20 @@
+:root {
+  /* HYPECON 공식 팔레트 */
+  --color-primary: #00E5A8;
+  --color-secondary: #E1F800;
+  --color-black: #000;
+  --color-white: #FFF;
+  --color-gray-light: #F2F2F2;
+  --color-gray-dark: #333;
+}
+
+.influencer-registration-title {
+  color: var(--color-primary);
+  text-align: center;
+  font-family: "Bebas Neue";
+  font-size: clamp(6.75rem, calc(180 / 1920 * 100vw), 11.25rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(5.5rem, calc(176 / 1920 * 100vw), 11rem);
+  letter-spacing: clamp(-0.28125rem, calc(-9 / 1920 * 100vw), -0.5625rem);
+} 

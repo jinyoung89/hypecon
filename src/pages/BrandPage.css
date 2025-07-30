@@ -1,10 +1,22 @@
 /* BrandPage 반응형 및 공통 스타일 */
 
+/* 공통 색상 변수 */
+:root {
+  --color-primary: #00E5A8;
+  --color-secondary: #E1F800;
+  --color-black: #000;
+  --color-white: #FFF;
+  --color-gray-light: #F2F2F2;
+  --color-gray-dark: #333;
+  --color-green: #75D19F;
+  --color-green-light: #DAFFCB;
+}
+
 .brand-page-root {
   width: 100%;
   min-height: 100vh;
-  background: #fff;
-  color: #111;
+  background: var(--color-white);
+  color: var(--color-gray-dark);
   box-sizing: border-box;
 }
 
@@ -40,20 +52,21 @@
 }
 
 .brand-hero-title {
-  color: var(--hypecon-main);
-  font-size: clamp(2.16rem, 3.75vw, 72px);
-  font-family: 'Noto Sans CJK KR', sans-serif;
+  color: var(--color-white);
+  text-align: center;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(28px, (56/1920)*100vw, 56px);
+  font-style: normal;
   font-weight: 900;
-  line-height: 139%;
-  text-shadow: 0 2px 16px rgba(0,0,0,0.22);
-  letter-spacing: -1px;
-  padding: 0 1.5rem;
+  line-height: clamp(36px, (73/1920)*100vw, 73px);
+  letter-spacing: clamp(-1.4px, (-2.8/1920)*100vw, -2.8px);
+  padding: 0 clamp(24px, 2.08vw, 32px);
   word-break: keep-all;
   white-space: pre-line;
   word-wrap: break-word;
-  width: clamp(369.6px, 64.17vw, 1232px);
+  width: clamp(500px, 75vw, 1400px);
   height: clamp(96.5px, 16.77vw, 322px);
-  text-align: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -61,72 +74,92 @@
 
 /* ENGAGEMENT GUIDE 섹션 */
 .brand-engagement-section {
-  background: #000;
-  color: #fff;
+  background: var(--color-black);
+  color: var(--color-white);
   padding: 5rem 0;
   display: flex;
   justify-content: center;
+  min-height: clamp(460px, (920/1920)*100vw, 920px);
+  height: clamp(460px, (920/1920)*100vw, 920px);
 }
 
 .brand-engagement-inner {
   max-width: 1000px;
   width: 100%;
   padding: 0 2rem;
-  text-align: start;
+  text-align: center;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .brand-engagement-title {
-  font-size: clamp(6rem, 10.42vw, 200px);
+  font-size: clamp(108px, (180/1920)*100vw, 180px);
   font-weight: 400;
-  color: #E1F800;
-  margin-bottom: 3rem;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
   text-transform: uppercase;
   font-family: 'Bebas Neue', sans-serif;
   line-height: 82%;
   text-align: center;
   word-wrap: break-word;
+  font-style: normal;
+  letter-spacing: 5px;
 }
 
 .brand-engagement-content {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .brand-engagement-text {
-  font-size: clamp(1rem, 1.75vw, 32px);
+  font-size: clamp(16px, (32/1920)*100vw, 32px);
   font-family: 'Noto Sans CJK KR', sans-serif;
   font-weight: 500;
-  line-height: 143%;
-  color: #fff;
+  line-height: 1.4;
+  color: var(--color-white);
   margin: 0;
   white-space: pre-line;
   word-wrap: break-word;
+  text-align: center;
+  font-style: normal;
+  letter-spacing: 2px;
 }
 
 /* 브랜드 큐레이션 기준 섹션 */
 .brand-curation-section {
-  background: #DAFFCB;
+  background: var(--color-white);
   padding: clamp(3rem, 4.17vw, 5rem) 0;
   display: flex;
   justify-content: center;
+  min-height: clamp(960px, (1920/1920)*100vw, 1920px);
+  height: clamp(960px, (1920/1920)*100vw, 1920px);
 }
 
 .brand-curation-inner {
   max-width: clamp(800px, 52.08vw, 1000px);
   width: 100%;
   padding: 0 clamp(1rem, 2.08vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .brand-curation-title {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-  font-weight: 900;
-  color: #000;
+  font-size: clamp(27px, (45/1920)*100vw, 45px);
+  font-weight: 700;
+  color: var(--color-white);
   margin-bottom: 1.5rem;
   text-align: center;
   display: inline-block;
-  background: #000;
-  color: #fff;
+  background: var(--color-black);
+  color: var(--color-white);
   border-radius: 50px;
   padding: 0.8rem 2.5rem;
   margin: 0 auto 2.5rem;
@@ -136,20 +169,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-style: normal;
+  line-height: 50px;
+  letter-spacing: -2.25px;
 }
 
 .brand-curation-desc {
-  font-size: clamp(0.9rem, 1.5vw, 28px);
-  font-family: 'Noto Sans CJK KR', sans-serif;
-  font-weight: 700;
-  line-height: clamp(1.3rem, 2.1vw, 40px);
-  color: #000;
+  font-size: clamp(14px, (20/1920)*100vw, 20px);
+  line-height: clamp(20px, (28/1920)*100vw, 28px);
+  color: var(--color-black);
+  margin: 0 0 clamp(2rem, 3.13vw, 3rem) 0;
+  font-family: 'Noto Sans', sans-serif;
   text-align: center;
-  margin-bottom: 3rem;
-  max-width: 800px;
+  max-width: clamp(600px, 62.5vw, 800px);
   margin-left: auto;
   margin-right: auto;
-  word-wrap: break-word;
 }
 
 .brand-curation-grid {
@@ -160,7 +195,7 @@
 }
 
 .curation-card {
-  background: #45B176;
+  background: var(--color-black);
   border-radius: 20px;
   padding: clamp(1rem, 2vw, 1.5rem);
   display: flex;
@@ -171,19 +206,24 @@
 }
 
 .curation-card-title {
-  font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+  font-size: clamp(18px, (30/1920)*100vw, 30px);
   font-weight: 700;
-  color: #000;
+  color: var(--color-black);
   margin-bottom: 1.5rem;
-  background: #000;
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-black);
   border-radius: 50px;
   padding: 0.7rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: clamp(60px, (120/1920)*100vw, 120px);
   text-align: center;
+  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-style: normal;
+  line-height: 50px;
+  letter-spacing: -1.26px;
 }
 
 .curation-card-content {
@@ -191,21 +231,21 @@
   flex-direction: column;
   gap: 1rem;
   width: 100%;
-  align-items: start;
-  text-align: start;
+  align-items: center;
+  text-align: center;
 }
 
 .curation-card-desc {
-  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-size: clamp(18px, (30/1920)*100vw, 30px);
   font-family: 'Noto Sans CJK KR', sans-serif;
   font-weight: 700;
-  color: #000;
+  color: var(--color-white);
   line-height: 1.6;
   margin: 0;
   white-space: pre-line;
   word-wrap: break-word;
   word-break: keep-all;
-  text-align: start;
+  text-align: center;
 }
 
 /* 얼리버드 오퍼 섹션 */
@@ -224,18 +264,15 @@
 }
 
 .brand-earlybird-title {
-  font-size: clamp(6rem, 10.42vw, 200px);
-  font-weight: 400;
-  color: #E1F800;
-  margin-bottom: 3rem;
-  text-transform: uppercase;
+  font-size: clamp(60px, (200/1920)*100vw, 200px);
   font-family: 'Bebas Neue', sans-serif;
-  line-height: 82%;
+  font-weight: 400;
+  line-height: 0.82;
+  color: var(--color-black);
   text-align: center;
-  word-wrap: break-word;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin-bottom: clamp(2rem, 3.13vw, 3rem);
+  text-transform: uppercase;
+  letter-spacing: clamp(-3px, (-10/1920)*100vw, -10px);
 }
 
 .brand-earlybird-content {
@@ -255,7 +292,7 @@
 
 /* 부스 타입 및 참가비 안내 섹션 */
 .brand-booth-section {
-  background: #75D19F;
+  background: var(--color-gray-light);
   padding: 5rem 0;
   display: flex;
   justify-content: center;
@@ -268,13 +305,13 @@
 }
 
 .brand-booth-title {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-  font-weight: 900;
-  color: #000;
+  font-size: clamp(27px, (45/1920)*100vw, 45px);
+  font-weight: 700;
+  color: var(--color-primary) !important;
   margin-bottom: 3rem;
   text-align: center;
-  background: #000;
-  color: #fff;
+  background: var(--color-black);
+  color: var(--color-primary) !important;
   border-radius: 50px;
   padding: 0.8rem 2.5rem;
   margin: 0 auto 2.5rem;
@@ -284,6 +321,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-style: normal;
+  line-height: 100px;
+  letter-spacing: -2.25px;
 }
 
 .brand-booth-table-container {
@@ -402,7 +443,7 @@
 
 /* 환불 규정 섹션 */
 .brand-refund-section {
-  background: #75D19F;
+  background: var(--color-gray-light);
   padding: 5rem 0;
   display: flex;
   justify-content: center;
@@ -415,13 +456,13 @@
 }
 
 .brand-refund-title {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-  font-weight: 900;
-  color: #000;
+  font-size: clamp(27px, (45/1920)*100vw, 45px);
+  font-weight: 700;
+  color: var(--color-primary) !important;
   margin-bottom: 3rem;
   text-align: center;
-  background: #000;
-  color: #fff;
+  background: var(--color-black);
+  color: var(--color-primary) !important;
   border-radius: 50px;
   padding: 0.8rem 2.5rem;
   margin: 0 auto 2.5rem;
@@ -431,6 +472,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-style: normal;
+  line-height: 100px;
+  letter-spacing: -2.25px;
 }
 
 .brand-refund-table-container {
@@ -524,7 +569,7 @@
 .brand-earlybird-benefit-title {
   font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 900;
-  color: #E1F800;
+  color: var(--color-primary) !important;
   margin-bottom: 3rem;
   text-align: center;
   text-transform: uppercase;
@@ -583,12 +628,112 @@
   padding: 5rem 0;
   display: flex;
   justify-content: center;
+  min-height: auto;
+  height: auto;
 }
 
 .brand-process-inner {
   max-width: clamp(1200px, 62.5vw, 1400px);
   width: 100%;
   padding: 0 clamp(1rem, 2.08vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.brand-process-new-element {
+  width: clamp(480px, (960/1920)*100vw, 960px);
+  height: clamp(60px, (120/1920)*100vw, 120px);
+  flex-shrink: 0;
+  border-radius: 500px;
+  background: #00E5A8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(22.5px, (45/1920)*100vw, 45px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(25px, (50/1920)*100vw, 50px);
+  letter-spacing: clamp(-1.125px, (-2.25/1920)*100vw, -2.25px);
+  margin: 0 auto clamp(40px, (80/1920)*100vw, 80px);
+}
+
+.brand-process-flow-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(20px, (40/1920)*100vw, 40px);
+  max-width: clamp(800px, (1200/1920)*100vw, 1200px);
+  margin: 0 auto;
+}
+
+.process-step-block {
+  width: clamp(544.5px, (1089/1920)*100vw, 1089px);
+  border-radius: clamp(10px, (20/1920)*100vw, 20px);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.process-step-header {
+  background: #000;
+  color: #00E5A8;
+  padding: clamp(15px, (30/1920)*100vw, 30px);
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(18px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  line-height: clamp(25px, (50/1920)*100vw, 50px);
+  letter-spacing: clamp(-0.9px, (-1.8/1920)*100vw, -1.8px);
+}
+
+.process-step-body {
+  background: #F5F5F5;
+  padding: clamp(20px, (30/1920)*100vw, 30px);
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(14px, (18/1920)*100vw, 18px);
+  line-height: 1.5;
+  text-align: center;
+}
+
+.process-step-body p {
+  margin: 0 0 clamp(10px, (15/1920)*100vw, 15px) 0;
+  font-weight: 500;
+  text-align: center;
+}
+
+.process-step-body ul {
+  margin: 0;
+  padding-left: 0;
+  text-align: center;
+  list-style: none;
+}
+
+.process-step-body li {
+  margin-bottom: clamp(5px, (8/1920)*100vw, 8px);
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(12px, (24/1920)*100vw, 24px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(19.5px, (39/1920)*100vw, 39px);
+  letter-spacing: clamp(-0.6px, (-1.2/1920)*100vw, -1.2px);
+}
+
+.process-arrow-down {
+  width: 0;
+  height: 0;
+  border-left: clamp(15px, (20/1920)*100vw, 20px) solid transparent;
+  border-right: clamp(15px, (20/1920)*100vw, 20px) solid transparent;
+  border-top: clamp(20px, (25/1920)*100vw, 25px) solid #00E5A8;
+  margin: 0 auto;
 }
 
 .brand-process-title {
@@ -727,141 +872,113 @@
   }
   
   .brand-hero-title {
-    font-size: clamp(1.1rem, 5vw, 1.5rem);
-    padding: 0 0.7rem;
+    font-size: clamp(18px, (36/1920)*100vw, 36px);
+    padding: 0 clamp(16px, 2vw, 32px);
   }
 
   .brand-engagement-section {
-    padding: 4rem 0;
+    padding: clamp(64px, (128/1920)*100vw, 128px) 0;
   }
   
   .brand-engagement-title {
-    margin-bottom: 2rem;
+    margin-bottom: clamp(32px, (48/1920)*100vw, 48px);
   }
   
   .brand-engagement-text {
-    font-size: clamp(1rem, 2.2vw, 1.2rem);
+    font-size: clamp(14px, (24/1920)*100vw, 24px) !important;
+    line-height: 1.3 !important;
   }
 
   .brand-curation-section {
-    padding: 4rem 0;
+    padding: clamp(64px, (128/1920)*100vw, 128px) 0;
   }
   
   .brand-curation-title {
-    margin-bottom: 2rem;
+    margin-bottom: clamp(32px, (48/1920)*100vw, 48px);
   }
   
   .brand-curation-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto auto;
-    gap: 1rem;
+    gap: clamp(16px, (24/1920)*100vw, 24px);
   }
   
   .curation-card-title {
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    padding: 0.6rem 1.2rem;
+    font-size: clamp(16px, (24/1920)*100vw, 24px);
+    padding: clamp(10px, (16/1920)*100vw, 16px) clamp(20px, (32/1920)*100vw, 32px);
   }
 
   .brand-earlybird-section {
-    padding: 4rem 0;
+    padding: clamp(64px, (128/1920)*100vw, 128px) 0;
   }
   
   .brand-earlybird-title {
-    margin-bottom: 2rem;
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: clamp(32px, (48/1920)*100vw, 48px);
+    font-size: clamp(40px, (80/1920)*100vw, 80px);
   }
   
   .brand-earlybird-info {
-    font-size: clamp(1rem, 2.2vw, 1.2rem);
+    font-size: clamp(16px, (24/1920)*100vw, 24px);
     line-height: 1.7;
   }
 
   .brand-booth-section {
-    padding: 4rem 0;
+    padding: clamp(64px, (128/1920)*100vw, 128px) 0;
   }
   
   .brand-booth-title {
-    margin-bottom: 2rem;
+    margin-bottom: clamp(32px, (48/1920)*100vw, 48px);
   }
   
   .brand-booth-table th,
   .brand-booth-table td {
-    padding: 0.7rem 0.5rem;
-    font-size: 0.9rem;
+    padding: clamp(12px, (16/1920)*100vw, 16px) clamp(8px, (12/1920)*100vw, 12px);
+    font-size: clamp(14px, (16/1920)*100vw, 16px);
   }
 
   /* 참가 신청 절차 섹션 모바일 대응 */
   .brand-process-section {
-    padding: 3rem 0;
+    padding: clamp(48px, (96/1920)*100vw, 96px) 0;
   }
   
-  .brand-process-title {
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    margin-bottom: 2rem;
-    padding: 0.7rem 1.5rem;
+  .brand-process-new-element {
+    width: clamp(300px, 80vw, 600px);
+    height: clamp(50px, (100/1920)*100vw, 100px);
+    font-size: clamp(18px, (36/1920)*100vw, 36px);
+    margin-bottom: clamp(30px, (60/1920)*100vw, 60px);
   }
   
-  .brand-process-flow {
-    gap: 1.5rem;
+  .brand-process-flow-chart {
+    gap: clamp(15px, (30/1920)*100vw, 30px);
+    max-width: clamp(400px, 90vw, 800px);
   }
   
-  .process-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+  .process-step-block {
+    width: clamp(350px, 85vw, 700px);
   }
   
-  .process-row:first-child {
-    max-width: 100%;
+  .process-step-header {
+    font-size: clamp(16px, (32/1920)*100vw, 32px);
+    line-height: clamp(22px, (44/1920)*100vw, 44px);
+    padding: clamp(12px, (24/1920)*100vw, 24px);
   }
   
-  .process-row:last-child {
-    max-width: 100%;
+  .process-step-body {
+    font-size: clamp(12px, (16/1920)*100vw, 16px);
+    padding: clamp(15px, (25/1920)*100vw, 25px);
   }
   
-  .process-step {
-    min-width: 280px;
-    max-width: 320px;
-    padding: 1.2rem;
+  .process-step-body p {
+    font-size: clamp(12px, (16/1920)*100vw, 16px);
   }
   
-  .process-step:first-child {
-    max-width: 320px;
+  .process-step-body li {
+    font-size: clamp(12px, (16/1920)*100vw, 16px);
   }
   
-  .process-icon {
-    width: 70px;
-    height: 70px;
-    margin: 0 auto 0.8rem;
-  }
-  
-  .process-step-title {
-    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-    margin-bottom: 0.8rem;
-  }
-  
-  .process-step-details p {
-    font-size: clamp(0.8rem, 2vw, 0.9rem);
-    margin-bottom: 0.4rem;
-  }
-  
-  .process-step-details ul {
-    margin: 0.4rem 0 0;
-  }
-  
-  .process-step-details li {
-    font-size: clamp(0.7rem, 1.8vw, 0.8rem);
-    margin-bottom: 0.3rem;
-  }
-  
-  .process-arrow {
-    margin-top: 0;
-    transform: rotate(90deg);
-  }
-  
-  .process-arrow img {
-    width: 30px;
-    height: 30px;
+  .process-arrow-down {
+    width: clamp(20px, (30/1920)*100vw, 30px);
+    height: clamp(20px, (30/1920)*100vw, 30px);
   }
 }
 
@@ -900,7 +1017,7 @@
   }
   
   .brand-curation-desc {
-    font-size: clamp(0.9rem, 2.2vw, 1rem);
+    font-size: clamp(0.6rem, 1.5vw, 0.8rem) !important;
     margin-bottom: 1.5rem;
   }
   
@@ -942,6 +1059,7 @@
     font-size: clamp(1.4rem, 4.5vw, 1.8rem);
     margin-bottom: 1.5rem;
     padding: 0.6rem 1.2rem;
+    color: var(--color-primary) !important;
   }
   
   .brand-booth-table th,
@@ -985,6 +1103,7 @@
   .brand-earlybird-benefit-title {
     font-size: clamp(1.8rem, 5.5vw, 2.5rem);
     margin-bottom: 1.5rem;
+    color: var(--color-primary) !important;
   }
   
   .brand-earlybird-benefit-content {
@@ -1007,67 +1126,54 @@
     margin-bottom: 0.5rem;
   }
 
-  /* 참가 신청 절차 섹션 */
+  /* 참가 신청 절차 섹션 모바일 대응 */
   .brand-process-section {
     padding: 2.5rem 0;
   }
   
-  .brand-process-title {
-    font-size: clamp(1.3rem, 4.5vw, 1.6rem);
-    margin-bottom: 1.5rem;
-    padding: 0.6rem 1.2rem;
+  .brand-process-new-element {
+    width: clamp(280px, 85vw, 500px);
+    height: clamp(45px, (90/1920)*100vw, 90px);
+    font-size: clamp(16px, (32/1920)*100vw, 32px);
+    line-height: clamp(22px, (44/1920)*100vw, 44px);
+    margin-bottom: clamp(25px, (50/1920)*100vw, 50px);
   }
   
-  .brand-process-flow {
-    gap: 1rem;
+  .brand-process-flow-chart {
+    gap: clamp(12px, (25/1920)*100vw, 25px);
+    max-width: clamp(320px, 92vw, 600px);
   }
   
-  .process-row {
-    gap: 1rem;
+  .process-step-block {
+    width: clamp(300px, 90vw, 600px);
   }
   
-  .process-step {
-    min-width: 250px;
-    max-width: 300px;
-    padding: 1rem;
+  .process-step-header {
+    font-size: clamp(14px, (28/1920)*100vw, 28px);
+    line-height: clamp(19px, (38/1920)*100vw, 38px);
+    padding: clamp(10px, (20/1920)*100vw, 20px);
   }
   
-  .process-step:first-child {
-    max-width: 300px;
+  .process-step-body {
+    font-size: clamp(11px, (14/1920)*100vw, 14px);
+    padding: clamp(12px, (20/1920)*100vw, 20px);
   }
   
-  .process-icon {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 0.6rem;
+  .process-step-body p {
+    font-size: clamp(11px, (14/1920)*100vw, 14px);
+    margin-bottom: clamp(6px, (10/1920)*100vw, 10px);
   }
   
-  .process-step-title {
-    font-size: clamp(0.8rem, 3vw, 1rem);
-    margin-bottom: 0.6rem;
+  .process-step-body li {
+    font-size: clamp(9px, (18/1920)*100vw, 18px);
+    line-height: clamp(14px, (28/1920)*100vw, 28px);
+    letter-spacing: clamp(-0.4px, (-0.8/1920)*100vw, -0.8px);
   }
   
-  .process-step-details p {
-    font-size: clamp(0.7rem, 2.5vw, 0.8rem);
-    margin-bottom: 0.3rem;
-  }
-  
-  .process-step-details ul {
-    margin: 0.3rem 0 0;
-  }
-  
-  .process-step-details li {
-    font-size: clamp(0.6rem, 2.2vw, 0.7rem);
-    margin-bottom: 0.2rem;
-  }
-  
-  .process-arrow {
-    margin-top: 0;
-  }
-  
-  .process-arrow img {
-    width: 25px;
-    height: 25px;
+  .process-arrow-down {
+    border-left: clamp(8px, (12/1920)*100vw, 12px) solid transparent;
+    border-right: clamp(8px, (12/1920)*100vw, 12px) solid transparent;
+    border-top: clamp(12px, (16/1920)*100vw, 16px) solid #00E5A8;
   }
 
   .brand-refund-section {
@@ -1078,6 +1184,7 @@
     font-size: clamp(1.4rem, 4.5vw, 1.8rem);
     margin-bottom: 1.5rem;
     padding: 0.6rem 1.2rem;
+    color: var(--color-primary) !important;
   }
   
   .brand-refund-table th,
@@ -1099,10 +1206,12 @@
 
 /* 참가비 납부 안내 섹션 */
 .brand-payment-section {
-  background: #fff;
-  padding: clamp(3rem, 4.17vw, 5rem) 0;
+  background: #000;
+  padding: 5rem 0;
   display: flex;
   justify-content: center;
+  min-height: clamp(420px, (840/1920)*100vw, 840px);
+  height: clamp(420px, (840/1920)*100vw, 840px);
 }
 
 .brand-payment-inner {
@@ -1110,7 +1219,65 @@
   width: 100%;
   padding: 0 clamp(1rem, 2.08vw, 2rem);
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: clamp(40px, (80/1920)*100vw, 80px);
+}
+
+.brand-payment-new-element {
+  width: clamp(480px, (960/1920)*100vw, 960px);
+  height: clamp(60px, (120/1920)*100vw, 120px);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(22.5px, (45/1920)*100vw, 45px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(25px, (50/1920)*100vw, 50px);
+  letter-spacing: clamp(-1.125px, (-2.25/1920)*100vw, -2.25px);
+  margin: 0 auto;
+  background: #00E5A8;
+  border-radius: 500px;
+}
+
+.brand-payment-content-new {
+  width: clamp(336px, (672.14/1920)*100vw, 672.14px);
+  height: clamp(164px, (328.89/1920)*100vw, 328.89px);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-payment-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, (20/1920)*100vw, 20px);
+}
+
+.brand-payment-deposit-title,
+.brand-payment-balance-title {
+  color: #00E5A8;
+  font-size: clamp(15px, (30/1920)*100vw, 30px);
+  font-family: "Noto Sans CJK KR";
+  font-weight: 700;
+  line-height: clamp(22px, (44/1920)*100vw, 44px);
+  word-wrap: break-word;
+}
+
+.brand-payment-deposit-desc,
+.brand-payment-balance-desc {
+  color: white;
+  font-size: clamp(15px, (30/1920)*100vw, 30px);
+  font-family: "Noto Sans CJK KR";
+  font-weight: 400;
+  line-height: clamp(22px, (44/1920)*100vw, 44px);
+  word-wrap: break-word;
 }
 
 .brand-payment-container {
@@ -1205,7 +1372,7 @@
 
 /* FAQ 섹션 */
 .brand-faq-section {
-  background: #F2F2F2;
+  background: var(--color-gray-light);
   padding: clamp(3rem, 4.17vw, 5rem) 0;
   display: flex;
   justify-content: center;
@@ -1219,11 +1386,11 @@
 }
 
 .brand-faq-title {
-  font-size: clamp(4rem, 10.42vw, 12rem);
+  font-size: clamp(60px, (200/1920)*100vw, 200px);
   font-family: 'Bebas Neue', sans-serif;
   font-weight: 400;
   line-height: 0.82;
-  color: #000;
+  color: var(--color-black);
   text-align: center;
   margin-bottom: clamp(2rem, 3.13vw, 4rem);
 }
@@ -1235,7 +1402,7 @@
 }
 
 .brand-faq-item {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--color-black);
   padding: clamp(1.5rem, 2.08vw, 2.5rem) 0;
 }
 
@@ -1254,7 +1421,7 @@
   width: clamp(30px, 2.08vw, 40px);
   height: clamp(30px, 2.08vw, 40px);
   border-radius: 50%;
-  border: 1px solid #000;
+  border: 1px solid var(--color-black);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1263,18 +1430,18 @@
 }
 
 .brand-faq-q-text {
-  font-size: clamp(1.5rem, 1.46vw, 1.8rem);
+  font-size: clamp(18px, (28/1920)*100vw, 28px);
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #000;
+  color: var(--color-black);
   line-height: 1;
 }
 
 .brand-faq-question-title {
-  font-size: clamp(1.2rem, 1.46vw, 1.8rem);
+  font-size: clamp(14px, (28/1920)*100vw, 28px);
   font-family: 'Noto Sans', sans-serif;
   font-weight: 700;
-  color: #000;
+  color: var(--color-black);
   line-height: 1.2;
   flex: 1;
 }
@@ -1290,7 +1457,7 @@
   width: clamp(30px, 2.08vw, 40px);
   height: clamp(30px, 2.08vw, 40px);
   border-radius: 50%;
-  border: 1px solid #000;
+  border: 1px solid var(--color-black);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1299,15 +1466,15 @@
 }
 
 .brand-faq-a-text {
-  font-size: clamp(1.5rem, 1.46vw, 1.8rem);
+  font-size: clamp(18px, (28/1920)*100vw, 28px);
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #000;
+  color: var(--color-black);
   line-height: 1;
 }
 
 .brand-faq-answer-text {
-  font-size: clamp(1rem, 1.25vw, 1.5rem);
+  font-size: clamp(16px, (24/1920)*100vw, 24px);
   font-family: 'Noto Sans', sans-serif;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.98);
@@ -1317,60 +1484,48 @@
 
 /* 반응형 스타일 */
 @media (max-width: 900px) {
+  .brand-faq-section {
+    padding: clamp(2.5rem, 5vw, 4rem) 0;
+  }
+  
   .brand-faq-title {
-    font-size: clamp(3rem, 8vw, 6rem);
-    margin-bottom: clamp(1.5rem, 4vw, 3rem);
-  }
-  
-  .brand-faq-question,
-  .brand-faq-answer {
-    gap: clamp(0.8rem, 2vw, 1.2rem);
-  }
-  
-  .brand-faq-answer {
-    padding-left: 0;
-  }
-  
-  .brand-faq-question-title {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
-  }
-  
-  .brand-faq-answer-text {
-    font-size: clamp(0.9rem, 2.2vw, 1.3rem);
-  }
-}
-
-@media (max-width: 600px) {
-  .brand-faq-title {
-    font-size: clamp(2.5rem, 10vw, 4rem);
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
+    line-height: 82%;
+    letter-spacing: clamp(-0.15rem, -1vw, -2px);
     margin-bottom: clamp(1rem, 5vw, 2rem);
   }
   
-  .brand-faq-question,
-  .brand-faq-answer {
-    gap: clamp(0.6rem, 3vw, 1rem);
+  .brand-faq-list {
+    gap: clamp(1rem, 1.56vw, 2rem);
   }
   
-  .brand-faq-answer {
-    padding-left: 0;
+  .brand-faq-question {
+    gap: clamp(0.8rem, 1.56vw, 1.5rem);
+    margin-bottom: clamp(0.8rem, 1.56vw, 1.5rem);
   }
   
   .brand-faq-q-circle,
   .brand-faq-a-circle {
-    width: clamp(25px, 6vw, 35px);
-    height: clamp(25px, 6vw, 35px);
+    width: clamp(25px, 2.08vw, 40px);
+    height: clamp(25px, 2.08vw, 40px);
   }
   
   .brand-faq-q-text,
   .brand-faq-a-text {
-    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    font-size: clamp(1.2rem, 1.46vw, 1.8rem);
   }
   
   .brand-faq-question-title {
-    font-size: clamp(0.9rem, 4vw, 1.3rem);
+    font-size: clamp(1rem, 1.46vw, 1.8rem);
+    line-height: 1.3;
+  }
+  
+  .brand-faq-answer {
+    gap: clamp(0.8rem, 1.56vw, 1.5rem);
   }
   
   .brand-faq-answer-text {
-    font-size: clamp(0.8rem, 3.5vw, 1.1rem);
+    font-size: clamp(0.9rem, 1.25vw, 1.5rem);
+    line-height: 1.4;
   }
 } 

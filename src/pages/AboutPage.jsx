@@ -15,7 +15,7 @@ function AboutPage() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        height: 'clamp(600px, 44.5vw, 854px)',
+        height: 'clamp(427px, (854/1920)*100vw, 854px)',
         padding: 'clamp(1rem, 2vw, 2rem)',
         '@media (max-width: 768px)': {
           height: 'auto !important',
@@ -30,8 +30,8 @@ function AboutPage() {
           justifyContent: 'center',
           display: 'flex',
           flexDirection: 'column',
-          alignItems: 'flex-start',
-          textAlign: 'left',
+          alignItems: 'center',
+          textAlign: 'center',
           gap: 'clamp(0.5rem, 2vw, 2rem)',
           maxWidth: '90vw',
           marginTop: 'clamp(4rem, 8vw, 8rem)',
@@ -41,22 +41,26 @@ function AboutPage() {
             alignItems: 'center !important',
             textAlign: 'center !important',
             gap: 'clamp(1rem, 3vw, 2rem) !important',
-            marginTop: 'clamp(2rem, 6vw, 4rem) !important'
+            marginTop: 'clamp(2rem, 6vw, 4rem) !important',
+            maxWidth: '85vw !important'
           }
         }}>
           <span style={{
-            color: 'white',
-            fontSize: 'clamp(1.5rem, 3.33vw, 4rem)',
-            fontFamily: 'Noto Sans, sans-serif',
+            color: '#FFF',
+            fontSize: 'clamp(33.6px, (56/1920)*100vw, 56px)',
+            fontFamily: 'Noto Sans CJK KR, sans-serif',
+            fontStyle: 'normal',
             fontWeight: '700',
-            lineHeight: 'clamp(1.5rem, 3.33vw, 4rem)',
+            lineHeight: 'clamp(45px, (75/1920)*100vw, 75px)',
+            letterSpacing: '-1.68px',
             wordWrap: 'break-word',
             textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
-            textAlign: 'left',
+            textAlign: 'center',
             '@media (max-width: 768px)': {
-              fontSize: 'clamp(1.2rem, 5vw, 2.5rem) !important',
-              lineHeight: 'clamp(1.4rem, 5.5vw, 2.8rem) !important',
-              textAlign: 'center !important'
+              fontSize: 'clamp(1rem, 4vw, 2rem) !important',
+              lineHeight: 'clamp(1.2rem, 4.5vw, 2.3rem) !important',
+              textAlign: 'center !important',
+              whiteSpace: 'pre-line !important'
             }
           }}>
             {t('about.intro.mainTitle')}
@@ -69,7 +73,7 @@ function AboutPage() {
             lineHeight: 'clamp(1.2rem, 2.73vw, 3.28rem)',
             wordWrap: 'break-word',
             textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
-            textAlign: 'left',
+            textAlign: 'center',
             '@media (max-width: 768px)': {
               fontSize: 'clamp(1.2rem, 5vw, 2.5rem) !important',
               lineHeight: 'clamp(1.4rem, 5.5vw, 2.8rem) !important',
@@ -86,7 +90,7 @@ function AboutPage() {
             lineHeight: 'clamp(0.8rem, 1.71vw, 2.05rem)',
             wordWrap: 'break-word',
             textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
-            textAlign: 'left',
+            textAlign: 'center',
             '@media (max-width: 768px)': {
               fontSize: 'clamp(0.9rem, 3vw, 1.8rem) !important',
               lineHeight: 'clamp(1.1rem, 3.5vw, 2rem) !important',
@@ -95,23 +99,44 @@ function AboutPage() {
           }}>
             {t('about.intro.subtitle')}
           </span>
+        </div>
+      </section>
+
+      {/* 흰색 섹션 */}
+      <section style={{
+        background: 'white',
+        height: 'clamp(120px, (240/1920)*100vw, 240px)',
+        width: '100%',
+        margin: '0',
+        padding: '0'
+      }}></section>
+
+      {/* F2F2F2 색상 섹션 */}
+      <section style={{
+        background: '#F2F2F2',
+        height: 'clamp(460px, (920/1920)*100vw, 920px)',
+        width: '100%',
+        margin: '0',
+        padding: '0',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}>
+        <div style={{
+          textAlign: 'center',
+          justifyContent: 'center',
+          display: 'flex',
+          flexDirection: 'column',
+          maxWidth: 'clamp(600px, 80vw, 1200px)',
+          padding: '0 clamp(1rem, 3vw, 2rem)'
+        }}>
           <span style={{
-            color: '#00E5A8',
-            fontSize: 'clamp(0.9rem, 1.35vw, 1.625rem)',
-            fontFamily: 'Noto Sans, sans-serif',
-            fontStyle: 'normal',
+            color: 'black',
+            fontSize: 'clamp(19.2px, (32/1920)*100vw, 32px)',
+            fontFamily: 'Noto Sans CJK KR, sans-serif',
             fontWeight: '400',
-            lineHeight: 'clamp(1rem, 1.56vw, 1.875rem)',
-            wordWrap: 'break-word',
-            textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
-            textAlign: 'left',
-            marginBottom: 'clamp(1rem, 4.01vw, 4.8125rem)',
-            '@media (max-width: 768px)': {
-              fontSize: 'clamp(0.8rem, 2.5vw, 1.2rem) !important',
-              lineHeight: 'clamp(1rem, 2.8vw, 1.4rem) !important',
-              textAlign: 'center !important',
-              marginBottom: 'clamp(1.5rem, 4vw, 2.5rem) !important'
-            }
+            lineHeight: 'clamp(27px, (45/1920)*100vw, 45px)',
+            wordWrap: 'break-word'
           }}>
             {t('about.intro.description').split('\n').map((line, index) => (
               <React.Fragment key={index}>
@@ -127,16 +152,11 @@ function AboutPage() {
                   if (isHighlighted) {
                     return (
                       <span key={wordIndex} style={{
-                        color: '#00E5A8',
-                        fontFamily: 'Noto Sans, sans-serif',
-                        fontSize: 'clamp(0.9rem, 1.35vw, 1.625rem)',
-                        fontStyle: 'normal',
+                        color: 'black',
+                        fontFamily: 'Noto Sans CJK KR, sans-serif',
+                        fontSize: 'clamp(19.2px, (32/1920)*100vw, 32px)',
                         fontWeight: '700',
-                        lineHeight: 'clamp(1rem, 1.56vw, 1.875rem)',
-                        '@media (max-width: 768px)': {
-                          fontSize: 'clamp(0.8rem, 2.5vw, 1.2rem) !important',
-                          lineHeight: 'clamp(1rem, 2.8vw, 1.4rem) !important'
-                        }
+                        lineHeight: 'clamp(27px, (45/1920)*100vw, 45px)'
                       }}>
                         {word}{wordIndex < line.split(' ').length - 1 ? ' ' : ''}
                       </span>
@@ -156,10 +176,19 @@ function AboutPage() {
         </div>
       </section>
 
+       {/* 흰색 섹션 */}
+       <section style={{
+        background: 'white',
+        height: 'clamp(120px, (240/1920)*100vw, 240px)',
+        width: '100%',
+        margin: '0',
+        padding: '0'
+      }}></section>
+
       {/* WHY BRANDS CHOOSE HYPECON 섹션 */}
       <section className="about-section about-section-why" style={{
         background: `var(--hypecon-dark)`,
-        height: 'clamp(300px, 33.33vw, 640px)',
+        height: 'clamp(420px, (840/1920)*100vw, 840px)',
         '@media (max-width: 768px)': {
           height: 'auto !important',
           minHeight: 'clamp(400px, 60vw, 600px) !important',
@@ -168,44 +197,37 @@ function AboutPage() {
         }
       }}>
         <div className="about-why-title" style={{
+          width: 'clamp(600px, (1200/1920)*100vw, 1200px)',
+          height: 'clamp(284.44px, (568.88/1920)*100vw, 568.88px)',
           textAlign: 'center',
           justifyContent: 'center',
           display: 'flex',
           flexDirection: 'column',
-          color: '#E1F800',
-          fontSize: 'clamp(4rem, 10.42vw, 12.5rem)',
+          color: 'var(--hypecon-teal)',
+          fontSize: 'clamp(108px, (180/1920)*100vw, 180px)',
           fontFamily: 'Bebas Neue, sans-serif',
           fontWeight: '400',
-          lineHeight: 'clamp(3rem, 8.54vw, 10.25rem)',
+          lineHeight: 'clamp(88.56px, (147.6/1920)*100vw, 147.6px)',
           wordWrap: 'break-word',
-          marginBottom: 'clamp(1.5rem, 2.08vw, 2.5rem)',
+          whiteSpace: 'pre-line',
           '@media (max-width: 768px)': {
             fontSize: 'clamp(2.5rem, 12vw, 6rem) !important',
             lineHeight: 'clamp(2rem, 10vw, 5rem) !important',
             marginBottom: 'clamp(2rem, 4vw, 3rem) !important',
-            textAlign: 'center !important'
+            textAlign: 'center !important',
+            whiteSpace: 'pre-line !important',
+            width: '100% !important'
           }
         }}>
-          {t('about.why.title').split('\n').map((line, index) => (
-            <React.Fragment key={index}>
-              {line}
-              {index < t('about.why.title').split('\n').length - 1 && <br />}
-            </React.Fragment>
-          ))}
+          {t('about.why.title')}
         </div>
         <div className="about-why-desc" style={{
-          width: 'clamp(400px, 48.13vw, 924px)',
-          height: 'clamp(60px, 6.09vw, 117px)',
+          width: 'clamp(462px, (924/1920)*100vw, 924px)',
+          height: 'clamp(112.43px, (224.86/1920)*100vw, 224.86px)',
           textAlign: 'center',
           justifyContent: 'center',
           display: 'flex',
           flexDirection: 'column',
-          color: 'white',
-          fontSize: 'clamp(1.5rem, 2.08vw, 2.5rem)',
-          fontFamily: 'Noto Sans, sans-serif',
-          fontWeight: '500',
-          lineHeight: 'clamp(1.8rem, 2.6vw, 3.125rem)',
-          wordWrap: 'break-word',
           '@media (max-width: 768px)': {
             width: '100% !important',
             height: 'auto !important',
@@ -215,10 +237,46 @@ function AboutPage() {
             textAlign: 'center !important'
           }
         }}>
-          <span className="about-why-highlight">
+          <span style={{
+            color: 'var(--hypecon-white)',
+            fontSize: 'clamp(21.6px, (36/1920)*100vw, 36px)',
+            fontFamily: 'Noto Sans CJK KR, sans-serif',
+            fontWeight: '400',
+            lineHeight: 'clamp(27px, (45/1920)*100vw, 45px)',
+            wordWrap: 'break-word',
+            whiteSpace: 'pre-line'
+          }}>
             {t('about.why.desc').split('\n').map((line, index) => (
               <React.Fragment key={index}>
-                {line}
+                {line.split(' ').map((word, wordIndex) => {
+                  // 언어 파일에서 강조 키워드 가져오기
+                  const highlightKeywords = t('about.why.highlightKeywords');
+                  
+                  // 키워드가 포함된 단어인지 확인
+                  const isHighlighted = highlightKeywords.some(keyword => 
+                    word.includes(keyword) || keyword.includes(word)
+                  );
+                  
+                  if (isHighlighted) {
+                    return (
+                      <span key={wordIndex} style={{
+                        color: 'var(--hypecon-white)',
+                        fontFamily: 'Noto Sans CJK KR, sans-serif',
+                        fontSize: 'clamp(21.6px, (36/1920)*100vw, 36px)',
+                        fontWeight: '700',
+                        lineHeight: 'clamp(27px, (45/1920)*100vw, 45px)'
+                      }}>
+                        {word}{wordIndex < line.split(' ').length - 1 ? ' ' : ''}
+                      </span>
+                    );
+                  }
+                  
+                  return (
+                    <span key={wordIndex}>
+                      {word}{wordIndex < line.split(' ').length - 1 ? ' ' : ''}
+                    </span>
+                  );
+                })}
                 {index < t('about.why.desc').split('\n').length - 1 && <br />}
               </React.Fragment>
             ))}
@@ -228,17 +286,36 @@ function AboutPage() {
 
       {/* Z세대 경험 소비 강조 섹션 */}
       <section className="about-section about-section-experience" style={{
+        height: 'clamp(564px, (1128/1920)*100vw, 1128px)',
         '@media (max-width: 768px)': {
+          height: 'auto !important',
+          minHeight: 'clamp(564px, (1128/1920)*100vw, 1128px) !important',
           padding: 'clamp(2rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem) !important',
           flexDirection: 'column !important'
         }
       }}>
         <div className="about-experience-badge" style={{
+          width: 'clamp(480px, (960/1920)*100vw, 960px)',
+          height: 'clamp(60px, (120/1920)*100vw, 120px)',
+          borderRadius: '60px',
+          border: '0 solid var(--hypecon-dark)',
+          background: 'var(--hypecon-dark)',
+          color: 'var(--hypecon-teal)',
+          fontSize: 'clamp(21.6px, (36/1920)*100vw, 36px)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          whiteSpace: 'nowrap',
           '@media (max-width: 768px)': {
+            width: '100% !important',
+            height: 'auto !important',
+            minHeight: 'clamp(60px, (120/1920)*100vw, 120px) !important',
             fontSize: 'clamp(0.8rem, 3vw, 1.2rem) !important',
             padding: 'clamp(0.5rem, 2vw, 1rem) clamp(1rem, 3vw, 2rem) !important',
             marginBottom: 'clamp(1.5rem, 4vw, 2.5rem) !important',
-            textAlign: 'center !important'
+            textAlign: 'center !important',
+            borderRadius: 'clamp(30px, 4vw, 60px) !important',
+            whiteSpace: 'nowrap !important'
           }
         }}>
           {t('about.experience.badge')}
@@ -250,19 +327,17 @@ function AboutPage() {
           justifyContent: 'center',
           display: 'flex',
           flexDirection: 'column',
-          color: 'black',
-          fontSize: 'clamp(2rem, 3.13vw, 3.75rem)',
+          color: 'var(--hypecon-dark)',
           fontFamily: 'Noto Sans, sans-serif',
-          fontWeight: '700',
-          lineHeight: 'clamp(1.8rem, 2.6vw, 3.125rem)',
           wordWrap: 'break-word',
+          whiteSpace: 'nowrap',
           '@media (max-width: 768px)': {
-            width: '100% !important',
+            width: '85% !important',
             height: 'auto !important',
-            fontSize: 'clamp(1.5rem, 6vw, 3rem) !important',
-            lineHeight: 'clamp(1.8rem, 6.5vw, 3.5rem) !important',
             marginBottom: 'clamp(1rem, 3vw, 2rem) !important',
-            textAlign: 'center !important'
+            textAlign: 'center !important',
+            whiteSpace: 'pre-wrap !important',
+            padding: '0 clamp(1rem, 3vw, 2rem) !important'
           }
         }}>
           {t('about.experience.title')}
@@ -274,21 +349,14 @@ function AboutPage() {
           justifyContent: 'center',
           display: 'flex',
           flexDirection: 'column',
-          color: 'black',
-          fontSize: 'clamp(1.2rem, 1.67vw, 2rem)',
+          color: 'var(--hypecon-dark)',
           fontFamily: 'Noto Sans, sans-serif',
-          fontWeight: '700',
-          lineHeight: 'clamp(1.8rem, 2.6vw, 3.125rem)',
           wordWrap: 'break-word',
-          whiteSpace: 'nowrap',
-          overflow: 'hidden',
-          textOverflow: 'ellipsis',
+          whiteSpace: 'pre-line',
           '@media (max-width: 768px)': {
             width: '100% !important',
             height: 'auto !important',
-            fontSize: 'clamp(1rem, 4vw, 1.5rem) !important',
-            lineHeight: 'clamp(1.3rem, 4.5vw, 1.8rem) !important',
-            whiteSpace: 'normal !important',
+            whiteSpace: 'pre-line !important',
             marginBottom: 'clamp(2rem, 5vw, 3rem) !important',
             textAlign: 'center !important'
           }
@@ -305,30 +373,54 @@ function AboutPage() {
         }}>
           {t('about.experience.cards').map((item, idx) => (
             <div className={`about-card ${idx % 2 === 1 ? 'about-card-main' : 'about-card-dark'}`} key={idx} style={{
+              backgroundColor: idx % 2 === 0 ? 'black' : '#00E5A8',
               '@media (max-width: 768px)': {
                 width: '100% !important',
                 height: 'auto !important',
                 minHeight: 'clamp(120px, 30vw, 200px) !important',
                 padding: 'clamp(1.5rem, 4vw, 2.5rem) !important',
                 borderRadius: 'clamp(15px, 4vw, 20px) !important',
-                textAlign: 'center !important'
+                textAlign: 'center !important',
+                backgroundColor: idx % 2 === 0 ? 'black !important' : '#00E5A8 !important'
               }
             }}>
               <div className="about-card-title" style={{
+                color: idx % 2 === 0 ? '#00E5A8' : 'black',
+                whiteSpace: 'pre-line',
                 '@media (max-width: 768px)': {
                   fontSize: 'clamp(1.2rem, 5vw, 2rem) !important',
                   lineHeight: 'clamp(1.4rem, 5.5vw, 2.3rem) !important',
                   marginBottom: 'clamp(0.5rem, 2vw, 1rem) !important',
-                  textAlign: 'center !important'
+                  textAlign: 'center !important',
+                  whiteSpace: 'pre-line !important',
+                  color: idx % 2 === 0 ? '#00E5A8 !important' : 'black !important'
                 }
-              }}>{item.title}</div>
+              }}>
+                {item.title.split('\n').map((line, lineIndex) => (
+                  <React.Fragment key={lineIndex}>
+                    {line}
+                    {lineIndex < item.title.split('\n').length - 1 && <br />}
+                  </React.Fragment>
+                ))}
+              </div>
               <div className="about-card-desc" style={{
+                color: idx % 2 === 0 ? 'white' : 'black',
+                whiteSpace: 'pre-line',
                 '@media (max-width: 768px)': {
                   fontSize: 'clamp(0.9rem, 3.5vw, 1.3rem) !important',
                   lineHeight: 'clamp(1.2rem, 4vw, 1.6rem) !important',
-                  textAlign: 'center !important'
+                  textAlign: 'center !important',
+                  whiteSpace: 'pre-line !important',
+                  color: idx % 2 === 0 ? 'white !important' : 'black !important'
                 }
-              }}>{item.desc}</div>
+              }}>
+                {item.desc.split('\n').map((line, lineIndex) => (
+                  <React.Fragment key={lineIndex}>
+                    {line}
+                    {lineIndex < item.desc.split('\n').length - 1 && <br />}
+                  </React.Fragment>
+                ))}
+              </div>
             </div>
           ))}
         </div>
@@ -363,37 +455,49 @@ function AboutPage() {
           {/* 왼쪽 텍스트 섹션 */}
           <div style={{
             width: 'clamp(300px, 30.05vw, 577px)',
-            height: 'clamp(200px, 15.53vw, 298.18px)',
-            justifyContent: 'center',
+            height: 'auto',
+            minHeight: 'clamp(100px, 8vw, 150px)',
+            justifyContent: 'flex-end',
             display: 'flex',
             flexDirection: 'column',
             color: 'black',
-            gap: 'clamp(0.5rem, 1vw, 1rem)'
+            gap: 'clamp(0.1rem, 0.2vw, 0.3rem)'
           }}>
             <span style={{
               color: 'black',
-              fontSize: 'clamp(2rem, 4.17vw, 5rem)',
+              fontSize: 'clamp(1.575rem, (42/1920)*100vw, 2.625rem)',
               fontFamily: 'Noto Sans, sans-serif',
+              fontStyle: 'normal',
               fontWeight: '400',
-              lineHeight: 'clamp(2.5rem, 5.21vw, 6.25rem)',
+              lineHeight: '1.2',
+              letterSpacing: '-1.26px',
               wordWrap: 'break-word'
             }}>
               {t('about.content.title')}
             </span>
             <span style={{
               color: 'black',
-              fontSize: 'clamp(2rem, 4.17vw, 5rem)',
+              fontSize: 'clamp(2.325rem, (62/1920)*100vw, 3.875rem)',
               fontFamily: 'Noto Sans, sans-serif',
+              fontStyle: 'normal',
               fontWeight: '700',
-              lineHeight: 'clamp(2.5rem, 5.21vw, 6.25rem)',
+              lineHeight: '1.2',
+              letterSpacing: '-1.86px',
               wordWrap: 'break-word'
             }}>
-              {t('about.content.strong').split('\n').map((line, index) => (
-                <React.Fragment key={index}>
-                  {line}
-                  {index < t('about.content.strong').split('\n').length - 1 && <br />}
-                </React.Fragment>
-              ))}
+              {t('about.content.strong1')}
+            </span>
+            <span style={{
+              color: 'black',
+              fontSize: 'clamp(3.225rem, (86/1920)*100vw, 5.375rem)',
+              fontFamily: 'Noto Sans, sans-serif',
+              fontStyle: 'normal',
+              fontWeight: '700',
+              lineHeight: '1.2',
+              letterSpacing: '-2.58px',
+              wordWrap: 'break-word'
+            }}>
+              {t('about.content.strong2')}
             </span>
           </div>
           
@@ -409,7 +513,7 @@ function AboutPage() {
           }}>
             <img 
               src={aboutSec04Img} 
-              alt="콘텐츠 + 커머스 스타일 페어" 
+              alt={t('about.content.imageAlt')} 
               style={{
                 width: '100%',
                 height: '100%',
@@ -457,7 +561,7 @@ function AboutPage() {
                 padding: 'clamp(1rem, 1.56vw, 1.875rem) clamp(1rem, 2.5vw, 3rem)',
                 background: 'black',
                 borderRadius: '30px',
-                border: '2px solid black',
+                border: '0 solid #000',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
@@ -478,7 +582,7 @@ function AboutPage() {
                   justifyContent: 'center',
                   display: 'flex',
                   flexDirection: 'column',
-                  color: index % 2 === 0 ? '#00E5A8' : '#E1F800',
+                  color: '#00E5A8',
                   fontSize: 'clamp(1rem, 1.88vw, 2.25rem)',
                   fontFamily: 'Noto Sans, sans-serif',
                   fontWeight: '700',
@@ -500,11 +604,12 @@ function AboutPage() {
               <div className="about-card-content-box" style={{
                 width: 'clamp(400px, 45.52vw, 874px)',
                 height: 'clamp(80px, 7.81vw, 150px)',
-                background: 'white',
+                background: '#FFF',
                 borderRadius: '30px',
-                border: '2px solid black',
+                border: '0 solid #000',
                 display: 'flex',
                 alignItems: 'center',
+                justifyContent: 'center',
                 padding: 'clamp(1rem, 1.35vw, 1.625rem) clamp(2rem, 5.31vw, 6.375rem)',
                 marginLeft: 'clamp(1rem, 2vw, 2rem)',
                 '@media (max-width: 768px)': {
@@ -527,6 +632,7 @@ function AboutPage() {
                   fontWeight: '500',
                   lineHeight: 'clamp(1.2rem, 2.6vw, 3.125rem)',
                   wordWrap: 'break-word',
+                  textAlign: 'center',
                   '@media (max-width: 768px)': {
                     fontSize: 'clamp(0.9rem, 3.5vw, 1.2rem) !important',
                     lineHeight: 'clamp(1.2rem, 4vw, 1.6rem) !important',
@@ -548,9 +654,9 @@ function AboutPage() {
 
       {/* 글로벌 브랜드 어필 섹션 */}
       <section className="about-section about-global-section" style={{
-        background: '#00E5A8',
+        background: 'black',
         padding: 'clamp(2rem, 5vw, 4rem) 0',
-        minHeight: 'clamp(300px, 40vw, 600px)',
+        height: 'clamp(380px, (760/1920)*100vw, 760px)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -560,6 +666,7 @@ function AboutPage() {
         zIndex: 10,
         '@media (max-width: 768px)': {
           padding: 'clamp(2rem, 6vw, 3rem) clamp(1rem, 3vw, 2rem) !important',
+          height: 'auto !important',
           minHeight: 'clamp(200px, 50vw, 400px) !important',
           flexDirection: 'column !important'
         }
@@ -574,15 +681,15 @@ function AboutPage() {
             justifyContent: 'center',
             display: 'flex',
             flexDirection: 'column',
-            color: 'black',
-            fontSize: 'clamp(1.5rem, 1.98vw, 2.375rem)',
+            color: 'white',
+            fontSize: 'clamp(1.35rem, (36/1920)*100vw, 2.25rem)',
             fontFamily: 'Noto Sans, sans-serif',
             fontWeight: '500',
             lineHeight: 'clamp(1.6rem, 2.08vw, 2.5rem)',
             wordWrap: 'break-word',
             maxWidth: 'clamp(600px, 80vw, 1200px)',
             padding: '0 clamp(1rem, 3vw, 2rem)',
-            textAlign: 'left',
+            textAlign: 'center',
             '@media (max-width: 768px)': {
               fontSize: 'clamp(1.2rem, 4vw, 1.8rem) !important',
               lineHeight: 'clamp(1.5rem, 4.5vw, 2.2rem) !important',
@@ -599,6 +706,15 @@ function AboutPage() {
           </div>
         </div>
       </section>
+
+            {/* 흰색 섹션 */}
+       <section style={{
+        background: 'white',
+        height: 'clamp(120px, (240/1920)*100vw, 240px)',
+        width: '100%',
+        margin: '0',
+        padding: '0'
+      }}></section>
 
       {/* 반응형 스타일은 AboutPage.css에서 관리 */}
     </>

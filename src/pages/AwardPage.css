@@ -11,8 +11,8 @@
 .award-hero-section {
   position: relative;
   width: 100%;
-  min-height: clamp(600px, 44.5vw, 854px);
-  height: clamp(600px, 44.5vw, 854px);
+  min-height: clamp(427px, (854/1920)*100vw, 854px);
+  height: clamp(427px, (854/1920)*100vw, 854px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -157,7 +157,7 @@
 .award-style-awards-title {
   font-size: clamp(6rem, 10.42vw, 200px);
   font-weight: 400;
-  color: #E1F800;
+  color: #00E5A8;
   margin-bottom: clamp(2rem, 3.13vw, 3rem);
   text-transform: uppercase;
   font-family: 'Bebas Neue', sans-serif;
@@ -203,14 +203,17 @@
 }
 
 .award-overview-title {
+  width: clamp(480px, (960/1920)*100vw, 960px);
   font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   font-weight: 700;
-  color: #E1F800;
+  color: #00E5A8;
   background: #000;
   border-radius: 60px;
   padding: clamp(0.8rem, 1.56vw, 1.2rem) clamp(6rem, 8.33vw, 8rem);
-  display: inline-block;
-  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
   font-family: 'Noto Sans', sans-serif;
 }
 
@@ -254,7 +257,7 @@
 
 /* 주요 시상 부문 섹션 */
 .award-categories-section {
-  background: #E1F800;
+  background: #000;
   padding: clamp(3rem, 4.17vw, 5rem) 0;
   display: flex;
   justify-content: center;
@@ -272,14 +275,17 @@
 }
 
 .award-categories-title {
+  width: clamp(480px, (960/1920)*100vw, 960px);
   font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   font-weight: 700;
-  color: #fff;
-  background: #000;
+  color: #000;
+  background: #00E5A8;
   border-radius: 60px;
   padding: clamp(0.8rem, 1.56vw, 1.2rem) clamp(3rem, 4.17vw, 4rem);
-  display: inline-block;
-  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
   font-family: 'Noto Sans', sans-serif;
 }
 
@@ -360,7 +366,7 @@
   position: relative;
   width: clamp(500px, 52.08vw, 781px);
   height: clamp(160px, 16.67vw, 260px);
-  background: #E1F800;
+  background: #F2F2F2;
   border-radius: 40px;
   display: flex;
   flex-direction: column;
@@ -384,7 +390,7 @@
   top: 16.67%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
+  color: #00E5A8;
   font-size: clamp(1.5rem, 2.5vw, 2.4rem);
   font-weight: 700;
   font-family: 'Noto Sans', sans-serif;
@@ -437,7 +443,7 @@
 
 /* 수상자 혜택 섹션 */
 .award-benefits-section {
-  background: #45B176;
+  background: #F2F2F2;
   padding: clamp(3rem, 4.17vw, 5rem) 0;
   display: flex;
   justify-content: center;
@@ -451,14 +457,17 @@
 }
 
 .award-benefits-title {
+  width: clamp(480px, (960/1920)*100vw, 960px);
   font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   font-weight: 700;
-  color: #fff;
+  color: #00E5A8;
   background: #000;
   border-radius: 60px;
   padding: clamp(0.8rem, 1.56vw, 1.2rem) clamp(3rem, 4.17vw, 4rem);
-  display: inline-block;
-  margin: 0 0 clamp(2rem, 3.13vw, 3rem) 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto clamp(2rem, 3.13vw, 3rem) auto;
   font-family: 'Noto Sans', sans-serif;
 }
 
@@ -468,10 +477,12 @@
 }
 
 .award-benefits-box {
-  background: #fff;
+  width: clamp(480px, (960/1920)*100vw, 960px);
+  background: #000;
   border-radius: 20px;
   padding: clamp(2rem, 3.13vw, 3rem);
   text-align: left;
+  margin: 0 auto;
 }
 
 .award-benefits-list {
@@ -494,7 +505,7 @@
 .award-benefit-text {
   font-size: clamp(1rem, 1.67vw, 1.2rem);
   line-height: 1.5;
-  color: #000;
+  color: #fff;
   font-family: 'Noto Sans', sans-serif;
 }
 
@@ -514,14 +525,17 @@
 }
 
 .award-participation-title {
+  width: clamp(480px, (960/1920)*100vw, 960px);
   font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   font-weight: 700;
-  color: #E1F800;
-  background: #000;
+  color: #000;
+  background: #00E5A8;
   border-radius: 60px;
   padding: clamp(0.8rem, 1.56vw, 1.2rem) clamp(3rem, 4.17vw, 4rem);
-  display: inline-block;
-  margin: 0 0 clamp(2rem, 3.13vw, 3rem) 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto clamp(2rem, 3.13vw, 3rem) auto;
   font-family: 'Noto Sans', sans-serif;
 }
 
@@ -565,7 +579,7 @@
   top: clamp(0.5rem, 0.78vw, 0.8rem);
   width: clamp(8px, 0.52vw, 10px);
   height: clamp(8px, 0.52vw, 10px);
-  background: #E1F800;
+  background: #00E5A8;
   border-radius: 50%;
 }
 
@@ -643,6 +657,10 @@
   color: #000;
   line-height: 1.2;
   flex: 1;
+  white-space: pre-line;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .award-faq-answer {
@@ -679,4 +697,8 @@
   color: rgba(0, 0, 0, 0.98);
   line-height: 1.2;
   flex: 1;
+  white-space: pre-line;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 } 

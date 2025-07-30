@@ -6,6 +6,15 @@ import { useLanguage } from '../contexts/LanguageContext';
 function InfluencerPage() {
   const { t } = useLanguage();
   
+  // 화살표 SVG 컴포넌트
+  const ArrowDown = () => (
+    <div className="arrow-down-container">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="21" viewBox="0 0 26 21" fill="none">
+        <path d="M13 21L0.875647 -2.28386e-06L25.1244 -1.63974e-07L13 21Z" fill="#00E5A8"/>
+      </svg>
+    </div>
+  );
+  
   // 인플로언서 등록 핸들러 (Google Forms로 이동)
   const handleInfluencerApply = () => {
     window.open('https://docs.google.com/forms/d/1ot0y2q8LRFzkeql-lvd3On5gwk-8pq6IB9l2ejKWq_Y/edit', '_blank');
@@ -17,27 +26,27 @@ function InfluencerPage() {
       <section className="influencer-hero-section" style={{backgroundImage: `url(${influencerImg})`}}>
         <div className="influencer-hero-overlay"></div>
         <div className="influencer-hero-text">
-          <div className="influencer-hero-title">
-            {t('influencer.hero.subtitle').split('\n').map((line, index) => (
-              <React.Fragment key={index}>
-                {line}
-                <br />
-              </React.Fragment>
-            ))}
+          <div className="influencer-hero-main-title">
+            {t('influencer.hero.subtitle')}
           </div>
         </div>
       </section>
 
       {/* INFLUENCER REGISTRATION 섹션 */}
-      <section className="influencer-registration-section">
-        <div className="influencer-registration-inner">
+      <section className="influencer-info-section">
+        <div className="influencer-info-inner">
           <h2 className="influencer-registration-title">{t('influencer.registration.title')}</h2>
-          <div className="influencer-registration-content">
-            <p className="influencer-registration-text">
+          <div className="influencer-info-content">
+            <p className="influencer-info-text">
               {t('influencer.registration.text')}
             </p>
-            <p className="influencer-registration-subtext">
-              {t('influencer.registration.subtext')}
+            <p className="influencer-info-subtext">
+              {t('influencer.registration.subtext').split('\n').map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}
             </p>
           </div>
         </div>
@@ -84,17 +93,9 @@ function InfluencerPage() {
       </section>
 
       {/* 선정 기준 & 주의사항, 일정 안내, 신청 방법, 문의 섹션 */}
-      <section className="influencer-info-section">
+      <section className="influencer-info-section criteria-section">
         <div className="influencer-info-inner">
-          {/* 선정 기준 & 주의사항 */}
-          <div className="influencer-criteria-section">
-            <h3 className="influencer-criteria-title">{t('influencer.info.criteria.title')}</h3>
-            <ul className="influencer-criteria-list">
-              {t('influencer.info.criteria.list').map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </div>
+      
 
           {/* 일정 안내 */}
           <div className="influencer-schedule-section">
@@ -109,11 +110,14 @@ function InfluencerPage() {
           {/* 신청 방법 */}
           <div className="influencer-apply-section">
             <h3 className="influencer-apply-title">{t('influencer.info.apply.title')}</h3>
-            <ul className="influencer-apply-list">
+            <div className="influencer-apply-steps">
               {t('influencer.info.apply.list').map((item, index) => (
-                <li key={index}>{item}</li>
+                <React.Fragment key={index}>
+                  <div className="influencer-apply-step">{item}</div>
+                  {index < t('influencer.info.apply.list').length - 1 && <ArrowDown />}
+                </React.Fragment>
               ))}
-            </ul>
+            </div>
           </div>
 
           {/* 참여 신청하기 버튼 */}
@@ -121,15 +125,25 @@ function InfluencerPage() {
             <button className="influencer-apply-button" onClick={handleInfluencerApply}>{t('influencer.info.apply.button')}</button>
           </div>
 
-          {/* 문의 */}
-          <div className="influencer-contact-section">
-            <h3 className="influencer-contact-title">{t('influencer.info.contact.title')}</h3>
-            <ul className="influencer-contact-list">
-              {t('influencer.info.contact.list').map((item, index) => (
-                <li key={index}>{item}</li>
+         
+    {/* 선정 기준 & 주의사항 */}
+    <div className="influencer-criteria-section">
+            <h3 className="influencer-criteria-title">{t('influencer.info.criteria.title')}</h3>
+            <ul className="influencer-criteria-list">
+              {t('influencer.info.criteria.list').map((item, index) => (
+                <li key={index}>
+                  {item.split('\n').map((line, lineIndex) => (
+                    <React.Fragment key={lineIndex}>
+                      {line}
+                      <br />
+                    </React.Fragment>
+                  ))}
+                </li>
               ))}
             </ul>
           </div>
+
+
         </div>
       </section>
 

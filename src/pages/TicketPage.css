@@ -1,18 +1,31 @@
 /* TicketPage 반응형 및 공통 스타일 */
 
+/* 공통 색상 변수 */
+:root {
+  --color-primary: #00E5A8;
+  --color-secondary: #E1F800;
+  --color-black: #000;
+  --color-white: #FFF;
+  --color-gray-light: #F2F2F2;
+  --color-gray-dark: #333;
+  --color-green: #75D19F;
+  --color-green-light: #DAFFCB;
+  --color-bright-green: #00FF00;
+}
+
 .ticket-page-root {
   width: 100%;
   min-height: 100vh;
-  background: #fff;
-  color: #111;
+  background: var(--color-white);
+  color: var(--color-gray-dark);
   box-sizing: border-box;
 }
 
 .ticket-hero-section {
   position: relative;
   width: 100%;
-  min-height: clamp(600px, 44.5vw, 854px);
-  height: clamp(600px, 44.5vw, 854px);
+  min-height: clamp(427px, (854/1920)*100vw, 854px);
+  height: clamp(427px, (854/1920)*100vw, 854px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -38,10 +51,25 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: clamp(1rem, 2.08vw, 2rem);
+}
+
+.ticket-hero-main-title {
+  color: var(--color-white);
+  text-align: center;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(2.1rem, (56/1920)*100vw, 3.5rem);
+  font-style: normal;
+  font-weight: 900;
+  line-height: clamp(2.85rem, (76/1920)*100vw, 4.75rem);
+  letter-spacing: clamp(-0.175rem, (-2.8/1920)*100vw, -0.175rem);
+  word-break: keep-all;
+  white-space: pre-line;
 }
 
 .ticket-hero-title {
-  color: #00E5A8;
+  color: var(--color-primary);
   font-size: clamp(2.16rem, 3.75vw, 72px);
   font-weight: 900;
   line-height: clamp(3rem, 5.21vw, 100px);
@@ -56,10 +84,12 @@
 
 /* TICKET INFORMATION 섹션 */
 .ticket-info-section {
-  background: #000;
-  padding: 5rem 0;
+  background: var(--color-black);
+  min-height: clamp(420px, (840/1920)*100vw, 840px);
+  height: clamp(420px, (840/1920)*100vw, 840px);
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .ticket-info-inner {
@@ -70,15 +100,15 @@
 }
 
 .ticket-info-title {
-  font-size: clamp(6rem, 10.42vw, 200px);
+  font-size: clamp(6.75rem, (180/1920)*100vw, 11.25rem);
   font-weight: 400;
-  color: #E1F800;
-  margin-bottom: clamp(2rem, 3.13vw, 3rem);
-  text-transform: uppercase;
-  font-family: 'Bebas Neue', sans-serif;
-  line-height: 82%;
+  color: #00E5A8;
   text-align: center;
-  letter-spacing: clamp(-0.3rem, -0.52vw, -10px);
+  font-family: "Bebas Neue";
+  font-style: normal;
+  line-height: 82%;
+  letter-spacing: clamp(-0.3375rem, (-9/1920)*100vw, -0.5625rem);
+  text-transform: uppercase;
 }
 
 .ticket-info-content {
@@ -89,7 +119,7 @@
 .ticket-info-text {
   font-size: clamp(1rem, 1.75vw, 32px);
   line-height: 1.6;
-  color: #fff;
+  color: var(--color-white);
   margin: 0;
   word-break: keep-all;
   font-family: 'Noto Sans CJK KR', sans-serif;
@@ -101,7 +131,7 @@
 
 /* 온몸으로 즐기는 스타일 페어 섹션 */
 .ticket-play-section {
-  background: #fff;
+  background: var(--color-white);
   padding: clamp(3rem, 4.17vw, 5rem) 0;
   display: flex;
   justify-content: center;
@@ -131,7 +161,7 @@
 .ticket-play-subtitle {
   font-size: clamp(0.9rem, 1.46vw, 1.2rem);
   font-weight: 500;
-  color: #000;
+  color: var(--color-black);
   margin-bottom: clamp(1rem, 1.56vw, 1.5rem);
   font-family: 'Noto Sans', sans-serif;
   white-space: pre-line;
@@ -146,7 +176,7 @@
 .ticket-play-title span {
   font-size: clamp(4rem, 11.46vw, 13.75rem);
   font-weight: 700;
-  color: #000;
+  color: var(--color-black);
   line-height: 0.8;
   font-family: 'Bebas Neue', sans-serif;
   letter-spacing: 1px;
@@ -154,7 +184,7 @@
 
 .ticket-play-separator {
   width: 3px;
-  background: #000;
+  background: var(--color-black);
   height: clamp(300px, 31.25vw, 500px);
   flex-shrink: 0;
   margin: clamp(2rem, 2.08vw, 3rem) 0;
@@ -198,10 +228,12 @@
 
 /* 이런 분들에게 추천해요 섹션 */
 .ticket-recommend-section {
-  background: #DAFFCB;
-  padding: clamp(3rem, 4.17vw, 5rem) 0;
+  background: var(--color-black);
+  min-height: clamp(680px, (1360/1920)*100vw, 1360px);
+  height: clamp(680px, (1360/1920)*100vw, 1360px);
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .ticket-recommend-inner {
@@ -216,16 +248,19 @@
 }
 
 .ticket-recommend-title {
-  font-size: clamp(1.5rem, 3.13vw, 2.5rem);
+  font-size: clamp(1.6875rem, (45/1920)*100vw, 2.8125rem);
   font-weight: 700;
-  color: #fff;
-  background: #000;
+  color: var(--color-black);
+  background: var(--color-primary);
   border-radius: 60px;
-  padding: clamp(1rem, 1.56vw, 1.5rem) clamp(2rem, 3.13vw, 3rem);
-  display: inline-block;
-  margin: 0;
+  width: clamp(480px, (960/1920)*100vw, 960px);
+  height: clamp(60px, (120/1920)*100vw, 120px);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
   font-family: 'Noto Sans', sans-serif;
-  width: clamp(300px, 52.08vw, 1000px);
   text-align: center;
 }
 
@@ -236,7 +271,7 @@
 .ticket-recommend-desc p {
   font-size: clamp(1rem, 2.08vw, 1.3rem);
   line-height: 1.6;
-  color: #000;
+  color: var(--color-white);
   margin: 0 0 clamp(0.5rem, 1.04vw, 1rem) 0;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 700;
@@ -247,7 +282,7 @@
 }
 
 .ticket-recommend-box {
-  background: #45B176;
+  background: var(--color-primary);
   border-radius: clamp(15px, 1.56vw, 25px);
   padding: clamp(2rem, 3.13vw, 3rem);
   text-align: center;
@@ -267,7 +302,7 @@
 .ticket-recommend-list li {
   font-size: clamp(0.9rem, 1.25vw, 1.1rem);
   line-height: 1.5;
-  color: #FFF;
+  color: var(--color-black);
   font-family: 'Noto Sans CJK KR', sans-serif;
   text-align: center;
   font-weight: 900;
@@ -279,7 +314,7 @@
 
 /* When & Where 섹션 */
 .ticket-whenwhere-section {
-  background: #75D19F;
+  background: var(--color-white);
   padding: clamp(3rem, 4.17vw, 5rem) 0;
   display: flex;
   justify-content: center;
@@ -299,8 +334,8 @@
 .ticket-whenwhere-title {
   font-size: clamp(1.5rem, 3.13vw, 2.5rem);
   font-weight: 700;
-  color: #E1F800;
-  background: #000;
+  color: var(--color-primary);
+  background: var(--color-black);
   border-radius: 60px;
   padding: clamp(1rem, 1.56vw, 1.5rem) clamp(2rem, 3.13vw, 3rem);
   display: inline-block;
@@ -313,8 +348,8 @@
 }
 
 .ticket-whenwhere-box {
-  background: transparent;
-  border: 1px solid #000;
+  background: var(--color-gray-light);
+  border: none;
   border-radius: clamp(10px, 1.04vw, 15px);
   padding: clamp(2rem, 3.13vw, 3rem);
   max-width: clamp(700px, 72.92vw, 900px);
@@ -338,6 +373,10 @@
   color: #000;
   margin-bottom: clamp(0.5rem, 0.52vw, 0.8rem);
   font-family: 'Noto Sans CJK KR', sans-serif;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: pre-line;
 }
 
 .ticket-whenwhere-location {
@@ -345,6 +384,10 @@
   color: #000;
   font-family: 'Noto Sans CJK KR', sans-serif;
   font-weight: 700;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: pre-line;
 }
 
 .ticket-whenwhere-right {
@@ -391,7 +434,7 @@
 
 /* 티켓 가격 & 혜택 섹션 */
 .ticket-price-section {
-  background: #75D19F;
+  background: #fff;
   padding: clamp(3rem, 4.17vw, 5rem) 0;
   display: flex;
   justify-content: center;
@@ -411,7 +454,7 @@
 .ticket-price-title {
   font-size: clamp(1.5rem, 3.13vw, 2.5rem);
   font-weight: 700;
-  color: #E1F800;
+  color: #00E5A8;
   background: #000;
   border-radius: 60px;
   padding: clamp(1rem, 1.56vw, 1.5rem) clamp(2rem, 3.13vw, 3rem);
@@ -690,7 +733,7 @@
   
   .ticket-recommend-list li {
     font-size: clamp(0.8rem, 2vw, 1rem);
-    color: #FFF;
+    color: #000;
     font-family: 'Noto Sans CJK KR', sans-serif;
     font-weight: 900;
   }
@@ -858,7 +901,7 @@
   
   .ticket-recommend-list li {
     font-size: clamp(0.7rem, 3.5vw, 0.9rem);
-    color: #FFF;
+    color: #000;
     font-family: 'Noto Sans CJK KR', sans-serif;
     font-weight: 900;
   }
@@ -876,7 +919,7 @@
   }
   
   .ticket-whenwhere-dates {
-    font-size: clamp(1rem, 4vw, 1.3rem);
+    font-size: clamp(0.8rem, 3vw, 1.1rem);
     font-family: 'Noto Sans CJK KR', sans-serif;
   }
   

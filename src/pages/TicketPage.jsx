@@ -12,7 +12,7 @@ function TicketPage() {
       <section className="ticket-hero-section" style={{backgroundImage: `url(${ticketImg})`}}>
         <div className="ticket-hero-overlay"></div>
         <div className="ticket-hero-text">
-          <div className="ticket-hero-title">
+          <div className="ticket-hero-main-title">
             {t('ticket.hero.subtitle')}
           </div>
         </div>
@@ -89,8 +89,22 @@ function TicketPage() {
           <div className="ticket-whenwhere-box">
             <div className="ticket-whenwhere-content">
               <div className="ticket-whenwhere-left">
-                <div className="ticket-whenwhere-dates">{t('ticket.whenWhere.dates')}</div>
-                <div className="ticket-whenwhere-location">{t('ticket.whenWhere.location')}</div>
+                <div className="ticket-whenwhere-dates">
+                  {t('ticket.whenWhere.dates').split('\n').map((line, index) => (
+                    <React.Fragment key={index}>
+                      {line}
+                      <br />
+                    </React.Fragment>
+                  ))}
+                </div>
+                <div className="ticket-whenwhere-location">
+                  {t('ticket.whenWhere.location').split('\n').map((line, index) => (
+                    <React.Fragment key={index}>
+                      {line}
+                      <br />
+                    </React.Fragment>
+                  ))}
+                </div>
               </div>
               <div className="ticket-whenwhere-right">
                 <div className="ticket-whenwhere-schedule">

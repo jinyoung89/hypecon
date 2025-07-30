@@ -68,18 +68,19 @@ function HomePage() {
             alt="HYPECON STYLE WEEK"
             style={{
               width: 'clamp(300px, 31.25vw, 600px)',
-              height: 'clamp(150px, 13.65vw, 262px)',
+              height: 'clamp(131px, 13.65vw, 262px)',
               objectFit: 'contain'
             }}
           />
           <div className="home-hero-subtitle" style={{
             color: '#FFF',
-            fontFamily: 'Inter, sans-serif',
-            fontSize: 'clamp(1.5rem, 1.67vw, 2rem)',
+            fontFamily: 'Montserrat, sans-serif',
+            fontSize: 'clamp(1.2rem, 1.67vw, 2rem)',
             fontStyle: 'normal',
             fontWeight: '700',
-            lineHeight: 'clamp(2rem, 2.5vw, 3rem)',
-            textAlign: 'center'
+            lineHeight: 'clamp(1.6rem, 2.5vw, 3rem)',
+            textAlign: 'center',
+            textShadow: '0 4px 20px rgba(0,0,0,0.5)'
           }}>2026. 2.19 ~ 22 @ COEX C HALL</div>
         </div>
       </section>
@@ -218,16 +219,16 @@ function HomePage() {
                   justifyContent: 'center',
                   display: 'flex',
                   flexDirection: 'column',
-                  color: 'black',
-                  fontSize: 'clamp(1.575rem, 2.19vw, 2.625rem)',
-                  fontFamily: 'Noto Sans, sans-serif',
+                  color: '#000',
+                  fontSize: 'clamp(21.6px, 1.875vw, 36px)',
+                  fontFamily: '"Noto Sans CJK KR", sans-serif',
                   fontWeight: '700',
-                  lineHeight: 'clamp(2rem, 2.63vw, 3.15rem)',
+                  lineHeight: '120%',
                   wordWrap: 'break-word',
                   cursor: 'pointer',
                   '@media (max-width: 768px)': {
-                    fontSize: 'clamp(1rem, 4vw, 1.5rem)',
-                    lineHeight: 'clamp(1.2rem, 4.5vw, 1.8rem)'
+                    fontSize: 'clamp(18px, 4vw, 28px)',
+                    lineHeight: '120%'
                   }
                 }}
               >
@@ -238,8 +239,8 @@ function HomePage() {
           
           {/* 오른쪽 섹션 - 이미지 */}
           <div style={{
-            width: 'clamp(300px, 33.33vw, 640px)',
-            height: 'clamp(200px, 23.96vw, 460px)',
+            width: 'clamp(314px, 32.76vw, 629px)',
+            height: 'clamp(200px, 20.83vw, 400px)',
             borderRadius: '12px',
             overflow: 'hidden',
             display: 'flex',
@@ -266,178 +267,17 @@ function HomePage() {
         </div>
       </section>
 
-      {/* "THAT'S WHERE HYPECON BEGINS" 섹션 */}
-      <section className="home-begins-section">
-        <div className="container home-begins-container">
-          <div style={{
-            position: 'relative',
-            width: '100%',
-            height: '100%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '0 clamp(1rem, 3vw, 2rem)',
-            margin: '0 auto',
-            gap: 'clamp(2rem, 4vw, 4rem)'
-          }}>
-            {/* 왼쪽 텍스트 섹션 */}
-            <div style={{
-              position: 'relative',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'flex-start',
-              height: '100%',
-              gap: 'clamp(1rem, 2vw, 2rem)',
-              '@media (max-width: 768px)': {
-                alignItems: 'center',
-                textAlign: 'center',
-                width: '100%'
-              }
-            }}>
-              {/* 컨텐츠 영역 */}
-              <div style={{
-                '@media (max-width: 768px)': {
-                  width: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  textAlign: 'center'
-                }
-              }}>
-              <div className="home-begins-desc" style={{
-                width: 'clamp(300px, 34.38vw, 660px)',
-                height: 'auto',
-                minHeight: 'clamp(30px, 3.02vw, 58px)',
-                justifyContent: 'center',
-                display: 'flex',
-                flexDirection: 'column',
-                color: 'black',
-                fontSize: 'clamp(1.125rem, 1.56vw, 1.875rem)',
-                fontFamily: 'Montserrat, sans-serif',
-                fontWeight: '700',
-                lineHeight: 'clamp(2rem, 2.08vw, 2.5rem)',
-                wordWrap: 'break-word',
-                textAlign: 'left',
-                alignItems: 'flex-start',
-                '@media (max-width: 768px)': {
-                  width: '100%',
-                  textAlign: 'center',
-                  alignItems: 'center'
-                }
-              }}>
-                {t('home.section2.desc').split('\n').map((line, index) => (
-                  <React.Fragment key={index}>
-                    {line}
-                    {index < t('home.section2.desc').split('\n').length - 1 && <br />}
-                  </React.Fragment>
-                ))}
-              </div>
-              <h2 className="home-begins-title">
-                {t('home.section2.title').split('\n').map((line, index) => (
-                  <React.Fragment key={index}>
-                    {line}
-                    {index < t('home.section2.title').split('\n').length - 1 && <br />}
-                  </React.Fragment>
-                ))}
-              </h2>
-              <p className="home-begins-highlight" style={{
-                width: 'clamp(300px, 25.42vw, 488px)',
-                height: 'clamp(50px, 4.84vw, 93px)',
-                justifyContent: 'center',
-                display: 'flex',
-                flexDirection: 'column',
-                color: 'black',
-                fontSize: 'clamp(1.313rem, 1.82vw, 2.188rem)',
-                fontFamily: 'Noto Sans, sans-serif',
-                fontWeight: '700',
-                lineHeight: 'clamp(2.2rem, 2.19vw, 2.625rem)',
-                wordWrap: 'break-word',
-                '@media (max-width: 768px)': {
-                  width: '100%',
-                  textAlign: 'center',
-                  alignItems: 'center'
-                }
-              }}>
-                {t('home.section2.highlight')}
-              </p>
-              </div>
-            </div>
-            
-            {/* 오른쪽 이미지 블록들 */}
-            <div style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 'clamp(1rem, 2vw, 2rem)'
-            }}>
-              {/* 상단 이미지 블록 */}
-              <div style={{
-                width: 'clamp(300px, 33.33vw, 640px)',
-                height: 'clamp(200px, 23.96vw, 460px)',
-                borderRadius: '12px',
-                position: 'relative',
-                overflow: 'hidden',
-                cursor: 'pointer',
-                transition: 'transform 0.3s',
-                display: 'flex',
-                alignItems: 'stretch'
-              }}>
-                <img 
-                  src={sec3Img}
-                  alt="얼리 부스 참가 신청"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover'
-                  }}
-                />
-                <div className="image-overlay home-begins-img-overlay">
-                  <div className="overlay-text home-begins-img-title">
-                    {t('home.section2.earlyBooth')}
-                  </div>
-                  <div className="overlay-text home-begins-img-date">
-                    {t('home.section2.deadline')}
-                  </div>
-                </div>
-              </div>
-              
-              {/* 하단 이미지 블록 */}
-              <div style={{
-                width: 'clamp(300px, 33.33vw, 640px)',
-                height: 'clamp(200px, 23.96vw, 460px)',
-                borderRadius: '12px',
-                position: 'relative',
-                overflow: 'hidden',
-                cursor: 'pointer',
-                transition: 'transform 0.3s',
-                display: 'flex',
-                alignItems: 'stretch'
-              }}>
-                <img 
-                  src={sec3Img2}
-                  alt="얼리 참가신청"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover'
-                  }}
-                />
-                <div className="image-overlay home-begins-img-overlay">
-                  <div className="overlay-text home-begins-img-title" style={{color: 'var(--hypecon-pink)'}}>
-                    {t('home.section2.earlyApply')}
-                  </div>
-                  <div className="overlay-text home-begins-img-date" style={{color: 'var(--hypecon-pink)'}}>
-                    {t('home.section2.deadline')}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* 흰색 여백바 */}
+      <div style={{
+        width: '100%',
+        height: 'clamp(120px, 12.5vw, 240px)',
+        background: '#FFFFFF',
+        margin: 0,
+        padding: 0
+      }} />
 
-      {/* 인플루언서/바이어/프레스 섹션 */}
-      <section className="home-influencer-section" style={{
+       {/* 인플루언서/바이어/프레스 섹션 */}
+       <section className="home-influencer-section" style={{
         background: `url(${sec4Img}) center/cover no-repeat`,
         height: 'clamp(400px, 39.53vw, 759px)',
         display: 'flex',
@@ -508,6 +348,185 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+           {/* 흰색 여백바 */}
+           <div style={{
+        width: '100%',
+        height: 'clamp(120px, 12.5vw, 240px)',
+        background: '#FFFFFF',
+        margin: 0,
+        padding: 0
+      }} />
+
+      {/* "THAT'S WHERE HYPECON BEGINS" 섹션 */}
+      <section className="home-begins-section">
+        <div className="container home-begins-container">
+          <div style={{
+            position: 'relative',
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '0 clamp(1rem, 3vw, 2rem)',
+            margin: '0 auto',
+            gap: 'clamp(2rem, 4vw, 4rem)'
+          }}>
+            {/* 왼쪽 텍스트 섹션 */}
+            <div style={{
+              position: 'relative',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'flex-start',
+              height: '100%',
+              gap: 'clamp(1rem, 2vw, 2rem)',
+              '@media (max-width: 768px)': {
+                alignItems: 'center',
+                textAlign: 'center',
+                width: '100%'
+              }
+            }}>
+              {/* 컨텐츠 영역 */}
+              <div style={{
+                '@media (max-width: 768px)': {
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  textAlign: 'center'
+                }
+              }}>
+              <div className="home-begins-desc" style={{
+                width: 'clamp(300px, 34.38vw, 660px)',
+                height: 'auto',
+                minHeight: 'clamp(30px, 3.02vw, 58px)',
+                justifyContent: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                color: 'black',
+                fontSize: 'clamp(1.125rem, 1.56vw, 1.875rem)',
+                fontFamily: 'Montserrat, sans-serif',
+                fontWeight: '700',
+                lineHeight: 'clamp(1.35rem, 1.87vw, 2.25rem)',
+                wordWrap: 'break-word',
+                textAlign: 'left',
+                alignItems: 'flex-start',
+                '@media (max-width: 768px)': {
+                  width: '100%',
+                  textAlign: 'center',
+                  alignItems: 'center'
+                }
+              }}>
+                {t('home.section2.desc').split('\n').map((line, index) => (
+                  <React.Fragment key={index}>
+                    {line}
+                    {index < t('home.section2.desc').split('\n').length - 1 && <br />}
+                  </React.Fragment>
+                ))}
+              </div>
+              <h2 className="home-begins-title" style={{
+                color: '#000',
+                fontFamily: '"Bebas Neue", sans-serif',
+                fontSize: 'clamp(108px, 9.375vw, 180px)',
+                fontStyle: 'normal',
+                fontWeight: '400',
+                lineHeight: '87%',
+                letterSpacing: '-1.8px',
+                marginBottom: '1.5rem'
+              }}>
+                {t('home.section2.title').split('\n').map((line, index) => (
+                  <React.Fragment key={index}>
+                    {line}
+                    {index < t('home.section2.title').split('\n').length - 1 && <br />}
+                  </React.Fragment>
+                ))}
+              </h2>
+              <p className="home-begins-highlight" style={{
+                width: 'clamp(300px, 25.42vw, 488px)',
+                height: 'clamp(50px, 4.84vw, 93px)',
+                justifyContent: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                color: 'black',
+                fontSize: 'clamp(1.313rem, 1.82vw, 2.188rem)',
+                fontFamily: 'Montserrat, sans-serif',
+                fontWeight: '700',
+                lineHeight: 'clamp(1.58rem, 2.18vw, 2.63rem)',
+                wordWrap: 'break-word',
+                '@media (max-width: 768px)': {
+                  width: '100%',
+                  textAlign: 'center',
+                  alignItems: 'center'
+                }
+              }}>
+                {t('home.section2.highlight').split('\n').map((line, index) => (
+                  <React.Fragment key={index}>
+                    {line}
+                    {index < t('home.section2.highlight').split('\n').length - 1 && <br />}
+                  </React.Fragment>
+                ))}
+              </p>
+              </div>
+            </div>
+            
+            {/* 오른쪽 이미지 블록들 */}
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 'clamp(1rem, 2vw, 2rem)'
+            }}>
+              {/* 상단 이미지 블록 */}
+              <div style={{
+                width: 'clamp(300px, 33.33vw, 640px)',
+                height: 'clamp(200px, 23.96vw, 460px)',
+                borderRadius: '12px',
+                position: 'relative',
+                overflow: 'hidden',
+                transition: 'transform 0.3s',
+                display: 'flex',
+                alignItems: 'stretch'
+              }}>
+                <img 
+                  src={sec3Img}
+                  alt="얼리 부스 참가 신청"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
+                />
+                
+              </div>
+              
+              {/* 하단 이미지 블록 */}
+              <div style={{
+                width: 'clamp(300px, 33.33vw, 640px)',
+                height: 'clamp(200px, 23.96vw, 460px)',
+                borderRadius: '12px',
+                position: 'relative',
+                overflow: 'hidden',
+                transition: 'transform 0.3s',
+                display: 'flex',
+                alignItems: 'stretch'
+              }}>
+                <img 
+                  src={sec3Img2}
+                  alt="얼리 참가신청"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                  }}
+                />
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+     
 
       {/* 애니메이션 CSS */}
       <style>{`

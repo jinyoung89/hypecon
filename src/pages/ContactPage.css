@@ -11,9 +11,12 @@
 /* CONTACT US 섹션 */
 .contact-hero-section {
   background: #000;
-  padding: 5rem 0;
+  min-height: clamp(325px, (650/1920)*100vw, 650px);
+  height: clamp(325px, (650/1920)*100vw, 650px);
+  padding: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .contact-hero-inner {
@@ -24,15 +27,16 @@
 }
 
 .contact-hero-title {
-  font-size: clamp(6rem, 10.42vw, 200px);
+  color: #00E5A8;
+  text-align: center;
+  font-family: "Bebas Neue";
+  font-size: clamp(6rem, (200/1920)*100vw, 200px);
+  font-style: normal;
   font-weight: 400;
-  color: #E1F800;
+  line-height: 82%;
+  letter-spacing: clamp(-0.3rem, (-10/1920)*100vw, -10px);
   margin-bottom: clamp(2rem, 3.13vw, 3rem);
   text-transform: uppercase;
-  font-family: 'Bebas Neue', sans-serif;
-  line-height: 82%;
-  text-align: center;
-  letter-spacing: clamp(-0.3rem, -0.52vw, -10px);
 }
 
 .contact-hero-subtitle {
@@ -50,6 +54,7 @@
   font-weight: 500;
   white-space: pre-line;
   word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* 반응형 스타일 */
@@ -243,6 +248,10 @@
   line-height: 1.5;
   color: #000;
   font-family: 'Noto Sans', sans-serif;
+  white-space: pre-line;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 /* 반응형 스타일 */
@@ -264,7 +273,7 @@
 
 /* 마지막 메시지 섹션 */
 .contact-message-section {
-  background: #45B176;
+  background: #F2F2F2;
   padding: clamp(3rem, 4.17vw, 5rem) 0;
   display: flex;
   justify-content: center;
@@ -288,8 +297,12 @@
 .contact-message-content p {
   font-size: clamp(1.2rem, 2.5vw, 1.6rem);
   line-height: 1.6;
-  color: #fff;
+  color: #000;
   margin: 0;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 400;
+  white-space: pre-line;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 } 
