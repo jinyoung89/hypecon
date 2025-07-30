@@ -12,22 +12,18 @@
   max-width: 100%;
 }
 
-/* 상단 소개 섹션 */
+/* 히어로 섹션 */
 .about-section-intro {
-  min-height: clamp(600px, 44.5vw, 854px);
-  height: clamp(600px, 44.5vw, 854px);
+  position: relative;
+  width: 100%;
+  min-height: clamp(427px, (854/1920)*100vw, 854px);
+  height: clamp(427px, (854/1920)*100vw, 854px);
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   overflow: hidden;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  max-width: 100%;
 }
 
 /* WHY BRANDS CHOOSE HYPECON 섹션 */

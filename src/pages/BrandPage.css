@@ -20,11 +20,12 @@
   box-sizing: border-box;
 }
 
+/* 히어로 섹션 */
 .brand-hero-section {
   position: relative;
   width: 100%;
-  min-height: clamp(600px, 44.5vw, 854px);
-  height: clamp(600px, 44.5vw, 854px);
+  min-height: clamp(427px, (854/1920)*100vw, 854px);
+  height: clamp(427px, (854/1920)*100vw, 854px);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -867,13 +868,14 @@
 /* 반응형 스타일 */
 @media (max-width: 900px) {
   .brand-hero-section {
-    min-height: clamp(500px, 60vh, 700px) !important;
-    height: clamp(500px, 60vh, 700px) !important;
+    min-height: clamp(427px, (854/1920)*100vw, 854px) !important;
+    height: clamp(427px, (854/1920)*100vw, 854px) !important;
   }
   
   .brand-hero-title {
-    font-size: clamp(18px, (36/1920)*100vw, 36px);
-    padding: 0 clamp(16px, 2vw, 32px);
+    font-size: clamp(28px, (56/1920)*100vw, 56px) !important;
+    line-height: clamp(36px, (73/1920)*100vw, 73px) !important;
+    padding: 0 0.5rem;
   }
 
   .brand-engagement-section {
@@ -984,8 +986,8 @@
 
 @media (max-width: 768px) {
   .brand-hero-section {
-    min-height: clamp(450px, 55vh, 600px) !important;
-    height: clamp(450px, 55vh, 600px) !important;
+    min-height: clamp(427px, (854/1920)*100vw, 854px) !important;
+    height: clamp(427px, (854/1920)*100vw, 854px) !important;
   }
   
   .brand-hero-title {

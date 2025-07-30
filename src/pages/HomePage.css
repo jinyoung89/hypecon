@@ -12,19 +12,18 @@
   max-width: 100%;
 }
 
+/* 히어로 섹션 */
 .home-hero-section {
-  min-height: clamp(512px, 44.48vw, 854px);
-  height: clamp(512px, 44.48vw, 854px);
-  background: linear-gradient(135deg, var(--hypecon-main) 0%, var(--hypecon-point-mint) 100%);
+  position: relative;
+  width: 100%;
+  min-height: clamp(427px, (854/1920)*100vw, 854px);
+  height: clamp(427px, (854/1920)*100vw, 854px);
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   overflow: hidden;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  max-width: 100%;
 }
 .home-hero-video {
   position: absolute;
@@ -54,19 +53,19 @@
 }
 .home-hero-title {
   font-family: 'Bebas Neue, sans-serif';
-  font-size: clamp(2.4rem, 5.21vw, 6.25rem);
+  font-size: clamp(28px, (56/1920)*100vw, 56px);
   font-weight: 900;
   margin-bottom: 0.5rem;
   text-shadow: 0 4px 20px rgba(0,0,0,0.5);
-  line-height: 0.9;
+  line-height: clamp(36px, (73/1920)*100vw, 73px);
 }
 .home-hero-subtitle {
   font-family: 'Montserrat, sans-serif';
-  font-size: clamp(1.2rem, 1.67vw, 2rem);
+  font-size: clamp(18px, (36/1920)*100vw, 36px);
   font-weight: 700;
   margin-bottom: 0.8rem;
   text-shadow: 0 4px 20px rgba(0,0,0,0.5);
-  line-height: 1.2;
+  line-height: clamp(24px, (48/1920)*100vw, 48px);
 }
 .home-hero-desc {
   font-family: 'Montserrat, sans-serif';

@@ -19,7 +19,7 @@ function AboutPage() {
         padding: 'clamp(1rem, 2vw, 2rem)',
         '@media (max-width: 768px)': {
           height: 'auto !important',
-          minHeight: 'clamp(600px, 80vw, 800px) !important',
+          minHeight: 'clamp(427px, (854/1920)*100vw, 854px) !important',
           padding: 'clamp(2rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem) !important',
           flexDirection: 'column !important'
         }
@@ -34,67 +34,82 @@ function AboutPage() {
           textAlign: 'center',
           gap: 'clamp(0.5rem, 2vw, 2rem)',
           maxWidth: '90vw',
-          marginTop: 'clamp(4rem, 8vw, 8rem)',
           '@media (max-width: 768px)': {
             width: '100% !important',
             height: 'auto !important',
             alignItems: 'center !important',
             textAlign: 'center !important',
             gap: 'clamp(1rem, 3vw, 2rem) !important',
-            marginTop: 'clamp(2rem, 6vw, 4rem) !important',
             maxWidth: '85vw !important'
           }
         }}>
           <span style={{
             color: '#FFF',
-            fontSize: 'clamp(33.6px, (56/1920)*100vw, 56px)',
+            fontSize: 'clamp(28px, (56/1920)*100vw, 56px)',
             fontFamily: 'Noto Sans CJK KR, sans-serif',
             fontStyle: 'normal',
-            fontWeight: '700',
-            lineHeight: 'clamp(45px, (75/1920)*100vw, 75px)',
-            letterSpacing: '-1.68px',
+            fontWeight: '900',
+            lineHeight: 'clamp(36px, (73/1920)*100vw, 73px)',
+            letterSpacing: 'clamp(-1.4px, (-2.8/1920)*100vw, -2.8px)',
             wordWrap: 'break-word',
             textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
             textAlign: 'center',
+            whiteSpace: 'pre-line',
+            wordBreak: 'keep-all',
+            overflowWrap: 'break-word',
             '@media (max-width: 768px)': {
-              fontSize: 'clamp(1rem, 4vw, 2rem) !important',
-              lineHeight: 'clamp(1.2rem, 4.5vw, 2.3rem) !important',
+              fontSize: 'clamp(1rem, 4.5vw, 1.3rem) !important',
+              lineHeight: 'clamp(1.2rem, 4.5vw, 1.5rem) !important',
               textAlign: 'center !important',
-              whiteSpace: 'pre-line !important'
+              whiteSpace: 'pre-line !important',
+              wordBreak: 'keep-all !important',
+              overflowWrap: 'break-word !important'
             }
           }}>
             {t('about.intro.mainTitle')}
           </span>
           <span style={{
             color: 'white',
-            fontSize: 'clamp(1.5rem, 3.33vw, 4rem)',
-            fontFamily: 'Noto Sans, sans-serif',
+            fontSize: 'clamp(18px, (36/1920)*100vw, 36px)',
+            fontFamily: 'Montserrat, sans-serif',
             fontWeight: '700',
-            lineHeight: 'clamp(1.2rem, 2.73vw, 3.28rem)',
+            lineHeight: 'clamp(24px, (48/1920)*100vw, 48px)',
             wordWrap: 'break-word',
             textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
             textAlign: 'center',
+            whiteSpace: 'pre-line',
+            wordBreak: 'keep-all',
+            overflowWrap: 'break-word',
             '@media (max-width: 768px)': {
-              fontSize: 'clamp(1.2rem, 5vw, 2.5rem) !important',
-              lineHeight: 'clamp(1.4rem, 5.5vw, 2.8rem) !important',
-              textAlign: 'center !important'
+              fontSize: 'clamp(18px, (36/1920)*100vw, 36px) !important',
+              lineHeight: 'clamp(24px, (48/1920)*100vw, 48px) !important',
+              textAlign: 'center !important',
+              whiteSpace: 'pre-line !important',
+              wordBreak: 'keep-all !important',
+              overflowWrap: 'break-word !important'
             }
           }}>
             <br/>
           </span>
           <span style={{
             color: 'white',
-            fontSize: 'clamp(1rem, 2.08vw, 2.5rem)',
-            fontFamily: 'Noto Sans, sans-serif',
+            fontSize: 'clamp(18px, (36/1920)*100vw, 36px)',
+            fontFamily: 'Montserrat, sans-serif',
             fontWeight: '700',
-            lineHeight: 'clamp(0.8rem, 1.71vw, 2.05rem)',
+            lineHeight: 'clamp(24px, (48/1920)*100vw, 48px)',
             wordWrap: 'break-word',
             textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
             textAlign: 'center',
+            whiteSpace: 'pre-line',
+            wordBreak: 'keep-all',
+            overflowWrap: 'break-word',
             '@media (max-width: 768px)': {
-              fontSize: 'clamp(0.9rem, 3vw, 1.8rem) !important',
-              lineHeight: 'clamp(1.1rem, 3.5vw, 2rem) !important',
-              textAlign: 'center !important'
+              fontSize: 'clamp(18px, (36/1920)*100vw, 36px) !important',
+              lineHeight: 'clamp(24px, (48/1920)*100vw, 48px) !important',
+              textAlign: 'center !important',
+              whiteSpace: 'pre-line !important',
+              wordBreak: 'keep-all !important',
+              overflowWrap: 'break-word !important'
             }
           }}>
             {t('about.intro.subtitle')}
@@ -161,7 +176,7 @@ function AboutPage() {
         height: 'clamp(420px, (840/1920)*100vw, 840px)',
         '@media (max-width: 768px)': {
           height: 'auto !important',
-          minHeight: 'clamp(400px, 60vw, 600px) !important',
+          minHeight: 'clamp(600px, 80vw, 800px) !important',
           padding: 'clamp(2rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem) !important',
           flexDirection: 'column !important'
         }
