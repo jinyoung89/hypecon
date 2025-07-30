@@ -155,7 +155,8 @@
   font-style: normal;
   line-height: clamp(25px, (50/1920)*100vw, 50px);
   letter-spacing: clamp(-0.675px, (-1.35/1920)*100vw, -1.35px);
-  width: clamp(480px, (960/1920)*100vw, 960px);
+  width: 100%;
+  max-width: clamp(480px, (960/1920)*100vw, 960px);
   height: clamp(60px, (120/1920)*100vw, 120px);
   flex-shrink: 0;
   border-radius: 60px;
@@ -238,7 +239,8 @@
   font-style: normal;
   line-height: clamp(25px, (50/1920)*100vw, 50px);
   letter-spacing: clamp(-0.675px, (-1.35/1920)*100vw, -1.35px);
-  width: clamp(480px, (960/1920)*100vw, 960px);
+  width: 100%;
+  max-width: clamp(480px, (960/1920)*100vw, 960px);
   height: clamp(60px, (120/1920)*100vw, 120px);
   flex-shrink: 0;
   border-radius: 60px;
@@ -321,7 +323,8 @@
   font-style: normal;
   line-height: clamp(25px, (50/1920)*100vw, 50px);
   letter-spacing: clamp(-0.675px, (-1.35/1920)*100vw, -1.35px);
-  width: clamp(480px, (960/1920)*100vw, 960px);
+  width: 100%;
+  max-width: clamp(480px, (960/1920)*100vw, 960px);
   height: clamp(60px, (120/1920)*100vw, 120px);
   flex-shrink: 0;
   border-radius: 60px;

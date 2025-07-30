@@ -79,6 +79,32 @@
     font-size: clamp(0.9rem, 2vw, 1.1rem);
     line-height: 1.4;
   }
+
+  .award-overview-title,
+  .award-categories-title,
+  .award-benefits-title,
+  .award-participation-title {
+    font-size: clamp(16px, (24/1920)*100vw, 24px);
+    padding: clamp(10px, (16/1920)*100vw, 16px) clamp(20px, (32/1920)*100vw, 32px);
+  }
+
+  .award-selection-stage {
+    width: 100%;
+    max-width: clamp(400px, 85vw, 600px);
+    height: clamp(120px, 20vw, 200px);
+  }
+  
+  .award-selection-stage-title {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+  }
+  
+  .award-selection-stage-details {
+    font-size: clamp(0.9rem, 2.2vw, 1.3rem);
+  }
+  
+  .award-selection-stage-note {
+    font-size: clamp(0.8rem, 1.8vw, 1rem);
+  }
 }
 
 @media (max-width: 600px) {
@@ -122,6 +148,32 @@
     line-height: clamp(1.3rem, 5.5vw, 1.8rem);
     letter-spacing: clamp(-0.04rem, -0.2vw, -1.2px);
     padding: 0 0.5rem;
+  }
+
+  .award-overview-title,
+  .award-categories-title,
+  .award-benefits-title,
+  .award-participation-title {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    padding: 0.6rem 1rem;
+  }
+
+  .award-selection-stage {
+    width: 100%;
+    max-width: clamp(320px, 90vw, 500px);
+    height: clamp(100px, 25vw, 160px);
+  }
+  
+  .award-selection-stage-title {
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+  }
+  
+  .award-selection-stage-details {
+    font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+  }
+  
+  .award-selection-stage-note {
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
   }
 }
 
@@ -203,13 +255,15 @@
 }
 
 .award-overview-title {
-  width: clamp(480px, (960/1920)*100vw, 960px);
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  width: 100%;
+  max-width: clamp(480px, (960/1920)*100vw, 960px);
+  height: clamp(60px, (120/1920)*100vw, 120px);
+  font-size: clamp(18px, (30/1920)*100vw, 30px);
   font-weight: 700;
   color: #00E5A8;
   background: #000;
-  border-radius: 60px;
-  padding: clamp(0.8rem, 1.56vw, 1.2rem) clamp(6rem, 8.33vw, 8rem);
+  border-radius: 50px;
+  padding: 0.7rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -275,13 +329,15 @@
 }
 
 .award-categories-title {
-  width: clamp(480px, (960/1920)*100vw, 960px);
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  width: 100%;
+  max-width: clamp(480px, (960/1920)*100vw, 960px);
+  height: clamp(60px, (120/1920)*100vw, 120px);
+  font-size: clamp(18px, (30/1920)*100vw, 30px);
   font-weight: 700;
   color: #000;
   background: #00E5A8;
-  border-radius: 60px;
-  padding: clamp(0.8rem, 1.56vw, 1.2rem) clamp(3rem, 4.17vw, 4rem);
+  border-radius: 50px;
+  padding: 0.7rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -364,7 +420,8 @@
 
 .award-selection-stage {
   position: relative;
-  width: clamp(500px, 52.08vw, 781px);
+  width: 100%;
+  max-width: clamp(500px, 52.08vw, 781px);
   height: clamp(160px, 16.67vw, 260px);
   background: #F2F2F2;
   border-radius: 40px;
@@ -457,13 +514,15 @@
 }
 
 .award-benefits-title {
-  width: clamp(480px, (960/1920)*100vw, 960px);
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  width: 100%;
+  max-width: clamp(480px, (960/1920)*100vw, 960px);
+  height: clamp(60px, (120/1920)*100vw, 120px);
+  font-size: clamp(18px, (30/1920)*100vw, 30px);
   font-weight: 700;
   color: #00E5A8;
   background: #000;
-  border-radius: 60px;
-  padding: clamp(0.8rem, 1.56vw, 1.2rem) clamp(3rem, 4.17vw, 4rem);
+  border-radius: 50px;
+  padding: 0.7rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -477,7 +536,8 @@
 }
 
 .award-benefits-box {
-  width: clamp(480px, (960/1920)*100vw, 960px);
+  width: 100%;
+  max-width: clamp(480px, (960/1920)*100vw, 960px);
   background: #000;
   border-radius: 20px;
   padding: clamp(2rem, 3.13vw, 3rem);
@@ -525,13 +585,15 @@
 }
 
 .award-participation-title {
-  width: clamp(480px, (960/1920)*100vw, 960px);
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  width: 100%;
+  max-width: clamp(480px, (960/1920)*100vw, 960px);
+  height: clamp(60px, (120/1920)*100vw, 120px);
+  font-size: clamp(18px, (30/1920)*100vw, 30px);
   font-weight: 700;
   color: #000;
   background: #00E5A8;
-  border-radius: 60px;
-  padding: clamp(0.8rem, 1.56vw, 1.2rem) clamp(3rem, 4.17vw, 4rem);
+  border-radius: 50px;
+  padding: 0.7rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;

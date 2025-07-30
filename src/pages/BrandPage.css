@@ -1227,7 +1227,8 @@
 }
 
 .brand-payment-new-element {
-  width: clamp(480px, (960/1920)*100vw, 960px);
+  width: 100%;
+  max-width: clamp(480px, (960/1920)*100vw, 960px);
   height: clamp(60px, (120/1920)*100vw, 120px);
   flex-shrink: 0;
   display: flex;
@@ -1246,7 +1247,8 @@
 }
 
 .brand-payment-content-new {
-  width: clamp(336px, (672.14/1920)*100vw, 672.14px);
+  width: 100%;
+  max-width: clamp(336px, (672.14/1920)*100vw, 672.14px);
   height: clamp(164px, (328.89/1920)*100vw, 328.89px);
   text-align: center;
   display: flex;
