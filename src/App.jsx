@@ -97,7 +97,7 @@ function AppContent() {
                   lineHeight: '150%'
                 }}
               >
-                {language}
+                {language === 'KR' ? 'EN' : 'KR'}
               </button>
             </div>
           </div>
