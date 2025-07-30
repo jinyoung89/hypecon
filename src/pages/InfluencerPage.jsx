@@ -59,16 +59,33 @@ function InfluencerPage() {
             <h2 className="influencer-invite-title">{t('influencer.invite.title')}</h2>
           </div>
           <div className="influencer-invite-content">
-            <p className="influencer-invite-text">
+            <p className="influencer-invite-text" style={{
+              whiteSpace: 'pre-line',
+              wordBreak: 'keep-all',
+              overflowWrap: 'break-word',
+              wordWrap: 'break-word'
+            }}>
               {t('influencer.invite.text')}
             </p>
-            <p className="influencer-invite-subtext">
+            <p className="influencer-invite-subtext" style={{
+              whiteSpace: 'pre-line',
+              wordBreak: 'keep-all',
+              overflowWrap: 'break-word',
+              wordWrap: 'break-word'
+            }}>
               {t('influencer.invite.subtext')}
             </p>
             <div className="influencer-invite-box">
               <div className="influencer-invite-text-content">
                 {t('influencer.invite.content').map((item, index) => (
-                  <p key={index}>{item}</p>
+                  <p key={index} style={{
+                    whiteSpace: 'pre-line',
+                    wordBreak: 'keep-all',
+                    overflowWrap: 'break-word',
+                    wordWrap: 'break-word'
+                  }}>
+                    {item}
+                  </p>
                 ))}
               </div>
             </div>
@@ -85,7 +102,14 @@ function InfluencerPage() {
           <div className="influencer-benefit-content">
             <ul className="influencer-benefit-list">
               {t('influencer.benefit.list').map((item, index) => (
-                <li key={index}>{item}</li>
+                <li key={index} style={{
+                  whiteSpace: 'pre-line',
+                  wordBreak: 'keep-all',
+                  overflowWrap: 'break-word',
+                  wordWrap: 'break-word'
+                }}>
+                  {item}
+                </li>
               ))}
             </ul>
           </div>
@@ -102,7 +126,14 @@ function InfluencerPage() {
             <h3 className="influencer-schedule-title">{t('influencer.info.schedule.title')}</h3>
             <ul className="influencer-schedule-list">
               {t('influencer.info.schedule.list').map((item, index) => (
-                <li key={index}>{item}</li>
+                <li key={index} style={{
+                  whiteSpace: 'pre-line',
+                  wordBreak: 'keep-all',
+                  overflowWrap: 'break-word',
+                  wordWrap: 'break-word'
+                }}>
+                  {item}
+                </li>
               ))}
             </ul>
           </div>
@@ -113,7 +144,14 @@ function InfluencerPage() {
             <div className="influencer-apply-steps">
               {t('influencer.info.apply.list').map((item, index) => (
                 <React.Fragment key={index}>
-                  <div className="influencer-apply-step">{item}</div>
+                  <div className="influencer-apply-step" style={{
+                    whiteSpace: 'pre-line',
+                    wordBreak: 'keep-all',
+                    overflowWrap: 'break-word',
+                    wordWrap: 'break-word'
+                  }}>
+                    {item}
+                  </div>
                   {index < t('influencer.info.apply.list').length - 1 && <ArrowDown />}
                 </React.Fragment>
               ))}

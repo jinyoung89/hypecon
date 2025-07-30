@@ -69,9 +69,23 @@ function AwardPage() {
               <div className="award-categories-list">
                 {t('award.categories.items').map((category, index) => (
                   <div key={index} className="award-category-item">
-                    <div className="award-category-title">{category.title}</div>
+                    <div className="award-category-title" style={{
+                      whiteSpace: 'pre-line',
+                      wordBreak: 'keep-all',
+                      overflowWrap: 'break-word',
+                      wordWrap: 'break-word'
+                    }}>
+                      {category.title}
+                    </div>
                     {category.desc && (
-                      <div className="award-category-description">{category.desc}</div>
+                      <div className="award-category-description" style={{
+                        whiteSpace: 'pre-line',
+                        wordBreak: 'keep-all',
+                        overflowWrap: 'break-word',
+                        wordWrap: 'break-word'
+                      }}>
+                        {category.desc}
+                      </div>
                     )}
                   </div>
                 ))}
@@ -93,8 +107,22 @@ function AwardPage() {
                     <div className="award-selection-stage-number">{stage.number}</div>
                     <div className="award-selection-stage-content">
                       <div>
-                        <div className="award-selection-stage-title">{stage.title}</div>
-                        <div className="award-selection-stage-details">: {stage.details}</div>
+                        <div className="award-selection-stage-title" style={{
+                          whiteSpace: 'pre-line',
+                          wordBreak: 'keep-all',
+                          overflowWrap: 'break-word',
+                          wordWrap: 'break-word'
+                        }}>
+                          {stage.title}
+                        </div>
+                        <div className="award-selection-stage-details" style={{
+                          whiteSpace: 'pre-line',
+                          wordBreak: 'keep-all',
+                          overflowWrap: 'break-word',
+                          wordWrap: 'break-word'
+                        }}>
+                          : {stage.details}
+                        </div>
                         {stage.note && (
                           <div className="award-selection-stage-note" style={{
                             whiteSpace: 'pre-line',
@@ -128,7 +156,14 @@ function AwardPage() {
                 {t('award.benefits.items').map((benefit, index) => (
                   <div key={index} className="award-benefit-item">
                     <span className="award-benefit-icon">🏆</span>
-                    <span className="award-benefit-text">{benefit}</span>
+                    <span className="award-benefit-text" style={{
+                      whiteSpace: 'pre-line',
+                      wordBreak: 'keep-all',
+                      overflowWrap: 'break-word',
+                      wordWrap: 'break-word'
+                    }}>
+                      {benefit}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -145,7 +180,14 @@ function AwardPage() {
             <div className="award-participation-box">
               <ul className="award-participation-list">
                 {t('award.participation.items').map((item, index) => (
-                  <li key={index}>{item}</li>
+                  <li key={index} style={{
+                    whiteSpace: 'pre-line',
+                    wordBreak: 'keep-all',
+                    overflowWrap: 'break-word',
+                    wordWrap: 'break-word'
+                  }}>
+                    {item}
+                  </li>
                 ))}
               </ul>
             </div>

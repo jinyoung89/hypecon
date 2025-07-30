@@ -19,13 +19,13 @@ function BrandPage() {
       <section className="brand-hero-section" style={{backgroundImage: `url(${brandImg})`}}>
         <div className="brand-hero-overlay"></div>
         <div className="brand-hero-text">
-          <div className="brand-hero-title">
-            {t('brand.hero.subtitle').split('\n').map((line, index) => (
-              <React.Fragment key={index}>
-                {line}
-                {index < t('brand.hero.subtitle').split('\n').length - 1 && <br />}
-              </React.Fragment>
-            ))}
+          <div className="brand-hero-title" style={{
+            whiteSpace: 'pre-line',
+            wordBreak: 'keep-all',
+            overflowWrap: 'break-word',
+            wordWrap: 'break-word'
+          }}>
+            {t('brand.hero.subtitle')}
           </div>
         </div>
       </section>
@@ -44,13 +44,13 @@ function BrandPage() {
         <div className="brand-engagement-inner">
           <h2 className="brand-engagement-title">{t('brand.engagement.title')}</h2>
           <div className="brand-engagement-content">
-            <p className="brand-engagement-text">
-              {t('brand.engagement.text').split('\n').map((line, index) => (
-                <span key={index}>
-                  {line}
-                  {index < t('brand.engagement.text').split('\n').length - 1 && <br />}
-                </span>
-              ))}
+            <p className="brand-engagement-text" style={{
+              whiteSpace: 'pre-line',
+              wordBreak: 'keep-all',
+              overflowWrap: 'break-word',
+              wordWrap: 'break-word'
+            }}>
+              {t('brand.engagement.text')}
             </p>
           </div>
         </div>
@@ -67,13 +67,13 @@ function BrandPage() {
               <div className="curation-card" key={index}>
                 <h3 className="curation-card-title">{card.title}</h3>
                 <div className="curation-card-content">
-                  <p className="curation-card-desc">
-                    {card.desc.split('\n').map((line, i) => (
-                      <React.Fragment key={i}>
-                        {line}
-                        <br />
-                      </React.Fragment>
-                    ))}
+                  <p className="curation-card-desc" style={{
+                    whiteSpace: 'pre-line',
+                    wordBreak: 'keep-all',
+                    overflowWrap: 'break-word',
+                    wordWrap: 'break-word'
+                  }}>
+                    {card.desc}
                   </p>
                 </div>
               </div>
@@ -116,21 +116,42 @@ function BrandPage() {
             <h3 className="brand-booth-subtitle">{t('brand.booth.additionalCost.title')}</h3>
             <ul className="brand-booth-list">
               {t('brand.booth.additionalCost.items').map((item, index) => (
-                <li key={index}>{item}</li>
+                <li key={index} style={{
+                  whiteSpace: 'pre-line',
+                  wordBreak: 'keep-all',
+                  overflowWrap: 'break-word',
+                  wordWrap: 'break-word'
+                }}>
+                  {item}
+                </li>
               ))}
             </ul>
             
             <h3 className="brand-booth-subtitle">{t('brand.booth.caution.title')}</h3>
             <ul className="brand-booth-list">
               {t('brand.booth.caution.items').map((item, index) => (
-                <li key={index}>{item}</li>
+                <li key={index} style={{
+                  whiteSpace: 'pre-line',
+                  wordBreak: 'keep-all',
+                  overflowWrap: 'break-word',
+                  wordWrap: 'break-word'
+                }}>
+                  {item}
+                </li>
               ))}
             </ul>
             
             <h3 className="brand-booth-subtitle">{t('brand.booth.termination.title')}</h3>
             <ul className="brand-booth-list">
               {t('brand.booth.termination.items').map((item, index) => (
-                <li key={index}>{item}</li>
+                <li key={index} style={{
+                  whiteSpace: 'pre-line',
+                  wordBreak: 'keep-all',
+                  overflowWrap: 'break-word',
+                  wordWrap: 'break-word'
+                }}>
+                  {item}
+                </li>
               ))}
             </ul>
           </div>
@@ -167,7 +188,14 @@ function BrandPage() {
             <h3 className="brand-refund-subtitle">{t('brand.refund.caution.title')}</h3>
             <ul className="brand-refund-list">
               {t('brand.refund.caution.items').map((item, index) => (
-                <li key={index}>{item}</li>
+                <li key={index} style={{
+                  whiteSpace: 'pre-line',
+                  wordBreak: 'keep-all',
+                  overflowWrap: 'break-word',
+                  wordWrap: 'break-word'
+                }}>
+                  {item}
+                </li>
               ))}
             </ul>
           </div>
@@ -189,20 +217,27 @@ function BrandPage() {
           <h2 className="brand-earlybird-benefit-title">{t('brand.earlyBenefit.title')}</h2>
           <div className="brand-earlybird-benefit-content">
             <div className="brand-earlybird-benefit-header">
-              <h3 className="brand-earlybird-benefit-subtitle">
-                {t('brand.earlyBenefit.subtitle').split('\n').map((line, index) => (
-                  <React.Fragment key={index}>
-                    {line}
-                    <br />
-                  </React.Fragment>
-                ))}
+              <h3 className="brand-earlybird-benefit-subtitle" style={{
+                whiteSpace: 'pre-line',
+                wordBreak: 'keep-all',
+                overflowWrap: 'break-word',
+                wordWrap: 'break-word'
+              }}>
+                {t('brand.earlyBenefit.subtitle')}
               </h3>
             </div>
             <div className="brand-earlybird-benefit-separator"></div>
             <div className="brand-earlybird-benefit-list">
               <ul>
                 {t('brand.earlyBenefit.benefits').map((benefit, index) => (
-                  <li key={index}>{benefit}</li>
+                  <li key={index} style={{
+                    whiteSpace: 'pre-line',
+                    wordBreak: 'keep-all',
+                    overflowWrap: 'break-word',
+                    wordWrap: 'break-word'
+                  }}>
+                    {benefit}
+                  </li>
                 ))}
               </ul>
             </div>
@@ -223,11 +258,25 @@ function BrandPage() {
               <div className="process-step-header">{t('brand.process.steps.0.title')}</div>
               <div className="process-step-body">
                 {t('brand.process.steps.0.details').map((detail, index) => (
-                  <p key={index}>{detail}</p>
+                  <p key={index} style={{
+                    whiteSpace: 'pre-line',
+                    wordBreak: 'keep-all',
+                    overflowWrap: 'break-word',
+                    wordWrap: 'break-word'
+                  }}>
+                    {detail}
+                  </p>
                 ))}
                 <ul>
                   {t('brand.process.steps.0.notes').map((note, index) => (
-                    <li key={index}>{note}</li>
+                    <li key={index} style={{
+                      whiteSpace: 'pre-line',
+                      wordBreak: 'keep-all',
+                      overflowWrap: 'break-word',
+                      wordWrap: 'break-word'
+                    }}>
+                      {note}
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -240,11 +289,25 @@ function BrandPage() {
               <div className="process-step-header">{t('brand.process.steps.1.title')}</div>
               <div className="process-step-body">
                 {t('brand.process.steps.1.details').map((detail, index) => (
-                  <p key={index}>{detail}</p>
+                  <p key={index} style={{
+                    whiteSpace: 'pre-line',
+                    wordBreak: 'keep-all',
+                    overflowWrap: 'break-word',
+                    wordWrap: 'break-word'
+                  }}>
+                    {detail}
+                  </p>
                 ))}
                 <ul>
                   {t('brand.process.steps.1.notes').map((note, index) => (
-                    <li key={index}>{note}</li>
+                    <li key={index} style={{
+                      whiteSpace: 'pre-line',
+                      wordBreak: 'keep-all',
+                      overflowWrap: 'break-word',
+                      wordWrap: 'break-word'
+                    }}>
+                      {note}
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -257,11 +320,25 @@ function BrandPage() {
               <div className="process-step-header">{t('brand.process.steps.2.title')}</div>
               <div className="process-step-body">
                 {t('brand.process.steps.2.details').map((detail, index) => (
-                  <p key={index}>{detail}</p>
+                  <p key={index} style={{
+                    whiteSpace: 'pre-line',
+                    wordBreak: 'keep-all',
+                    overflowWrap: 'break-word',
+                    wordWrap: 'break-word'
+                  }}>
+                    {detail}
+                  </p>
                 ))}
                 <ul>
                   {t('brand.process.steps.2.notes').map((note, index) => (
-                    <li key={index}>{note}</li>
+                    <li key={index} style={{
+                      whiteSpace: 'pre-line',
+                      wordBreak: 'keep-all',
+                      overflowWrap: 'break-word',
+                      wordWrap: 'break-word'
+                    }}>
+                      {note}
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -274,11 +351,25 @@ function BrandPage() {
               <div className="process-step-header">{t('brand.process.steps.3.title')}</div>
               <div className="process-step-body">
                 {t('brand.process.steps.3.details').map((detail, index) => (
-                  <p key={index}>{detail}</p>
+                  <p key={index} style={{
+                    whiteSpace: 'pre-line',
+                    wordBreak: 'keep-all',
+                    overflowWrap: 'break-word',
+                    wordWrap: 'break-word'
+                  }}>
+                    {detail}
+                  </p>
                 ))}
                 <ul>
                   {t('brand.process.steps.3.notes').map((note, index) => (
-                    <li key={index}>{note}</li>
+                    <li key={index} style={{
+                      whiteSpace: 'pre-line',
+                      wordBreak: 'keep-all',
+                      overflowWrap: 'break-word',
+                      wordWrap: 'break-word'
+                    }}>
+                      {note}
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -291,12 +382,26 @@ function BrandPage() {
               <div className="process-step-header">{t('brand.process.steps.4.title')}</div>
               <div className="process-step-body">
                 {t('brand.process.steps.4.details').map((detail, index) => (
-                  <p key={index}>{detail}</p>
+                  <p key={index} style={{
+                    whiteSpace: 'pre-line',
+                    wordBreak: 'keep-all',
+                    overflowWrap: 'break-word',
+                    wordWrap: 'break-word'
+                  }}>
+                    {detail}
+                  </p>
                 ))}
                 {t('brand.process.steps.4.notes').length > 0 && (
                   <ul>
                     {t('brand.process.steps.4.notes').map((note, index) => (
-                      <li key={index}>{note}</li>
+                      <li key={index} style={{
+                        whiteSpace: 'pre-line',
+                        wordBreak: 'keep-all',
+                        overflowWrap: 'break-word',
+                        wordWrap: 'break-word'
+                      }}>
+                        {note}
+                      </li>
                     ))}
                   </ul>
                 )}
@@ -338,13 +443,13 @@ function BrandPage() {
                   <div className="brand-faq-a-circle">
                     <span className="brand-faq-a-text">A</span>
                   </div>
-                  <div className="brand-faq-answer-text">
-                    {item.a.split('\n').map((line, i) => (
-                      <React.Fragment key={i}>
-                        {line}
-                        <br />
-                      </React.Fragment>
-                    ))}
+                  <div className="brand-faq-answer-text" style={{
+                    whiteSpace: 'pre-line',
+                    wordBreak: 'keep-all',
+                    overflowWrap: 'break-word',
+                    wordWrap: 'break-word'
+                  }}>
+                    {item.a}
                   </div>
                 </div>
               </div>

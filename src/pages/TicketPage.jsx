@@ -159,26 +159,52 @@ function TicketPage() {
             </p>
 
             <h3 className="ticket-refund-title">{t('ticket.refund.title')}</h3>
-            <p className="ticket-refund-intro">
+            <p className="ticket-refund-intro" style={{
+              whiteSpace: 'pre-line',
+              wordBreak: 'keep-all',
+              overflowWrap: 'break-word',
+              wordWrap: 'break-word'
+            }}>
               {t('ticket.refund.intro')}
             </p>
             <ul className="ticket-refund-list">
               {t('ticket.refund.list').map((item, index) => (
-                <li key={index}>{item}</li>
+                <li key={index} style={{
+                  whiteSpace: 'pre-line',
+                  wordBreak: 'keep-all',
+                  overflowWrap: 'break-word',
+                  wordWrap: 'break-word'
+                }}>
+                  {item}
+                </li>
               ))}
             </ul>
 
             <h3 className="ticket-notes-title">{t('ticket.notes.title')}</h3>
             <ul className="ticket-notes-list">
               {t('ticket.notes.list').map((item, index) => (
-                <li key={index}>{item}</li>
+                <li key={index} style={{
+                  whiteSpace: 'pre-line',
+                  wordBreak: 'keep-all',
+                  overflowWrap: 'break-word',
+                  wordWrap: 'break-word'
+                }}>
+                  {item}
+                </li>
               ))}
             </ul>
 
             <h3 className="ticket-booking-title">{t('ticket.booking.title')}</h3>
             <ol className="ticket-booking-list">
               {t('ticket.booking.list').map((item, index) => (
-                <li key={index}>{item}</li>
+                <li key={index} style={{
+                  whiteSpace: 'pre-line',
+                  wordBreak: 'keep-all',
+                  overflowWrap: 'break-word',
+                  wordWrap: 'break-word'
+                }}>
+                  {item}
+                </li>
               ))}
             </ol>
           </div>
