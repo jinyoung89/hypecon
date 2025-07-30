@@ -80,11 +80,11 @@ const ko = {
       },
       {
         title: 'SNS콘텐츠\n허브',
-        desc: '10만명이 찍고\n공유하며자발적으로\n바이럴 생성'
+        desc: '10만명이 찍고\n공유하며 자발적으로\n바이럴 생성'
       },
       {
         title: '글로벌 유통\n파급력',
-        desc: 'K-브랜드 콘텐츠 확산\n바이어 연결\n실전형 유통 무대'
+        desc: 'K-브랜드 콘텐츠 확산\n바이어 연결로\n실전형 유통 무대'
       }
     ]
   },
@@ -537,7 +537,7 @@ const ko = {
       },
       whenWhere: {
         title: 'When & Where',
-        dates: '2026.2.19 (목) - 2.22 (일)',
+        dates: '2026. 2. 19 (목) - 2. 22 (일)',
         location: '서울 COEX C홀 전관',
         schedule: [
           {
@@ -786,8 +786,7 @@ const ko = {
   
   award: {
     hero: {
-      title: '스타일 씬을 만든 모두에게 주어지는, Z세대의 찬사',
-      subtitle: '이 무대는 스타일을 만든 사람을 위한 것입니다.'
+      title: '스타일 씬을 만든 모두에게 주어지는, Z세대의 찬사\n이 무대는 스타일을 만든 사람을 위한 것입니다.'
     },
     styleAwards: {
       title: 'HYPECON\nSTYLE AWARDS',

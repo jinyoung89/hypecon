@@ -136,42 +136,12 @@ function AboutPage() {
             fontFamily: 'Noto Sans CJK KR, sans-serif',
             fontWeight: '400',
             lineHeight: 'clamp(27px, (45/1920)*100vw, 45px)',
+            whiteSpace: 'pre-line',
+            wordBreak: 'keep-all',
+            overflowWrap: 'break-word',
             wordWrap: 'break-word'
           }}>
-            {t('about.intro.description').split('\n').map((line, index) => (
-              <React.Fragment key={index}>
-                {line.split(' ').map((word, wordIndex) => {
-                  // 언어 파일에서 강조 키워드 가져오기
-                  const highlightKeywords = t('about.intro.highlightKeywords');
-                  
-                  // 키워드가 포함된 단어인지 확인
-                  const isHighlighted = highlightKeywords.some(keyword => 
-                    word.includes(keyword) || keyword.includes(word)
-                  );
-                  
-                  if (isHighlighted) {
-                    return (
-                      <span key={wordIndex} style={{
-                        color: 'black',
-                        fontFamily: 'Noto Sans CJK KR, sans-serif',
-                        fontSize: 'clamp(19.2px, (32/1920)*100vw, 32px)',
-                        fontWeight: '700',
-                        lineHeight: 'clamp(27px, (45/1920)*100vw, 45px)'
-                      }}>
-                        {word}{wordIndex < line.split(' ').length - 1 ? ' ' : ''}
-                      </span>
-                    );
-                  }
-                  
-                  return (
-                    <span key={wordIndex}>
-                      {word}{wordIndex < line.split(' ').length - 1 ? ' ' : ''}
-                    </span>
-                  );
-                })}
-                {index < t('about.intro.description').split('\n').length - 1 && <br />}
-              </React.Fragment>
-            ))}
+            {t('about.intro.description')}
           </span>
         </div>
       </section>
@@ -243,43 +213,12 @@ function AboutPage() {
             fontFamily: 'Noto Sans CJK KR, sans-serif',
             fontWeight: '400',
             lineHeight: 'clamp(27px, (45/1920)*100vw, 45px)',
-            wordWrap: 'break-word',
-            whiteSpace: 'pre-line'
+            whiteSpace: 'pre-line',
+            wordBreak: 'keep-all',
+            overflowWrap: 'break-word',
+            wordWrap: 'break-word'
           }}>
-            {t('about.why.desc').split('\n').map((line, index) => (
-              <React.Fragment key={index}>
-                {line.split(' ').map((word, wordIndex) => {
-                  // 언어 파일에서 강조 키워드 가져오기
-                  const highlightKeywords = t('about.why.highlightKeywords');
-                  
-                  // 키워드가 포함된 단어인지 확인
-                  const isHighlighted = highlightKeywords.some(keyword => 
-                    word.includes(keyword) || keyword.includes(word)
-                  );
-                  
-                  if (isHighlighted) {
-                    return (
-                      <span key={wordIndex} style={{
-                        color: 'var(--hypecon-white)',
-                        fontFamily: 'Noto Sans CJK KR, sans-serif',
-                        fontSize: 'clamp(21.6px, (36/1920)*100vw, 36px)',
-                        fontWeight: '700',
-                        lineHeight: 'clamp(27px, (45/1920)*100vw, 45px)'
-                      }}>
-                        {word}{wordIndex < line.split(' ').length - 1 ? ' ' : ''}
-                      </span>
-                    );
-                  }
-                  
-                  return (
-                    <span key={wordIndex}>
-                      {word}{wordIndex < line.split(' ').length - 1 ? ' ' : ''}
-                    </span>
-                  );
-                })}
-                {index < t('about.why.desc').split('\n').length - 1 && <br />}
-              </React.Fragment>
-            ))}
+            {t('about.why.desc')}
           </span>
         </div>
       </section>

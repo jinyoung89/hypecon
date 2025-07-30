@@ -21,13 +21,13 @@ function BuyerPage() {
       <section className="buyer-hero-section" style={{backgroundImage: `url(${buyerImg})`}}>
         <div className="buyer-hero-overlay"></div>
         <div className="buyer-hero-text">
-          <div className="buyer-hero-main-title">
-            {t('buyer.hero.subtitle').split('\n').map((line, index) => (
-              <React.Fragment key={index}>
-                {line}
-                <br />
-              </React.Fragment>
-            ))}
+          <div className="buyer-hero-main-title" style={{
+            whiteSpace: 'pre-line',
+            wordBreak: 'keep-all',
+            overflowWrap: 'break-word',
+            wordWrap: 'break-word'
+          }}>
+            {t('buyer.hero.subtitle')}
           </div>
         </div>
       </section>
@@ -37,13 +37,13 @@ function BuyerPage() {
         <div className="buyer-info-inner">
           <h2 className="buyer-info-title">{t('buyer.registration.title')}</h2>
           <div className="buyer-info-content">
-            <p className="buyer-info-text">
-              {t('buyer.registration.text').split('\n').map((line, index) => (
-                <React.Fragment key={index}>
-                  {line}
-                  <br />
-                </React.Fragment>
-              ))}
+            <p className="buyer-info-text" style={{
+              whiteSpace: 'pre-line',
+              wordBreak: 'keep-all',
+              overflowWrap: 'break-word',
+              wordWrap: 'break-word'
+            }}>
+              {t('buyer.registration.text')}
             </p>
             <p className="buyer-info-subtext">
               {t('buyer.registration.subtext')}
@@ -159,13 +159,13 @@ function BuyerPage() {
                   <div className="buyer-faq-a-circle">
                     <span className="buyer-faq-a-text">A</span>
                   </div>
-                  <div className="buyer-faq-answer-text">
-                    {item.a.split('\n').map((line, i) => (
-                      <React.Fragment key={i}>
-                        {line}
-                        <br />
-                      </React.Fragment>
-                    ))}
+                  <div className="buyer-faq-answer-text" style={{
+                    whiteSpace: 'pre-line',
+                    wordBreak: 'keep-all',
+                    overflowWrap: 'break-word',
+                    wordWrap: 'break-word'
+                  }}>
+                    {item.a}
                   </div>
                 </div>
               </div>

@@ -40,13 +40,13 @@ function InfluencerPage() {
             <p className="influencer-info-text">
               {t('influencer.registration.text')}
             </p>
-            <p className="influencer-info-subtext">
-              {t('influencer.registration.subtext').split('\n').map((line, index) => (
-                <React.Fragment key={index}>
-                  {line}
-                  <br />
-                </React.Fragment>
-              ))}
+            <p className="influencer-info-subtext" style={{
+              whiteSpace: 'pre-line',
+              wordBreak: 'keep-all',
+              overflowWrap: 'break-word',
+              wordWrap: 'break-word'
+            }}>
+              {t('influencer.registration.subtext')}
             </p>
           </div>
         </div>
@@ -131,13 +131,13 @@ function InfluencerPage() {
             <h3 className="influencer-criteria-title">{t('influencer.info.criteria.title')}</h3>
             <ul className="influencer-criteria-list">
               {t('influencer.info.criteria.list').map((item, index) => (
-                <li key={index}>
-                  {item.split('\n').map((line, lineIndex) => (
-                    <React.Fragment key={lineIndex}>
-                      {line}
-                      <br />
-                    </React.Fragment>
-                  ))}
+                <li key={index} style={{
+                  whiteSpace: 'pre-line',
+                  wordBreak: 'keep-all',
+                  overflowWrap: 'break-word',
+                  wordWrap: 'break-word'
+                }}>
+                  {item}
                 </li>
               ))}
             </ul>
@@ -184,13 +184,13 @@ function InfluencerPage() {
                   <div className="influencer-faq-a-circle">
                     <span className="influencer-faq-a-text">A</span>
                   </div>
-                  <div className="influencer-faq-answer-text">
-                    {item.a.split('\n').map((line, index) => (
-                      <React.Fragment key={index}>
-                        {line}
-                        <br />
-                      </React.Fragment>
-                    ))}
+                  <div className="influencer-faq-answer-text" style={{
+                    whiteSpace: 'pre-line',
+                    wordBreak: 'keep-all',
+                    overflowWrap: 'break-word',
+                    wordWrap: 'break-word'
+                  }}>
+                    {item.a}
                   </div>
                 </div>
               </div>

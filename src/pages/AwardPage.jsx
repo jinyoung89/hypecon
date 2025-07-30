@@ -12,9 +12,13 @@ function AwardPage() {
       <section className="award-hero-section" style={{backgroundImage: `url(${awardImg})`}}>
         <div className="award-hero-overlay"></div>
         <div className="award-hero-text">
-          <div className="award-hero-title">
-            {t('award.hero.title')}<br/>
-            {t('award.hero.subtitle')}
+          <div className="award-hero-title" style={{
+            whiteSpace: 'pre-line',
+            wordBreak: 'keep-all',
+            overflowWrap: 'break-word',
+            wordWrap: 'break-word'
+          }}>
+            {t('award.hero.title')}
           </div>
         </div>
       </section>
@@ -22,7 +26,12 @@ function AwardPage() {
       {/* HYPECON STYLE AWARDS 섹션 */}
       <section className="award-style-awards-section">
         <div className="award-style-awards-inner">
-          <h2 className="award-style-awards-title">
+          <h2 className="award-style-awards-title" style={{
+            whiteSpace: 'pre-line',
+            wordBreak: 'keep-all',
+            overflowWrap: 'break-word',
+            wordWrap: 'break-word'
+          }}>
             {t('award.styleAwards.title')}
           </h2>
           <div className="award-style-awards-content">
@@ -87,7 +96,14 @@ function AwardPage() {
                         <div className="award-selection-stage-title">{stage.title}</div>
                         <div className="award-selection-stage-details">: {stage.details}</div>
                         {stage.note && (
-                          <div className="award-selection-stage-note">{stage.note}</div>
+                          <div className="award-selection-stage-note" style={{
+                            whiteSpace: 'pre-line',
+                            wordBreak: 'keep-all',
+                            overflowWrap: 'break-word',
+                            wordWrap: 'break-word'
+                          }}>
+                            {stage.note}
+                          </div>
                         )}
                       </div>
                     </div>
@@ -154,13 +170,13 @@ function AwardPage() {
                   <div className="award-faq-a-circle">
                     <span className="award-faq-a-text">A</span>
                   </div>
-                  <div className="award-faq-answer-text">
-                    {faq.a.split('\n').map((line, lineIndex) => (
-                      <React.Fragment key={lineIndex}>
-                        {line}
-                        {lineIndex < faq.a.split('\n').length - 1 && <br />}
-                      </React.Fragment>
-                    ))}
+                  <div className="award-faq-answer-text" style={{
+                    whiteSpace: 'pre-line',
+                    wordBreak: 'keep-all',
+                    overflowWrap: 'break-word',
+                    wordWrap: 'break-word'
+                  }}>
+                    {faq.a}
                   </div>
                 </div>
               </div>

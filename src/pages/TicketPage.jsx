@@ -23,13 +23,13 @@ function TicketPage() {
         <div className="ticket-info-inner">
           <h2 className="ticket-info-title">{t('ticket.info.title')}</h2>
           <div className="ticket-info-content">
-            <p className="ticket-info-text">
-              {t('ticket.info.text').split('\n').map((line, index) => (
-                <React.Fragment key={index}>
-                  {line}
-                  <br />
-                </React.Fragment>
-              ))}
+            <p className="ticket-info-text" style={{
+              whiteSpace: 'pre-line',
+              wordBreak: 'keep-all',
+              overflowWrap: 'break-word',
+              wordWrap: 'break-word'
+            }}>
+              {t('ticket.info.text')}
             </p>
           </div>
         </div>
@@ -89,21 +89,21 @@ function TicketPage() {
           <div className="ticket-whenwhere-box">
             <div className="ticket-whenwhere-content">
               <div className="ticket-whenwhere-left">
-                <div className="ticket-whenwhere-dates">
-                  {t('ticket.whenWhere.dates').split('\n').map((line, index) => (
-                    <React.Fragment key={index}>
-                      {line}
-                      <br />
-                    </React.Fragment>
-                  ))}
+                <div className="ticket-whenwhere-dates" style={{
+                  whiteSpace: 'pre-line',
+                  wordBreak: 'keep-all',
+                  overflowWrap: 'break-word',
+                  wordWrap: 'break-word'
+                }}>
+                  {t('ticket.whenWhere.dates')}
                 </div>
-                <div className="ticket-whenwhere-location">
-                  {t('ticket.whenWhere.location').split('\n').map((line, index) => (
-                    <React.Fragment key={index}>
-                      {line}
-                      <br />
-                    </React.Fragment>
-                  ))}
+                <div className="ticket-whenwhere-location" style={{
+                  whiteSpace: 'pre-line',
+                  wordBreak: 'keep-all',
+                  overflowWrap: 'break-word',
+                  wordWrap: 'break-word'
+                }}>
+                  {t('ticket.whenWhere.location')}
                 </div>
               </div>
               <div className="ticket-whenwhere-right">
@@ -149,13 +149,13 @@ function TicketPage() {
                 </tbody>
               </table>
             </div>
-            <p className="ticket-price-note">
-              {t('ticket.price.note').split('\n').map((line, index) => (
-                <React.Fragment key={index}>
-                  {line}
-                  <br />
-                </React.Fragment>
-              ))}
+            <p className="ticket-price-note" style={{
+              whiteSpace: 'pre-line',
+              wordBreak: 'keep-all',
+              overflowWrap: 'break-word',
+              wordWrap: 'break-word'
+            }}>
+              {t('ticket.price.note')}
             </p>
 
             <h3 className="ticket-refund-title">{t('ticket.refund.title')}</h3>
