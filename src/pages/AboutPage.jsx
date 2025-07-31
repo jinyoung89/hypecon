@@ -126,7 +126,7 @@ function AboutPage() {
         padding: '0'
       }}></section>
 
-      {/* F2F2F2 색상 섹션 */}
+      {/* Z세대가 주목하는  섹션 */}
       <section style={{
         background: '#F2F2F2',
         height: 'clamp(460px, (920/1920)*100vw, 920px)',
@@ -156,7 +156,40 @@ function AboutPage() {
             overflowWrap: 'break-word',
             wordWrap: 'break-word'
           }}>
-            {t('about.intro.description')}
+            {(() => {
+              const description = t('about.intro.description');
+              const keywords = t('about.intro.highlightKeywords');
+              
+              // 키워드를 길이 순으로 정렬 (긴 키워드부터 처리)
+              const sortedKeywords = [...keywords].sort((a, b) => b.length - a.length);
+              
+              // 텍스트를 키워드로 분할하고 강조 처리
+              let result = [description];
+              
+              sortedKeywords.forEach(keyword => {
+                const newResult = [];
+                result.forEach(part => {
+                  if (typeof part === 'string') {
+                    const parts = part.split(keyword);
+                    parts.forEach((textPart, index) => {
+                      if (textPart) newResult.push(textPart);
+                      if (index < parts.length - 1) {
+                        newResult.push(
+                          <span key={`${keyword}-${index}`} style={{ fontWeight: '700' }}>
+                            {keyword}
+                          </span>
+                        );
+                      }
+                    });
+                  } else {
+                    newResult.push(part);
+                  }
+                });
+                result = newResult;
+              });
+              
+              return result;
+            })()}
           </span>
         </div>
       </section>

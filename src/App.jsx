@@ -33,6 +33,7 @@ import youtubeIcon from './assets/icons/youtube-icon.svg';
 import facebookIcon from './assets/icons/facebook-icon.svg';
 import tiktokIcon from './assets/icons/tiktok-icon.svg';
 import instagramIcon from './assets/icons/instagram-icon.svg';
+import footerImage from './assets/images/footer.png';
 
 // Import Language Context
 import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
@@ -231,12 +232,17 @@ function Footer() {
     <footer style={{width:'100%', background:'var(--hypecon-dark)', marginTop:'0', padding: '4rem 0 2rem 0', textAlign: 'center'}}>
       <div className="container mx-auto px-4">
         {/* 메인 타이틀 */}
-        <div style={{marginBottom: '2rem'}}>
-          <div style={{fontSize: 'clamp(1.4rem, 14vw, 2.5rem)', fontWeight: '900', color: 'var(--hypecon-main)', marginBottom: '0rem', lineHeight: '0.8'}}>
-            HYPECON
-          </div>
-          <div style={{fontSize: 'clamp(1.1rem, 12vw, 2.2rem)', fontWeight: '500', color: 'var(--hypecon-main)', marginBottom: '0rem', lineHeight: '0.8'}}>
-            STYLE WEEK
+        <div style={{marginBottom: '2rem', textAlign: 'center'}}>
+          <div style={{marginBottom: '0rem', lineHeight: '0.8', display: 'flex', justifyContent: 'center'}}>
+            <img 
+              src={footerImage} 
+              alt="HYPECON STYLE WEEK" 
+              style={{
+                width: 'clamp(200px, 20vw, 300px)',
+                height: 'auto',
+                objectFit: 'contain'
+              }}
+            />
           </div>
         </div>
         
@@ -306,9 +312,6 @@ function Footer() {
           marginBottom: '2rem',
           lineHeight: '1.2'
         }}>
-          <div style={{fontSize: '1rem', fontWeight: '500', marginBottom: '1rem', color: '#DDDDDD', fontFamily: 'Noto Sans KR'}}>
-            HYPECON STYLE WEEK 운영사무국
-          </div>
           <div style={{fontSize: '1rem', fontWeight: '350', color: '#DDDDDD', fontFamily: 'Noto Sans KR', lineHeight: 1.5}}>
             서울시 강남구 테헤란로 142 아크플레이스 5F<br/>
             문의. hello@hypeconweek.com

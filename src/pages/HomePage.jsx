@@ -88,7 +88,7 @@ function HomePage() {
       {/* 중간 콘텐츠 블록 */}
       <section className="home-section-block" style={{
         width: '100vw',
-        height: 'clamp(400px, 33.33vw, 640px)',
+        height: 'clamp(460px, 47.92vw, 920px)',
         position: 'relative',
         background: '#F2F2F2',
         margin: '0',
@@ -279,7 +279,7 @@ function HomePage() {
        {/* 인플루언서/바이어/프레스 섹션 */}
        <section className="home-influencer-section" style={{
         background: `url(${sec4Img}) center/cover no-repeat`,
-        height: 'clamp(400px, 39.53vw, 759px)',
+        height: 'clamp(420px, 43.75vw, 840px)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
@@ -525,6 +525,15 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+              {/* 흰색 여백바 */}
+              <div style={{
+        width: '100%',
+        height: 'clamp(120px, 12.5vw, 240px)',
+        background: '#FFFFFF',
+        margin: 0,
+        padding: 0
+      }} />
 
      
 
