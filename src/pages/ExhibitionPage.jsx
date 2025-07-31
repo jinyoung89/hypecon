@@ -240,7 +240,9 @@ function ExhibitionPage() {
               </div>
               <div className="b2b-item-content">
                 <div className="b2b-item-desc">
-                  {t('exhibition.b2b.features')[0]}
+                  {t('exhibition.b2b.features').map((feature, index) => 
+                    index === 0 ? `· ${feature}` : `\n· ${feature}`
+                  ).join('')}
                 </div>
               </div>
             </div>

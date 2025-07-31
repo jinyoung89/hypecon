@@ -48,6 +48,11 @@ function AppContent() {
     return location.pathname === path;
   };
 
+  // 페이지 이동 시 스크롤을 맨 위로 올리기
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   // 모바일 메뉴 오픈 시 스크롤 방지
   useEffect(() => {
     if (isMobileMenuOpen) {

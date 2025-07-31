@@ -24,7 +24,7 @@ const en = {
     section1: {
       title: 'BEYOND ONLINE EXPERIENCE STYLE',
       desc: 'Where Gen Z and brands share their sensibilities\nand reactions spark new worlds. A fashion and beauty fair.',
-      button: 'Booth Registration Notification'
+      button: 'Early Booth Registration'
     },
     section2: {
       desc: 'THE MOMENT WHEN BRANDS\nAND FANDOMS CONNECT DIRECTLY.',
@@ -62,7 +62,7 @@ const en = {
     ]
   },
   experience: {
-    badge: 'Wear it. Snap it. Share it. Sell it. Go global.\nThis is the real stage for your brand.',
+    badge: 'Wear it. Snap it. Share it. Sell it. Go global.\nYour brand\'s real stage',
     title: 'For Gen Z, experience is the product.',
     desc: 'HYPECON STYLE WEEK Seoul 2026 isn\'t just where brands get seen.',
     highlightKeywords: [
@@ -143,8 +143,8 @@ const en = {
     },
     organizer: {
       title: 'Hosted / Organized by',
-      host: 'Host: Planus Inc.',
-      coHost: 'Co-organizers: Planus Inc, GREH Inc.'
+      host: 'Host: Plenus Inc.',
+      coHost: 'Co-organizers: Plenus Inc., GRAE Inc.'
     },
     participants: {
       title: 'Key Participants',
@@ -169,7 +169,7 @@ const en = {
     },
     highlights: {
       day1: {
-        title: 'Opening Performance, AI Runway Show, VIP & Celebrity Guests\nHyper Photo Spots Open',
+        title: 'Opening Performance, AI Runway Show, VIP & Celebrity Guests\nHyper Photo Spots',
         desc: 'A media- and content-driven launch day that maximizes attention from both brands and fans\nGlobal mega-influencers lead content creation'
       },
       day2: {
@@ -236,17 +236,16 @@ const en = {
     b2b: {
       title: 'B2B Buyer Program',
       program: {
-        title: 'Global Buyer\nPre-matching\nProgram'
+        title: 'Pre-scheduled\nGlobal Buyer\nMatching'
       },
       features: [
-        'A pre-matched global buyer program for participating brands.',
         'Opt-in buyer distribution → auto-matching system',
         'Curated global buyers (fashion, beauty, retail, select shops, duty-free)',
         '1:1 lounge meetings scheduled in advance',
         'Support: interpreters, buyer profiles, sample display'
       ],
       lounge: {
-        title: 'Exclusive Buyer Lounge',
+        title: 'Exclusive\nBuyer\nLounge',
         features: [
           'Dedicated VIP Business Lounge inside the venue',
           'Relaxation space for buyers with brand brochures and catalogs',
@@ -262,14 +261,14 @@ const en = {
         ]
       },
       showcase: {
-        title: 'Product Sourcing Showcase',
+        title: 'Product\nSourcing\nShowcase',
         features: [
           'Brand pitch sessions for buyers',
           'Hosted on the main HYPECON stage or in buyer-exclusive showrooms'
         ]
       },
       online: {
-        title: 'Online B2B Distribution Support',
+        title: 'Online B2B\nDistribution\nSupport',
         features: [
           'Priority access to online/offline B2B order meetings',
           'Digital showroom integration for global buyers'
@@ -307,11 +306,11 @@ const en = {
      brand: {
       hero: {
         title: 'BRAND REGISTRATION',
-        subtitle: 'Showcase at HYPECON STYLE WEEK\nYour first step toward becoming a global brand.'
+        subtitle: 'Joining HYPECON STYLE WEEK\nis your first step toward becoming a global brand.'
       },
       engagement: {
         title: 'ENGAGEMENT GUIDE',
-        text: 'Your opportunity to connect with Gen Z and global fandoms. Now is your brand\'s moment to shine.\nHYPECON is more than just an exhibition.\n\nA real-time commerce platform where products are tried on, captured, and shared.\nJoin this Gen Z style fair and unleash your brand\'s full potential.'
+        text: 'Meet Gen Z and global fandoms. Now is your moment to lead.\nHYPECON is more than just a showcase —\nit’s a real-time commerce experience where your brand is worn, captured, and shared.\nElevate your brand recognition in this Gen Z–driven style fair.\n'
       },
       curation: {
         title: 'Brand Curation Standards',
@@ -319,7 +318,7 @@ const en = {
         cards: [
           {
             title: 'Brands That Move Fandoms',
-            desc: 'Not just followers —\nbrands with real fans who\nwear, shoot, and share'
+            desc: 'Not just followers —\nbrands with real communities \nthat wear it, shoot it, and share it.'
           },
           {
             title: 'Brands Defined by Real Style',
