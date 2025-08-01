@@ -133,7 +133,8 @@ const ko = {
     date: '2026. 2.19 (목) ~ 2.22 (일) | 서울 COEX C Hall'
   },
   poster: {
-    title: 'HYPECON STYLE WEEK SEOUL 2026'
+    title: 'HYPECON STYLE WEEK SEOUL 2026',
+    alt: 'HYPECON STYLE WEEK SEOUL 2026 포스터'
   },
   organizer: {
     title: '주최/주관',
@@ -232,7 +233,7 @@ const ko = {
       title: '해외 바이어\n사전매칭\n프로그램'
     },
     features: [
-      '· 브랜드 신청 시 \'바이어 대상 유통 희망\' 체크 → 자동 매칭 시스템 적용\n· 분야별 맞춤 바이어 초청 (패션, 뷰티, 리테일, 편집숍, 면세점 등)\n· 1:1 매칭된 시간표에 따라 라운지에서 비즈니스 미팅 진행\n· 지원 항목: 통역 인력, 바이어 사전 프로필, 샘플 세팅 공간'
+      '브랜드 신청 시 \'바이어 대상 유통 희망\' 체크 → 자동 매칭 시스템 적용\n· 분야별 맞춤 바이어 초청 (패션, 뷰티, 리테일, 편집숍, 면세점 등)\n· 1:1 매칭된 시간표에 따라 라운지에서 비즈니스 미팅 진행\n· 지원 항목: 통역 인력, 바이어 사전 프로필, 샘플 세팅 공간'
     ],
     lounge: {
       title: '바이어 전용\n라운지 운영',
@@ -318,7 +319,7 @@ const ko = {
         },
         {
           title: '반응이 입증된 브랜드',
-          desc: '오프런, 인증샷, 리셀, 재구매\n실제 소비자 따라붙는\n리얼 반응 브랜드'
+          desc: '오프런, 인증샷, 리셀, 재구매\n실제 소비가 따라붙는\n리얼 반응 브랜드'
         },
         {
           title: '더 커질 수 있는 브랜드',
@@ -336,6 +337,51 @@ const ko = {
     },
     booth: {
       title: '부스 타입 및 참가비 안내',
+      boothTypes: {
+        title: '부스타입',
+        notice: '*모든 금액은 VAT 별도 입니다.',
+        labels: {
+          earlyPrice: '얼리버드 특가',
+          regularPrice: '정가'
+        },
+        independent: {
+          title: '독립부스',
+          description: '시공 자유, 4부스 이상부터',
+          earlyPrice: '260만 원',
+          regularPrice: '320만 원',
+          alt: '독립부스 이미지'
+        },
+        basic: {
+          title: '기본부스(옥타)',
+          earlyPrice: '340만 원',
+          regularPrice: '400만 원',
+          alt: '기본부스 이미지'
+        },
+        artwall: {
+          title: '아트월 부스- 2부스',
+          earlyPrice: '580만 원',
+          regularPrice: '700만 원',
+          alt: '아트월 부스 이미지'
+        },
+        acrylic4: {
+          title: '아크릴 부스 - 4부스',
+          earlyPrice: '1,120만 원',
+          regularPrice: '1,360만 원',
+          alt: '아크릴 부스 4부스 이미지'
+        },
+        acrylic6: {
+          title: '아크릴 부스 - 6부스',
+          earlyPrice: '1,680만 원',
+          regularPrice: '2,040만 원',
+          alt: '아크릴 부스 6부스 이미지'
+        },
+        acrylic8: {
+          title: '아크릴 부스 - 8부스',
+          earlyPrice: '2,200만 원',
+          regularPrice: '2,680만 원',
+          alt: '아크릴 부스 8부스 이미지'
+        }
+      },
       table: {
         headers: ['부스 타입', '얼리버드 특가(VAT 별도)', '정가(VAT 별도)', '비고'],
         rows: [
@@ -403,7 +449,7 @@ const ko = {
       benefits: [
         '얼리버드 특가 적용 (선착순)',
         '위치 우선 배정 (입구/핵심 동선/무대 인접)',
-        '코너 부스 추가 비용 면제 (2부스 이상 신청 시)',
+        '코너 부스 50% 할인 (2부스 이상 신청 시)',
         'SNS 사전 홍보 콘텐츠 기회',
         '브랜드 단독 패션쇼/AI 패션쇼 참여 우선권 (선정 브랜드 한정)',
         '브랜드 인터뷰 콘텐츠 및 프로모션 영상 우선 배정',
@@ -465,7 +511,7 @@ const ko = {
       ]
     },
     payment: {
-      title: '참가비 납부 안내',
+      title: '참가 신청하기',
       deposit: {
         title: '계약금 (총 참가비의 50%)',
         desc: '참가 확정 후, 인보이스 수신일로부터 7일 이내 납부'
@@ -488,7 +534,7 @@ const ko = {
         },
         {
           q: '얼리 특가 혜택은 무엇인가요?',
-          a: '부스 참가비 최대 100만 원 할인 (약 20~25%)\n인기 존 우선 배정\n사전 공개 콘텐츠 홍보 우선 노출'
+          a: '부스 참가비 20~25% 할인\n인기 존 우선 배정\n사전 공개 콘텐츠 홍보 우선 노출'
         },
         {
           q: '참가 브랜드는 언제까지 모집하나요?',
@@ -686,7 +732,7 @@ const ko = {
   influencer: {
     hero: {
       title: 'INFLUENCER REGISTRATION',
-      subtitle: '하입콘이 초청한 인플루언서라는 건,\nZ세대 스타일 씬을 ‘이끄는 이름’이 되었다는 뜻입니다.\n누구나 신청할 수 있지만, 누구나 초대받을 수는 없습니다.'
+      subtitle: 'HYPECON의 초대, 그 자체가 증명입니다.\n당신은 지금 Z세대 스타일 씬을 이끄는 이름입니다'
     },
     registration: {
       title: 'INFLUENCER REGISTRATION',
@@ -936,7 +982,7 @@ const ko = {
           icon: 'instagram',
           label: '공식 SNS',
           details: [
-            '@hypeconwe',
+            '@hypeconweek',
             '가장 빠른 소식은 인스타그램에서'
           ]
         },

@@ -13,6 +13,7 @@ alwaysApply: true
 Size Conversion Rule for Figma Design
 1. 디자인 사이즈 기준
 기준 해상도: 1920px (Desktop)
+
 2. 변환 공식
 ▸ 폰트
 clamp(최소 rem, (피그마값 / 1920) * 100vw, 최대 rem)
@@ -22,6 +23,7 @@ clamp(최소 rem, (피그마값 / 1920) * 100vw, 최대 rem)
 clamp(최소 px, (피그마값 / 1920) * 100vw, 최대 px)
 최소값(px): 피그마 값의 50%
 최대값(px): 피그마 값 동일
+
 3. 모바일 대응 전략
 ▸ 대응 해상도 구분
 Desktop: 1280px 이상
@@ -35,7 +37,8 @@ clamp로 최소/최대값을 제한해 요소 붕괴 방지
 여백: clamp(8px, xvw, 16px) 형태 사용
 레이아웃: Desktop은 복수열, Mobile은 단일열 정렬
 이미지 및 아이콘은 max-width: 100% 사용, SVG는 viewBox 기준 scaling
-모바일 우선 설계: 핵심 정보는 상단 배치, scroll 최소화, 불필요한 복잡도 제거
+모바일 우선 설계: 핵심 정보는 상단 배치, scroll 최소화
+
 4. 범용적 버튼 너비 룰
 ▸ 기본 원칙
 웹(Desktop/Tablet): width: 100%, max-width: clamp(480px, (960/1920)100vw, 960px)로 최대 너비 제한
@@ -49,19 +52,23 @@ clamp로 최소/최대값을 제한해 요소 붕괴 방지
 width: 100% (모바일 대응)
 max-width: clamp(480px, (960/1920)100vw, 960px) (웹 최대 너비 제한)
 이 방식으로 모든 해상도에서 적절한 크기 보장
+
 5. 텍스트 처리
 텍스트는 언어 관리 시스템을 사용
 텍스트가 추가되었을 경우 시스템에 등록하고 번역을 반드시 추가할 것
+
 6. 색상 사용
 공통 색상 변수로만 관리
 정의된 색상 외에는 사용 금지
+
 7. 텍스트 줄바꿈 처리 규칙
 텍스트의 문단이 깨지지 않게 주의 / \n 문자를 기준으로 텍스트를 분할하여 각 줄에 <br /> 태그 추가
 문단 유지: pre-line으로 \n 문자를 기준으로 줄바꿈이 유지됨
 word-break: keep-all;
 overflow-wrap: break-word;
 word-wrap: break-word;
-8. 카드형 제목 요소 스타일 규칙
+
+8. 스타일 규칙
 ▸ 반응형 패딩
 Desktop: padding: 0.7rem 1.5rem
 Tablet: clamp(10px, (16/1920)100vw, 16px) clamp(20px, (32/1920)100vw, 32px)
@@ -72,3 +79,5 @@ Tablet: clamp(16px, (24/1920)100vw, 24px)
 Mobile: clamp(0.9rem, 3vw, 1.1rem)
 ▸ 반응형 높이
 모든 해상도: clamp(60px, (120/1920)100vw, 120px) (최소 60px 보장)
+
+

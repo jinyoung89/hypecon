@@ -28,7 +28,7 @@
 
 /* WHY BRANDS CHOOSE HYPECON 섹션 */
 .about-section-why {
-  min-height: clamp(400px, 33vw, 640px);
+  min-height: clamp(600px, 62.5vw, 1200px);
   background: var(--hypecon-dark);
   display: flex;
   flex-direction: column;
@@ -38,8 +38,8 @@
 }
 
 .about-why-title {
-  font-size: clamp(4rem, 10.42vw, 12.5rem);
-  line-height: clamp(3rem, 8.54vw, 10.25rem);
+  font-size: clamp(6.75rem, (180/1920)*100vw, 11.25rem);
+  line-height: clamp(5.53rem, (147.6/1920)*100vw, 9.23rem);
   color: #E1F800;
   text-align: center;
   font-family: 'Bebas Neue, sans-serif';
@@ -54,58 +54,154 @@
   height: clamp(60px, 6.09vw, 117px);
   text-align: center;
   color: white;
-  font-size: clamp(1.5rem, 2.08vw, 2.5rem);
+  font-size: clamp(1.35rem, (36/1920)*100vw, 2.25rem);
   font-family: 'Noto Sans, sans-serif';
   font-weight: 500;
-  line-height: clamp(1.8rem, 2.6vw, 3.125rem);
+  line-height: clamp(1.69rem, (45/1920)*100vw, 2.81rem);
   word-wrap: break-word;
 }
 
-/* Z세대 경험 섹션 */
+/* Z세대 경험 섹션 - 완전 재작성 */
 .about-section-experience {
   padding: clamp(2rem, 5vw, 4rem) 0;
   background: white;
-  min-height: clamp(400px, 50vw, 800px);
+  min-height: clamp(564px, (1128/1920)*100vw, 1128px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  margin: 0;
 }
 
+/* 배지 스타일 */
+.about-experience-badge {
+  width: clamp(480px, (960/1920)*100vw, 960px);
+  height: clamp(60px, (120/1920)*100vw, 120px);
+  border-radius: 60px;
+  background: #000000 !important;
+  color: #00E5A8 !important;
+  font-size: clamp(1.35rem, (36/1920)*100vw, 2.25rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  margin-bottom: clamp(49.5px, (99/1920)*100vw, 99px);
+}
+
+/* 타이틀 스타일 */
 .about-experience-title {
-  width: clamp(400px, 55.83vw, 1072px);
-  height: clamp(40px, 3.91vw, 75.09px);
+  width: clamp(300px, 55.83vw, 1072px);
+  height: auto;
   text-align: center;
-  color: black;
-  font-size: clamp(2rem, 3.13vw, 3.75rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--hypecon-dark);
   font-family: 'Noto Sans, sans-serif';
-  font-weight: 700;
-  line-height: clamp(1.8rem, 2.6vw, 3.125rem);
-  word-wrap: break-word;
-  margin-bottom: clamp(1rem, 2vw, 2rem);
-}
-
-.about-experience-desc {
-  width: clamp(600px, 80vw, 1600px);
-  height: clamp(30px, 2.66vw, 51.06px);
-  text-align: center;
-  color: black;
-  font-size: clamp(1.2rem, 1.67vw, 2rem);
-  font-family: 'Noto Sans, sans-serif';
+  font-size: clamp(2.25rem, (60/1920)*100vw, 3.75rem);
   font-weight: 700;
   line-height: clamp(1.8rem, 2.6vw, 3.125rem);
   word-wrap: break-word;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-bottom: clamp(1rem, 2vw, 2rem);
+}
+
+/* 설명 스타일 */
+.about-experience-desc {
+  width: clamp(300px, 80vw, 1600px);
+  height: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--hypecon-dark);
+  font-family: 'Noto Sans, sans-serif';
+  font-size: clamp(1.2rem, (32/1920)*100vw, 2rem);
+  font-weight: 700;
+  line-height: clamp(1.8rem, 2.6vw, 3.125rem);
+  word-wrap: break-word;
+  white-space: pre-line;
+  word-break: keep-all;
+  overflow-wrap: break-word;
   margin-bottom: clamp(2rem, 4vw, 3rem);
+  min-height: auto;
+  overflow: visible;
+}
+
+/* 카드 컨테이너 */
+.about-experience-cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(1rem, 2vw, 2rem);
+  padding: 0 clamp(1rem, 3vw, 2rem);
+}
+
+/* 개별 카드 */
+.about-card {
+  width: clamp(123.5px, (247/1920)*100vw, 247px);
+  height: clamp(123.5px, (247/1920)*100vw, 247px);
+  border-radius: 50%;
+  padding: clamp(1rem, 2vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.about-card-dark {
+  background: black;
+}
+
+.about-card-main {
+  background: #00E5A8;
+}
+
+.about-card-title {
+  font-size: clamp(1rem, (32/1920)*100vw, 2rem);
+  font-weight: 700;
+  line-height: clamp(1.2rem, (38.4/1920)*100vw, 2.4rem);
+  margin-bottom: clamp(0.5rem, 1vw, 1rem);
+  white-space: pre-line;
+  word-break: keep-all;
+}
+
+.about-card-dark .about-card-title {
+  color: #00E5A8;
+}
+
+.about-card-main .about-card-title {
+  color: black;
+}
+
+.about-card-desc {
+  font-size: clamp(0.75rem, (24/1920)*100vw, 1.5rem);
+  font-weight: 400;
+  line-height: clamp(0.9rem, (28.8/1920)*100vw, 1.8rem);
+  white-space: pre-line;
+  word-break: keep-all;
+}
+
+.about-card-dark .about-card-desc {
+  color: white;
+}
+
+.about-card-main .about-card-desc {
+  color: black;
 }
 
 /* 도파민 섹션 */
 .about-2col-section {
-  width: 100vw;
+  width: 100%;
   height: auto;
-  min-height: clamp(800px, 91.04vw, 1748px);
+  min-height: clamp(900px, (1800/1920)*100vw, 1800px);
   background: #F2F2F2;
   display: flex;
   flex-direction: column;
@@ -113,7 +209,7 @@
   justify-content: flex-start;
   padding: clamp(2rem, 4vw, 4rem) 0;
   overflow: visible;
-  position: static;
+  margin: 0;
 }
 
 /* 글로벌 브랜드 어필 섹션 */
@@ -276,6 +372,34 @@
   }
   
   /* Z세대 경험 섹션 모바일 */
+  .about-section-experience {
+    min-height: clamp(800px, (1600/1920)*100vw, 1600px) !important;
+    height: auto !important;
+    padding: clamp(3rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem) !important;
+    flex-direction: column !important;
+  }
+  
+  .about-experience-badge {
+    width: 100% !important;
+    max-width: clamp(480px, (960/1920)*100vw, 960px) !important;
+    height: clamp(60px, (120/1920)*100vw, 120px) !important;
+    padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 3vw, 1.5rem) !important;
+    font-size: clamp(1rem, 3vw, 1.5rem) !important;
+    line-height: clamp(1.3rem, 3.5vw, 1.8rem) !important;
+    margin-bottom: clamp(2rem, 5vw, 3rem) !important;
+    text-align: center !important;
+    overflow: visible !important;
+    background: #000000 !important;
+    color: #00E5A8 !important;
+    white-space: pre-line !important;
+    word-break: keep-all !important;
+    overflow-wrap: break-word !important;
+    border-radius: clamp(30px, 8vw, 60px) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
   .about-experience-title {
     width: 100% !important;
     height: auto !important;
@@ -284,19 +408,82 @@
   }
   
   .about-experience-desc {
+    width: 90% !important;
+    max-width: 350px !important;
+    height: auto !important;
+    font-size: clamp(0.8rem, 3vw, 1.2rem) !important;
+    line-height: clamp(1.3rem, 3.5vw, 1.8rem) !important;
+    white-space: pre-line !important;
+    word-break: keep-all !important;
+    overflow-wrap: break-word !important;
+    margin-bottom: clamp(2rem, 5vw, 3rem) !important;
+    text-align: center !important;
+    overflow: visible !important;
+  }
+  
+  .about-experience-cards {
+    width: 100vw !important;
+    padding: 0 clamp(1rem, 3vw, 2rem) !important;
+    gap: clamp(2rem, 4vw, 3rem) !important;
+  }
+  
+  .about-card {
     width: 100% !important;
     height: auto !important;
+    min-height: clamp(150px, 20vw, 250px) !important;
+    padding: clamp(1rem, 2vw, 2rem) !important;
+    border-radius: clamp(15px, 2vw, 25px) !important;
+    background: white !important;
+    border: 2px solid black !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+  }
+  
+  .about-card-dark {
+    background: #00E5A8 !important;
+  }
+  
+  .about-card-main {
+    background: black !important;
+  }
+  
+  .about-card-title {
     font-size: clamp(1rem, 3vw, 1.5rem) !important;
-    line-height: clamp(1.3rem, 3.5vw, 1.8rem) !important;
+    line-height: clamp(1.2rem, 3.5vw, 1.8rem) !important;
     white-space: normal !important;
     overflow: visible !important;
     text-overflow: unset !important;
+    width: 100% !important;
+    color: black !important;
+    text-align: center !important;
+  }
+  
+  .about-card-dark .about-card-title {
+    color: #00E5A8 !important;
+  }
+  
+  .about-card-main .about-card-title {
+    color: black !important;
+  }
+  
+  .about-card-desc {
+    font-size: clamp(0.8rem, 2.5vw, 1.2rem) !important;
+    line-height: clamp(1.2rem, 3vw, 1.5rem) !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+  
+  .about-card-dark .about-card-desc {
+    color: white !important;
+  }
+  
+  .about-card-main .about-card-desc {
+    color: black !important;
   }
   
   /* 도파민 섹션 모바일 */
   .about-2col-section {
     height: auto !important;
-    min-height: clamp(1200px, 150vw, 2000px) !important;
+    min-height: clamp(1600px, 200vw, 2500px) !important;
     padding: clamp(2rem, 4vw, 3rem) 0 !important;
   }
   

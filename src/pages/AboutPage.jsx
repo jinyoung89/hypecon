@@ -206,7 +206,7 @@ function AboutPage() {
       {/* WHY BRANDS CHOOSE HYPECON 섹션 */}
       <section className="about-section about-section-why" style={{
         background: `var(--hypecon-dark)`,
-        height: 'clamp(420px, (840/1920)*100vw, 840px)',
+        height: 'clamp(600px, (1200/1920)*100vw, 1200px)',
         '@media (max-width: 768px)': {
           height: 'auto !important',
           minHeight: 'clamp(600px, 80vw, 800px) !important',
@@ -216,21 +216,22 @@ function AboutPage() {
       }}>
         <div className="about-why-title" style={{
           width: 'clamp(600px, (1200/1920)*100vw, 1200px)',
-          height: 'clamp(284.44px, (568.88/1920)*100vw, 568.88px)',
+          height: 'clamp(180px, (360/1920)*100vw, 360px)',
           textAlign: 'center',
           justifyContent: 'center',
           display: 'flex',
           flexDirection: 'column',
           color: 'var(--hypecon-teal)',
-          fontSize: 'clamp(108px, (180/1920)*100vw, 180px)',
+          fontSize: 'clamp(6.75rem, (180/1920)*100vw, 11.25rem)',
           fontFamily: 'Bebas Neue, sans-serif',
           fontWeight: '400',
-          lineHeight: 'clamp(88.56px, (147.6/1920)*100vw, 147.6px)',
+          lineHeight: 'clamp(5.53rem, (147.6/1920)*100vw, 9.23rem)',
           wordWrap: 'break-word',
           whiteSpace: 'pre-line',
           '@media (max-width: 768px)': {
             fontSize: 'clamp(2.5rem, 12vw, 6rem) !important',
             lineHeight: 'clamp(2rem, 10vw, 5rem) !important',
+            height: 'auto !important',
             marginBottom: 'clamp(2rem, 4vw, 3rem) !important',
             textAlign: 'center !important',
             whiteSpace: 'pre-line !important',
@@ -257,10 +258,10 @@ function AboutPage() {
         }}>
           <span style={{
             color: 'var(--hypecon-white)',
-            fontSize: 'clamp(21.6px, (36/1920)*100vw, 36px)',
+            fontSize: 'clamp(1.35rem, (36/1920)*100vw, 2.25rem)',
             fontFamily: 'Noto Sans CJK KR, sans-serif',
             fontWeight: '400',
-            lineHeight: 'clamp(27px, (45/1920)*100vw, 45px)',
+            lineHeight: 'clamp(1.69rem, (45/1920)*100vw, 2.81rem)',
             whiteSpace: 'pre-line',
             wordBreak: 'keep-all',
             overflowWrap: 'break-word',
@@ -272,117 +273,20 @@ function AboutPage() {
       </section>
 
       {/* Z세대 경험 소비 강조 섹션 */}
-      <section className="about-section about-section-experience" style={{
-        height: 'clamp(564px, (1128/1920)*100vw, 1128px)',
-        '@media (max-width: 768px)': {
-          height: 'auto !important',
-          minHeight: 'clamp(564px, (1128/1920)*100vw, 1128px) !important',
-          padding: 'clamp(2rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem) !important',
-          flexDirection: 'column !important'
-        }
-      }}>
-        <div className="about-experience-badge" style={{
-          width: 'clamp(480px, (960/1920)*100vw, 960px)',
-          height: 'clamp(60px, (120/1920)*100vw, 120px)',
-          borderRadius: '60px',
-          border: '0 solid var(--hypecon-dark)',
-          background: 'var(--hypecon-dark)',
-          color: 'var(--hypecon-teal)',
-          fontSize: 'clamp(21.6px, (36/1920)*100vw, 36px)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          whiteSpace: 'nowrap',
-          '@media (max-width: 768px)': {
-            width: '100% !important',
-            height: 'auto !important',
-            minHeight: 'clamp(60px, (120/1920)*100vw, 120px) !important',
-            fontSize: 'clamp(0.8rem, 3vw, 1.2rem) !important',
-            padding: 'clamp(0.5rem, 2vw, 1rem) clamp(1rem, 3vw, 2rem) !important',
-            marginBottom: 'clamp(1.5rem, 4vw, 2.5rem) !important',
-            textAlign: 'center !important',
-            borderRadius: 'clamp(30px, 4vw, 60px) !important',
-            whiteSpace: 'nowrap !important'
-          }
-        }}>
+      <section className="about-section about-section-experience">
+        <div className="about-experience-badge">
           {t('about.experience.badge')}
         </div>
-        <div className="about-experience-title" style={{
-          width: 'clamp(400px, 55.83vw, 1072px)',
-          height: 'clamp(40px, 3.91vw, 75.09px)',
-          textAlign: 'center',
-          justifyContent: 'center',
-          display: 'flex',
-          flexDirection: 'column',
-          color: 'var(--hypecon-dark)',
-          fontFamily: 'Noto Sans, sans-serif',
-          wordWrap: 'break-word',
-          whiteSpace: 'nowrap',
-          '@media (max-width: 768px)': {
-            width: '85% !important',
-            height: 'auto !important',
-            marginBottom: 'clamp(1rem, 3vw, 2rem) !important',
-            textAlign: 'center !important',
-            whiteSpace: 'pre-wrap !important',
-            padding: '0 clamp(1rem, 3vw, 2rem) !important'
-          }
-        }}>
+        <div className="about-experience-title">
           {t('about.experience.title')}
         </div>
-        <div className="about-experience-desc" style={{
-          width: 'clamp(600px, 80vw, 1600px)',
-          height: 'clamp(30px, 2.66vw, 51.06px)',
-          textAlign: 'center',
-          justifyContent: 'center',
-          display: 'flex',
-          flexDirection: 'column',
-          color: 'var(--hypecon-dark)',
-          fontFamily: 'Noto Sans, sans-serif',
-          wordWrap: 'break-word',
-          whiteSpace: 'pre-line',
-          '@media (max-width: 768px)': {
-            width: '100% !important',
-            height: 'auto !important',
-            whiteSpace: 'pre-line !important',
-            marginBottom: 'clamp(2rem, 5vw, 3rem) !important',
-            textAlign: 'center !important'
-          }
-        }}>
+        <div className="about-experience-desc">
           {t('about.experience.desc')}
         </div>
-        <div className="about-experience-cards" style={{
-          '@media (max-width: 768px)': {
-            display: 'flex !important',
-            flexDirection: 'column !important',
-            gap: 'clamp(1rem, 3vw, 2rem) !important',
-            padding: '0 clamp(1rem, 3vw, 2rem) !important'
-          }
-        }}>
+        <div className="about-experience-cards">
           {t('about.experience.cards').map((item, idx) => (
-            <div className={`about-card ${idx % 2 === 1 ? 'about-card-main' : 'about-card-dark'}`} key={idx} style={{
-              backgroundColor: idx % 2 === 0 ? 'black' : '#00E5A8',
-              '@media (max-width: 768px)': {
-                width: '100% !important',
-                height: 'auto !important',
-                minHeight: 'clamp(120px, 30vw, 200px) !important',
-                padding: 'clamp(1.5rem, 4vw, 2.5rem) !important',
-                borderRadius: 'clamp(15px, 4vw, 20px) !important',
-                textAlign: 'center !important',
-                backgroundColor: idx % 2 === 0 ? 'black !important' : '#00E5A8 !important'
-              }
-            }}>
-              <div className="about-card-title" style={{
-                color: idx % 2 === 0 ? '#00E5A8' : 'black',
-                whiteSpace: 'pre-line',
-                '@media (max-width: 768px)': {
-                  fontSize: 'clamp(1.2rem, 5vw, 2rem) !important',
-                  lineHeight: 'clamp(1.4rem, 5.5vw, 2.3rem) !important',
-                  marginBottom: 'clamp(0.5rem, 2vw, 1rem) !important',
-                  textAlign: 'center !important',
-                  whiteSpace: 'pre-line !important',
-                  color: idx % 2 === 0 ? '#00E5A8 !important' : 'black !important'
-                }
-              }}>
+            <div className={`about-card ${idx % 2 === 1 ? 'about-card-main' : 'about-card-dark'}`} key={idx}>
+              <div className="about-card-title">
                 {item.title.split('\n').map((line, lineIndex) => (
                   <React.Fragment key={lineIndex}>
                     {line}
@@ -390,17 +294,7 @@ function AboutPage() {
                   </React.Fragment>
                 ))}
               </div>
-              <div className="about-card-desc" style={{
-                color: idx % 2 === 0 ? 'white' : 'black',
-                whiteSpace: 'pre-line',
-                '@media (max-width: 768px)': {
-                  fontSize: 'clamp(0.9rem, 3.5vw, 1.3rem) !important',
-                  lineHeight: 'clamp(1.2rem, 4vw, 1.6rem) !important',
-                  textAlign: 'center !important',
-                  whiteSpace: 'pre-line !important',
-                  color: idx % 2 === 0 ? 'white !important' : 'black !important'
-                }
-              }}>
+              <div className="about-card-desc">
                 {item.desc.split('\n').map((line, lineIndex) => (
                   <React.Fragment key={lineIndex}>
                     {line}
@@ -413,17 +307,17 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* 도파민 쇼핑+콘텐츠 스타일 페어 섹션 */}
+      {/* 도파민 쇼핑+콘텐츠 스타일 페어 섹션 (카드 영역 통합) */}
       <section className="about-section about-2col-section" style={{
-        width: '100vw',
+        width: '100%',
         height: 'auto',
-        minHeight: 'clamp(800px, 91.04vw, 1748px)',
         background: '#F2F2F2',
         margin: '0',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'flex-start',
+        justifyContent: 'center',
+        gap: 'clamp(1rem, 2vw, 2rem)',
         padding: 'clamp(2rem, 4vw, 4rem) 0',
         overflow: 'visible'
       }}>
@@ -431,34 +325,40 @@ function AboutPage() {
         <div style={{
           position: 'relative',
           width: '100%',
-          height: 'clamp(300px, 20.73vw, 398px)',
+          height: 'auto',
+          minHeight: 'clamp(150px, (300/1920)*100vw, 300px)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          padding: '0 clamp(1rem, 3vw, 2rem)',
+          padding: 'clamp(0.5rem, 1vw, 1rem) clamp(1rem, 3vw, 2rem)',
           margin: '0 auto',
-          gap: 'clamp(2rem, 4vw, 4rem)'
+          gap: 'clamp(2rem, 4vw, 4rem)',
+          maxWidth: 'clamp(600px, (1200/1920)*100vw, 1200px)'
         }}>
           {/* 왼쪽 텍스트 섹션 */}
           <div style={{
-            width: 'clamp(300px, 30.05vw, 577px)',
+            flex: '1',
+            width: 'auto',
+            maxWidth: 'clamp(225px, (450/1920)*100vw, 450px)',
             height: 'auto',
-            minHeight: 'clamp(100px, 8vw, 150px)',
-            justifyContent: 'flex-end',
             display: 'flex',
             flexDirection: 'column',
+            justifyContent: 'center',
             color: 'black',
-            gap: 'clamp(0.1rem, 0.2vw, 0.3rem)'
+            gap: 'clamp(0.5rem, 1vw, 1rem)'
           }}>
             <span style={{
               color: 'black',
               fontSize: 'clamp(1.575rem, (42/1920)*100vw, 2.625rem)',
               fontFamily: 'Noto Sans, sans-serif',
-              fontStyle: 'normal',
               fontWeight: '400',
-              lineHeight: '1.2',
-              letterSpacing: '-1.26px',
-              wordWrap: 'break-word'
+              lineHeight: 'clamp(1.89rem, (50.4/1920)*100vw, 3.15rem)',
+              wordWrap: 'break-word',
+              whiteSpace: 'pre-line',
+              wordBreak: 'keep-all',
+              overflowWrap: 'break-word',
+              display: 'block',
+              textAlign: 'left'
             }}>
               {t('about.content.title')}
             </span>
@@ -466,11 +366,14 @@ function AboutPage() {
               color: 'black',
               fontSize: 'clamp(2.325rem, (62/1920)*100vw, 3.875rem)',
               fontFamily: 'Noto Sans, sans-serif',
-              fontStyle: 'normal',
               fontWeight: '700',
-              lineHeight: '1.2',
-              letterSpacing: '-1.86px',
-              wordWrap: 'break-word'
+              lineHeight: 'clamp(2.79rem, (74.4/1920)*100vw, 4.65rem)',
+              wordWrap: 'break-word',
+              whiteSpace: 'pre-line',
+              wordBreak: 'keep-all',
+              overflowWrap: 'break-word',
+              display: 'block',
+              textAlign: 'left'
             }}>
               {t('about.content.strong1')}
             </span>
@@ -478,50 +381,51 @@ function AboutPage() {
               color: 'black',
               fontSize: 'clamp(3.225rem, (86/1920)*100vw, 5.375rem)',
               fontFamily: 'Noto Sans, sans-serif',
-              fontStyle: 'normal',
               fontWeight: '700',
-              lineHeight: '1.2',
-              letterSpacing: '-2.58px',
-              wordWrap: 'break-word'
+              lineHeight: 'clamp(3.87rem, (103.2/1920)*100vw, 6.45rem)',
+              wordWrap: 'break-word',
+              whiteSpace: 'pre-line',
+              wordBreak: 'keep-all',
+              overflowWrap: 'break-word',
+              display: 'block',
+              textAlign: 'left'
             }}>
               {t('about.content.strong2')}
             </span>
           </div>
-          
           {/* 오른쪽 이미지 */}
           <div style={{
-            width: 'clamp(300px, 32.96vw, 632.80px)',
-            height: 'clamp(200px, 20.7vw, 397.48px)',
-            borderRadius: '12px',
+            width: 'clamp(234px, (468/1920)*100vw, 468px)',
+            height: 'clamp(147px, (294/1920)*100vw, 294px)',
+            borderRadius: '8px',
             overflow: 'hidden',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center'
+            flexShrink: 0,
+            backgroundColor: '#f0f0f0'
           }}>
             <img 
               src={aboutSec04Img} 
-              alt={t('about.content.imageAlt')} 
+              alt="HYPECON Style"
               style={{
                 width: '100%',
                 height: '100%',
-                objectFit: 'cover'
+                objectFit: 'cover',
+                display: 'block'
               }}
             />
           </div>
         </div>
 
-        {/* 하단 6개 카드 영역 */}
+        {/* 통합된 카드 영역 */}
         <div className="about-cards-container" style={{
           width: '100%',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
+          justifyContent: 'center',
           gap: 'clamp(1rem, 2vw, 2rem)',
-          marginTop: 'clamp(2rem, 4vw, 4rem)',
           padding: '0 clamp(2rem, 4vw, 3rem)',
           '@media (max-width: 768px)': {
             gap: 'clamp(1.5rem, 4vw, 2.5rem) !important',
-            marginTop: 'clamp(2rem, 5vw, 3rem) !important',
             padding: '0 clamp(1rem, 3vw, 2rem) !important'
           }
         }}>
@@ -533,6 +437,7 @@ function AboutPage() {
               position: 'relative',
               display: 'flex',
               alignItems: 'center',
+              justifyContent: 'center',
               '@media (max-width: 768px)': {
                 width: '100% !important',
                 height: 'auto !important',
@@ -543,8 +448,8 @@ function AboutPage() {
               }
             }}>
               <div className="about-card-title-box" style={{
-                width: 'clamp(200px, 18.23vw, 350px)',
-                height: 'clamp(80px, 7.81vw, 150px)',
+                width: 'clamp(150.5px, (301/1920)*100vw, 301px)',
+                height: 'clamp(75px, (150/1920)*100vw, 150px)',
                 padding: 'clamp(1rem, 1.56vw, 1.875rem) clamp(1rem, 2.5vw, 3rem)',
                 background: 'black',
                 borderRadius: '30px',
@@ -570,10 +475,12 @@ function AboutPage() {
                   display: 'flex',
                   flexDirection: 'column',
                   color: '#00E5A8',
-                  fontSize: 'clamp(1rem, 1.88vw, 2.25rem)',
-                  fontFamily: 'Noto Sans, sans-serif',
-                  fontWeight: '700',
-                  lineHeight: 'clamp(1.2rem, 2.08vw, 2.5rem)',
+                  fontSize: 'clamp(19.2px, (32/1920)*100vw, 32px)',
+                  fontFamily: '"Noto Sans CJK KR", sans-serif',
+                  fontStyle: 'normal',
+                  fontWeight: '900',
+                  lineHeight: 'clamp(24px, (40/1920)*100vw, 40px)',
+                  letterSpacing: '-0.96px',
                   wordWrap: 'break-word',
                   whiteSpace: 'nowrap',
                   overflow: 'hidden',
@@ -589,8 +496,8 @@ function AboutPage() {
                 </div>
               </div>
               <div className="about-card-content-box" style={{
-                width: 'clamp(400px, 45.52vw, 874px)',
-                height: 'clamp(80px, 7.81vw, 150px)',
+                width: 'clamp(323.5px, (647/1920)*100vw, 647px)',
+                height: 'clamp(75px, (150/1920)*100vw, 150px)',
                 background: '#FFF',
                 borderRadius: '30px',
                 border: '0 solid #000',
@@ -613,13 +520,15 @@ function AboutPage() {
                   justifyContent: 'center',
                   display: 'flex',
                   flexDirection: 'column',
-                  color: 'black',
-                  fontSize: 'clamp(0.8rem, 1.67vw, 2rem)',
-                  fontFamily: 'Noto Sans, sans-serif',
-                  fontWeight: '500',
-                  lineHeight: 'clamp(1.2rem, 2.6vw, 3.125rem)',
-                  wordWrap: 'break-word',
+                  color: '#000',
+                  fontSize: 'clamp(14.4px, (24/1920)*100vw, 24px)',
+                  fontFamily: '"Noto Sans CJK KR", sans-serif',
+                  fontStyle: 'normal',
+                  fontWeight: '400',
+                  lineHeight: 'clamp(19.8px, (33/1920)*100vw, 33px)',
+                  letterSpacing: '-0.72px',
                   textAlign: 'center',
+                  wordWrap: 'break-word',
                   '@media (max-width: 768px)': {
                     fontSize: 'clamp(0.9rem, 3.5vw, 1.2rem) !important',
                     lineHeight: 'clamp(1.2rem, 4vw, 1.6rem) !important',

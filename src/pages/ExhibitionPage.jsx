@@ -8,6 +8,7 @@ import exIc2 from '../assets/images/ex_ic_2.png';
 import exIc3 from '../assets/images/ex_ic_3.png';
 import exIc4 from '../assets/images/ex_ic_4.png';
 import exPoster from '../assets/images/ex_poster.png';
+import arrowIcon from '../assets/icons/arrow-icon.svg';
 import { useLanguage } from '../contexts/LanguageContext';
 
 function ExhibitionPage() {
@@ -42,11 +43,14 @@ function ExhibitionPage() {
           </div>
           <div className="exhibition-poster-content">
             <div className="exhibition-poster-image">
-              <img src={exPoster} alt="HYPECON STYLE WEEK SEOUL 2026 포스터" />
+              <img src={exPoster} alt={t('exhibition.poster.alt')} />
             </div>
             <div className="exhibition-poster-info">
               <div className="poster-info-item">
-                <span className="info-label">🔷 {t('exhibition.organizer.title')}</span>
+                <span className="info-label">
+                  <img src={arrowIcon} alt="arrow" />
+                  {t('exhibition.organizer.title')}
+                </span>
                 <div className="info-content">
                   {t('exhibition.organizer.host')}<br/>
                   {t('exhibition.organizer.coHost')}
@@ -54,8 +58,11 @@ function ExhibitionPage() {
               </div>
               
               <div className="poster-info-item">
-                <span className="info-label">🔹 {t('exhibition.participants.title')}</span>
-                <div className="info-content">
+                <span className="info-label">
+                  <img src={arrowIcon} alt="arrow" />
+                  {t('exhibition.participants.title')}
+                </span>
+                <div className="info-content info-content-participants">
                   {t('exhibition.participants.list').map((item, index) => (
                     <React.Fragment key={index}>
                       • {item}<br/>
@@ -65,14 +72,20 @@ function ExhibitionPage() {
               </div>
               
               <div className="poster-info-item">
-                <span className="info-label">🎟️ {t('exhibition.scale.title')}</span>
+                <span className="info-label">
+                  <img src={arrowIcon} alt="arrow" />
+                  {t('exhibition.scale.title')}
+                </span>
                 <div className="info-content">
                   {t('exhibition.scale.desc')}
                 </div>
               </div>
               
               <div className="poster-info-item">
-                <span className="info-label">🟣 {t('exhibition.categories.title')}</span>
+                <span className="info-label">
+                  <img src={arrowIcon} alt="arrow" />
+                  {t('exhibition.categories.title')}
+                </span>
                 <div className="info-content">
                   {t('exhibition.categories.list').map((item, index) => (
                     <React.Fragment key={index}>
@@ -302,7 +315,7 @@ function ExhibitionPage() {
         </div>
       </section>
 
-      {/* WHY JOIN 섹션 */}
+      {/* WHY JOIN & FOR 통합 섹션 */}
       <section className="exhibition-why-join-section">
         <div className="exhibition-why-join-inner">
           <div className="why-join-content">
@@ -312,10 +325,7 @@ function ExhibitionPage() {
             <img src={exSec07Img} alt="Why Join HYPECON" />
           </div>
         </div>
-      </section>
-
-      {/* FOR 섹션들 */}
-      <section className="exhibition-for-section">
+        
         <div className="exhibition-for-inner">
           <div className="for-grid">
             <div className="for-item">

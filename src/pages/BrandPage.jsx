@@ -1,7 +1,11 @@
 import React from 'react';
 import './BrandPage.css';
 import brandImg from '../assets/images/brand.png';
-import brand2Img from '../assets/images/brand2.png';
+import booth1Img from '../assets/images/booth1.png';
+import booth2Img from '../assets/images/booth2.png';
+import booth3Img from '../assets/images/booth3.png';
+import booth4Img from '../assets/images/booth4.png';
+import booth5Img from '../assets/images/booth5.png';
 import process01 from '../assets/images/process_01.png';
 import process02 from '../assets/images/process_02.png';
 import process03 from '../assets/images/process_03.png';
@@ -9,6 +13,38 @@ import process04 from '../assets/images/process_04.png';
 import process05 from '../assets/images/process_05.png';
 import arrow from '../assets/images/arrow.png';
 import { useLanguage } from '../contexts/LanguageContext';
+
+// 부스 섹션 컴포넌트
+const BoothSection = ({ title, description, image, altText, earlyPrice, regularPrice, isGrayBackground = false }) => {
+  const { t } = useLanguage();
+  
+  return (
+    <section className={`brand-booth-type-section ${isGrayBackground ? 'brand-booth-type-section-gray' : ''}`}>
+      <div className="brand-booth-type-inner">
+        <h3 className="brand-booth-type-subtitle">{title}</h3>
+        {description && <p className="brand-booth-type-desc">{description}</p>}
+        <div className="brand-booth-type-image">
+          <img src={image} alt={altText} />
+        </div>
+        <div className="brand-booth-type-price">
+          <div className="price-row">
+            <span className="price-label">{t('brand.booth.boothTypes.labels.earlyPrice')}</span>
+            <span className="price-colon">:</span>
+            <span className="price-value">{earlyPrice}</span>
+          </div>
+          <div className="price-row">
+            <span className="price-label">{t('brand.booth.boothTypes.labels.regularPrice')}</span>
+            <span className="price-colon">:</span>
+            <span className="price-value">{regularPrice}</span>
+          </div>
+        </div>
+        <div className="brand-booth-type-content">
+          {/* 부스 타입 내용 */}
+        </div>
+      </div>
+    </section>
+  );
+};
 
 function BrandPage() {
   const { t } = useLanguage();
@@ -82,9 +118,85 @@ function BrandPage() {
         </div>
       </section>
 
- 
+      {/* 부스 타입 섹션 */}
+      <section className="brand-booth-type-section">
+        <div className="brand-booth-type-inner">
+          <h2 className="brand-booth-type-title">{t('brand.booth.boothTypes.title')}</h2>
+          <p className="brand-booth-type-notice">{t('brand.booth.boothTypes.notice')}</p>
+          <h3 className="brand-booth-type-subtitle">{t('brand.booth.boothTypes.independent.title')}</h3>
+          <p className="brand-booth-type-desc">{t('brand.booth.boothTypes.independent.description')}</p>
+          <div className="brand-booth-type-image">
+            <img src={booth1Img} alt={t('brand.booth.boothTypes.independent.alt')} />
+          </div>
+          <div className="brand-booth-type-price">
+            <div className="price-row">
+              <span className="price-label">{t('brand.booth.boothTypes.labels.earlyPrice')}</span>
+              <span className="price-colon">:</span>
+              <span className="price-value">{t('brand.booth.boothTypes.independent.earlyPrice')}</span>
+            </div>
+            <div className="price-row">
+              <span className="price-label">{t('brand.booth.boothTypes.labels.regularPrice')}</span>
+              <span className="price-colon">:</span>
+              <span className="price-value">{t('brand.booth.boothTypes.independent.regularPrice')}</span>
+            </div>
+          </div>
+          <div className="brand-booth-type-content">
+            {/* 부스 타입 내용 */}
+          </div>
+        </div>
+      </section>
 
-     
+      {/* 기본부스 섹션 */}
+      <BoothSection
+        title={t('brand.booth.boothTypes.basic.title')}
+        image={booth2Img}
+        altText={t('brand.booth.boothTypes.basic.alt')}
+        earlyPrice={t('brand.booth.boothTypes.basic.earlyPrice')}
+        regularPrice={t('brand.booth.boothTypes.basic.regularPrice')}
+        isGrayBackground={true}
+      />
+
+      {/* 아트월 부스 섹션 */}
+      <BoothSection
+        title={t('brand.booth.boothTypes.artwall.title')}
+        image={booth3Img}
+        altText={t('brand.booth.boothTypes.artwall.alt')}
+        earlyPrice={t('brand.booth.boothTypes.artwall.earlyPrice')}
+        regularPrice={t('brand.booth.boothTypes.artwall.regularPrice')}
+      />
+
+    
+
+      <BoothSection
+        title={t('brand.booth.boothTypes.acrylic4.title')}
+        image={booth4Img}
+        altText={t('brand.booth.boothTypes.acrylic4.alt')}
+        earlyPrice={t('brand.booth.boothTypes.acrylic4.earlyPrice')}
+        regularPrice={t('brand.booth.boothTypes.acrylic4.regularPrice')}
+        isGrayBackground={true}
+      />
+
+        {/* 아크릴 부스 섹션 */}
+        <BoothSection
+        title={t('brand.booth.boothTypes.acrylic6.title')}
+        image={booth4Img}
+        altText={t('brand.booth.boothTypes.acrylic6.alt')}
+        earlyPrice={t('brand.booth.boothTypes.acrylic6.earlyPrice')}
+        regularPrice={t('brand.booth.boothTypes.acrylic6.regularPrice')}
+      
+        
+      />
+
+
+<BoothSection
+        title={t('brand.booth.boothTypes.acrylic8.title')}
+        image={booth5Img}
+        altText={t('brand.booth.boothTypes.acrylic8.alt')}
+        earlyPrice={t('brand.booth.boothTypes.acrylic8.earlyPrice')}
+        regularPrice={t('brand.booth.boothTypes.acrylic8.regularPrice')}
+        isGrayBackground={true}
+         
+      />
 
       {/* 부스 타입 및 참가비 안내 섹션 */}
       <section className="brand-booth-section">
@@ -202,17 +314,8 @@ function BrandPage() {
         </div>
       </section>
 
-      {/* 부스 배치도 섹션 */}
-      <section className="brand-layout-section">
-        <div className="brand-layout-inner">
-          <h2 className="brand-layout-title">{t('brand.layout.title')}</h2>
-          <div className="brand-layout-image">
-            <img src={brand2Img} alt="부스 배치도" />
-          </div>
-        </div>
-      </section>
-{/* 얼리버드 혜택 섹션 */}
-<section className="brand-earlybird-benefit-section">
+      {/* 얼리버드 혜택 섹션 */}
+      <section className="brand-earlybird-benefit-section">
         <div className="brand-earlybird-benefit-inner">
           <h2 className="brand-earlybird-benefit-title">{t('brand.earlyBenefit.title')}</h2>
           <div className="brand-earlybird-benefit-content">

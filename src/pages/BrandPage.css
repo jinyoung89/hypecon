@@ -18,6 +18,8 @@
   background: var(--color-white);
   color: var(--color-gray-dark);
   box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
 }
 
 /* 히어로 섹션 */
@@ -75,6 +77,7 @@
 
 /* ENGAGEMENT GUIDE 섹션 */
 .brand-engagement-section {
+  position: relative;
   background: var(--color-black);
   color: var(--color-white);
   padding: 5rem 0;
@@ -82,10 +85,11 @@
   justify-content: center;
   min-height: clamp(460px, (920/1920)*100vw, 920px);
   height: clamp(460px, (920/1920)*100vw, 920px);
+  box-sizing: border-box;
 }
 
 .brand-engagement-inner {
-  max-width: 1000px;
+  max-width: 1400px;
   width: 100%;
   padding: 0 2rem;
   text-align: center;
@@ -112,7 +116,7 @@
 }
 
 .brand-engagement-content {
-  max-width: 1000px;
+  max-width: 1400px;
   margin: 0 auto;
   text-align: center;
 }
@@ -133,57 +137,62 @@
 
 /* 브랜드 큐레이션 기준 섹션 */
 .brand-curation-section {
-  background: var(--color-white);
+  position: relative;
+  background: #F2F2F2;
   padding: clamp(3rem, 4.17vw, 5rem) 0;
   display: flex;
   justify-content: center;
   min-height: clamp(960px, (1920/1920)*100vw, 1920px);
-  height: clamp(960px, (1920/1920)*100vw, 1920px);
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .brand-curation-inner {
-  max-width: clamp(800px, 52.08vw, 1000px);
+  max-width: clamp(1000px, 80vw, 1600px);
   width: 100%;
   padding: 0 clamp(1rem, 2.08vw, 2rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  min-height: 100%;
 }
 
 .brand-curation-title {
   font-size: clamp(27px, (45/1920)*100vw, 45px);
   font-weight: 700;
   color: var(--color-white);
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(18px, (36/1920)*100vw, 36px);
   text-align: center;
   display: inline-block;
   background: var(--color-black);
   color: var(--color-white);
-  border-radius: 50px;
-  padding: 0.8rem 2.5rem;
-  margin: 0 auto 2.5rem;
+  border-radius: clamp(25px, (50/1920)*100vw, 50px);
+  padding: clamp(12.8px, (25.6/1920)*100vw, 25.6px) clamp(20px, (40/1920)*100vw, 40px);
+  margin: 0 auto clamp(20px, (40/1920)*100vw, 40px);
   display: block;
-  width: clamp(300px, 52.08vw, 1000px);
-  height: clamp(40px, 7.08vw, 136px);
+  width: clamp(480px, (960/1920)*100vw, 960px);
+  height: clamp(60px, (120/1920)*100vw, 120px);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Noto Sans CJK KR', sans-serif;
   font-style: normal;
-  line-height: 50px;
+  line-height: clamp(30px, (50/1920)*100vw, 50px);
   letter-spacing: -2.25px;
 }
 
 .brand-curation-desc {
-  font-size: clamp(14px, (20/1920)*100vw, 20px);
-  line-height: clamp(20px, (28/1920)*100vw, 28px);
-  color: var(--color-black);
-  margin: 0 0 clamp(2rem, 3.13vw, 3rem) 0;
-  font-family: 'Noto Sans', sans-serif;
+  color: #000;
+  font-family: "Noto Sans CJK KR", sans-serif;
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(30px, (50/1920)*100vw, 50px);
+  letter-spacing: -1.8px;
+  margin: 0 0 clamp(24px, (48/1920)*100vw, 48px) 0;
   text-align: center;
-  max-width: clamp(600px, 62.5vw, 800px);
+  max-width: clamp(800px, 90vw, 1400px);
   margin-left: auto;
   margin-right: auto;
 }
@@ -192,69 +201,75 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: clamp(1rem, 2vw, 1.5rem);
+  gap: clamp(12px, (24/1920)*100vw, 24px);
 }
 
 .curation-card {
   background: var(--color-black);
-  border-radius: 20px;
-  padding: clamp(1rem, 2vw, 1.5rem);
+  border-radius: clamp(10px, (20/1920)*100vw, 20px);
+  padding: clamp(12px, (24/1920)*100vw, 24px);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: start;
-  height: 100%;
+  width: clamp(310px, (620/1920)*100vw, 620px);
+  height: clamp(260px, (520/1920)*100vw, 520px);
 }
 
 .curation-card-title {
-  font-size: clamp(18px, (30/1920)*100vw, 30px);
+  color: #000;
+  text-align: center;
+  font-family: "Noto Sans CJK KR", sans-serif;
+  font-size: clamp(25.2px, (42/1920)*100vw, 42px);
+  font-style: normal;
   font-weight: 700;
-  color: var(--color-black);
-  margin-bottom: 1.5rem;
+  line-height: clamp(30px, (50/1920)*100vw, 50px);
+  letter-spacing: -1.26px;
+  margin-top: clamp(29px, (58/1920)*100vw, 58px);
+  margin-bottom: clamp(31.5px, (63/1920)*100vw, 63px);
   background: var(--color-primary);
-  color: var(--color-black);
-  border-radius: 50px;
-  padding: 0.7rem 1.5rem;
+  border-radius: clamp(25px, (50/1920)*100vw, 50px);
+  padding: clamp(11.2px, (22.4/1920)*100vw, 22.4px) clamp(18px, (36/1920)*100vw, 36px);
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: clamp(260px, (520/1920)*100vw, 520px);
   height: clamp(60px, (120/1920)*100vw, 120px);
-  text-align: center;
-  font-family: 'Noto Sans CJK KR', sans-serif;
-  font-style: normal;
-  line-height: 50px;
-  letter-spacing: -1.26px;
+  flex-shrink: 0;
 }
 
 .curation-card-content {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: clamp(8px, (16/1920)*100vw, 16px);
   width: 100%;
   align-items: center;
   text-align: center;
 }
 
 .curation-card-desc {
-  font-size: clamp(18px, (30/1920)*100vw, 30px);
-  font-family: 'Noto Sans CJK KR', sans-serif;
-  font-weight: 700;
-  color: var(--color-white);
-  line-height: 1.6;
+  color: #FFF;
+  text-align: center;
+  font-family: "Noto Sans CJK KR", sans-serif;
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: clamp(31.2px, (52/1920)*100vw, 52px);
+  letter-spacing: -1.8px;
   margin: 0;
   white-space: pre-line;
   word-wrap: break-word;
   word-break: keep-all;
-  text-align: center;
 }
 
 /* 얼리버드 오퍼 섹션 */
 .brand-earlybird-section {
+  position: relative;
   background: #000;
   padding: 5rem 0;
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .brand-earlybird-inner {
@@ -293,7 +308,7 @@
 
 /* 부스 타입 및 참가비 안내 섹션 */
 .brand-booth-section {
-  background: var(--color-gray-light);
+  background: var(--color-white);
   padding: 5rem 0;
   display: flex;
   justify-content: center;
@@ -306,26 +321,25 @@
 }
 
 .brand-booth-title {
-  font-size: clamp(27px, (45/1920)*100vw, 45px);
-  font-weight: 700;
-  color: var(--color-primary) !important;
-  margin-bottom: 3rem;
+  color: #00E5A8 !important;
   text-align: center;
+  font-family: "Noto Sans CJK KR", sans-serif;
+  font-size: clamp(27px, (45/1920)*100vw, 45px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(60px, (100/1920)*100vw, 100px);
+  letter-spacing: -2.25px;
+  margin-bottom: 3rem;
   background: var(--color-black);
-  color: var(--color-primary) !important;
   border-radius: 50px;
   padding: 0.8rem 2.5rem;
   margin: 0 auto 2.5rem;
   display: block;
-  width: clamp(300px, 52.08vw, 1000px);
-  height: clamp(40px, 7.08vw, 136px);
+  width: clamp(480px, (960/1920)*100vw, 960px);
+  height: clamp(60px, (120/1920)*100vw, 120px);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Noto Sans CJK KR', sans-serif;
-  font-style: normal;
-  line-height: 100px;
-  letter-spacing: -2.25px;
 }
 
 .brand-booth-table-container {
@@ -404,42 +418,6 @@
   margin-bottom: 0.5rem;
   position: relative;
   padding-left: 0.5rem;
-}
-
-/* 부스 배치도 섹션 */
-.brand-layout-section {
-  background: #F2F2F2;
-  padding: 5rem 0;
-  display: flex;
-  justify-content: center;
-}
-
-.brand-layout-inner {
-  max-width: 1000px;
-  width: 100%;
-  padding: 0 2rem;
-  text-align: center;
-}
-
-.brand-layout-title {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-  font-weight: 900;
-  color: #000;
-  margin-bottom: 3rem;
-  text-align: center;
-}
-
-.brand-layout-image {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.brand-layout-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 /* 환불 규정 섹션 */
@@ -1080,104 +1058,6 @@
     line-height: 1.5;
   }
 
-  .brand-layout-section {
-    padding: 3rem 0;
-  }
-  
-  .brand-layout-title {
-    font-size: clamp(1.4rem, 4.5vw, 1.8rem);
-    margin-bottom: 1.5rem;
-    padding: 0.6rem 1.2rem;
-  }
-  
-  .brand-layout-image {
-    max-width: 95%;
-  }
-  
-  .brand-layout-image img {
-    border-radius: 10px;
-  }
-
-  .brand-earlybird-benefit-section {
-    padding: 3rem 0;
-  }
-  
-  .brand-earlybird-benefit-title {
-    font-size: clamp(1.8rem, 5.5vw, 2.5rem);
-    margin-bottom: 1.5rem;
-    color: var(--color-primary) !important;
-  }
-  
-  .brand-earlybird-benefit-content {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .brand-earlybird-benefit-separator {
-    width: 100%;
-    height: 1px;
-  }
-
-  .brand-earlybird-benefit-subtitle {
-    font-size: clamp(1rem, 3.5vw, 1.2rem);
-  }
-  
-  .brand-earlybird-benefit-list li {
-    font-size: clamp(0.8rem, 2.2vw, 0.9rem);
-    line-height: 1.5;
-    margin-bottom: 0.5rem;
-  }
-
-  /* 참가 신청 절차 섹션 모바일 대응 */
-  .brand-process-section {
-    padding: 2.5rem 0;
-  }
-  
-  .brand-process-new-element {
-    width: clamp(280px, 85vw, 500px);
-    height: clamp(45px, (90/1920)*100vw, 90px);
-    font-size: clamp(16px, (32/1920)*100vw, 32px);
-    line-height: clamp(22px, (44/1920)*100vw, 44px);
-    margin-bottom: clamp(25px, (50/1920)*100vw, 50px);
-  }
-  
-  .brand-process-flow-chart {
-    gap: clamp(12px, (25/1920)*100vw, 25px);
-    max-width: clamp(320px, 92vw, 600px);
-  }
-  
-  .process-step-block {
-    width: clamp(300px, 90vw, 600px);
-  }
-  
-  .process-step-header {
-    font-size: clamp(14px, (28/1920)*100vw, 28px);
-    line-height: clamp(19px, (38/1920)*100vw, 38px);
-    padding: clamp(10px, (20/1920)*100vw, 20px);
-  }
-  
-  .process-step-body {
-    font-size: clamp(11px, (14/1920)*100vw, 14px);
-    padding: clamp(12px, (20/1920)*100vw, 20px);
-  }
-  
-  .process-step-body p {
-    font-size: clamp(11px, (14/1920)*100vw, 14px);
-    margin-bottom: clamp(6px, (10/1920)*100vw, 10px);
-  }
-  
-  .process-step-body li {
-    font-size: clamp(9px, (18/1920)*100vw, 18px);
-    line-height: clamp(14px, (28/1920)*100vw, 28px);
-    letter-spacing: clamp(-0.4px, (-0.8/1920)*100vw, -0.8px);
-  }
-  
-  .process-arrow-down {
-    border-left: clamp(8px, (12/1920)*100vw, 12px) solid transparent;
-    border-right: clamp(8px, (12/1920)*100vw, 12px) solid transparent;
-    border-top: clamp(12px, (16/1920)*100vw, 16px) solid #00E5A8;
-  }
-
   .brand-refund-section {
     padding: 3rem 0;
   }
@@ -1532,4 +1412,174 @@
     font-size: clamp(0.9rem, 1.25vw, 1.5rem);
     line-height: 1.4;
   }
+} 
+
+/* 부스 타입 섹션 */
+.brand-booth-type-section {
+  position: relative;
+  background: var(--color-white);
+  padding: clamp(3rem, 4.17vw, 5rem) 0;
+  display: flex;
+  justify-content: center;
+  min-height: clamp(480px, (960/1920)*100vw, 960px);
+  box-sizing: border-box;
+}
+
+.brand-booth-type-section-gray {
+  background: #F2F2F2;
+}
+
+.brand-booth-type-inner {
+  max-width: clamp(1000px, 80vw, 1600px);
+  width: 100%;
+  padding: 0 clamp(1rem, 2.08vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+
+.brand-booth-type-title {
+  color: #00E5A8;
+  text-align: center;
+  font-family: "Noto Sans CJK KR", sans-serif;
+  font-size: clamp(27px, (45/1920)*100vw, 45px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(60px, (100/1920)*100vw, 100px);
+  letter-spacing: -2.25px;
+  margin-bottom: clamp(18px, (36/1920)*100vw, 36px);
+  display: block;
+  background: var(--color-black);
+  border-radius: clamp(25px, (50/1920)*100vw, 50px);
+  padding: clamp(12.8px, (25.6/1920)*100vw, 25.6px) clamp(20px, (40/1920)*100vw, 40px);
+  margin: 0 auto clamp(20px, (40/1920)*100vw, 40px);
+  width: clamp(480px, (960/1920)*100vw, 960px);
+  height: clamp(60px, (120/1920)*100vw, 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-booth-type-notice {
+  color: #000;
+  text-align: center;
+  font-family: "Noto Sans CJK KR", sans-serif;
+  font-size: clamp(14.4px, (24/1920)*100vw, 24px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(29.4px, (49/1920)*100vw, 49px);
+  letter-spacing: -1.2px;
+  margin: 0 auto clamp(16px, (32/1920)*100vw, 32px);
+}
+
+.brand-booth-type-subtitle {
+  color: #000;
+  font-family: "Noto Sans CJK KR", sans-serif;
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(25.8px, (43/1920)*100vw, 43px);
+  letter-spacing: -1.8px;
+  text-align: center;
+  margin: clamp(52px, (104/1920)*100vw, 104px) auto clamp(8px, (16/1920)*100vw, 16px);
+}
+
+.brand-booth-type-desc {
+  color: #000;
+  text-align: center;
+  font-family: "Noto Sans CJK KR", sans-serif;
+  font-size: clamp(14.4px, (24/1920)*100vw, 24px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(29.4px, (49/1920)*100vw, 49px);
+  letter-spacing: -1.2px;
+  margin: 0 auto clamp(16px, (32/1920)*100vw, 32px);
+}
+
+.brand-booth-type-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto clamp(16px, (32/1920)*100vw, 32px);
+  width: 100%;
+}
+
+.brand-booth-type-image img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  outline: none;
+  border-radius: clamp(5px, (10/1920)*100vw, 10px);
+}
+
+.brand-booth-type-price {
+  text-align: center;
+  margin: 0 auto clamp(16px, (32/1920)*100vw, 32px);
+  display: inline-block;
+}
+
+.brand-booth-type-price p {
+  color: #000;
+  font-family: "Noto Sans CJK KR", sans-serif;
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(29.4px, (49/1920)*100vw, 49px);
+  letter-spacing: -1.6px;
+  margin: 0;
+  white-space: pre;
+}
+
+.price-row {
+  display: grid;
+  grid-template-columns: clamp(120px, (200/1920)*100vw, 200px) auto auto;
+  gap: 0.5em;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.price-label {
+  color: #000;
+  font-family: "Noto Sans CJK KR", sans-serif;
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(29.4px, (49/1920)*100vw, 49px);
+  letter-spacing: -1.6px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.price-colon {
+  color: #000;
+  font-family: "Noto Sans CJK KR", sans-serif;
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(29.4px, (49/1920)*100vw, 49px);
+  letter-spacing: -1.6px;
+  text-align: center;
+}
+
+.price-value {
+  color: #000;
+  font-family: "Noto Sans CJK KR", sans-serif;
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(29.4px, (49/1920)*100vw, 49px);
+  letter-spacing: -1.6px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.brand-booth-type-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(16px, (32/1920)*100vw, 32px);
 } 

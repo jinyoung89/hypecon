@@ -139,7 +139,8 @@ const en = {
       date: 'February 19 (Thu) - 22 (Sun), 2026 | COEX C Hall, Seoul'
     },
     poster: {
-      title: 'HYPECON STYLE WEEK SEOUL 2026'
+      title: 'HYPECON STYLE WEEK SEOUL 2026',
+      alt: 'HYPECON STYLE WEEK SEOUL 2026 Poster'
     },
     organizer: {
       title: 'Hosted / Organized by',
@@ -321,12 +322,12 @@ const en = {
             desc: 'Not just followers —\nbrands with real communities \nthat wear it, shoot it, and share it.'
           },
           {
-            title: 'Brands Defined by Real Style',
-            desc: 'A distinct identity obvious\nat first glance.\nAesthetic, visuals, and products —\neach with its own unique voice'
+            title: 'Brands That Speak Through Style',
+            desc: 'A mood you feel at first glance.\nLookbooks, visuals, and products —\neach with its own unique voice.'
           },
           {
             title: 'Brands Backed by Real Hype',
-            desc: 'Sell-outs, user photos, reviews, repurchases —\nbrands that spark real demand and real action'
+            desc: 'Sell-outs, user photos, resales, repurchases —\nbrands that spark real demand and real consumer action'
           },
           {
             title: 'Brands Ready to Scale',
@@ -344,6 +345,51 @@ const en = {
       },
       booth: {
         title: 'Booth Types & Participation Fees',
+        boothTypes: {
+          title: 'Booth Types',
+          notice: '*All fees are exclusive of VAT.',
+          labels: {
+            earlyPrice: 'Early Bird Special',
+            regularPrice: 'Regular Price'
+          },
+          independent: {
+            title: 'Space-only Booth',
+            description: 'Customizable setup, available from 4 booths or more',
+            earlyPrice: '₩2,600,000',
+            regularPrice: '₩3,200,000',
+            alt: 'Independent Booth Image'
+          },
+          basic: {
+            title: 'Standard Booth',
+            earlyPrice: '₩3,400,000',
+            regularPrice: '₩4,000,000',
+            alt: 'Standard Booth Image'
+          },
+          artwall: {
+            title: 'Art Wall Type (2 Booth)',
+            earlyPrice: '₩5,800,000',
+            regularPrice: '₩7,000,000',
+            alt: 'Art Wall Booth Image'
+          },
+          acrylic4: {
+            title: 'Art Wall Type (4 Booth)',
+            earlyPrice: '11,280,000',
+            regularPrice: '13,600,000',
+            alt: 'Acrylic Booth 4 Units Image'
+          },
+          acrylic6: {
+            title: 'Art Wall Type (6 Booth)',
+            earlyPrice: '₩16,800,000',
+            regularPrice: '₩20,400,000',
+            alt: 'Acrylic Booth 6 Units Image'
+          },
+          acrylic8: {
+            title: 'Art Wall Type (8 Booth)',
+            earlyPrice: '₩22,000,000',
+            regularPrice: '₩26,800,000',
+            alt: 'Acrylic Booth 8 Units Image'
+          }
+        },
         table: {
           headers: ['Booth Type', 'Early Bird Special (Excl. VAT)', 'Regular Price (Excl. VAT)', 'Notes'],
           rows: [
@@ -366,8 +412,8 @@ const en = {
           title: 'Important Notes',
           items: [
             '· All fees are exclusive of VAT.',
-            '· Corner booths are allocated based on the brand\'s category.',
-            '· Brands may be allocated based on the brand\'s category and style.',
+            '· Corner booths are prioritized for multi-booth applicants and early registrants.',
+            '·Booth locations may be adjusted based on the brand\'s category and style.',
             '※ Brands that violate intellectual property rights or operate without proper licensing,',
             'including those selling unauthorized wholesale products, may be restricted from participation.',
             'All legal responsibility lies with the participant; the organizer assumes no liability.'
@@ -388,8 +434,8 @@ const en = {
           headers: ['Category', 'Condition', 'Refund'],
           rows: [
             ['100% Refund', 'Up to 90 days before the event (by Nov 21, 2025)', '100% refund of deposit and balance'],
-            ['Partial Refund', 'Between 89-60 days before the event (Nov 22 – Dec 20, 2025)', '50% refund of total amount paid (if balance is unpaid, 50% of deposit will be refunded)'],
-            ['No Refund', 'Within 59 days of the event (from Dec 21, 2025 onward)', 'No refund of deposit or balance'],
+            ['Partial Refund', 'Cancellation 89–60 days before the event\n(Nov 22 – Dec 20, 2025)', '50% refund of total amount paid (if balance is unpaid, 50% of deposit will be refunded)'],
+            ['No Refund', 'Cancellation within 59 days of the event\n(from Dec 21, 2025 onward)', 'No refund of deposit or balance'],
             ['Unpaid Balance', 'If the remaining balance is not paid within 60 days of the contract date', 'Deposit will be forfeited, and the contract will be automatically terminated']
           ]
         },
@@ -398,7 +444,7 @@ const en = {
           items: [
             'All refund requests must be submitted in writing (e.g., email) and will be processed based on the date of receipt.',
             'Refunds will be processed within 15 business days after approval of the request.',
-            'In case of cancellation by the organizer, the full participation fee will be refunded.'
+            'If the event is canceled due to the organizer, the full participation fee will be refunded.'
           ]
         }
       },
@@ -410,15 +456,15 @@ const en = {
         subtitle: 'Early Bird Application Benefits',
         benefits: [
           'Early Bird pricing (first-come, first-served)',
-          'Priority booth placement (entrance, main aisles, stage proximity)',
-          'Free corner booth upgrade for multi-booth applicants and early registrants',
-          'Priority for brand interview and promo videos',
-          'Priority for brand showcase (influencers, and styling show collaborations)',
-          'Priority access to B2B buyer matching',
-          'Merchandise production & customization collaborations',
-          'Priority for brand-celebrity sessions',
-          'Pre-event social media exposure',
-          'Access to buyer order meetings'
+          'Priority booth placement (entrance, main aisles, near stage)',
+          '50% Discount on Corner Booths (for 2+ booths)',
+          'Pre-event promotion on HYPECON social channels',
+          'Priority access to exclusive brand & AI fashion shows (selected brands only)',
+          'Priority for brand interviews and promotional videos',
+          'Priority for influencer, Wanghong (Chinese influencer), and styling show collaborations',
+          'Priority access to B2B buyer matchmaking program.',
+          'Merchandise customization & co-branded content opportunities.',
+          'Access to exclusive buyer ordering sessions.'
         ]
       },
       process: {
@@ -434,7 +480,7 @@ const en = {
             ],
             notes: [
               'Early Bird pricing may end early if booth availability runs out',
-              'Booth assignments are made based on: comprehensive evaluation of application date, brand size, booth type, and brand concept'
+              'Booth assignments are made based on a comprehensive and fair evaluation of\napplication date, brand size, booth type, and brand concept.'
             ]
           },
           {
@@ -458,10 +504,10 @@ const en = {
           {
             title: 'Utilities Application and Payment',
             details: [
-              'By Friday, December 19, 2025'
+              'Submit requests (electricity, internet, AV equipment, etc.) by Friday December 19, 2025'
             ],
             notes: [
-              'Utilities requests will be automatically canceled if payment is not made'
+              'Unpaid utilities applications will be automatically canceled'
             ]
           },
           {
@@ -488,16 +534,16 @@ const en = {
         title: 'FAQ',
         items: [
           {
-            q: 'Are there requirements for brand participation?',
+            q: 'Are there eligibility requirements for brand participation?',
             a: 'HYPECON curates fashion and beauty brands targeting Generation Z.\nParticipation is confirmed upon review and approval by the organizing team.'
           },
           {
-            q: 'When is the Early Bird deadline?',
+            q: 'When is the Early Bird application deadline?',
             a: 'The deadline is Tuesday, September 30, 2025. Popular zones may close early on a first-come, first-served basis.'
           },
           {
             q: 'What are the Early Bird benefits?',
-            a: 'Up to ₩1,000,000 discount on booth fees (approximately 20-25%)\nPriority assignment in popular zones\nPriority exposure in promotional content'
+            a: 'Booth fees discounted by 20–25%\nPriority assignment in popular zones\nPriority exposure in pre-event promotional content'
           },
           {
             q: 'Until when are you accepting brand applications?',
@@ -589,7 +635,7 @@ const en = {
       list: [
         '100% refund: More than 7 days before event',
         '50% refund: 3 to 6 days before event',
-        'No refund: Less than 3 days before event'
+        'No refund: Less than 2 days before event'
       ]
     },
     notes: {
@@ -650,7 +696,7 @@ const en = {
           'Click the "Register as Buyer" button below',
           'Enter your basic and company information',
           'Upload proof of professional status (e.g. business card or certificate)',
-          'Upon approval, entry information will be sent via email before the event'
+          'Upon approval, entry details will be sent via email before the event'
         ]
       },
       register: {
@@ -679,7 +725,7 @@ const en = {
           },
           {
             q: 'Are there any registration requirements?',
-            a: 'You must provide proof that you work in the industry, such as a business card or relevant document (e.g. distributor, select shop, MD, importer/exporter).'
+            a: 'You must provide proof of industry affiliation, such as a business card or relevant\ndocuments (e.g. distributor, select shop, platform MD, importer/exporter).'
           },
           {
             q: 'Is on-site registration available?',
@@ -694,7 +740,7 @@ const en = {
   influencer: {
     hero: {
       title: 'INFLUENCER REGISTRATION',
-      subtitle: 'The real stage connecting brands, followers, and fandoms'
+      subtitle: 'An invitation to HYPECON is proof in itself.\nYou are a leading figure in the Gen Z style scene.'
     },
     registration: {
       title: 'INFLUENCER REGISTRATION',
@@ -707,8 +753,8 @@ const en = {
       subtext: 'HYPECON looks for real influence, not just traffic.',
       content: [
         'Creators consistently publishing fashion and beauty content on Instagram, TikTok, YouTube, etc.',
-        'Stylers with brand collaboration experience or aspiring to collaborate',
-        'People who can convey content sensitivity, taste, and attitude',
+        'Fashion creators with brand collaboration experience or aspiring to collaborate',
+        'People who know how to express taste, attitude, and aesthetic through content',
         'Those who want to be protagonists in the HYPECON scene'
       ]
     },
@@ -717,7 +763,7 @@ const en = {
       list: [
         'HYPECON VIP entry + Fast Pass issuance',
         'Brand-sponsored goods & experience kits',
-        'Access to exclusive lounges & priority booking for shooting zones',
+        'Access to exclusive lounges & priority booking for photo zones',
         'Brand content collaboration opportunities (Reels, short-form, etc.)',
         'HYPECON official account tags and reposts',
         'Automatic qualification for HYPECON STYLE AWARDS'
@@ -728,7 +774,7 @@ const en = {
         title: '⚠ Selection Criteria & Precautions',
         list: [
           'Application alone does not guarantee selection.',
-          'The HYPECON team directly evaluates SNS channels, content sensitivity, activity consistency, etc.',
+          'The HYPECON team evaluates SNS channels, content appeal, activity consistency, etc.',
           'Only a limited number of people will be selected, and registration may close early.',
           'Submission of false information or plagiarized content will result in immediate disqualification.'
         ]
@@ -764,7 +810,7 @@ const en = {
       items: [
         {
           q: 'Can anyone apply?',
-          a: 'HYPECON influencers are selected through a review process that values content sensitivity, activity, and brand synergy more than follower count.'
+          a: 'HYPECON influencers are selected through a review process that values content appeal, activity, and brand synergy more than follower count.'
         },
         {
           q: 'What benefits do selected influencers receive?',
@@ -888,7 +934,7 @@ const en = {
     benefits: {
       title: 'Winner Benefits',
       items: [
-        'Award trophy & prize money, plus official announcement content',
+        'Award trophy & prize money, plus official winner announcement content',
         'Feature in partner magazine (profile/interview)',
         'Highlight video on YouTube & official social media clips',
         'Priority brand collaboration offers & inclusion in post-event report'
@@ -898,8 +944,8 @@ const en = {
       title: 'Audience Participation',
       items: [
         'On-site voting open to all (QR code + photo zone link)',
-        'Hashtag analysis from social posts taken at the photo zone',
-        'Lucky draw event for selected participants'
+        'Auto hashtag analysis of social posts taken at the photo zone',
+        'Lucky draw event for selected participants of the popularity vote'
       ]
     },
     faq: {
@@ -946,7 +992,7 @@ const en = {
           icon: 'instagram',
           label: 'Official Social Media',
           details: [
-            '@hypeconwe',
+            '@hypeconweek',
             'For the latest updates, follow us on Instagram'
           ]
         },

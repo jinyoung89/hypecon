@@ -111,91 +111,125 @@
 
 .exhibition-poster-header {
   text-align: left;
-  width: 100%;
+  width: fit-content;
   margin-bottom: clamp(0.2rem, 0.5vw, 0.5rem);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 500px;
-  margin-left: clamp(1.5rem, 4vw, 2.5rem);
+  margin-left: 0;
 }
 
 .exhibition-poster-content {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   gap: clamp(2rem, 4vw, 3rem);
   width: 100%;
+  justify-content: flex-start;
 }
 
 .exhibition-poster-image {
-  flex: 1;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   max-width: 500px;
-  width: 100%;
+  width: auto;
 }
 
 .exhibition-poster-image img {
-  max-width: 100%;
-  height: auto;
+  width: clamp(261.5px, (523/1920)*100vw, 523px);
+  height: clamp(370px, (740/1920)*100vw, 740px);
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .exhibition-poster-info {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: clamp(1rem, 2vw, 1.5rem);
-  width: 100%;
+  gap: clamp(10.5px, (21/1920)*100vw, 21px);
+  width: auto;
   max-width: 600px;
 }
 
 .poster-title {
-  font-size: clamp(1.2rem, 1.35vw, 26px);
-  font-weight: 900;
-  color: var(--hypecon-dark);
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(1.6875rem, (45/1920)*100vw, 2.8125rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 114%; /* 51.3px */
+  letter-spacing: -1.35px;
   margin: 0;
-  line-height: 1;
-  white-space: pre-line;
+  white-space: nowrap;
   word-wrap: break-word;
   word-break: keep-all;
+  text-align: left;
 }
 
 .poster-date {
-  font-size: clamp(1.2rem, 1.35vw, 26px);
-  font-weight: 700;
-  color: var(--hypecon-dark);
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(1.35rem, (36/1920)*100vw, 2.25rem);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 114%; /* 41.04px */
+  letter-spacing: -1.08px;
   margin: 0;
-  line-height: 1;
-  white-space: pre-line;
+  white-space: nowrap;
   word-wrap: break-word;
   word-break: keep-all;
+  text-align: left;
 }
 
 .poster-info-item {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0;
   margin-bottom: 0;
 }
 
 .info-label {
-  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(1.2rem, (32/1920)*100vw, 2rem);
+  font-style: normal;
   font-weight: 700;
-  color: var(--hypecon-dark);
-  display: block;
+  line-height: 60px; /* 187.5% */
+  letter-spacing: -1.6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-label img {
+  flex-shrink: 0;
+  width: 14px;
+  height: 16px;
+  vertical-align: middle;
 }
 
 .info-content {
-  font-size: clamp(0.95rem, 2vw, 1.1rem);
-  color: var(--hypecon-dark);
-  line-height: 1.6;
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(0.9rem, (24/1920)*100vw, 1.5rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 145%; /* 34.8px */
+  letter-spacing: -0.72px;
   white-space: pre-line;
   word-wrap: break-word;
   word-break: keep-all;
+  margin-left: 22px;
+}
+
+.info-content-participants {
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(0.975rem, (26/1920)*100vw, 1.625rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114%; /* 29.64px */
+  letter-spacing: -0.78px;
 }
 
 /* PROGRAMS HIGHLIGHT 섹션 */
@@ -205,6 +239,7 @@
   padding: clamp(2rem, 5vw, 4rem) 0;
   display: flex;
   justify-content: center;
+  align-items: center;
   min-height: clamp(1200px, 111.46vw, 2140px);
 }
 
@@ -221,7 +256,7 @@
   font-weight: 400;
   color: #00E5A8;
   text-align: center;
-  margin-bottom: clamp(2rem, 4vw, 3rem);
+  margin-bottom: clamp(82.5px, (165/1920)*100vw, 165px);
   font-family: 'Bebas Neue', sans-serif;
   font-style: normal;
   line-height: 82%;
@@ -244,15 +279,10 @@
 .exhibition-programs-item {
   display: flex;
   align-items: flex-start;
-  gap: clamp(1.5rem, 3vw, 2rem);
+  gap: clamp(27px, (54/1920)*100vw, 54px);
   padding: clamp(1rem, 2vw, 1.5rem) 0;
-  border-bottom: 1px solid rgba(225, 248, 0, 0.2);
-  max-width: 800px;
-  width: 800px;
-}
-
-.exhibition-programs-item:last-child {
-  border-bottom: none;
+  max-width: 1200px;
+  width: 100%;
 }
 
 .exhibition-programs-icon {
@@ -282,15 +312,15 @@
 }
 
 .exhibition-programs-date {
-  font-size: clamp(1.5rem, 2.6vw, 35px);
+  font-size: clamp(1.575rem, (42/1920)*100vw, 2.625rem);
   font-weight: 700;
-  color: #000000;
-  margin-bottom: 0.5rem;
-  line-height: 35px;
+  color: #000;
+  margin-bottom: 1rem;
+  line-height: clamp(1.875rem, (50/1920)*100vw, 3.125rem);
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   text-transform: uppercase;
-  letter-spacing: -4px;
+  letter-spacing: -2.1px;
   white-space: nowrap;
   max-width: 1200px;
   background: #00E5A8;
@@ -300,32 +330,34 @@
 }
 
 .exhibition-programs-subtitle {
-  font-size: clamp(1.2rem, 2.34vw, 32px);
+  font-size: clamp(1.35rem, (36/1920)*100vw, 2.25rem);
   font-weight: 700;
-  color: #FFFFFF;
+  color: #FFF;
   margin-bottom: 0.8rem;
-  line-height: 120%;
-  font-family: 'Noto Sans', sans-serif;
+  margin-left: clamp(1rem, 2vw, 2rem);
+  line-height: 125%;
+  font-family: "Noto Sans CJK KR", sans-serif;
   font-style: normal;
   word-wrap: break-word;
   white-space: pre-line;
   word-break: keep-all;
-  letter-spacing: -2.25px;
+  letter-spacing: -1.08px;
   max-width: 1200px;
 }
 
 .exhibition-programs-desc {
-  font-size: clamp(1rem, 1.25vw, 24px);
+  font-size: clamp(0.9rem, (24/1920)*100vw, 1.5rem);
   font-weight: 500;
   color: #00E5A8;
   line-height: 134%;
   margin: 0;
-  font-family: 'Noto Sans CJK KR', sans-serif;
+  margin-left: clamp(1rem, 2vw, 2rem);
+  font-family: "Noto Sans CJK KR", sans-serif;
   font-style: normal;
   word-wrap: break-word;
   white-space: pre-line;
   word-break: keep-all;
-  letter-spacing: clamp(-0.2px, -0.0375vw, -0.72px);
+  letter-spacing: -0.72px;
   max-width: 1200px;
 }
 
@@ -341,41 +373,41 @@
 }
 
 .exhibition-new-experience-inner {
-  max-width: 1000px;
+  max-width: 1600px;
   width: 100%;
   padding: 0 clamp(1rem, 3vw, 2rem);
   text-align: center;
 }
 
 .exhibition-new-experience-title {
-  font-size: clamp(3rem, 9.375vw, 180px);
+  font-size: clamp(6.75rem, (180/1920)*100vw, 11.25rem);
   font-weight: 400;
   color: #000;
   text-align: center;
   margin-bottom: clamp(2rem, 4vw, 3rem);
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-style: normal;
   line-height: 82%;
-  letter-spacing: clamp(-1px, -0.28vw, -5.4px);
+  letter-spacing: -5.4px;
   text-transform: uppercase;
 }
 
 .exhibition-new-experience-desc {
-  font-size: clamp(1.5rem, 2.34vw, 45px);
+  font-size: clamp(1.6875rem, (45/1920)*100vw, 2.8125rem);
   font-weight: 700;
   color: #000;
   text-align: center;
   margin-bottom: clamp(2rem, 4vw, 4rem);
-  line-height: clamp(1.8rem, 2.58vw, 62px);
+  line-height: clamp(2.325rem, (62/1920)*100vw, 3.875rem);
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
   white-space: pre-line;
   word-wrap: break-word;
   word-break: keep-all;
-  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-family: "Noto Sans CJK KR", sans-serif;
   font-style: normal;
-  letter-spacing: clamp(-0.4px, -0.07vw, -1.35px);
+  letter-spacing: -1.35px;
 }
 
 .experience-title-text {
@@ -391,14 +423,14 @@
 }
 
 .experience-desc-text {
-  font-size: clamp(1.2rem, 1.875vw, 36px);
+  font-size: clamp(1.35rem, (36/1920)*100vw, 2.25rem);
   font-weight: 400;
   color: #000;
   text-align: center;
   line-height: normal;
-  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-family: "Noto Sans CJK KR", sans-serif;
   font-style: normal;
-  letter-spacing: clamp(-0.3px, -0.056vw, -1.08px);
+  letter-spacing: -1.08px;
   white-space: pre-line;
   word-wrap: break-word;
   word-break: keep-all;
@@ -407,31 +439,41 @@
 .exhibition-new-experience-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: clamp(1.5rem, 3vw, 2rem);
-  max-width: 900px;
+  gap: clamp(26px, (52/1920)*100vw, 52px);
+  width: clamp(620px, calc(((594/1920)*100vw * 2) + (52/1920)*100vw), 1240px);
+  max-width: 100%;
   margin: 0 auto;
+  justify-content: center;
+  justify-items: center;
 }
 
 .experience-card {
   background: var(--hypecon-white);
   border-radius: 20px;
-  padding: clamp(1.5rem, 3vw, 2rem);
+  padding: clamp(2rem, 4vw, 3rem);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+  width: clamp(297px, (594/1920)*100vw, 594px);
+  aspect-ratio: 594 / 415;
+  flex-shrink: 0;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .experience-card-title {
-  font-size: clamp(1.5rem, 2.19vw, 42px);
+  font-size: clamp(1.575rem, (42/1920)*100vw, 2.625rem);
   font-weight: 700;
   color: #000;
-  margin-bottom: clamp(1rem, 2vw, 1.5rem);
-  line-height: clamp(1.8rem, 2.6vw, 50px);
-  font-family: 'Montserrat', sans-serif;
+  margin-bottom: clamp(6px, (12/1920)*100vw, 12px);
+  line-height: clamp(1.875rem, (50/1920)*100vw, 3.125rem);
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
-  letter-spacing: clamp(-0.8px, -0.175vw, -3.36px);
+  letter-spacing: -3.36px;
   white-space: pre-line;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .experience-card-list {
@@ -439,25 +481,32 @@
   padding: 0;
   margin: 0;
   color: #000;
+  flex: 1;
+  width: 100%;
+  height: clamp(107px, (214/1920)*100vw, 214px);
+  overflow-y: auto;
 }
 
 .experience-card-list li {
-  font-size: clamp(1.1rem, 1.67vw, 32px);
+  font-size: clamp(0.9rem, (32/1920)*100vw, 2rem);
   font-weight: 500;
-  margin-bottom: 0.8rem;
+  margin-bottom: clamp(0.05rem, 0.05vw, 0.05rem);
   position: relative;
-  padding-left: 1rem;
-  line-height: clamp(1.7rem, 2.6vw, 50px);
-  font-family: 'Noto Sans CJK KR', sans-serif;
+  padding-left: 1.5rem;
+  line-height: clamp(1.4rem, (50/1920)*100vw, 3.125rem);
+  font-family: "Noto Sans CJK KR", sans-serif;
   font-style: normal;
-  letter-spacing: clamp(-0.3px, -0.05vw, -0.96px);
+  letter-spacing: -0.96px;
+  color: #000;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .experience-card-list li::before {
   content: '•';
   position: absolute;
   left: 0;
-  color: #45B176;
+  color: #000;
 }
 
 /* KEY CONTENT POINTS 섹션 */
@@ -478,7 +527,7 @@
 }
 
 .exhibition-key-points-title {
-  font-size: clamp(1.5rem, 2.34vw, 45px);
+  font-size: clamp(1.6875rem, (45/1920)*100vw, 2.8125rem);
   font-weight: 700;
   color: #000;
   margin-bottom: clamp(2rem, 4vw, 3rem);
@@ -486,10 +535,10 @@
   background: #00E5A8;
   border-radius: 50px;
   padding: clamp(0.8rem, 2vw, 1rem) clamp(2rem, 3vw, 2.5rem);
-  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-family: "Noto Sans CJK KR", sans-serif;
   font-style: normal;
-  line-height: clamp(1.7rem, 2.6vw, 50px);
-  letter-spacing: clamp(-0.6px, -0.117vw, -2.25px);
+  line-height: clamp(1.875rem, (50/1920)*100vw, 3.125rem);
+  letter-spacing: -2.25px;
   width: clamp(300px, 50vw, 960px);
   height: clamp(60px, 6.25vw, 120px);
   align-items: center;
@@ -503,7 +552,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: clamp(2rem, 3vw, 3rem);
+  gap: clamp(17.5px, (35/1920)*100vw, 35px);
   flex-wrap: nowrap;
   width: 100%;
   max-width: 100%;
@@ -514,8 +563,8 @@
   background: #fff;
   border-radius: 30px;
   padding: 0;
-  width: clamp(300px, 22.92vw, 440px);
-  height: clamp(180px, 16.93vw, 260px);
+  width: clamp(220px, (440/1920)*100vw, 440px);
+  height: clamp(130px, (260/1920)*100vw, 260px);
   position: relative;
   border: 2px solid #000;
   display: flex;
@@ -525,7 +574,7 @@
 }
 
 .key-point-number {
-  font-size: clamp(1.5rem, 3.13vw, 48px);
+  font-size: clamp(1.8rem, (48/1920)*100vw, 3rem);
   font-weight: 700;
   color: #00E5A8;
   margin-bottom: 0;
@@ -533,10 +582,10 @@
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   position: absolute;
-  left: clamp(1rem, 2.08vw, 32px);
-  top: clamp(0.5rem, 1.04vw, 10px);
-  width: clamp(60px, 6.06vw, 93px);
-  height: clamp(80px, 8.21vw, 126px);
+  left: clamp(16px, (32/1920)*100vw, 32px);
+  top: clamp(5px, (10/1920)*100vw, 10px);
+  width: clamp(40px, (70/1920)*100vw, 70px);
+  height: clamp(70px, (110/1920)*100vw, 110px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -544,22 +593,25 @@
 }
 
 .key-point-title {
-  font-size: clamp(1rem, 1.67vw, 28px);
+  font-size: clamp(1.2rem, (32/1920)*100vw, 2rem);
   font-weight: 700;
   color: #000;
   margin-bottom: 0;
-  line-height: clamp(1.5rem, 2.6vw, 42px);
-  font-family: 'Noto Sans CJK KR', sans-serif;
+  line-height: clamp(1.875rem, (50/1920)*100vw, 3.125rem);
+  font-family: "Noto Sans CJK KR", sans-serif;
   font-style: normal;
   position: absolute;
-  left: clamp(5rem, 8.85vw, 170px);
-  top: clamp(1.8rem, 3.6vw, 55px);
+  left: clamp(51px, (110/1920)*100vw, 110px);
+  top: clamp(5px, (10/1920)*100vw, 10px);
+  height: clamp(70px, (110/1920)*100vw, 110px);
+  display: flex;
+  align-items: center;
   word-wrap: break-word;
   white-space: pre-line;
 }
 
 .key-point-desc {
-  font-size: clamp(0.7rem, 1.04vw, 16px);
+  font-size: clamp(0.9rem, (24/1920)*100vw, 1.5rem);
   color: #000;
   line-height: clamp(1rem, 1.56vw, 24px);
   font-family: 'Noto Sans CJK KR', sans-serif;
@@ -568,7 +620,7 @@
   left: clamp(1rem, 2.48vw, 38px);
   top: clamp(4rem, 7.93vw, 129px);
   word-wrap: break-word;
-  max-width: calc(100% - clamp(2rem, 4.96vw, 76px));
+  max-width: calc(100% - clamp(1rem, 2.5vw, 48px));
   white-space: pre-line;
 }
 
@@ -579,6 +631,7 @@
   padding: clamp(2rem, 5vw, 4rem) 0;
   display: flex;
   justify-content: center;
+  align-items: center;
   min-height: clamp(1200px, 93.75vw, 1800px);
 }
 
@@ -628,7 +681,7 @@
 .b2b-item::after {
   content: '';
   position: absolute;
-  left: clamp(200px, 26.04vw, 250px);
+  left: clamp(185px, (370/1920)*100vw, 370px);
   top: 50%;
   transform: translateY(-50%);
   width: clamp(2px, 0.156vw, 3px);
@@ -643,20 +696,20 @@
 
 .b2b-item-title {
   flex-shrink: 0;
-  width: 250px;
-  min-width: 250px;
-  font-size: clamp(1.5rem, 2.24vw, 43px);
+  width: clamp(160px, (320/1920)*100vw, 320px);
+  min-width: clamp(160px, (320/1920)*100vw, 320px);
+  font-size: clamp(1.6125rem, (43/1920)*100vw, 2.6875rem);
   font-weight: 700;
   color: #000;
-  line-height: clamp(1.9rem, 2.86vw, 55px);
+  line-height: clamp(2.0625rem, (55/1920)*100vw, 3.4375rem);
   text-align: left;
   white-space: pre-line;
   word-wrap: break-word;
   word-break: keep-all;
   overflow-wrap: break-word;
-  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-family: "Noto Sans CJK KR", sans-serif;
   font-style: normal;
-  letter-spacing: clamp(-0.8px, -0.157vw, -3.01px);
+  letter-spacing: -3.01px;
 }
 
 .b2b-item-content {
@@ -664,63 +717,71 @@
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  padding-left: 1.5rem;
+  padding-left: 50px;
 }
 
 .b2b-item-desc {
   color: #000;
   font-family: "Noto Sans CJK KR", sans-serif;
-  font-size: clamp(1.2rem, 1.67vw, 32px);
+  font-size: clamp(1.2rem, (32/1920)*100vw, 2rem);
   font-style: normal;
   font-weight: 400;
-  line-height: clamp(1.8rem, 2.5vw, 48px);
-  letter-spacing: clamp(-0.6px, -0.083vw, -1.6px);
+  line-height: clamp(1.8rem, (48/1920)*100vw, 3rem);
+  letter-spacing: -1.6px;
   white-space: pre-line;
   word-wrap: break-word;
   word-break: keep-all;
   margin-bottom: 0.5rem;
 }
 
-/* WHY JOIN 섹션 */
+/* WHY JOIN & FOR 통합 섹션 */
 .exhibition-why-join-section {
   background: #fff;
   color: var(--hypecon-dark);
-  padding: clamp(2rem, 5vw, 4rem) 0 0 0;
+  padding: clamp(2rem, 5vw, 4rem) 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 400px;
+  min-height: clamp(1074px, (2148/1920)*100vw, 2148px);
 }
 
 .exhibition-why-join-inner {
-  max-width: clamp(800px, 83.33vw, 1000px);
+  max-width: clamp(1000px, 95vw, 1400px);
   width: 100%;
   padding: 0 clamp(1rem, 3vw, 2rem);
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 0;
+  gap: clamp(2rem, 4vw, 4rem);
+  margin-bottom: clamp(3rem, 6vw, 5rem);
 }
 
 .why-join-content {
-  flex: 1;
+  width: clamp(200px, (400/1920)*100vw, 400px);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .why-join-title {
-  font-size: clamp(5rem, 15vw, 10rem);
-  font-weight: 900;
-  color: var(--hypecon-dark);
-  line-height: 0.8;
-  text-align: left;
-  font-family: 'Bebas Neue', 'Montserrat', sans-serif;
+  font-size: clamp(6.75rem, (180/1920)*100vw, 11.25rem);
+  font-weight: 400;
+  color: #000;
+  line-height: 82%;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: -5.4px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .why-join-image {
-  flex: 1.5;
+  width: clamp(428px, (856/1920)*100vw, 856px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -728,44 +789,30 @@
 }
 
 .why-join-image img {
-  width: clamp(400px, 45.31vw, 870px);
-  height: clamp(180px, 20.47vw, 393px);
+  width: clamp(428px, (856/1920)*100vw, 856px);
+  height: clamp(193.5px, (387/1920)*100vw, 387px);
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
 /* FOR 섹션들 */
-.exhibition-for-section {
+/* .exhibition-for-section {
   background: #fff;
   color: var(--hypecon-dark);
   padding: 0 0 clamp(2rem, 5vw, 4rem) 0;
   display: flex;
   justify-content: center;
-}
+} */
 
+/* FOR 그리드 (통합 섹션 내부) */
 .exhibition-for-inner {
   max-width: 1200px;
   width: 100%;
   padding: 0 clamp(1rem, 3vw, 2rem);
-  position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 0;
-}
-
-.exhibition-for-inner .why-join-title {
-  position: absolute;
-  top: 0;
-  left: clamp(1rem, 3vw, 2rem);
-  font-size: clamp(3rem, 8vw, 5rem);
-  font-weight: 900;
-  color: #000;
-  margin: 0;
-  line-height: 0.9;
-  text-align: left;
-  font-family: 'Bebas Neue', 'Montserrat', sans-serif;
-  text-transform: uppercase;
 }
 
 .for-grid {
@@ -773,7 +820,6 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: clamp(1rem, 2vw, 1.5rem);
-  margin-top: 6rem;
   max-width: clamp(600px, 62.5vw, 1200px);
   width: 100%;
   margin-left: auto;
@@ -789,7 +835,8 @@
   background: #000;
   border-radius: 20px;
   padding: clamp(1rem, 2vw, 1.5rem);
-  height: 100%;
+  width: clamp(310px, (620/1920)*100vw, 620px);
+  height: clamp(290px, (580/1920)*100vw, 580px);
 }
 
 .for-title {
@@ -797,16 +844,20 @@
   color: #000;
   border-radius: 50px;
   padding: clamp(0.6rem, 1.5vw, 0.7rem) clamp(1.2rem, 2vw, 1.5rem);
-  font-size: clamp(1rem, 3vw, 1.3rem);
+  font-size: clamp(1.575rem, (42/1920)*100vw, 2.625rem);
   font-weight: 700;
   white-space: nowrap;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  width: 100%;
+  letter-spacing: -2.1px;
+  width: clamp(260px, (520/1920)*100vw, 520px);
+  height: clamp(60px, (120/1920)*100vw, 120px);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  line-height: clamp(1.875rem, (50/1920)*100vw, 3.125rem);
 }
 
 .for-content {
@@ -830,26 +881,27 @@
 .for-content p .guest-title,
 .for-content p .buyer-title,
 .for-content p .influencer-title {
-  color: #fff;
+  color: #FFF;
   font-family: "Noto Sans CJK KR", sans-serif;
-  font-size: clamp(1rem, 1.5vw, 28px);
+  font-size: clamp(1.35rem, (36/1920)*100vw, 2.25rem);
   font-style: normal;
   font-weight: 700;
-  line-height: clamp(1.4rem, 2.1vw, 40px);
-  letter-spacing: -1.4px;
+  line-height: clamp(1.875rem, (50/1920)*100vw, 3.125rem);
+  letter-spacing: -1.8px;
+  text-align: center;
   display: block;
   margin-bottom: 0.5rem;
 }
 
 /* FOR 섹션 나머지 내용 스타일 */
 .for-content p {
-  color: #fff;
+  color: #FFF;
   font-family: "Noto Sans CJK KR", sans-serif;
-  font-size: clamp(1rem, 1.4vw, 26px);
+  font-size: clamp(1.2rem, (32/1920)*100vw, 2rem);
   font-style: normal;
   font-weight: 400;
-  line-height: clamp(1.2rem, 1.7vw, 32px);
-  letter-spacing: -1.3px;
+  line-height: clamp(1.5rem, (40/1920)*100vw, 2.5rem);
+  letter-spacing: -1.6px;
   white-space: pre-line;
   word-wrap: break-word;
   word-break: keep-all;
@@ -944,6 +996,7 @@
   .poster-date {
     text-align: center !important;
     margin-bottom: 2rem !important;
+    white-space: nowrap !important;
   }
 
   .poster-info-item {
@@ -956,7 +1009,7 @@
   }
 
   .info-content {
-    text-align: center !important;
+    text-align: left !important;
   }
 
   /* PROGRAMS HIGHLIGHT 모바일 */
@@ -1006,6 +1059,20 @@
   .exhibition-new-experience-grid {
     grid-template-columns: 1fr !important;
     gap: clamp(1rem, 2vw, 1.5rem) !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .experience-card {
+    width: clamp(250px, 90vw, 500px) !important;
+    aspect-ratio: 594 / 415 !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    padding: clamp(1rem, 3vw, 1.5rem) !important;
+  }
+
+  .experience-card-title {
+    margin-bottom: clamp(1rem, 4vw, 2rem) !important;
   }
 
   /* KEY CONTENT POINTS 모바일 */
@@ -1042,8 +1109,8 @@
   }
 
   .key-point-title {
-    font-size: clamp(1.2rem, 3.5vw, 1.8rem) !important;
-    line-height: clamp(1.5rem, 4.5vw, 2.2rem) !important;
+    font-size: clamp(1.2rem, (32/1920)*100vw, 2rem) !important;
+    line-height: clamp(1.875rem, (50/1920)*100vw, 3.125rem) !important;
     position: relative !important;
     left: 0 !important;
     top: 0 !important;
@@ -1114,6 +1181,7 @@
 
   .why-join-content {
     text-align: center !important;
+    width: clamp(120px, (250/1920)*100vw, 250px) !important;
   }
 
   .why-join-title {
@@ -1151,6 +1219,9 @@
     gap: clamp(1rem, 2vw, 1.5rem) !important;
     margin-top: 0 !important;
     max-width: 100% !important;
+    justify-items: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
 
@@ -1165,11 +1236,15 @@
   }
 
   .exhibition-new-experience-title {
-    font-size: clamp(2rem, 7vw, 3rem) !important;
+    font-size: clamp(4.05rem, (108/1920)*100vw, 6.75rem) !important;
   }
 
   .why-join-title {
-    font-size: clamp(3rem, 12vw, 4rem) !important;
+    font-size: clamp(2.7rem, (90/1920)*100vw, 4.5rem) !important;
+  }
+
+  .why-join-content {
+    width: clamp(150px, (300/1920)*100vw, 300px) !important;
   }
 
   .for-title {
