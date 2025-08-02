@@ -391,14 +391,32 @@ const en = {
           }
         },
         table: {
-          headers: ['Booth Type', 'Early Bird Special (Excl. VAT)', 'Regular Price (Excl. VAT)', 'Notes'],
+          headers: ['Booth Type', 'Quantity', 'Early Bird Special\n<span class="vat-text">Excl. VAT</span>', 'Regular Price\n<span class="vat-text">Excl. VAT</span>', 'Notes'],
           rows: [
-            ['Standard Booth', '₩3,800,000', '₩4,800,000', 'Basic 3m × 3m booth'],
-            ['Special Booth (Minimum 2 booths)', '₩3,200,000', '₩4,200,000', 'Customizable setup, available from 2 booths or more'],
-            ['Premium Booth (Art Wall Type)', '₩4,500,000', '₩5,200,000', 'Available from 2 booths or more'],
-            ['Premium Booth (Block Type)', '₩5,200,000', '₩5,800,000', 'Available from 2 booths or more']
+            ['Independent Booth', '4+ booths', '₩2.6M', '₩3.2M', 'Free construction'],
+            ['Basic Booth (Octa)', '1 booth', '₩3.4M', '₩4.0M', 'Single booth application only'],
+            ['Acrylic Booth', '2 booths', '₩5.8M', '₩7.0M', ''],
+            ['', '4 booths', '₩11.2M', '₩13.6M', ''],
+            ['', '6 booths', '₩16.8M', '₩20.4M', ''],
+            ['', '8 booths', '₩22.0M', '₩26.8M', '']
           ]
         },
+        tableNote: '※ Basic 1 booth size: 3M X 3M',
+        basicIncluded: 'Basic Included Items',
+        basicIncludedItems: [
+          'Info Desk',
+          'Chair provided (1 set per company)',
+          'Booth fixtures (floor, lighting)',
+          '1kw power supply',
+          'Outlet installation (1 per company)',
+          'Booth signage',
+          'Pytex (carpet)'
+        ],
+        additionalCostTitle: 'Additional Cost Information',
+        additionalCostItems: [
+          'Utility Costs: Additional electricity, additional lighting, internet, additional signage, etc. must be applied for separately and paid\n(detailed items will be provided separately after participation confirmation)',
+          'Corner Booth Additional Cost: ₩300,000 per booth (VAT excluded)\n(Corner allocation prioritized by first-come-first-served/number of booths/brand category)'
+        ],
         additionalCost: {
           title: 'Additional Costs',
           items: [
@@ -434,7 +452,7 @@ const en = {
           headers: ['Category', 'Condition', 'Refund'],
           rows: [
             ['100% Refund', 'Up to 90 days before the event (by Nov 21, 2025)', '100% refund of deposit and balance'],
-            ['Partial Refund', 'Cancellation 89–60 days before the event\n(Nov 22 – Dec 20, 2025)', '50% refund of total amount paid (if balance is unpaid, 50% of deposit will be refunded)'],
+            ['Partial Refund', 'Cancellation 89–60 days before the event\n(Nov 22 – Dec 20, 2025)', '50% refund of total amount paid\n<span class="small-text">(if balance is unpaid, 50% of deposit will be refunded)</span>'],
             ['No Refund', 'Cancellation within 59 days of the event\n(from Dec 21, 2025 onward)', 'No refund of deposit or balance'],
             ['Unpaid Balance', 'If the remaining balance is not paid within 60 days of the contract date', 'Deposit will be forfeited, and the contract will be automatically terminated']
           ]
@@ -639,7 +657,7 @@ const en = {
       ]
     },
     notes: {
-      title: '⚠️ Important Notes',
+      title: 'Important Notes',
       list: [
         'Tickets are valid for one day only and cannot be used on other dates.',
         'Transfers, exchanges, and partial refunds are not allowed.',
@@ -693,7 +711,7 @@ const en = {
       method: {
         title: 'How to Register',
         list: [
-          'Click the "Register as Buyer" button below',
+          'Click the <strong>"Register as Buyer"</strong> button below',
           'Enter your basic and company information',
           'Upload proof of professional status (e.g. business card or certificate)',
           'Upon approval, entry details will be sent via email before the event'
@@ -703,7 +721,7 @@ const en = {
         title: 'BUYER/PRESS Registration',
         note: '※ You will receive an individual confirmation email upon approval.',
         notice: {
-          title: '⚠️ Important Notes',
+          title: 'Important Notes',
           list: [
             'This registration is separate from the general admission ticket.',
             'On-site registration may be limited. Pre-registration is highly recommended.',
@@ -750,7 +768,7 @@ const en = {
     invite: {
       title: 'Who We\'re Looking For',
       text: 'Content authenticity and impact matter more than follower count.',
-      subtext: 'HYPECON looks for real influence, not just traffic.',
+      subtext: 'HYPECON looks for real <strong>influence</strong>, not just traffic.',
       content: [
         'Creators consistently publishing fashion and beauty content on Instagram, TikTok, YouTube, etc.',
         'Fashion creators with brand collaboration experience or aspiring to collaborate',
@@ -828,12 +846,7 @@ const en = {
     },
     whatItTakes: {
       title: 'WHAT IT TAKES',
-      text: 'HYPECON is a space where the hottest Gen Z brands connect with the most authentic influencers.',
-      list: [
-        'People brands reach out to first',
-        'Content that followers pay attention to',
-        'The beginning of feed transformation'
-      ],
+      textWithList: 'HYPECON is a space where the hottest Gen Z brands connect with the most authentic influencers.\n\nPeople brands reach out to first\nContent that followers pay attention to\nThe beginning of feed transformation',
       ending: 'Gen Z responded to you, now the world is watching.'
     }
   },
@@ -861,51 +874,51 @@ const en = {
       title: 'Award Categories',
       items: [
         {
-          title: '🏆 Influencer of the Year',
+          title: 'Influencer of the Year',
           desc: 'The style influencer who inspired Gen Z the most in 2025.'
         },
         {
-          title: '🏆 Brand of the Year',
+          title: 'Brand of the Year',
           desc: 'The most loved and purchased fashion or beauty brand among Gen Z.'
         },
         {
-          title: '🏆 Most Loved Brand (Audience Choice)',
+          title: 'Most Loved Brand (Audience Choice)',
           desc: 'Top-voted brand selected by on-site attendees.'
         },
         {
-          title: '🏆 Style Creator of the Year',
+          title: 'Style Creator of the Year',
           desc: 'A creator who sparked massive engagement through short-form content and Reels.'
         },
         {
-          title: '🏆 Stylist of the Year',
+          title: 'Stylist of the Year',
           desc: 'The stylist behind the most iconic idol and celebrity looks of the year.'
         },
         {
-          title: '🏆 Makeup Artist of the Year',
+          title: 'Makeup Artist of the Year',
           desc: 'The artist who defined the key makeup trends of 2026.'
         },
         {
-          title: '🏆 Rising Icon',
+          title: 'Rising Icon',
           desc: 'The breakout next-gen style icon of the year.'
         },
         {
-          title: '🏆 Collaboration of the Year',
+          title: 'Collaboration of the Year',
           desc: 'The best influencer x brand collaboration of the year.'
         },
         {
-          title: '🧢 Y2K Style',
+          title: 'Y2K Style',
           desc: ''
         },
         {
-          title: '📸 Most Posted Zone',
+          title: 'Most Posted Zone',
           desc: ''
         },
         {
-          title: '💅 Nail & Hair Trendsetter',
+          title: 'Nail & Hair Trendsetter',
           desc: ''
         },
         {
-          title: '🧑‍🎓 Campus Style (Favorite look among 20s students)',
+          title: 'Campus Style (Favorite look among 20s students)',
           desc: ''
         }
       ]
@@ -934,10 +947,10 @@ const en = {
     benefits: {
       title: 'Winner Benefits',
       items: [
-        'Award trophy & prize money, plus official winner announcement content',
-        'Feature in partner magazine (profile/interview)',
-        'Highlight video on YouTube & official social media clips',
-        'Priority brand collaboration offers & inclusion in post-event report'
+        'Award trophy & prize money + official winner content publication',
+        'Profile/interview feature in partner magazines',
+        'YouTube highlight video / official SNS clip distribution',
+        'Priority brand collaboration recommendations / report inclusion'
       ]
     },
     participation: {

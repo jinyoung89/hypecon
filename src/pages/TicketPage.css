@@ -109,6 +109,7 @@
   line-height: 82%;
   letter-spacing: clamp(-0.3375rem, (-9/1920)*100vw, -0.5625rem);
   text-transform: uppercase;
+  margin-bottom: clamp(21px, (42/1920)*100vw, 42px);
 }
 
 .ticket-info-content {
@@ -138,16 +139,23 @@
 }
 
 .ticket-play-inner {
-  max-width: clamp(800px, 52.08vw, 1000px);
+  max-width: clamp(1200px, 80vw, 1600px);
   width: 100%;
+  margin: 0 auto;
   padding: 0 clamp(1rem, 2.08vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .ticket-play-content {
   display: flex;
   align-items: center;
-  gap: clamp(2rem, 3.13vw, 4rem);
+  justify-content: center;
+  gap: clamp(1.5rem, 2.5vw, 3rem);
   min-height: clamp(300px, 31.25vw, 500px);
+  align-self: center;
+  width: 100%;
 }
 
 .ticket-play-left {
@@ -159,26 +167,33 @@
 }
 
 .ticket-play-subtitle {
-  font-size: clamp(0.9rem, 1.46vw, 1.2rem);
-  font-weight: 500;
-  color: var(--color-black);
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(25.2px, (42/1920)*100vw, 42px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(36px, (60/1920)*100vw, 60px);
+  letter-spacing: clamp(-1.26px, (-2.1/1920)*100vw, -2.1px);
   margin-bottom: clamp(1rem, 1.56vw, 1.5rem);
-  font-family: 'Noto Sans', sans-serif;
   white-space: pre-line;
+  max-width: clamp(400px, 50vw, 600px);
+  text-align: left;
 }
 
 .ticket-play-title {
   display: flex;
   flex-direction: column;
   gap: clamp(0.5rem, 0.52vw, 0.8rem);
+  max-width: clamp(400px, 50vw, 600px);
 }
 
 .ticket-play-title span {
-  font-size: clamp(4rem, 11.46vw, 13.75rem);
-  font-weight: 700;
-  color: var(--color-black);
-  line-height: 0.8;
-  font-family: 'Bebas Neue', sans-serif;
+  color: #000;
+  font-family: "Bebas Neue";
+  font-size: clamp(108px, (180/1920)*100vw, 180px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 86%;
   letter-spacing: 1px;
 }
 
@@ -191,9 +206,10 @@
 }
 
 .ticket-play-right {
-  flex: 1;
+  flex: 1.8;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .ticket-play-list {
@@ -202,15 +218,19 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: clamp(0.8rem, 1.04vw, 1.2rem);
+  gap: clamp(0.2rem, 0.26vw, 0.3rem);
+  width: 100%;
+  max-width: clamp(400px, (800/1920)*100vw, 800px);
 }
 
 .ticket-play-list li {
-  font-size: clamp(0.9rem, 1.25vw, 1.1rem);
-  line-height: 1.4;
   color: #000;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
   font-weight: 500;
+  line-height: clamp(42.6px, (71/1920)*100vw, 71px);
+  letter-spacing: clamp(-0.96px, (-1.6/1920)*100vw, -1.6px);
   position: relative;
   padding-left: clamp(1.5rem, 2.08vw, 2rem);
 }
@@ -219,9 +239,9 @@
   content: '';
   position: absolute;
   left: 0;
-  top: clamp(0.4rem, 0.52vw, 0.6rem);
-  width: clamp(8px, 0.42vw, 12px);
-  height: clamp(8px, 0.42vw, 12px);
+  top: clamp(16px, (28/1920)*100vw, 28px);
+  width: clamp(10px, (20/1920)*100vw, 20px);
+  height: clamp(10px, (20/1920)*100vw, 20px);
   background: #00FF00;
   border-radius: 50%;
 }
@@ -269,12 +289,15 @@
 }
 
 .ticket-recommend-desc p {
-  font-size: clamp(1rem, 2.08vw, 1.3rem);
-  line-height: 1.6;
-  color: var(--color-white);
-  margin: 0 0 clamp(0.5rem, 1.04vw, 1rem) 0;
-  font-family: 'Noto Sans', sans-serif;
+  color: #FFF;
+  text-align: center;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
   font-weight: 700;
+  line-height: clamp(30px, (50/1920)*100vw, 50px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
+  margin: 0 0 clamp(0.5rem, 1.04vw, 1rem) 0;
 }
 
 .ticket-recommend-desc p:last-child {
@@ -286,8 +309,16 @@
   border-radius: clamp(15px, 1.56vw, 25px);
   padding: clamp(2rem, 3.13vw, 3rem);
   text-align: center;
-  max-width: clamp(600px, 62.5vw, 800px);
+  width: 100%;
+  max-width: clamp(478px, (956/1920)*100vw, 956px);
+  height: auto;
+  min-height: clamp(218px, (436/1920)*100vw, 436px);
+  flex-shrink: 0;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .ticket-recommend-list {
@@ -300,12 +331,14 @@
 }
 
 .ticket-recommend-list li {
-  font-size: clamp(0.9rem, 1.25vw, 1.1rem);
-  line-height: 1.5;
-  color: var(--color-black);
-  font-family: 'Noto Sans CJK KR', sans-serif;
+  color: #000;
   text-align: center;
-  font-weight: 900;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: clamp(33px, (55/1920)*100vw, 55px);
+  letter-spacing: clamp(-0.576px, (-0.96/1920)*100vw, -0.96px);
 }
 
 .ticket-recommend-list li::before {
@@ -321,7 +354,7 @@
 }
 
 .ticket-whenwhere-inner {
-  max-width: clamp(800px, 52.08vw, 1000px);
+  max-width: clamp(1000px, 80vw, 1400px);
   width: 100%;
   padding: 0 clamp(1rem, 2.08vw, 2rem);
   text-align: center;
@@ -332,7 +365,8 @@
 }
 
 .ticket-whenwhere-title {
-  font-size: clamp(1.5rem, 3.13vw, 2.5rem);
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(27px, (45/1920)*100vw, 45px);
   font-weight: 700;
   color: var(--color-primary);
   background: var(--color-black);
@@ -340,7 +374,6 @@
   padding: clamp(1rem, 1.56vw, 1.5rem) clamp(2rem, 3.13vw, 3rem);
   display: inline-block;
   margin: 0;
-  font-family: 'Noto Sans CJK KR', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   width: clamp(300px, 52.08vw, 1000px);
@@ -351,28 +384,43 @@
   background: var(--color-gray-light);
   border: none;
   border-radius: clamp(10px, 1.04vw, 15px);
-  padding: clamp(2rem, 3.13vw, 3rem);
-  max-width: clamp(700px, 72.92vw, 900px);
+  padding: clamp(0.5rem, 0.8vw, 0.8rem);
+  width: 100%;
+  max-width: clamp(640px, (1280/1920)*100vw, 1280px);
+  height: auto;
+  min-height: clamp(202.5px, (405/1920)*100vw, 405px);
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .ticket-whenwhere-content {
   display: flex;
-  gap: clamp(2rem, 3.13vw, 4rem);
-  align-items: flex-start;
+  gap: clamp(1rem, 1.5vw, 1.5rem);
+  align-items: stretch;
+  justify-content: center;
 }
 
 .ticket-whenwhere-left {
-  flex: 1;
+  flex: none;
+  width: clamp(250px, (500/1920)*100vw, 500px);
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .ticket-whenwhere-dates {
-  font-size: clamp(1.2rem, 2.08vw, 1.5rem);
-  font-weight: 700;
   color: #000;
-  margin-bottom: clamp(0.5rem, 0.52vw, 0.8rem);
-  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 900;
+  line-height: clamp(36px, (60/1920)*100vw, 60px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
+  margin-bottom: clamp(0.2rem, 0.3vw, 0.3rem);
   word-break: keep-all;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -380,10 +428,13 @@
 }
 
 .ticket-whenwhere-location {
-  font-size: clamp(1rem, 1.56vw, 1.2rem);
   color: #000;
-  font-family: 'Noto Sans CJK KR', sans-serif;
-  font-weight: 700;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 900;
+  line-height: clamp(36px, (60/1920)*100vw, 60px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
   word-break: keep-all;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -391,45 +442,59 @@
 }
 
 .ticket-whenwhere-right {
-  flex: 1;
-  text-align: left;
+  flex: none;
+  width: clamp(295px, (590/1920)*100vw, 590px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .ticket-whenwhere-schedule {
   display: flex;
   flex-direction: column;
-  gap: clamp(0.8rem, 1.04vw, 1.2rem);
+  gap: clamp(0.3rem, 0.5vw, 0.5rem);
+  width: 100%;
 }
 
 .schedule-item {
   display: flex;
   align-items: center;
-  gap: clamp(0.2rem, 1.5vw, 0.6rem);
+  gap: clamp(0.1rem, 0.8vw, 0.3rem);
   flex-wrap: wrap;
 }
 
 .schedule-date {
-  font-size: clamp(0.9rem, 1.25vw, 1.1rem);
-  font-weight: 700;
   color: #000;
-  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(36px, (60/1920)*100vw, 60px);
+  letter-spacing: clamp(-0.96px, (-1.6/1920)*100vw, -1.6px);
   flex-shrink: 0;
 }
 
 .schedule-time {
-  font-size: clamp(0.9rem, 1.25vw, 1.1rem);
   color: #000;
-  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(36px, (60/1920)*100vw, 60px);
+  letter-spacing: clamp(-0.96px, (-1.6/1920)*100vw, -1.6px);
   flex-shrink: 0;
-  font-weight: 700;
 }
 
 .schedule-last {
-  font-size: clamp(0.8rem, 1.04vw, 1rem);
   color: #000;
-  font-family: 'Noto Sans CJK KR', sans-serif;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(36px, (60/1920)*100vw, 60px);
+  letter-spacing: clamp(-0.96px, (-1.6/1920)*100vw, -1.6px);
   flex-shrink: 0;
-  font-weight: 700;
 }
 
 /* 티켓 가격 & 혜택 섹션 */
@@ -441,7 +506,7 @@
 }
 
 .ticket-price-inner {
-  max-width: clamp(800px, 52.08vw, 1000px);
+  max-width: clamp(1000px, 80vw, 1400px);
   width: 100%;
   padding: 0 clamp(1rem, 2.08vw, 2rem);
   text-align: center;
@@ -471,45 +536,57 @@
   background: transparent;
   border-radius: clamp(10px, 1.04vw, 15px);
   padding: clamp(2rem, 3.13vw, 3rem);
-  max-width: clamp(700px, 72.92vw, 900px);
+  max-width: clamp(1000px, 80vw, 1400px);
   margin: 0 auto;
-  text-align: left;
+  text-align: center;
 }
 
 .ticket-price-table-container {
-  width: 100%;
+  width: clamp(640px, (1280/1920)*100vw, 1280px);
+  min-height: clamp(256.5px, (513/1920)*100vw, 513px);
   overflow-x: auto;
-  margin-bottom: clamp(1.5rem, 2.08vw, 2rem);
+  margin: 0 auto clamp(1.5rem, 2.08vw, 2rem);
 }
 
 .ticket-price-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: clamp(1rem, 1.56vw, 1.5rem);
+  margin: 0 auto clamp(1rem, 1.56vw, 1.5rem);
   background: transparent;
+}
+
+.ticket-price-table-mobile {
+  display: none;
 }
 
 .ticket-price-table th {
   background: transparent;
   color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
   font-weight: 700;
+  line-height: clamp(36px, (60/1920)*100vw, 60px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
   text-align: center;
   padding: clamp(0.8rem, 1.04vw, 1.2rem);
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
-  font-family: 'Noto Sans', sans-serif;
-  font-size: clamp(0.9rem, 1.25vw, 1.1rem);
 }
 
 .ticket-price-table td {
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(36px, (60/1920)*100vw, 60px);
+  letter-spacing: clamp(-0.96px, (-1.6/1920)*100vw, -1.6px);
   padding: clamp(0.8rem, 1.04vw, 1.2rem);
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
   text-align: center;
   background: transparent;
-  font-family: 'Noto Sans', sans-serif;
-  font-size: clamp(0.8rem, 1.04vw, 1rem);
-  line-height: 1.4;
 }
 
 .ticket-price-table tr:nth-child(even) {
@@ -527,28 +604,49 @@
 }
 
 .ticket-price-note {
-  font-size: clamp(0.8rem, 1.04vw, 1rem);
-  line-height: 1.5;
   color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(14.4px, (24/1920)*100vw, 24px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(36px, (60/1920)*100vw, 60px);
+  letter-spacing: clamp(-1.008px, (-1.68/1920)*100vw, -1.68px);
   margin: 0;
-  font-family: 'Noto Sans', sans-serif;
   text-align: left;
 }
 
-.ticket-refund-title {
-  font-size: clamp(1.2rem, 2.08vw, 1.5rem);
-  font-weight: 700;
+.ticket-price-note strong {
   color: #000;
-  margin: clamp(2rem, 3.13vw, 3rem) 0 clamp(1rem, 1.56vw, 1.5rem) 0;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(36px, (60/1920)*100vw, 60px);
+  letter-spacing: clamp(-1.344px, (-2.24/1920)*100vw, -2.24px);
+}
+
+.ticket-refund-title {
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(16.2px, (27/1920)*100vw, 27px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
+  margin: clamp(65px, (130/1920)*100vw, 130px) 0 clamp(1rem, 1.56vw, 1.5rem) 0;
+  text-align: left;
 }
 
 .ticket-refund-intro {
-  font-size: clamp(0.9rem, 1.25vw, 1.1rem);
-  line-height: 1.5;
   color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(16.2px, (27/1920)*100vw, 27px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
   margin: 0 0 clamp(1rem, 1.56vw, 1.5rem) 0;
-  font-family: 'Noto Sans', sans-serif;
+  text-align: left;
 }
 
 .ticket-refund-list {
@@ -557,35 +655,51 @@
   margin: 0 0 clamp(2rem, 3.13vw, 3rem) 0;
   display: flex;
   flex-direction: column;
-  gap: clamp(0.5rem, 0.52vw, 0.8rem);
+  gap: 0;
+  text-align: left;
 }
 
 .ticket-refund-list li {
-  font-size: clamp(0.9rem, 1.25vw, 1.1rem);
-  line-height: 1.4;
   color: #000;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(29.4px, (49/1920)*100vw, 49px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
+  margin-bottom: clamp(8px, (15/1920)*100vw, 15px);
   position: relative;
-  padding-left: clamp(1.5rem, 2.08vw, 2rem);
+  padding-left: clamp(20px, (35/1920)*100vw, 35px);
+  text-align: left;
+  white-space: pre-line;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.ticket-refund-list li strong {
+  font-weight: 700;
 }
 
 .ticket-refund-list li::before {
-  content: '';
+  content: '•';
+  color: #000;
   position: absolute;
   left: 0;
-  top: clamp(0.4rem, 0.52vw, 0.6rem);
-  width: clamp(6px, 0.42vw, 8px);
-  height: clamp(6px, 0.42vw, 8px);
-  background: #000;
-  border-radius: 50%;
+  font-weight: 700;
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
 }
 
 .ticket-notes-title {
-  font-size: clamp(1.2rem, 2.08vw, 1.5rem);
-  font-weight: 700;
   color: #000;
-  margin: clamp(2rem, 3.13vw, 3rem) 0 clamp(1rem, 1.56vw, 1.5rem) 0;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(16.2px, (27/1920)*100vw, 27px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
+  margin: clamp(65px, (130/1920)*100vw, 130px) 0 clamp(1rem, 1.56vw, 1.5rem) 0;
+  text-align: left;
 }
 
 .ticket-notes-list {
@@ -594,51 +708,140 @@
   margin: 0 0 clamp(2rem, 3.13vw, 3rem) 0;
   display: flex;
   flex-direction: column;
-  gap: clamp(0.5rem, 0.52vw, 0.8rem);
+  gap: 0;
+  text-align: left;
 }
 
 .ticket-notes-list li {
-  font-size: clamp(0.9rem, 1.25vw, 1.1rem);
-  line-height: 1.4;
   color: #000;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(29.4px, (49/1920)*100vw, 49px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
+  margin-bottom: clamp(8px, (15/1920)*100vw, 15px);
   position: relative;
-  padding-left: clamp(1.5rem, 2.08vw, 2rem);
+  padding-left: clamp(20px, (35/1920)*100vw, 35px);
+  text-align: left;
+  white-space: pre-line;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .ticket-notes-list li::before {
-  content: '';
+  content: '•';
+  color: #000;
   position: absolute;
   left: 0;
-  top: clamp(0.4rem, 0.52vw, 0.6rem);
-  width: clamp(6px, 0.42vw, 8px);
-  height: clamp(6px, 0.42vw, 8px);
-  background: #000;
-  border-radius: 50%;
+  font-weight: 700;
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
 }
 
 .ticket-booking-title {
-  font-size: clamp(1.2rem, 2.08vw, 1.5rem);
-  font-weight: 700;
   color: #000;
-  margin: clamp(2rem, 3.13vw, 3rem) 0 clamp(1rem, 1.56vw, 1.5rem) 0;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(16.2px, (27/1920)*100vw, 27px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
+  margin: clamp(65px, (130/1920)*100vw, 130px) 0 clamp(1rem, 1.56vw, 1.5rem) 0;
+  text-align: left;
 }
 
 .ticket-booking-list {
   list-style: decimal;
-  padding-left: clamp(1.5rem, 2.08vw, 2rem);
+  padding-left: clamp(20px, (35/1920)*100vw, 35px);
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: clamp(0.5rem, 0.52vw, 0.8rem);
+  gap: 0;
+  text-align: left;
 }
 
 .ticket-booking-list li {
-  font-size: clamp(0.9rem, 1.25vw, 1.1rem);
-  line-height: 1.4;
   color: #000;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(29.4px, (49/1920)*100vw, 49px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
+  margin-bottom: clamp(8px, (15/1920)*100vw, 15px);
+  text-align: left;
+  white-space: pre-line;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* 새로운 섹션 */
+.ticket-new-section {
+  background: var(--color-black);
+  min-height: clamp(340px, (680/1920)*100vw, 680px);
+  height: clamp(340px, (680/1920)*100vw, 680px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.ticket-new-inner {
+  max-width: clamp(1024px, (2048/1920)*100vw, 2048px);
+  width: 100%;
+  padding: 0 clamp(1rem, 2.08vw, 2rem);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.ticket-new-button {
+  width: clamp(327px, (654/1920)*100vw, 654px);
+  height: clamp(74px, (148/1920)*100vw, 148px);
+  flex-shrink: 0;
+  aspect-ratio: 327/74;
+  background: #00E5A8;
+  border: none;
+  border-radius: clamp(150px, (300/1920)*100vw, 300px);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  text-align: center;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(27px, (45/1920)*100vw, 45px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(30px, (50/1920)*100vw, 50px);
+  letter-spacing: clamp(-0.81px, (-1.35/1920)*100vw, -1.35px);
+  transition: all 0.3s ease;
+}
+
+.ticket-new-button:hover {
+  background: #00D199;
+  transform: translateY(-2px);
+}
+
+.ticket-new-text {
+  color: #FFF;
+  text-align: center;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(14.4px, (24/1920)*100vw, 24px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(21.6px, (36/1920)*100vw, 36px);
+  letter-spacing: clamp(-0.72px, (-1.2/1920)*100vw, -1.2px);
+  margin: clamp(1rem, 2vw, 1.5rem) 0 0 0;
+  white-space: pre-line;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 /* 반응형 스타일 */
@@ -695,20 +898,22 @@
   }
   
   .ticket-play-title span {
-    font-size: clamp(3rem, 8vw, 10rem);
-    font-weight: 700;
+    font-size: clamp(64.8px, (108/1920)*100vw, 108px);
+    font-weight: 400;
   }
   
   .ticket-play-list li {
-    font-size: clamp(0.8rem, 2.2vw, 1rem);
-    padding-left: clamp(1.2rem, 3vw, 1.8rem);
+    font-size: clamp(11.52px, (19.2/1920)*100vw, 19.2px);
+    line-height: clamp(25.56px, (42.6/1920)*100vw, 42.6px);
+    letter-spacing: clamp(-0.576px, (-0.96/1920)*100vw, -0.96px);
+    padding-left: clamp(1rem, 5vw, 1.5rem);
     font-weight: 500;
   }
   
   .ticket-play-list li::before {
-    width: clamp(6px, 2vw, 10px);
-    height: clamp(6px, 2vw, 10px);
-    top: clamp(0.3rem, 1vw, 0.5rem);
+    width: clamp(10px, (20/1920)*100vw, 20px);
+    height: clamp(10px, (20/1920)*100vw, 20px);
+    top: clamp(9.6px, (16.8/1920)*100vw, 16.8px);
   }
 
   .ticket-recommend-section {
@@ -723,19 +928,47 @@
   }
   
   .ticket-recommend-desc p {
-    font-size: clamp(0.9rem, 2.2vw, 1.2rem);
+    font-size: clamp(12.96px, (21.6/1920)*100vw, 21.6px);
+    line-height: clamp(18px, (30/1920)*100vw, 30px);
+    letter-spacing: clamp(-0.648px, (-1.08/1920)*100vw, -1.08px);
     font-weight: 700;
   }
   
   .ticket-recommend-box {
     padding: clamp(1.5rem, 4vw, 2.5rem);
+    width: clamp(280px, 90vw, 600px);
+    height: auto;
+    min-height: clamp(150px, 25vw, 250px);
+  }
+  
+  .ticket-price-table th,
+  .ticket-price-table td {
+    padding: clamp(0.6rem, 1.5vw, 1rem);
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+  }
+  
+  .ticket-price-table th {
+    font-size: clamp(12.96px, (21.6/1920)*100vw, 21.6px);
+    line-height: clamp(21.6px, (36/1920)*100vw, 36px);
+    letter-spacing: clamp(-0.648px, (-1.08/1920)*100vw, -1.08px);
+    font-weight: 700;
+  }
+  
+  .ticket-price-table td {
+    font-size: clamp(11.52px, (19.2/1920)*100vw, 19.2px);
+    line-height: clamp(21.6px, (36/1920)*100vw, 36px);
+    letter-spacing: clamp(-0.576px, (-0.96/1920)*100vw, -0.96px);
+    font-weight: 400;
   }
   
   .ticket-recommend-list li {
-    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-size: clamp(11.52px, (19.2/1920)*100vw, 19.2px);
+    line-height: clamp(19.8px, (33/1920)*100vw, 33px);
+    letter-spacing: clamp(-0.3456px, (-0.576/1920)*100vw, -0.576px);
     color: #000;
     font-family: 'Noto Sans CJK KR', sans-serif;
-    font-weight: 900;
+    font-weight: 500;
   }
 
   .ticket-whenwhere-section {
@@ -743,33 +976,70 @@
   }
   
   .ticket-whenwhere-title {
-    font-size: clamp(1.3rem, 4vw, 2rem);
-    padding: clamp(0.8rem, 2vw, 1.2rem) clamp(1.5rem, 4vw, 2.5rem);
+    font-size: clamp(16.2px, (27/1920)*100vw, 27px);
+    padding: clamp(0.7rem, 3vw, 1rem) clamp(1rem, 5vw, 2rem);
     border-radius: 60px;
-    width: clamp(280px, 60vw, 800px);
+    width: clamp(250px, 70vw, 600px);
     font-family: 'Noto Sans CJK KR', sans-serif;
   }
   
+  .ticket-whenwhere-box {
+    width: 100%;
+    max-width: clamp(280px, 95vw, 500px);
+    height: auto;
+    min-height: clamp(180px, 30vw, 280px);
+    padding: clamp(0.8rem, 3vw, 1.2rem);
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  .ticket-whenwhere-content {
+    flex-direction: column;
+    gap: clamp(0.8rem, 4vw, 1.5rem);
+  }
+  
+  .ticket-whenwhere-left {
+    width: 100%;
+  }
+  
+  .ticket-whenwhere-right {
+    width: 100%;
+  }
+  
   .ticket-whenwhere-dates {
-    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    font-size: clamp(12.96px, (21.6/1920)*100vw, 21.6px);
+    line-height: clamp(21.6px, (36/1920)*100vw, 36px);
+    letter-spacing: clamp(-0.648px, (-1.08/1920)*100vw, -1.08px);
+    font-weight: 900;
     font-family: 'Noto Sans CJK KR', sans-serif;
   }
   
   .ticket-whenwhere-location {
-    font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+    font-size: clamp(12.96px, (21.6/1920)*100vw, 21.6px);
+    line-height: clamp(21.6px, (36/1920)*100vw, 36px);
+    letter-spacing: clamp(-0.648px, (-1.08/1920)*100vw, -1.08px);
+    font-weight: 900;
     font-family: 'Noto Sans CJK KR', sans-serif;
   }
   
   .schedule-date,
   .schedule-time {
-    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-size: clamp(11.52px, (19.2/1920)*100vw, 19.2px);
+    line-height: clamp(21.6px, (36/1920)*100vw, 36px);
+    letter-spacing: clamp(-0.576px, (-0.96/1920)*100vw, -0.96px);
     font-weight: 700;
     font-family: 'Noto Sans CJK KR', sans-serif;
   }
   
+  .schedule-time {
+    font-weight: 400;
+  }
+  
   .schedule-last {
-    font-size: clamp(0.7rem, 1.8vw, 0.9rem);
-    font-weight: 700;
+    font-size: clamp(11.52px, (19.2/1920)*100vw, 19.2px);
+    line-height: clamp(21.6px, (36/1920)*100vw, 36px);
+    letter-spacing: clamp(-0.576px, (-0.96/1920)*100vw, -0.96px);
+    font-weight: 400;
     font-family: 'Noto Sans CJK KR', sans-serif;
   }
 
@@ -787,14 +1057,6 @@
     padding: clamp(1.5rem, 4vw, 2.5rem);
   }
   
-  .ticket-price-table th,
-  .ticket-price-table td {
-    padding: clamp(0.6rem, 1.5vw, 1rem);
-    font-size: clamp(0.7rem, 1.8vw, 0.9rem);
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
-  }
-  
   .ticket-price-table th:first-child,
   .ticket-price-table td:first-child {
     border-left: 1px solid #000;
@@ -806,7 +1068,82 @@
   }
   
   .ticket-price-note {
-    font-size: clamp(0.7rem, 1.8vw, 0.9rem);
+    font-size: clamp(8.64px, (14.4/1920)*100vw, 14.4px);
+    line-height: clamp(21.6px, (36/1920)*100vw, 36px);
+    letter-spacing: clamp(-0.6048px, (-1.008/1920)*100vw, -1.008px);
+    font-weight: 400;
+  }
+  
+  .ticket-price-note strong {
+    font-size: clamp(11.52px, (19.2/1920)*100vw, 19.2px);
+    line-height: clamp(21.6px, (36/1920)*100vw, 36px);
+    letter-spacing: clamp(-0.8064px, (-1.344/1920)*100vw, -1.344px);
+    font-weight: 700;
+  }
+  
+  .ticket-refund-title,
+  .ticket-notes-title,
+  .ticket-booking-title {
+    font-size: clamp(12.96px, (21.6/1920)*100vw, 21.6px);
+    line-height: clamp(9.72px, (16.2/1920)*100vw, 16.2px);
+    letter-spacing: clamp(-0.648px, (-1.08/1920)*100vw, -1.08px);
+    font-weight: 700;
+  }
+  
+  .ticket-refund-intro,
+  .ticket-refund-list li,
+  .ticket-notes-list li,
+  .ticket-booking-list li {
+    font-size: clamp(12.96px, (21.6/1920)*100vw, 21.6px);
+    line-height: 1.5;
+    letter-spacing: clamp(-0.648px, (-1.08/1920)*100vw, -1.08px);
+    font-weight: 400;
+  }
+  
+  .ticket-refund-list li,
+  .ticket-notes-list li {
+    margin-bottom: clamp(5px, (10/1920)*100vw, 10px);
+    padding-left: clamp(15px, (25/1920)*100vw, 25px);
+  }
+  
+  .ticket-refund-list li::before,
+  .ticket-notes-list li::before {
+    font-size: clamp(12.96px, (21.6/1920)*100vw, 21.6px);
+  }
+  
+  .ticket-booking-list {
+    padding-left: clamp(15px, (25/1920)*100vw, 25px);
+  }
+  
+  .ticket-booking-list li {
+    margin-bottom: clamp(5px, (10/1920)*100vw, 10px);
+  }
+  
+  .ticket-new-section {
+    min-height: clamp(250px, 40vw, 400px);
+    height: clamp(250px, 40vw, 400px);
+    padding: clamp(2rem, 4vw, 3rem) 0;
+  }
+  
+  .ticket-new-inner {
+    max-width: clamp(600px, 90vw, 1200px);
+    padding: 0 clamp(1rem, 3vw, 2rem);
+  }
+  
+  .ticket-new-button {
+    width: clamp(250px, 80vw, 500px);
+    height: clamp(50px, 12vw, 100px);
+    font-size: clamp(16.2px, (27/1920)*100vw, 27px);
+    line-height: clamp(18px, (30/1920)*100vw, 30px);
+    letter-spacing: clamp(-0.486px, (-0.81/1920)*100vw, -0.81px);
+    border-radius: clamp(100px, (200/1920)*100vw, 200px);
+  }
+  
+  .ticket-new-text {
+    font-size: clamp(8.64px, (14.4/1920)*100vw, 14.4px);
+    line-height: clamp(12.96px, (21.6/1920)*100vw, 21.6px);
+    letter-spacing: clamp(-0.432px, (-0.72/1920)*100vw, -0.72px);
+    margin: clamp(0.8rem, 1.5vw, 1.2rem) 0 0 0;
   }
 }
 
@@ -848,30 +1185,34 @@
   }
   
   .ticket-play-subtitle {
-    font-size: clamp(0.8rem, 3vw, 1rem);
+    font-size: clamp(15.12px, (25.2/1920)*100vw, 25.2px);
+    line-height: clamp(21.6px, (36/1920)*100vw, 36px);
+    letter-spacing: clamp(-0.756px, (-1.26/1920)*100vw, -1.26px);
     margin-bottom: clamp(0.8rem, 3vw, 1.2rem);
     white-space: pre-line;
   }
   
   .ticket-play-title span {
-    font-size: clamp(2.5rem, 12vw, 8rem);
-    font-weight: 700;
+    font-size: clamp(64.8px, (108/1920)*100vw, 108px);
+    font-weight: 400;
   }
   
   .ticket-play-list {
-    gap: clamp(0.6rem, 3vw, 1rem);
+    gap: clamp(0.15rem, 0.8vw, 0.25rem);
   }
   
   .ticket-play-list li {
-    font-size: clamp(0.7rem, 3.5vw, 0.9rem);
+    font-size: clamp(11.52px, (19.2/1920)*100vw, 19.2px);
+    line-height: clamp(25.56px, (42.6/1920)*100vw, 42.6px);
+    letter-spacing: clamp(-0.576px, (-0.96/1920)*100vw, -0.96px);
     padding-left: clamp(1rem, 5vw, 1.5rem);
     font-weight: 500;
   }
   
   .ticket-play-list li::before {
-    width: clamp(5px, 3vw, 8px);
-    height: clamp(5px, 3vw, 8px);
-    top: clamp(0.2rem, 1.5vw, 0.4rem);
+    width: clamp(10px, (20/1920)*100vw, 20px);
+    height: clamp(10px, (20/1920)*100vw, 20px);
+    top: clamp(9.6px, (16.8/1920)*100vw, 16.8px);
   }
 
   .ticket-recommend-section {
@@ -891,8 +1232,13 @@
   }
   
   .ticket-recommend-box {
-    padding: clamp(1.2rem, 5vw, 2rem);
-    border-radius: clamp(10px, 2.5vw, 20px);
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    width: 100%;
+    max-width: clamp(280px, 90vw, 600px);
+    height: auto;
+    min-height: clamp(150px, 25vw, 250px);
+    margin: 0 auto;
+    box-sizing: border-box;
   }
   
   .ticket-recommend-list {
@@ -900,10 +1246,12 @@
   }
   
   .ticket-recommend-list li {
-    font-size: clamp(0.7rem, 3.5vw, 0.9rem);
+    font-size: clamp(11.52px, (19.2/1920)*100vw, 19.2px);
+    line-height: clamp(19.8px, (33/1920)*100vw, 33px);
+    letter-spacing: clamp(-0.3456px, (-0.576/1920)*100vw, -0.576px);
     color: #000;
     font-family: 'Noto Sans CJK KR', sans-serif;
-    font-weight: 900;
+    font-weight: 500;
   }
 
   .ticket-whenwhere-section {
@@ -911,7 +1259,7 @@
   }
   
   .ticket-whenwhere-title {
-    font-size: clamp(1.1rem, 5vw, 1.8rem);
+    font-size: clamp(16.2px, (27/1920)*100vw, 27px);
     padding: clamp(0.7rem, 3vw, 1rem) clamp(1rem, 5vw, 2rem);
     border-radius: 60px;
     width: clamp(250px, 70vw, 600px);
@@ -963,9 +1311,22 @@
   .ticket-price-table th,
   .ticket-price-table td {
     padding: clamp(0.5rem, 2vw, 0.8rem);
-    font-size: clamp(0.6rem, 2.5vw, 0.8rem);
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
+  }
+  
+  .ticket-price-table th {
+    font-size: clamp(12.96px, (21.6/1920)*100vw, 21.6px);
+    line-height: clamp(21.6px, (36/1920)*100vw, 36px);
+    letter-spacing: clamp(-0.648px, (-1.08/1920)*100vw, -1.08px);
+    font-weight: 700;
+  }
+  
+  .ticket-price-table td {
+    font-size: clamp(11.52px, (19.2/1920)*100vw, 19.2px);
+    line-height: clamp(21.6px, (36/1920)*100vw, 36px);
+    letter-spacing: clamp(-0.576px, (-0.96/1920)*100vw, -0.96px);
+    font-weight: 400;
   }
   
   .ticket-price-table th:first-child,
@@ -979,7 +1340,82 @@
   }
   
   .ticket-price-note {
-    font-size: clamp(0.6rem, 2.5vw, 0.8rem);
+    font-size: clamp(8.64px, (14.4/1920)*100vw, 14.4px);
+    line-height: clamp(21.6px, (36/1920)*100vw, 36px);
+    letter-spacing: clamp(-0.6048px, (-1.008/1920)*100vw, -1.008px);
+    font-weight: 400;
+  }
+  
+  .ticket-price-note strong {
+    font-size: clamp(11.52px, (19.2/1920)*100vw, 19.2px);
+    line-height: clamp(21.6px, (36/1920)*100vw, 36px);
+    letter-spacing: clamp(-0.8064px, (-1.344/1920)*100vw, -1.344px);
+    font-weight: 700;
+  }
+  
+  .ticket-refund-title,
+  .ticket-notes-title,
+  .ticket-booking-title {
+    font-size: clamp(12.96px, (21.6/1920)*100vw, 21.6px);
+    line-height: clamp(9.72px, (16.2/1920)*100vw, 16.2px);
+    letter-spacing: clamp(-0.648px, (-1.08/1920)*100vw, -1.08px);
+    font-weight: 700;
+  }
+  
+  .ticket-refund-intro,
+  .ticket-refund-list li,
+  .ticket-notes-list li,
+  .ticket-booking-list li {
+    font-size: clamp(12.96px, (21.6/1920)*100vw, 21.6px);
+    line-height: 1.5;
+    letter-spacing: clamp(-0.648px, (-1.08/1920)*100vw, -1.08px);
+    font-weight: 400;
+  }
+  
+  .ticket-refund-list li,
+  .ticket-notes-list li {
+    margin-bottom: clamp(5px, (10/1920)*100vw, 10px);
+    padding-left: clamp(15px, (25/1920)*100vw, 25px);
+  }
+  
+  .ticket-refund-list li::before,
+  .ticket-notes-list li::before {
+    font-size: clamp(12.96px, (21.6/1920)*100vw, 21.6px);
+  }
+  
+  .ticket-booking-list {
+    padding-left: clamp(15px, (25/1920)*100vw, 25px);
+  }
+  
+  .ticket-booking-list li {
+    margin-bottom: clamp(5px, (10/1920)*100vw, 10px);
+  }
+  
+  .ticket-new-section {
+    min-height: clamp(200px, 35vw, 350px);
+    height: clamp(200px, 35vw, 350px);
+    padding: clamp(1.5rem, 5vw, 2.5rem) 0;
+  }
+  
+  .ticket-new-inner {
+    max-width: clamp(500px, 95vw, 1000px);
+    padding: 0 clamp(0.8rem, 4vw, 1.5rem);
+  }
+  
+  .ticket-new-button {
+    width: clamp(220px, 85vw, 450px);
+    height: clamp(45px, 10vw, 80px);
+    font-size: clamp(16.2px, (27/1920)*100vw, 27px);
+    line-height: clamp(18px, (30/1920)*100vw, 30px);
+    letter-spacing: clamp(-0.486px, (-0.81/1920)*100vw, -0.81px);
+    border-radius: clamp(90px, (180/1920)*100vw, 180px);
+  }
+  
+  .ticket-new-text {
+    font-size: clamp(8.64px, (14.4/1920)*100vw, 14.4px);
+    line-height: clamp(12.96px, (21.6/1920)*100vw, 21.6px);
+    letter-spacing: clamp(-0.432px, (-0.72/1920)*100vw, -0.72px);
+    margin: clamp(0.6rem, 1vw, 0.8rem) 0 0 0;
   }
 } 
 
@@ -995,6 +1431,142 @@
     letter-spacing: clamp(-0.04rem, -0.2vw, -1.2px);
     padding: 0 0.5rem;
   }
+  
+  /* 티켓 가격 표 모바일 카드 레이아웃 */
+  .ticket-price-box {
+    padding: clamp(1rem, 3vw, 2rem);
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .ticket-price-table-container {
+    overflow-x: visible;
+    padding: 0;
+    width: 100%;
+    margin: 0 auto clamp(1.5rem, 2.08vw, 2rem);
+  }
+
+  .ticket-price-table {
+    display: none;
+  }
+
+  .ticket-price-table-mobile {
+    display: block;
+    width: 100%;
+  }
+
+  .ticket-card {
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .ticket-card-header {
+    font-family: "Noto Sans CJK KR";
+    font-size: clamp(1.1rem, 4vw, 1.3rem);
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+  }
+
+  .ticket-card-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.8rem;
+    font-family: "Noto Sans CJK KR";
+  }
+
+  .ticket-card-row:last-child {
+    margin-bottom: 0;
+  }
+
+  .ticket-card-label {
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.3rem;
+  }
+
+  .ticket-card-value {
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    font-weight: 400;
+    color: #000;
+    line-height: 1.4;
+    white-space: pre-line;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  /* 추천 박스 모바일 최적화 */
+  .ticket-recommend-box {
+    width: 100%;
+    max-width: clamp(280px, 95vw, 500px);
+    height: auto;
+    min-height: clamp(100px, 18vw, 180px);
+    padding: clamp(1rem, 4vw, 1.5rem);
+    border-radius: clamp(8px, 2vw, 15px);
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  /* When & Where 박스 모바일 최적화 */
+  .ticket-whenwhere-box {
+    width: 100%;
+    max-width: clamp(280px, 95vw, 500px);
+    height: auto;
+    min-height: clamp(160px, 25vw, 250px);
+    padding: clamp(0.8rem, 3vw, 1.2rem);
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  .ticket-recommend-list {
+    gap: clamp(0.5rem, 2.5vw, 0.8rem);
+  }
+  
+  .ticket-recommend-list li {
+    font-size: clamp(11.52px, (19.2/1920)*100vw, 19.2px);
+    line-height: clamp(19.8px, (33/1920)*100vw, 33px);
+    letter-spacing: clamp(-0.3456px, (-0.576/1920)*100vw, -0.576px);
+    font-weight: 500;
+  }
+  
+  /* 새로운 섹션 모바일 */
+  .ticket-new-section {
+    min-height: clamp(180px, 30vw, 300px);
+    height: clamp(180px, 30vw, 300px);
+    padding: clamp(1.2rem, 4vw, 2rem) 0;
+  }
+  
+  .ticket-new-inner {
+    max-width: clamp(450px, 95vw, 900px);
+    padding: 0 clamp(0.8rem, 3vw, 1.5rem);
+  }
+  
+  .ticket-new-button {
+    width: clamp(200px, 85vw, 400px);
+    height: clamp(42px, 9vw, 75px);
+    font-size: clamp(16.2px, (27/1920)*100vw, 27px);
+    line-height: clamp(18px, (30/1920)*100vw, 30px);
+    letter-spacing: clamp(-0.486px, (-0.81/1920)*100vw, -0.81px);
+    border-radius: clamp(80px, (160/1920)*100vw, 160px);
+  }
+  
+  .ticket-new-text {
+    font-size: clamp(8.64px, (14.4/1920)*100vw, 14.4px);
+    line-height: clamp(12.96px, (21.6/1920)*100vw, 21.6px);
+    letter-spacing: clamp(-0.432px, (-0.72/1920)*100vw, -0.72px);
+    margin: clamp(0.6rem, 1vw, 0.8rem) 0 0 0;
+  }
 } 
 
 @media (max-width: 480px) {
@@ -1008,5 +1580,67 @@
     line-height: clamp(1.1rem, 4.5vw, 1.5rem);
     letter-spacing: clamp(-0.02rem, -0.1vw, -0.8px);
     padding: 0 0.3rem;
+  }
+  
+  /* 추천 박스 초소형 모바일 최적화 */
+  .ticket-recommend-box {
+    width: 100%;
+    max-width: clamp(250px, 98vw, 400px);
+    height: auto;
+    min-height: clamp(80px, 15vw, 150px);
+    padding: clamp(0.8rem, 3vw, 1.2rem);
+    border-radius: clamp(6px, 1.5vw, 12px);
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  /* When & Where 박스 초소형 모바일 최적화 */
+  .ticket-whenwhere-box {
+    width: 100%;
+    max-width: clamp(250px, 98vw, 400px);
+    height: auto;
+    min-height: clamp(140px, 20vw, 200px);
+    padding: clamp(0.6rem, 2vw, 1rem);
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  .ticket-recommend-list {
+    gap: clamp(0.4rem, 2vw, 0.6rem);
+  }
+  
+  .ticket-recommend-list li {
+    font-size: clamp(10px, 3.5vw, 14px);
+    line-height: clamp(16px, 4.5vw, 20px);
+    letter-spacing: clamp(-0.3px, -0.8vw, -0.5px);
+    font-weight: 500;
+  }
+  
+  /* 새로운 섹션 초소형 모바일 */
+  .ticket-new-section {
+    min-height: clamp(150px, 25vw, 250px);
+    height: clamp(150px, 25vw, 250px);
+    padding: clamp(1rem, 3vw, 1.5rem) 0;
+  }
+  
+  .ticket-new-inner {
+    max-width: clamp(350px, 98vw, 800px);
+    padding: 0 clamp(0.5rem, 2vw, 1rem);
+  }
+  
+  .ticket-new-button {
+    width: clamp(180px, 90vw, 350px);
+    height: clamp(38px, 8vw, 65px);
+    font-size: clamp(16.2px, (27/1920)*100vw, 27px);
+    line-height: clamp(18px, (30/1920)*100vw, 30px);
+    letter-spacing: clamp(-0.486px, (-0.81/1920)*100vw, -0.81px);
+    border-radius: clamp(70px, (140/1920)*100vw, 140px);
+  }
+  
+  .ticket-new-text {
+    font-size: clamp(8.64px, (14.4/1920)*100vw, 14.4px);
+    line-height: clamp(12.96px, (21.6/1920)*100vw, 21.6px);
+    letter-spacing: clamp(-0.432px, (-0.72/1920)*100vw, -0.72px);
+    margin: clamp(0.5rem, 0.8vw, 0.6rem) 0 0 0;
   }
 } 

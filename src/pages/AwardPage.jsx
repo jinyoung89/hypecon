@@ -155,13 +155,8 @@ function AwardPage() {
               <div className="award-benefits-list">
                 {t('award.benefits.items').map((benefit, index) => (
                   <div key={index} className="award-benefit-item">
-                    <span className="award-benefit-icon">🏆</span>
-                    <span className="award-benefit-text" style={{
-                      whiteSpace: 'pre-line',
-                      wordBreak: 'keep-all',
-                      overflowWrap: 'break-word',
-                      wordWrap: 'break-word'
-                    }}>
+                    <span className="award-benefit-icon"></span>
+                    <span className="award-benefit-text">
                       {benefit}
                     </span>
                   </div>

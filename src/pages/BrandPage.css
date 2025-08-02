@@ -255,7 +255,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: clamp(31.2px, (52/1920)*100vw, 52px);
-  letter-spacing: -1.8px;
+  letter-spacing: clamp(-0.96px, (-1.6/1920)*100vw, -1.6px);
   margin: 0;
   white-space: pre-line;
   word-wrap: break-word;
@@ -273,10 +273,12 @@
 }
 
 .brand-earlybird-inner {
-  max-width: 1000px;
+  max-width: 1400px;
   width: 100%;
   padding: 0 2rem;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .brand-earlybird-title {
@@ -315,7 +317,7 @@
 }
 
 .brand-booth-inner {
-  max-width: 1000px;
+  max-width: 1400px;
   width: 100%;
   padding: 0 2rem;
 }
@@ -329,11 +331,11 @@
   font-weight: 700;
   line-height: clamp(60px, (100/1920)*100vw, 100px);
   letter-spacing: -2.25px;
-  margin-bottom: 3rem;
+  margin-bottom: clamp(54px, (90/1920)*100vw, 90px);
   background: var(--color-black);
   border-radius: 50px;
   padding: 0.8rem 2.5rem;
-  margin: 0 auto 2.5rem;
+  margin: 0 auto clamp(54px, (90/1920)*100vw, 90px);
   display: block;
   width: 100%;
   max-width: clamp(480px, (960/1920)*100vw, 960px);
@@ -347,53 +349,235 @@
   width: 100%;
   overflow-x: auto;
   margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .brand-booth-table {
-  width: 100%;
+  width: clamp(655px, (1310/1920)*100vw, 1310px);
+  max-width: 100%;
   border-collapse: collapse;
-  margin-bottom: 2rem;
-  background: transparent;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #000;
+  display: table;
+}
+
+.brand-booth-table th:first-child,
+.brand-booth-table td:first-child {
+  width: clamp(151px, (302/1920)*100vw, 302px);
+  min-width: clamp(151px, (302/1920)*100vw, 302px);
+}
+
+.brand-booth-table tr:first-child th:nth-child(2),
+.brand-booth-table tr:nth-child(2) th:nth-child(2),
+.brand-booth-table tr:nth-child(3) th:nth-child(2),
+.brand-booth-table tr:first-child td:nth-child(2),
+.brand-booth-table tr:nth-child(2) td:nth-child(2),
+.brand-booth-table tr:nth-child(3) td:nth-child(2),
+.brand-booth-table tr:nth-child(4) td:first-child,
+.brand-booth-table tr:nth-child(5) td:first-child,
+.brand-booth-table tr:nth-child(6) td:first-child {
+  width: clamp(90px, (180/1920)*100vw, 180px);
+  min-width: clamp(90px, (180/1920)*100vw, 180px);
+}
+
+.brand-booth-table th:nth-child(3),
+.brand-booth-table td:nth-child(3) {
+  width: clamp(140px, (280/1920)*100vw, 280px);
+  min-width: clamp(140px, (280/1920)*100vw, 280px);
 }
 
 .brand-booth-table th {
-  background: transparent;
+  background: #fff;
   color: #000;
-  font-weight: 700;
   text-align: center;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(30px, (50/1920)*100vw, 50px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
   padding: 1rem;
-  border: 1px solid #000;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
   border-left: none;
   border-right: none;
+  white-space: pre-line;
+  word-break: keep-all;
 }
 
 .brand-booth-table th:first-child {
   border-left: 1px solid #000;
+  border-right: 1px solid #000;
 }
 
-.brand-booth-table th:last-child {
-  border-right: 1px solid #000;
+.brand-booth-table th .vat-text {
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(14.4px, (24/1920)*100vw, 24px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(19.8px, (33/1920)*100vw, 33px);
+  letter-spacing: clamp(-0.72px, (-1.2/1920)*100vw, -1.2px);
 }
 
 .brand-booth-table td {
   padding: 0.8rem 1rem;
-  border: 1px solid #000;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
   border-left: none;
   border-right: none;
   text-align: center;
-  background: transparent;
+  background: #fff;
+  white-space: pre-line;
+  word-break: keep-all;
+  vertical-align: middle;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(24px, (40/1920)*100vw, 40px);
+  letter-spacing: clamp(-0.96px, (-1.6/1920)*100vw, -1.6px);
+  margin-bottom: 0.4rem;
+  padding-left: 0;
 }
 
-.brand-booth-table td:first-child {
+.brand-booth-table tr:first-child td:nth-child(3),
+.brand-booth-table tr:nth-child(2) td:nth-child(3),
+.brand-booth-table tr:nth-child(3) td:nth-child(3),
+.brand-booth-table tr:nth-child(4) td:nth-child(2),
+.brand-booth-table tr:nth-child(5) td:nth-child(2),
+.brand-booth-table tr:nth-child(6) td:nth-child(2) {
+  font-weight: 700;
+}
+
+.brand-booth-table tr:first-child td:first-child,
+.brand-booth-table tr:nth-child(2) td:first-child,
+.brand-booth-table tr:nth-child(3) td:first-child {
+  font-weight: 700;
+  background: #fff;
   border-left: 1px solid #000;
-}
-
-.brand-booth-table td:last-child {
   border-right: 1px solid #000;
 }
 
-.brand-booth-table tr:nth-child(even) {
-  background: transparent;
+.brand-booth-table-note {
+  font-size: clamp(14.4px, (24/1920)*100vw, 24px);
+  color: #666;
+  text-align: right;
+  margin: clamp(8px, (12/1920)*100vw, 12px) 0 0 0;
+  width: clamp(655px, (1310/1920)*100vw, 1310px);
+  max-width: 100%;
+  display: block;
+  align-self: center;
+  font-family: "Noto Sans CJK KR";
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(18px, (30/1920)*100vw, 30px);
+  letter-spacing: clamp(-0.72px, (-1.2/1920)*100vw, -1.2px);
+}
+
+.brand-booth-table-mobile {
+  display: none;
+}
+
+.brand-booth-basic-included {
+  color: #000;
+  text-align: left;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(24px, (40/1920)*100vw, 40px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
+  margin: clamp(20px, (40/1920)*100vw, 40px) auto clamp(10px, (20/1920)*100vw, 20px);
+  display: block;
+  width: clamp(655px, (1310/1920)*100vw, 1310px);
+  max-width: 100%;
+  align-self: flex-start;
+}
+
+.brand-booth-basic-list {
+  width: clamp(655px, (1310/1920)*100vw, 1310px);
+  max-width: 100%;
+  align-self: flex-start;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto clamp(20px, (40/1920)*100vw, 40px);
+}
+
+.brand-booth-basic-list li {
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(29.4px, (49/1920)*100vw, 49px);
+  letter-spacing: clamp(-0.96px, (-1.6/1920)*100vw, -1.6px);
+  margin-bottom: clamp(8px, (15/1920)*100vw, 15px);
+  position: relative;
+  padding-left: clamp(20px, (35/1920)*100vw, 35px);
+}
+
+.brand-booth-basic-list li:before {
+  content: '•';
+  color: #000;
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+}
+
+.brand-booth-additional-cost-title {
+  color: #000;
+  text-align: left;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(24px, (40/1920)*100vw, 40px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
+  margin: clamp(20px, (40/1920)*100vw, 40px) auto clamp(10px, (20/1920)*100vw, 20px);
+  display: block;
+  width: clamp(655px, (1310/1920)*100vw, 1310px);
+  max-width: 100%;
+  align-self: flex-start;
+}
+
+.brand-booth-additional-cost-list {
+  width: clamp(655px, (1310/1920)*100vw, 1310px);
+  max-width: 100%;
+  align-self: flex-start;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto clamp(20px, (40/1920)*100vw, 40px);
+}
+
+.brand-booth-additional-cost-list li {
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(29.4px, (49/1920)*100vw, 49px);
+  letter-spacing: clamp(-0.96px, (-1.6/1920)*100vw, -1.6px);
+  margin-bottom: clamp(8px, (15/1920)*100vw, 15px);
+  position: relative;
+  padding-left: clamp(20px, (35/1920)*100vw, 35px);
+  white-space: pre-line;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.brand-booth-additional-cost-list li:before {
+  content: '•';
+  color: #000;
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
 }
 
 .brand-booth-info {
@@ -423,58 +607,67 @@
 
 /* 환불 규정 섹션 */
 .brand-refund-section {
-  background: var(--color-gray-light);
+  background: #fff;
   padding: 5rem 0;
   display: flex;
   justify-content: center;
 }
 
 .brand-refund-inner {
-  max-width: 1000px;
+  max-width: 1400px;
   width: 100%;
   padding: 0 2rem;
 }
 
 .brand-refund-title {
-  font-size: clamp(27px, (45/1920)*100vw, 45px);
-  font-weight: 700;
-  color: var(--color-primary) !important;
-  margin-bottom: 3rem;
+  color: #00E5A8 !important;
   text-align: center;
+  font-family: "Noto Sans CJK KR", sans-serif;
+  font-size: clamp(27px, (45/1920)*100vw, 45px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(60px, (100/1920)*100vw, 100px);
+  letter-spacing: -2.25px;
+  margin-bottom: clamp(54px, (90/1920)*100vw, 90px);
   background: var(--color-black);
-  color: var(--color-primary) !important;
   border-radius: 50px;
   padding: 0.8rem 2.5rem;
-  margin: 0 auto 2.5rem;
+  margin: 0 auto clamp(54px, (90/1920)*100vw, 90px);
   display: block;
-  width: clamp(300px, 52.08vw, 1000px);
-  height: clamp(40px, 7.08vw, 136px);
+  width: 100%;
+  max-width: clamp(480px, (960/1920)*100vw, 960px);
+  height: clamp(60px, (120/1920)*100vw, 120px);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Noto Sans CJK KR', sans-serif;
-  font-style: normal;
-  line-height: 100px;
-  letter-spacing: -2.25px;
 }
 
 .brand-refund-table-container {
   width: 100%;
   overflow-x: auto;
   margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .brand-refund-table {
-  width: 100%;
+  width: clamp(640px, (1280/1920)*100vw, 1280px);
+  height: clamp(250px, (500/1920)*100vw, 500px);
   border-collapse: collapse;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
   background: transparent;
 }
 
 .brand-refund-table th {
   background: transparent;
   color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
   font-weight: 700;
+  line-height: clamp(36px, (60/1920)*100vw, 60px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
   text-align: center;
   padding: 1rem;
   border: 1px solid #000;
@@ -497,6 +690,17 @@
   border-right: none;
   text-align: center;
   background: transparent;
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: clamp(36px, (60/1920)*100vw, 60px);
+  letter-spacing: clamp(-0.96px, (-1.6/1920)*100vw, -1.6px);
+  white-space: pre-line;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .brand-refund-table td:first-child {
@@ -512,24 +716,68 @@
 }
 
 .brand-refund-subtitle {
-  font-size: clamp(1.3rem, 3vw, 1.6rem);
-  font-weight: 700;
   color: #000;
-  margin: 2rem 0 1rem;
+  text-align: left;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(24px, (40/1920)*100vw, 40px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
+  margin: clamp(20px, (40/1920)*100vw, 40px) auto clamp(10px, (20/1920)*100vw, 20px);
+  display: block;
+  width: clamp(655px, (1310/1920)*100vw, 1310px);
+  max-width: 100%;
+  align-self: flex-start;
 }
 
 .brand-refund-list {
+  width: clamp(655px, (1310/1920)*100vw, 1310px);
+  max-width: 100%;
+  align-self: flex-start;
   list-style-type: none;
   padding: 0;
-  margin: 0 0 2rem;
+  margin: 0 auto clamp(20px, (40/1920)*100vw, 40px);
 }
 
 .brand-refund-list li {
-  font-size: clamp(1rem, 2vw, 1.1rem);
-  line-height: 1.6;
-  margin-bottom: 0.5rem;
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(29.4px, (49/1920)*100vw, 49px);
+  letter-spacing: clamp(-0.96px, (-1.6/1920)*100vw, -1.6px);
+  margin-bottom: clamp(8px, (15/1920)*100vw, 15px);
   position: relative;
-  padding-left: 0.5rem;
+  padding-left: clamp(20px, (35/1920)*100vw, 35px);
+  white-space: pre-line;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.brand-refund-list li:before {
+  content: '•';
+  color: #000;
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+}
+
+.brand-refund-table td .small-text {
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(13.2px, (22/1920)*100vw, 22px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: clamp(36px, (60/1920)*100vw, 60px);
+  letter-spacing: clamp(-0.66px, (-1.1/1920)*100vw, -1.1px);
+}
+
+.brand-refund-table-mobile {
+  display: none;
 }
 
 /* 얼리버드 혜택 섹션 */
@@ -538,54 +786,67 @@
   padding: 5rem 0;
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: clamp(600px, (1200/1920)*100vw, 1200px);
+  height: clamp(600px, (1200/1920)*100vw, 1200px);
 }
 
 .brand-earlybird-benefit-inner {
-  max-width: 1000px;
+  max-width: 1400px;
   width: 100%;
   padding: 0 2rem;
 }
 
 .brand-earlybird-benefit-title {
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  font-weight: 900;
-  color: var(--color-primary) !important;
-  margin-bottom: 3rem;
+  color: #00E5A8;
   text-align: center;
+  font-family: "Bebas Neue";
+  font-size: clamp(108px, (180/1920)*100vw, 180px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 82%;
+  letter-spacing: clamp(-3.24px, (-5.4/1920)*100vw, -5.4px);
+  margin-bottom: clamp(55px, (110/1920)*100vw, 110px);
   text-transform: uppercase;
-  font-family: 'Bebas Neue', 'Montserrat', sans-serif;
-  letter-spacing: 1px;
 }
 
 .brand-earlybird-benefit-content {
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   gap: 2rem;
-  max-width: 900px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .brand-earlybird-benefit-header {
   flex-shrink: 0;
+  width: clamp(150px, (300/1920)*100vw, 300px);
+  max-width: 300px;
 }
 
 .brand-earlybird-benefit-subtitle {
-  font-size: clamp(1.3rem, 3vw, 1.6rem);
-  font-weight: 700;
   color: #00E5A8;
-  line-height: 1.3;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(27px, (45/1920)*100vw, 45px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(30px, (50/1920)*100vw, 50px);
+  letter-spacing: clamp(-1.35px, (-2.25/1920)*100vw, -2.25px);
   margin: 0;
 }
 
 .brand-earlybird-benefit-separator {
-  width: 1px;
-  background: #fff;
-  height: 200px;
+  width: clamp(1.5px, (3/1920)*100vw, 3px);
+  background: #00E5A8;
+  height: clamp(254px, (508/1920)*100vw, 508px);
   flex-shrink: 0;
 }
 
 .brand-earlybird-benefit-list {
-  flex: 1;
+  width: clamp(385px, (770/1920)*100vw, 770px);
+  max-width: 770px;
 }
 
 .brand-earlybird-benefit-list ul {
@@ -595,10 +856,14 @@
 }
 
 .brand-earlybird-benefit-list li {
-  font-size: clamp(1rem, 2vw, 1.1rem);
-  line-height: 1.6;
-  color: #fff;
-  margin-bottom: 0.8rem;
+  color: #FFF;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: clamp(31.2px, (52/1920)*100vw, 52px);
+  letter-spacing: clamp(-0.96px, (-1.6/1920)*100vw, -1.6px);
+  margin-bottom: 0.2rem;
   padding-left: 0;
 }
 
@@ -663,12 +928,12 @@
   color: #00E5A8;
   padding: clamp(15px, (30/1920)*100vw, 30px);
   font-family: "Noto Sans CJK KR";
-  font-size: clamp(18px, (36/1920)*100vw, 36px);
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
   font-style: normal;
   font-weight: 700;
   text-align: center;
-  line-height: clamp(25px, (50/1920)*100vw, 50px);
-  letter-spacing: clamp(-0.9px, (-1.8/1920)*100vw, -1.8px);
+  line-height: clamp(30px, (50/1920)*100vw, 50px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
 }
 
 .process-step-body {
@@ -683,8 +948,19 @@
 
 .process-step-body p {
   margin: 0 0 clamp(10px, (15/1920)*100vw, 15px) 0;
-  font-weight: 500;
+  font-weight: 400;
   text-align: center;
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  line-height: clamp(26.4px, (44/1920)*100vw, 44px);
+  letter-spacing: clamp(-0.96px, (-1.6/1920)*100vw, -1.6px);
+}
+
+/* 특정 텍스트만 굵게 표시 */
+.process-step-body p strong {
+  font-weight: 700;
 }
 
 .process-step-body ul {
@@ -966,9 +1242,10 @@
   }
   
   .process-step-header {
-    font-size: clamp(16px, (32/1920)*100vw, 32px);
-    line-height: clamp(22px, (44/1920)*100vw, 44px);
+    font-size: clamp(12.96px, (21.6/1920)*100vw, 21.6px);
+    line-height: clamp(18px, (30/1920)*100vw, 30px);
     padding: clamp(12px, (24/1920)*100vw, 24px);
+    letter-spacing: clamp(-0.648px, (-1.08/1920)*100vw, -1.08px);
   }
   
   .process-step-body {
@@ -977,7 +1254,10 @@
   }
   
   .process-step-body p {
-    font-size: clamp(12px, (16/1920)*100vw, 16px);
+    font-size: clamp(11.52px, (19.2/1920)*100vw, 19.2px);
+    line-height: clamp(15.84px, (26.4/1920)*100vw, 26.4px);
+    letter-spacing: clamp(-0.576px, (-0.96/1920)*100vw, -0.96px);
+    font-weight: 400;
   }
   
   .process-step-body li {
@@ -1083,6 +1363,18 @@
   .brand-booth-table td {
     padding: 0.5rem 0.3rem;
     font-size: 0.8rem;
+    line-height: 1.2;
+  }
+
+  .brand-booth-table th {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.2rem;
+  }
+
+  .brand-booth-table td:first-child {
+    font-weight: 700;
+    background: #f9f9f9;
+    font-size: 0.75rem;
   }
   
   .brand-booth-subtitle {
@@ -1131,23 +1423,22 @@
     font-size: clamp(1.8rem, 5vw, 2.5rem);
     margin-bottom: 2rem;
     line-height: 1.2;
-  }
-
-  .brand-earlybird-benefit-content {
-    flex-direction: column !important;
-    gap: 1.5rem !important;
-    max-width: 100% !important;
-  }
-
-  .brand-earlybird-benefit-header {
-    width: 100% !important;
-    text-align: center !important;
+    letter-spacing: clamp(-3.24px, (-5.4/1920)*100vw, -5.4px);
   }
 
   .brand-earlybird-benefit-subtitle {
     font-size: clamp(1.1rem, 3.5vw, 1.4rem);
     text-align: center !important;
     margin-bottom: 1rem;
+  }
+
+  .brand-earlybird-benefit-content {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 1.5rem !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
   }
 
   .brand-earlybird-benefit-separator {
@@ -1189,8 +1480,8 @@
 
 .brand-payment-new-element {
   width: 100%;
-  max-width: clamp(480px, (960/1920)*100vw, 960px);
-  height: clamp(60px, (120/1920)*100vw, 120px);
+  max-width: clamp(327px, (654/1920)*100vw, 654px);
+  height: clamp(73.5px, (147/1920)*100vw, 147px);
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -1276,13 +1567,15 @@
 }
 
 .brand-payment-subtitle {
-  color: #000;
-  font-size: clamp(1rem, 1vw, 18px);
-  font-family: 'Noto Sans CJK KR', sans-serif;
+  color: #FFF;
+  text-align: center;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(27.6px, (46/1920)*100vw, 46px);
+  font-style: normal;
   font-weight: 700;
-  line-height: clamp(0.8rem, 1.4vw, 28px);
-  margin-bottom: clamp(5px, 0.52vw, 10px);
-  word-wrap: break-word;
+  line-height: clamp(26.4px, (44/1920)*100vw, 44px);
+  letter-spacing: clamp(-1.38px, (-2.3/1920)*100vw, -2.3px);
+  margin: clamp(20px, (40/1920)*100vw, 40px) auto clamp(-20px, (-20/1920)*100vw, -10px);
 }
 
 .brand-payment-text {
@@ -1312,8 +1605,8 @@
   
   .brand-payment-subtitle,
   .brand-payment-text {
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
-    line-height: 1.3;
+    font-size: clamp(16.56px, (27.6/1920)*100vw, 27.6px);
+    line-height: clamp(15.84px, (26.4/1920)*100vw, 26.4px);
   }
 }
 
@@ -1339,6 +1632,9 @@
   padding: clamp(3rem, 4.17vw, 5rem) 0;
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: clamp(880px, (1760/1920)*100vw, 1760px);
+  height: clamp(880px, (1760/1920)*100vw, 1760px);
 }
 
 .brand-faq-inner {
@@ -1663,3 +1959,141 @@
   align-items: center;
   gap: clamp(16px, (32/1920)*100vw, 32px);
 } 
+
+  /* 모바일에서 테이블을 카드형으로 변경 */
+  @media (max-width: 768px) {
+    .brand-booth-table-container {
+      overflow-x: visible;
+      padding: 0;
+    }
+
+    .brand-booth-table {
+      display: none;
+    }
+
+    .brand-booth-table-mobile {
+      display: block;
+      width: 100%;
+    }
+
+    .booth-card {
+      background: #fff;
+      border: 1px solid #000;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .booth-card-header {
+      font-family: "Noto Sans CJK KR";
+      font-size: clamp(1.1rem, 4vw, 1.3rem);
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 0.8rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .booth-card-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      font-family: "Noto Sans CJK KR";
+    }
+
+    .booth-card-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .booth-card-label {
+      font-size: clamp(0.9rem, 3vw, 1rem);
+      font-weight: 600;
+      color: #333;
+      flex: 1;
+    }
+
+    .booth-card-value {
+      font-size: clamp(0.9rem, 3vw, 1rem);
+      font-weight: 400;
+      color: #000;
+      text-align: right;
+      flex: 1;
+    }
+
+    .booth-card-value.early-bird {
+      font-weight: 700;
+      color: #000;
+    }
+
+    .booth-card-note {
+      font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+      color: #666;
+      text-align: right;
+      margin: 1rem 0 0 0;
+    }
+
+    /* 환불 규정 테이블 모바일 카드 레이아웃 */
+    .brand-refund-table-container {
+      overflow-x: visible;
+      padding: 0;
+    }
+
+    .brand-refund-table {
+      display: none;
+    }
+
+    .brand-refund-table-mobile {
+      display: block;
+      width: 100%;
+    }
+
+    .refund-card {
+      background: #fff;
+      border: 1px solid #000;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .refund-card-header {
+      font-family: "Noto Sans CJK KR";
+      font-size: clamp(1.1rem, 4vw, 1.3rem);
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 0.8rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .refund-card-row {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0.8rem;
+      font-family: "Noto Sans CJK KR";
+    }
+
+    .refund-card-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .refund-card-label {
+      font-size: clamp(0.9rem, 3vw, 1rem);
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 0.3rem;
+    }
+
+    .refund-card-value {
+      font-size: clamp(0.9rem, 3vw, 1rem);
+      font-weight: 400;
+      color: #000;
+      line-height: 1.4;
+      white-space: pre-line;
+      word-break: keep-all;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+  } 

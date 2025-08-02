@@ -208,65 +208,110 @@ function BrandPage() {
               <thead>
                 <tr>
                   {t('brand.booth.table.headers').map((header, index) => (
-                    <th key={index}>{header}</th>
+                    <th key={index} dangerouslySetInnerHTML={{__html: header}}></th>
                   ))}
                 </tr>
               </thead>
               <tbody>
-                {t('brand.booth.table.rows').map((row, rowIndex) => (
-                  <tr key={rowIndex}>
-                    {row.map((cell, cellIndex) => (
-                      <td key={cellIndex}>{cell}</td>
-                    ))}
-                  </tr>
-                ))}
+                <tr>
+                  <td rowSpan="1">{t('brand.booth.table.rows')[0][0]}</td>
+                  <td>{t('brand.booth.table.rows')[0][1]}</td>
+                  <td>{t('brand.booth.table.rows')[0][2]}</td>
+                  <td>{t('brand.booth.table.rows')[0][3]}</td>
+                  <td>{t('brand.booth.table.rows')[0][4]}</td>
+                </tr>
+                <tr>
+                  <td rowSpan="1">{t('brand.booth.table.rows')[1][0]}</td>
+                  <td>{t('brand.booth.table.rows')[1][1]}</td>
+                  <td>{t('brand.booth.table.rows')[1][2]}</td>
+                  <td>{t('brand.booth.table.rows')[1][3]}</td>
+                  <td>{t('brand.booth.table.rows')[1][4]}</td>
+                </tr>
+                <tr>
+                  <td rowSpan="4">{t('brand.booth.table.rows')[2][0]}</td>
+                  <td>{t('brand.booth.table.rows')[2][1]}</td>
+                  <td>{t('brand.booth.table.rows')[2][2]}</td>
+                  <td>{t('brand.booth.table.rows')[2][3]}</td>
+                  <td>{t('brand.booth.table.rows')[2][4]}</td>
+                </tr>
+                <tr>
+                  <td>{t('brand.booth.table.rows')[3][1]}</td>
+                  <td>{t('brand.booth.table.rows')[3][2]}</td>
+                  <td>{t('brand.booth.table.rows')[3][3]}</td>
+                  <td>{t('brand.booth.table.rows')[3][4]}</td>
+                </tr>
+                <tr>
+                  <td>{t('brand.booth.table.rows')[4][1]}</td>
+                  <td>{t('brand.booth.table.rows')[4][2]}</td>
+                  <td>{t('brand.booth.table.rows')[4][3]}</td>
+                  <td>{t('brand.booth.table.rows')[4][4]}</td>
+                </tr>
+                <tr>
+                  <td>{t('brand.booth.table.rows')[5][1]}</td>
+                  <td>{t('brand.booth.table.rows')[5][2]}</td>
+                  <td>{t('brand.booth.table.rows')[5][3]}</td>
+                  <td>{t('brand.booth.table.rows')[5][4]}</td>
+                </tr>
               </tbody>
             </table>
+            
+            {/* 모바일용 카드 레이아웃 */}
+            <div className="brand-booth-table-mobile">
+              {t('brand.booth.table.rows').map((row, index) => {
+                let boothType = row[0];
+                if (!boothType && index >= 3 && index <= 5) {
+                  boothType = t('brand.booth.table.rows')[2][0]; // 아크릴 부스
+                }
+                
+                return (
+                  <div key={index} className="booth-card">
+                    <div className="booth-card-header">
+                      {boothType} - {row[1]}
+                    </div>
+                    <div className="booth-card-row">
+                      <span className="booth-card-label">얼리버드 특가:</span>
+                      <span className="booth-card-value early-bird">{row[2]}</span>
+                    </div>
+                    <div className="booth-card-row">
+                      <span className="booth-card-label">정가:</span>
+                      <span className="booth-card-value">{row[3]}</span>
+                    </div>
+                    {row[4] && (
+                      <div className="booth-card-row">
+                        <span className="booth-card-label">비고:</span>
+                        <span className="booth-card-value">{row[4]}</span>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+            
+            <p className="brand-booth-table-note">
+              {t('brand.booth.tableNote')}
+            </p>
+            
+            <h3 className="brand-booth-basic-included">
+              {t('brand.booth.basicIncluded')}
+            </h3>
+            
+            <ul className="brand-booth-basic-list">
+              {t('brand.booth.basicIncludedItems').map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+            
+            <h3 className="brand-booth-additional-cost-title">
+              {t('brand.booth.additionalCostTitle')}
+            </h3>
+            
+            <ul className="brand-booth-additional-cost-list">
+              {t('brand.booth.additionalCostItems').map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
           </div>
           
-          <div className="brand-booth-info">
-            <h3 className="brand-booth-subtitle">{t('brand.booth.additionalCost.title')}</h3>
-            <ul className="brand-booth-list">
-              {t('brand.booth.additionalCost.items').map((item, index) => (
-                <li key={index} style={{
-                  whiteSpace: 'pre-line',
-                  wordBreak: 'keep-all',
-                  overflowWrap: 'break-word',
-                  wordWrap: 'break-word'
-                }}>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            
-            <h3 className="brand-booth-subtitle">{t('brand.booth.caution.title')}</h3>
-            <ul className="brand-booth-list">
-              {t('brand.booth.caution.items').map((item, index) => (
-                <li key={index} style={{
-                  whiteSpace: 'pre-line',
-                  wordBreak: 'keep-all',
-                  overflowWrap: 'break-word',
-                  wordWrap: 'break-word'
-                }}>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            
-            <h3 className="brand-booth-subtitle">{t('brand.booth.termination.title')}</h3>
-            <ul className="brand-booth-list">
-              {t('brand.booth.termination.items').map((item, index) => (
-                <li key={index} style={{
-                  whiteSpace: 'pre-line',
-                  wordBreak: 'keep-all',
-                  overflowWrap: 'break-word',
-                  wordWrap: 'break-word'
-                }}>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
       </section>
 
@@ -288,12 +333,31 @@ function BrandPage() {
                 {t('brand.refund.table.rows').map((row, rowIndex) => (
                   <tr key={rowIndex}>
                     {row.map((cell, cellIndex) => (
-                      <td key={cellIndex}>{cell}</td>
+                      <td key={cellIndex} dangerouslySetInnerHTML={{__html: cell}}></td>
                     ))}
                   </tr>
                 ))}
               </tbody>
             </table>
+            
+            {/* 모바일용 카드 레이아웃 */}
+            <div className="brand-refund-table-mobile">
+              {t('brand.refund.table.rows').map((row, index) => (
+                <div key={index} className="refund-card">
+                  <div className="refund-card-header">
+                    {row[0]}
+                  </div>
+                  <div className="refund-card-row">
+                    <span className="refund-card-label">조건:</span>
+                    <span className="refund-card-value" dangerouslySetInnerHTML={{__html: row[1]}}></span>
+                  </div>
+                  <div className="refund-card-row">
+                    <span className="refund-card-label">환불 내용:</span>
+                    <span className="refund-card-value" dangerouslySetInnerHTML={{__html: row[2]}}></span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
           
           <div className="brand-refund-info">
@@ -366,8 +430,7 @@ function BrandPage() {
                     wordBreak: 'keep-all',
                     overflowWrap: 'break-word',
                     wordWrap: 'break-word'
-                  }}>
-                    {detail}
+                  }} dangerouslySetInnerHTML={{__html: detail}}>
                   </p>
                 ))}
                 <ul>
@@ -397,8 +460,7 @@ function BrandPage() {
                     wordBreak: 'keep-all',
                     overflowWrap: 'break-word',
                     wordWrap: 'break-word'
-                  }}>
-                    {detail}
+                  }} dangerouslySetInnerHTML={{__html: detail}}>
                   </p>
                 ))}
                 <ul>
@@ -428,8 +490,7 @@ function BrandPage() {
                     wordBreak: 'keep-all',
                     overflowWrap: 'break-word',
                     wordWrap: 'break-word'
-                  }}>
-                    {detail}
+                  }} dangerouslySetInnerHTML={{__html: detail}}>
                   </p>
                 ))}
                 <ul>
@@ -459,8 +520,7 @@ function BrandPage() {
                     wordBreak: 'keep-all',
                     overflowWrap: 'break-word',
                     wordWrap: 'break-word'
-                  }}>
-                    {detail}
+                  }} dangerouslySetInnerHTML={{__html: detail}}>
                   </p>
                 ))}
                 <ul>
@@ -490,8 +550,7 @@ function BrandPage() {
                     wordBreak: 'keep-all',
                     overflowWrap: 'break-word',
                     wordWrap: 'break-word'
-                  }}>
-                    {detail}
+                  }} dangerouslySetInnerHTML={{__html: detail}}>
                   </p>
                 ))}
                 {t('brand.process.steps.4.notes').length > 0 && (
@@ -518,11 +577,12 @@ function BrandPage() {
       <section className="brand-payment-section">
         <div className="brand-payment-inner">
           <div className="brand-payment-new-element">{t('brand.payment.title')}</div>
+          <div className="brand-payment-subtitle">{t('brand.payment.subtitle')}</div>
           <div className="brand-payment-content-new">
             <div className="brand-payment-content-wrapper">
-              <span className="brand-payment-deposit-title">• {t('brand.payment.deposit.title')}</span>
+              <span className="brand-payment-deposit-title">{t('brand.payment.deposit.title')}</span>
               <span className="brand-payment-deposit-desc">{t('brand.payment.deposit.desc')}</span>
-              <span className="brand-payment-balance-title">• {t('brand.payment.balance.title')}</span>
+              <span className="brand-payment-balance-title">{t('brand.payment.balance.title')}</span>
               <span className="brand-payment-balance-desc">{t('brand.payment.balance.desc')}</span>
             </div>
           </div>

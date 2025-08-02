@@ -67,14 +67,16 @@ function InfluencerPage() {
             }}>
               {t('influencer.invite.text')}
             </p>
-            <p className="influencer-invite-subtext" style={{
-              whiteSpace: 'pre-line',
-              wordBreak: 'keep-all',
-              overflowWrap: 'break-word',
-              wordWrap: 'break-word'
-            }}>
-              {t('influencer.invite.subtext')}
-            </p>
+            <p 
+              className="influencer-invite-subtext" 
+              style={{
+                whiteSpace: 'pre-line',
+                wordBreak: 'keep-all',
+                overflowWrap: 'break-word',
+                wordWrap: 'break-word'
+              }}
+              dangerouslySetInnerHTML={{ __html: t('influencer.invite.subtext') }}
+            />
             <div className="influencer-invite-box">
               <div className="influencer-invite-text-content">
                 {t('influencer.invite.content').map((item, index) => (
@@ -190,17 +192,12 @@ function InfluencerPage() {
         <div className="influencer-what-it-takes-inner">
           <h2 className="influencer-what-it-takes-title">{t('influencer.whatItTakes.title')}</h2>
           <div className="influencer-what-it-takes-content">
-            <p className="influencer-what-it-takes-text">
-              {t('influencer.whatItTakes.text')}
-            </p>
-            <div className="influencer-what-it-takes-list">
-              {t('influencer.whatItTakes.list').map((item, index) => (
-                <p key={index}>{item}</p>
-              ))}
+            <div className="influencer-what-it-takes-text-group">
+              {t('influencer.whatItTakes.textWithList')}
             </div>
-            <p className="influencer-what-it-takes-ending">
+            <div className="influencer-what-it-takes-ending">
               {t('influencer.whatItTakes.ending')}
-            </p>
+            </div>
           </div>
         </div>
       </section>

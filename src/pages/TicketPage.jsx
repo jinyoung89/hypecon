@@ -38,9 +38,9 @@ function TicketPage() {
       {/* 온몸으로 즐기는 스타일 페어 섹션 */}
       <section className="ticket-play-section">
         <div className="ticket-play-inner">
+          <h3 className="ticket-play-subtitle">{t('ticket.play.subtitle')}</h3>
           <div className="ticket-play-content">
             <div className="ticket-play-left">
-              <h3 className="ticket-play-subtitle">{t('ticket.play.subtitle')}</h3>
               <div className="ticket-play-title">
                 {t('ticket.play.title').map((word, index) => (
                   <span key={index}>{word}</span>
@@ -148,14 +148,32 @@ function TicketPage() {
                   ))}
                 </tbody>
               </table>
+              
+              {/* 모바일용 카드 레이아웃 */}
+              <div className="ticket-price-table-mobile">
+                {t('ticket.price.table.rows').map((row, index) => (
+                  <div key={index} className="ticket-card">
+                    <div className="ticket-card-header">
+                      {row[0]}
+                    </div>
+                    <div className="ticket-card-row">
+                      <span className="ticket-card-label">가격:</span>
+                      <span className="ticket-card-value">{row[1]}</span>
+                    </div>
+                    <div className="ticket-card-row">
+                      <span className="ticket-card-label">혜택:</span>
+                      <span className="ticket-card-value">{row[2]}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
             <p className="ticket-price-note" style={{
               whiteSpace: 'pre-line',
               wordBreak: 'keep-all',
               overflowWrap: 'break-word',
               wordWrap: 'break-word'
-            }}>
-              {t('ticket.price.note')}
+            }} dangerouslySetInnerHTML={{__html: t('ticket.price.note')}}>
             </p>
 
             <h3 className="ticket-refund-title">{t('ticket.refund.title')}</h3>
@@ -174,8 +192,7 @@ function TicketPage() {
                   wordBreak: 'keep-all',
                   overflowWrap: 'break-word',
                   wordWrap: 'break-word'
-                }}>
-                  {item}
+                }} dangerouslySetInnerHTML={{__html: item}}>
                 </li>
               ))}
             </ul>
@@ -208,6 +225,18 @@ function TicketPage() {
               ))}
             </ol>
           </div>
+        </div>
+      </section>
+
+      {/* 새로운 섹션 */}
+      <section className="ticket-new-section">
+        <div className="ticket-new-inner">
+          <button className="ticket-new-button">
+            얼리버드 티켓 1차 예매
+          </button>
+          <p className="ticket-new-text">
+            얼리버드 티켓은 2025년 10월 중 오픈 예정입니다.
+          </p>
         </div>
       </section>
     </div>

@@ -99,7 +99,10 @@ function BuyerPage() {
               <div className="buyer-method-steps">
                 {t('buyer.method.list').map((item, index) => (
                   <React.Fragment key={index}>
-                    <div className="buyer-method-step">{item}</div>
+                    <div 
+                      className="buyer-method-step"
+                      dangerouslySetInnerHTML={{ __html: item }}
+                    />
                     {index < t('buyer.method.list').length - 1 && <ArrowDown />}
                   </React.Fragment>
                 ))}
@@ -131,12 +134,16 @@ function BuyerPage() {
               </div>
               
               <div className="buyer-register-contact">
-                <h3 className="buyer-register-contact-title">{t('buyer.register.contact.title')}</h3>
-                <div className="buyer-register-contact-info">
-                  <p className="buyer-register-email">{t('buyer.register.contact.email')}</p>
-                  <p className="buyer-register-phone">{t('buyer.register.contact.phone')}</p>
+                <div className="buyer-register-contact-content">
+                  <span className="buyer-register-contact-question">{t('buyer.register.contact.title').replace('💬 ', '')}</span>
+                  <span className="buyer-register-contact-divider">|</span>
+                  <div className="buyer-register-contact-info">
+                    <span className="buyer-register-contact-email">{t('buyer.register.contact.email')}</span>
+                    <span className="buyer-register-contact-phone">{t('buyer.register.contact.phone').replace('📞 ', '')}</span>
+                  </div>
                 </div>
               </div>
+              
             </div>
           </div>
         </div>

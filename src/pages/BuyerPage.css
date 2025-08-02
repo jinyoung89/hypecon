@@ -136,7 +136,7 @@
 }
 
 .buyer-target-inner {
-  max-width: 1000px;
+  max-width: 1400px;
   width: 100%;
   padding: 0 clamp(1rem, 2.08vw, 2rem);
   text-align: center;
@@ -169,7 +169,8 @@
 }
 
 .buyer-target-content {
-  max-width: clamp(600px, 62.5vw, 800px);
+  width: 100%;
+  max-width: clamp(480px, (960/1920)*100vw, 960px);
   margin: 0 auto;
 }
 
@@ -191,24 +192,34 @@
 }
 
 .buyer-target-list li {
-  font-size: clamp(1rem, 1.67vw, 1.2rem);
-  line-height: 1.5;
-  color: var(--color-black);
-  font-family: 'Noto Sans', sans-serif;
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: clamp(42.6px, (71/1920)*100vw, 71px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
   position: relative;
-  padding-left: clamp(1.5rem, 2.08vw, 2rem);
+  padding-left: clamp(2.5rem, 3.13vw, 3rem);
   text-align: start;
   display: flex;
+  align-items: flex-start;
   justify-content: flex-start;
 }
 
 .buyer-target-list li::before {
-  content: '•';
-  position: relative;
-  left: -0.5rem;
-  color: var(--color-primary);
-  font-weight: bold;
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  content: '';
+  position: absolute;
+  left: clamp(0.5rem, 0.78vw, 0.75rem);
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(16px, 1.04vw, 20px);
+  height: clamp(15.2px, 0.99vw, 19px);
+  background-image: url('../assets/bullet-point.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
 }
 
 /* 등록 혜택 섹션 */
@@ -253,7 +264,8 @@
 }
 
 .buyer-benefit-content {
-  max-width: clamp(600px, 62.5vw, 800px);
+  width: 100%;
+  max-width: clamp(480px, (960/1920)*100vw, 960px);
   margin: 0 auto;
 }
 
@@ -275,24 +287,34 @@
 }
 
 .buyer-benefit-list li {
-  font-size: clamp(1rem, 1.67vw, 1.2rem);
-  line-height: 1.5;
-  color: var(--color-black);
-  font-family: 'Noto Sans', sans-serif;
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: clamp(42.6px, (71/1920)*100vw, 71px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
   position: relative;
-  padding-left: clamp(1.5rem, 2.08vw, 2rem);
+  padding-left: clamp(3.5rem, 4.17vw, 4rem);
   text-align: start;
   display: flex;
+  align-items: flex-start;
   justify-content: flex-start;
 }
 
 .buyer-benefit-list li::before {
-  content: '•';
-  position: relative;
-  left: -0.5rem;
-  color: var(--color-primary);
-  font-weight: bold;
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  content: '';
+  position: absolute;
+  left: clamp(0.5rem, 0.78vw, 0.75rem);
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(18px, 2.34vw, 45px);
+  height: clamp(18.4px, 2.4vw, 46px);
+  background-image: url('../assets/task-point.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
 }
 
 /* 등록 방법 섹션 */
@@ -337,7 +359,8 @@
 }
 
 .buyer-method-content {
-  max-width: clamp(600px, 62.5vw, 800px);
+  width: 100%;
+  max-width: clamp(480px, (960/1920)*100vw, 960px);
   margin: 0 auto;
 }
 
@@ -357,12 +380,22 @@
 }
 
 .buyer-method-step {
-  font-size: clamp(1rem, 1.67vw, 1.2rem);
-  line-height: 1.5;
-  color: var(--color-black);
-  font-family: 'Noto Sans', sans-serif;
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(42.6px, (71/1920)*100vw, 71px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
   text-align: center;
-  max-width: 80%;
+  max-width: 100%;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.buyer-method-step strong {
+  font-weight: 700;
 }
 
 .arrow-down-container {
@@ -381,10 +414,13 @@
 }
 
 .buyer-method-list li {
-  font-size: clamp(1rem, 1.67vw, 1.2rem);
-  line-height: 1.5;
-  color: var(--color-black);
-  font-family: 'Noto Sans', sans-serif;
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: clamp(42.6px, (71/1920)*100vw, 71px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
   position: relative;
   padding-left: clamp(1.5rem, 2.08vw, 2rem);
   text-align: start;
@@ -410,7 +446,7 @@
 }
 
 .buyer-register-inner {
-  max-width: clamp(800px, 52.08vw, 1000px);
+  max-width: clamp(1000px, 72.92vw, 1400px);
   width: 100%;
   padding: 0 clamp(1rem, 2.08vw, 2rem);
   text-align: center;
@@ -421,11 +457,12 @@
 }
 
 .buyer-register-title {
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-size: clamp(27px, (45/1920)*100vw, 45px);
   font-weight: 700;
   color: var(--color-black);
   background-color: var(--color-primary);
   width: clamp(327px, (654/1920)*100vw, 654px);
+  height: clamp(74px, (148/1920)*100vw, 148px);
   border-radius: 60px;
   padding: clamp(0.8rem, 1.56vw, 1.2rem) clamp(1rem, 2.08vw, 2rem);
   margin: 0 auto;
@@ -437,7 +474,7 @@
 }
 
 .buyer-register-content {
-  max-width: clamp(600px, 62.5vw, 800px);
+  max-width: clamp(800px, (1200/1920)*100vw, 1200px);
   margin: 0 auto;
 }
 
@@ -446,13 +483,18 @@
 }
 
 .buyer-register-note {
-  font-size: clamp(0.9rem, 1.25vw, 1.1rem);
-  line-height: 1.5;
-  color: var(--color-black);
-  font-family: 'Noto Sans', sans-serif;
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(14.4px, (24/1920)*100vw, 24px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: clamp(36px, (60/1920)*100vw, 60px);
+  letter-spacing: clamp(-0.72px, (-1.2/1920)*100vw, -1.2px);
   margin: 0 0 clamp(2rem, 3.13vw, 3rem) 0;
-  font-style: italic;
   text-align: center;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .buyer-register-notice,
@@ -462,12 +504,53 @@
 
 .buyer-register-notice-title,
 .buyer-register-contact-title {
-  font-size: clamp(1.1rem, 1.46vw, 1.3rem);
-  font-weight: 700;
-  color: var(--color-black);
-  margin: 0 0 clamp(1rem, 1.56vw, 1.5rem) 0;
-  font-family: 'Noto Sans', sans-serif;
+  color: #000;
   text-align: center;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(30.6px, (51/1920)*100vw, 51px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
+  margin: 0 0 clamp(1rem, 1.56vw, 1.5rem) 0;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.5rem, 0.78vw, 0.75rem);
+}
+
+.buyer-register-notice-title::before {
+  content: '';
+  width: clamp(18px, 2.34vw, 45px);
+  height: clamp(18px, 2.34vw, 45px);
+  background-image: url('../assets/warning-icon.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.buyer-register-notice-item {
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(28.2px, (47/1920)*100vw, 47px);
+  letter-spacing: clamp(-0.96px, (-1.6/1920)*100vw, -1.6px);
+  text-align: center;
+  margin: 0;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.buyer-register-notice-item::before {
+  display: none;
 }
 
 .buyer-register-notice-list {
@@ -480,33 +563,91 @@
   align-items: center;
 }
 
-.buyer-register-notice-list li {
-  font-size: clamp(0.9rem, 1.25vw, 1.1rem);
-  line-height: 1.5;
-  color: var(--color-black);
-  font-family: 'Noto Sans', sans-serif;
+.buyer-register-contact {
+  margin-top: clamp(135px, (270/1920)*100vw, 270px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buyer-register-contact-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: clamp(1rem, 1.56vw, 1.5rem);
+  flex-wrap: nowrap;
+  text-align: center;
+  width: 100%;
+  max-width: clamp(800px, 62.5vw, 1200px);
+  margin: 0 auto;
+}
+
+.buyer-register-contact-question {
+  color: #00E5A8;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(28.2px, (47/1920)*100vw, 47px);
+  letter-spacing: clamp(-0.96px, (-1.6/1920)*100vw, -1.6px);
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  flex-shrink: 0;
   text-align: center;
 }
 
-.buyer-register-notice-list li::before {
-  content: '⚠️';
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: clamp(0.9rem, 1.25vw, 1.1rem);
+.buyer-register-contact-divider {
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(28.2px, (47/1920)*100vw, 47px);
+  letter-spacing: clamp(-0.96px, (-1.6/1920)*100vw, -1.6px);
+  flex-shrink: 0;
+  text-align: center;
+  align-self: flex-start;
 }
 
 .buyer-register-contact-info {
-  font-size: clamp(0.9rem, 1.25vw, 1.1rem);
-  line-height: 1.5;
-  color: var(--color-black);
-  font-family: 'Noto Sans', sans-serif;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(0.25rem, 0.39vw, 0.375rem);
+  min-width: clamp(300px, 31.25vw, 600px);
+  text-align: left;
 }
 
-.buyer-register-email,
-.buyer-register-phone {
-  margin: 0 0 clamp(0.5rem, 0.78vw, 0.8rem) 0;
+.buyer-register-contact-email {
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(28.2px, (47/1920)*100vw, 47px);
+  letter-spacing: clamp(-0.96px, (-1.6/1920)*100vw, -1.6px);
+  text-align: left;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: nowrap;
+}
+
+.buyer-register-contact-phone {
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(28.2px, (47/1920)*100vw, 47px);
+  letter-spacing: clamp(-0.96px, (-1.6/1920)*100vw, -1.6px);
+  text-align: left;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: nowrap;
 }
 
 .buyer-register-notice-items {
@@ -514,15 +655,28 @@
   flex-direction: column;
   gap: clamp(0.8rem, 1.04vw, 1rem);
   align-items: center;
+  width: 100%;
 }
 
 .buyer-register-notice-item {
-  font-size: clamp(0.9rem, 1.25vw, 1.1rem);
-  line-height: 1.5;
-  color: var(--color-black);
-  font-family: 'Noto Sans', sans-serif;
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(28.2px, (47/1920)*100vw, 47px);
+  letter-spacing: clamp(-0.96px, (-1.6/1920)*100vw, -1.6px);
   text-align: center;
   margin: 0;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  width: 100%;
+  max-width: 100%;
+}
+
+.buyer-register-notice-item::before {
+  display: none;
 }
 
 /* FAQ 섹션 */
@@ -670,6 +824,95 @@
   .buyer-info-subtext {
     font-size: clamp(0.9rem, 2vw, 1.1rem);
   }
+  
+  .buyer-target-list li {
+    font-size: clamp(16.2px, (21.6/1920)*100vw, 21.6px);
+    line-height: clamp(32.13px, (42.6/1920)*100vw, 42.6px);
+    letter-spacing: clamp(-0.81px, (-1.08/1920)*100vw, -1.08px);
+    padding-left: clamp(2rem, 2.5vw, 2.5rem);
+  }
+
+  .buyer-target-list li::before {
+    left: clamp(0.3rem, 0.5vw, 0.5rem);
+    width: clamp(12px, 0.8vw, 16px);
+    height: clamp(11.4px, 0.75vw, 15.2px);
+  }
+  
+  .buyer-target-inner {
+    max-width: 95vw;
+    padding: 0 clamp(0.8rem, 2vw, 1.5rem);
+  }
+  
+  .buyer-target-content {
+    max-width: 90vw;
+  }
+  
+  .buyer-benefit-list li {
+    font-size: clamp(16.2px, (21.6/1920)*100vw, 21.6px);
+    line-height: clamp(32.13px, (42.6/1920)*100vw, 42.6px);
+    letter-spacing: clamp(-0.81px, (-1.08/1920)*100vw, -1.08px);
+    padding-left: clamp(2.5rem, 3vw, 3rem);
+  }
+
+  .buyer-benefit-list li::before {
+    left: clamp(0.3rem, 0.5vw, 0.5rem);
+    width: clamp(14px, 1.8vw, 36px);
+    height: clamp(14.3px, 1.85vw, 36.8px);
+  }
+  
+  .buyer-method-list li {
+    font-size: clamp(16.2px, (21.6/1920)*100vw, 21.6px);
+    line-height: clamp(32.13px, (42.6/1920)*100vw, 42.6px);
+    letter-spacing: clamp(-0.81px, (-1.08/1920)*100vw, -1.08px);
+  }
+
+  .buyer-method-step {
+    font-size: clamp(16.2px, (21.6/1920)*100vw, 21.6px);
+    line-height: clamp(32.13px, (42.6/1920)*100vw, 42.6px);
+    letter-spacing: clamp(-0.81px, (-1.08/1920)*100vw, -1.08px);
+  }
+
+  .buyer-register-title {
+    font-size: clamp(16.2px, (27/1920)*100vw, 27px);
+    width: clamp(196.2px, (392.4/1920)*100vw, 392.4px);
+    height: clamp(44.4px, (88.8/1920)*100vw, 88.8px);
+    padding: clamp(0.48rem, 0.94vw, 0.72rem) clamp(0.6rem, 1.25vw, 1.2rem);
+  }
+
+  .buyer-register-notice-title,
+  .buyer-register-contact-title {
+    font-size: clamp(16.2px, (27/1920)*100vw, 27px);
+    line-height: clamp(22.95px, (38.25/1920)*100vw, 38.25px);
+    letter-spacing: clamp(-0.81px, (-1.35/1920)*100vw, -1.35px);
+  }
+
+  .buyer-register-notice-title::before {
+    width: clamp(14px, 1.8vw, 36px);
+    height: clamp(14px, 1.8vw, 36px);
+  }
+
+  .buyer-register-notice-item {
+    font-size: clamp(14.4px, (24/1920)*100vw, 24px);
+    line-height: clamp(21.15px, (35.25/1920)*100vw, 35.25px);
+    letter-spacing: clamp(-0.72px, (-1.2/1920)*100vw, -1.2px);
+  }
+
+  .buyer-register-notice {
+    margin-top: clamp(30px, (60/1920)*100vw, 60px);
+  }
+
+  .buyer-register-contact {
+    margin-top: clamp(162px, (270/1920)*100vw, 270px);
+  }
+
+  .buyer-register-contact-question,
+  .buyer-register-contact-divider,
+  .buyer-register-contact-email,
+  .buyer-register-contact-phone {
+    font-size: clamp(14.4px, (24/1920)*100vw, 24px);
+    line-height: clamp(21.15px, (35.25/1920)*100vw, 35.25px);
+    letter-spacing: clamp(-0.72px, (-1.2/1920)*100vw, -1.2px);
+  }
 }
 
 @media (max-width: 600px) {
@@ -704,32 +947,140 @@
   .buyer-info-subtext {
     font-size: clamp(0.9rem, 2vw, 1.1rem);
   }
-}
+  
+  .buyer-target-list li {
+    font-size: clamp(16.2px, (21.6/1920)*100vw, 21.6px);
+    line-height: clamp(32.13px, (42.6/1920)*100vw, 42.6px);
+    letter-spacing: clamp(-0.81px, (-1.08/1920)*100vw, -1.08px);
+    padding-left: clamp(1.8rem, 2.2vw, 2.2rem);
+  }
+
+  .buyer-target-list li::before {
+    left: clamp(0.2rem, 0.4vw, 0.4rem);
+    width: clamp(10px, 0.7vw, 14px);
+    height: clamp(9.5px, 0.65vw, 13.3px);
+  }
+  
+  .buyer-target-inner {
+    max-width: 95vw;
+    padding: 0 clamp(0.8rem, 2vw, 1.5rem);
+  }
+  
+  .buyer-target-content {
+    max-width: 90vw;
+  }
+  
+  .buyer-benefit-list li {
+    font-size: clamp(16.2px, (21.6/1920)*100vw, 21.6px);
+    line-height: clamp(32.13px, (42.6/1920)*100vw, 42.6px);
+    letter-spacing: clamp(-0.81px, (-1.08/1920)*100vw, -1.08px);
+    padding-left: clamp(2.2rem, 2.7vw, 2.7rem);
+  }
+
+  .buyer-benefit-list li::before {
+    left: clamp(0.2rem, 0.4vw, 0.4rem);
+    width: clamp(12px, 1.5vw, 30px);
+    height: clamp(12.2px, 1.55vw, 30.7px);
+  }
+  
+  .buyer-method-list li {
+    font-size: clamp(16.2px, (21.6/1920)*100vw, 21.6px);
+    line-height: clamp(32.13px, (42.6/1920)*100vw, 42.6px);
+    letter-spacing: clamp(-0.81px, (-1.08/1920)*100vw, -1.08px);
+  }
+
+  .buyer-method-step {
+    font-size: clamp(14px, (18/1920)*100vw, 18px);
+    line-height: clamp(28px, (36/1920)*100vw, 36px);
+    letter-spacing: clamp(-0.7px, (-0.9/1920)*100vw, -0.9px);
+  }
+
+  .buyer-register-title {
+    font-size: clamp(13.5px, (22.5/1920)*100vw, 22.5px);
+    width: clamp(163.5px, (327/1920)*100vw, 327px);
+    height: clamp(37px, (74/1920)*100vw, 74px);
+    padding: clamp(0.4rem, 0.78vw, 0.6rem) clamp(0.5rem, 1.04vw, 1rem);
+  }
+
+  .buyer-register-notice-title,
+  .buyer-register-contact-title {
+    font-size: clamp(12.96px, (21.6/1920)*100vw, 21.6px);
+    line-height: clamp(18.36px, (30.6/1920)*100vw, 30.6px);
+    letter-spacing: clamp(-0.648px, (-1.08/1920)*100vw, -1.08px);
+  }
+
+  .buyer-register-notice-title::before {
+    width: clamp(10.8px, 1.44vw, 27px);
+    height: clamp(10.8px, 1.44vw, 27px);
+  }
+
+  .buyer-register-notice-item {
+    font-size: clamp(11.52px, (19.2/1920)*100vw, 19.2px);
+    line-height: clamp(16.92px, (28.2/1920)*100vw, 28.2px);
+    letter-spacing: clamp(-0.576px, (-0.96/1920)*100vw, -0.96px);
+  }
+
+  .buyer-register-notice {
+    margin-top: clamp(30px, (50/1920)*100vw, 50px);
+  }
+
+  .buyer-register-contact {
+    margin-top: clamp(135px, (225/1920)*100vw, 225px);
+  }
+
+  .buyer-register-contact-question,
+  .buyer-register-contact-divider,
+  .buyer-register-contact-email,
+  .buyer-register-contact-phone {
+    font-size: clamp(11.52px, (19.2/1920)*100vw, 19.2px);
+    line-height: clamp(16.92px, (28.2/1920)*100vw, 28.2px);
+    letter-spacing: clamp(-0.576px, (-0.96/1920)*100vw, -0.96px);
+  }
+
+  .buyer-register-contact-content {
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(0.5rem, 1vw, 1rem);
+    text-align: center;
+  }
+  
+  .buyer-register-contact-info {
+    align-items: center;
+    text-align: center;
+    gap: clamp(0.25rem, 0.5vw, 0.5rem);
+  }
+  
+  .buyer-register-contact-divider {
+    display: none;
+  }
+
+  .buyer-register-contact-email,
+  .buyer-register-contact-phone {
+    white-space: normal;
+    text-align: center;
+  }
+} 
 
 @media (max-width: 768px) {
-  .buyer-hero-section {
-    min-height: clamp(427px, (854/1920)*100vw, 854px) !important;
-    height: clamp(427px, (854/1920)*100vw, 854px) !important;
+  .buyer-register-contact-content {
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(0.5rem, 1vw, 1rem);
+    text-align: center;
   }
   
-  .buyer-hero-main-title {
-    font-size: clamp(28px, (56/1920)*100vw, 56px) !important;
-    line-height: clamp(36px, (73/1920)*100vw, 73px) !important;
-    letter-spacing: clamp(-1.4px, (-2.8/1920)*100vw, -2.8px) !important;
-    padding: 0 0.5rem;
+  .buyer-register-contact-info {
+    align-items: center;
+    text-align: center;
+    gap: clamp(0.25rem, 0.5vw, 0.5rem);
   }
-}
+  
+  .buyer-register-contact-divider {
+    display: none;
+  }
 
-@media (max-width: 480px) {
-  .buyer-hero-section {
-    min-height: clamp(427px, (854/1920)*100vw, 854px) !important;
-    height: clamp(427px, (854/1920)*100vw, 854px) !important;
-  }
-  
-  .buyer-hero-main-title {
-    font-size: clamp(28px, (56/1920)*100vw, 56px) !important;
-    line-height: clamp(36px, (73/1920)*100vw, 73px) !important;
-    letter-spacing: clamp(-1.4px, (-2.8/1920)*100vw, -2.8px) !important;
-    padding: 0 0.3rem;
+  .buyer-register-contact-email,
+  .buyer-register-contact-phone {
+    text-align: center;
   }
 } 

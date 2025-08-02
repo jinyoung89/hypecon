@@ -50,39 +50,6 @@ function HomePage() {
           <source src={heroVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        
-        {/* 오버레이 */}
-        <div className="home-hero-overlay"></div>
-        
-        {/* 텍스트 오버레이 */}
-        <div className="home-hero-text" style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          textAlign: 'center',
-          gap: 'clamp(1rem, 2vw, 2rem)'
-        }}>
-          <img 
-            src={homeImg}
-            alt="HYPECON STYLE WEEK"
-            style={{
-              width: 'clamp(300px, 31.25vw, 600px)',
-              height: 'clamp(131px, 13.65vw, 262px)',
-              objectFit: 'contain'
-            }}
-          />
-          <div className="home-hero-subtitle" style={{
-            color: '#FFF',
-            fontFamily: 'Montserrat, sans-serif',
-            fontSize: 'clamp(1.2rem, 1.67vw, 2rem)',
-            fontStyle: 'normal',
-            fontWeight: '700',
-            lineHeight: 'clamp(1.6rem, 2.5vw, 3rem)',
-            textAlign: 'center',
-            textShadow: '0 4px 20px rgba(0,0,0,0.5)'
-          }}>2026. 2.19 ~ 22 @ COEX C HALL</div>
-        </div>
       </section>
 
       {/* 중간 콘텐츠 블록 */}
