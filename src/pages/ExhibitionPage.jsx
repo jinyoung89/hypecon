@@ -102,7 +102,7 @@ function ExhibitionPage() {
       {/* PROGRAMS HIGHLIGHT 섹션 */}
       <section className="exhibition-programs-section">
         <div className="exhibition-programs-inner">
-          <h2 className="exhibition-programs-title">PROGRAMS HIGHLIGHT</h2>
+          <h2 className="hypecon-large-title hypecon-large-title--primary">PROGRAMS HIGHLIGHT</h2>
           <div className="exhibition-programs-list">
             <div className="exhibition-programs-item">
               <div className="exhibition-programs-icon">
