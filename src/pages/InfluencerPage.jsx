@@ -35,7 +35,7 @@ function InfluencerPage() {
       {/* INFLUENCER REGISTRATION 섹션 */}
       <section className="influencer-info-section">
         <div className="influencer-info-inner">
-          <h2 className="influencer-registration-title">{t('influencer.registration.title')}</h2>
+          <h2 className="hypecon-large-title hypecon-large-title--primary">{t('influencer.registration.title')}</h2>
           <div className="influencer-info-content">
             <p className="influencer-info-text">
               {t('influencer.registration.text')}

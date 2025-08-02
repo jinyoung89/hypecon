@@ -35,7 +35,7 @@ function BuyerPage() {
       {/* BUYER REGISTRATION 섹션 */}
       <section className="buyer-info-section">
         <div className="buyer-info-inner">
-          <h2 className="buyer-info-title">{t('buyer.registration.title')}</h2>
+          <h2 className="hypecon-large-title hypecon-large-title--primary">{t('buyer.registration.title')}</h2>
           <div className="buyer-info-content">
             <p className="buyer-info-text" style={{
               whiteSpace: 'pre-line',

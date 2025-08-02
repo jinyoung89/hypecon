@@ -167,7 +167,7 @@ function ExhibitionPage() {
       {/* HYPECON EXPERIENCE 섹션 */}
       <section className="exhibition-new-experience-section">
         <div className="exhibition-new-experience-inner">
-          <h2 className="exhibition-new-experience-title">HYPECON EXPERIENCE</h2>
+          <h2 className="hypecon-large-title hypecon-large-title--black">HYPECON EXPERIENCE</h2>
           
           <div className="exhibition-new-experience-desc">
             <div className="experience-title-text">{t('exhibition.experience.title')}</div>
@@ -319,7 +319,7 @@ function ExhibitionPage() {
       <section className="exhibition-why-join-section">
         <div className="exhibition-why-join-inner">
           <div className="why-join-content">
-            <h2 className="why-join-title">WHY<br/>JOIN</h2>
+            <div className="hypecon-large-title hypecon-large-title--black">WHY JOIN</div>
           </div>
           <div className="why-join-image">
             <img src={exSec07Img} alt="Why Join HYPECON" />

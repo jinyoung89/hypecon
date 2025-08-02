@@ -78,7 +78,7 @@ function BrandPage() {
       {/* ENGAGEMENT GUIDE 섹션 */}
       <section className="brand-engagement-section">
         <div className="brand-engagement-inner">
-          <h2 className="brand-engagement-title">{t('brand.engagement.title')}</h2>
+          <h2 className="hypecon-large-title hypecon-large-title--primary">{t('brand.engagement.title')}</h2>
           <div className="brand-engagement-content">
             <p className="brand-engagement-text" style={{
               whiteSpace: 'pre-line',
@@ -381,7 +381,7 @@ function BrandPage() {
       {/* 얼리버드 혜택 섹션 */}
       <section className="brand-earlybird-benefit-section">
         <div className="brand-earlybird-benefit-inner">
-          <h2 className="brand-earlybird-benefit-title">{t('brand.earlyBenefit.title')}</h2>
+          <h2 className="hypecon-large-title hypecon-large-title--primary">{t('brand.earlyBenefit.title')}</h2>
           <div className="brand-earlybird-benefit-content">
             <div className="brand-earlybird-benefit-header">
               <h3 className="brand-earlybird-benefit-subtitle" style={{

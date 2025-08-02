@@ -21,7 +21,7 @@ function TicketPage() {
       {/* TICKET INFORMATION 섹션 */}
       <section className="ticket-info-section">
         <div className="ticket-info-inner">
-          <h2 className="ticket-info-title">{t('ticket.info.title')}</h2>
+          <h2 className="hypecon-large-title hypecon-large-title--primary">{t('ticket.info.title')}</h2>
           <div className="ticket-info-content">
             <p className="ticket-info-text" style={{
               whiteSpace: 'pre-line',
