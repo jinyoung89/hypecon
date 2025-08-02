@@ -231,7 +231,10 @@ function TicketPage() {
       {/* 새로운 섹션 */}
       <section className="ticket-new-section">
         <div className="ticket-new-inner">
-          <button className="ticket-new-button">
+          <button 
+            className="ticket-new-button"
+            onClick={() => window.open('https://docs.google.com/forms/d/1qloDsLH1ODQeTmSJQoUrPKQ1fGNs5yi6vw1gbh-IYfM/edit', '_blank')}
+          >
             얼리버드 티켓 1차 예매
           </button>
           <p className="ticket-new-text">

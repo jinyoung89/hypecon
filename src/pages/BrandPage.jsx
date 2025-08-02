@@ -576,7 +576,13 @@ function BrandPage() {
       {/* 참가비 납부 안내 섹션 */}
       <section className="brand-payment-section">
         <div className="brand-payment-inner">
-          <div className="brand-payment-new-element">{t('brand.payment.title')}</div>
+          <div 
+            className="brand-payment-new-element" 
+            onClick={() => window.open('https://docs.google.com/forms/d/1qloDsLH1ODQeTmSJQoUrPKQ1fGNs5yi6vw1gbh-IYfM/edit', '_blank')}
+            style={{ cursor: 'pointer' }}
+          >
+            {t('brand.payment.title')}
+          </div>
           <div className="brand-payment-subtitle">{t('brand.payment.subtitle')}</div>
           <div className="brand-payment-content-new">
             <div className="brand-payment-content-wrapper">

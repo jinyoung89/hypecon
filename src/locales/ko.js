@@ -364,22 +364,22 @@ const ko = {
           alt: '아트월 부스 이미지'
         },
         acrylic4: {
-          title: '아크릴 부스 - 4부스',
+          title: '아트월 부스 - 4부스',
           earlyPrice: '1,120만 원',
           regularPrice: '1,360만 원',
-          alt: '아크릴 부스 4부스 이미지'
+          alt: '아트월 부스 4부스 이미지'
         },
         acrylic6: {
-          title: '아크릴 부스 - 6부스',
+          title: '아트월 부스 - 6부스',
           earlyPrice: '1,680만 원',
           regularPrice: '2,040만 원',
-          alt: '아크릴 부스 6부스 이미지'
+          alt: '아트월 부스 6부스 이미지'
         },
         acrylic8: {
-          title: '아크릴 부스 - 8부스',
+          title: '아트월 부스 - 8부스',
           earlyPrice: '2,200만 원',
           regularPrice: '2,680만 원',
-          alt: '아크릴 부스 8부스 이미지'
+          alt: '아트월 부스 8부스 이미지'
         }
       },
       table: {

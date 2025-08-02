@@ -108,11 +108,16 @@
   margin-bottom: 2rem;
   text-transform: uppercase;
   font-family: 'Bebas Neue', sans-serif;
-  line-height: 82%;
+  line-height: clamp(0.7, 0.82, 0.82);
   text-align: center;
   word-wrap: break-word;
   font-style: normal;
-  letter-spacing: clamp(-5.4px, (-9/1920)*100vw, -9px);
+  letter-spacing: clamp(-3px, (-9/1920)*100vw, -9px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.2rem, 0.5vw, 0.5rem);
 }
 
 .brand-engagement-content {
@@ -804,10 +809,15 @@
   font-size: clamp(108px, (180/1920)*100vw, 180px);
   font-style: normal;
   font-weight: 400;
-  line-height: 82%;
-  letter-spacing: clamp(-3.24px, (-5.4/1920)*100vw, -5.4px);
+  line-height: clamp(0.7, 0.82, 0.82);
+  letter-spacing: clamp(-2px, (-5.4/1920)*100vw, -5.4px);
   margin-bottom: clamp(55px, (110/1920)*100vw, 110px);
   text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.2rem, 0.5vw, 0.5rem);
 }
 
 .brand-earlybird-benefit-content {
@@ -1290,6 +1300,9 @@
   .brand-engagement-title {
     font-size: clamp(2.5rem, 6vw, 3.5rem);
     margin-bottom: 1.5rem;
+    line-height: clamp(0.9, 1.1, 1.1) !important;
+    letter-spacing: clamp(-1px, -2px, -2px) !important;
+    gap: clamp(0.8rem, 2vw, 1.5rem) !important;
   }
   
   .brand-engagement-text {
@@ -1422,8 +1435,9 @@
   .brand-earlybird-benefit-title {
     font-size: clamp(1.8rem, 5vw, 2.5rem);
     margin-bottom: 2rem;
-    line-height: 1.2;
-    letter-spacing: clamp(-3.24px, (-5.4/1920)*100vw, -5.4px);
+    line-height: clamp(0.9, 1.2, 1.2) !important;
+    letter-spacing: clamp(-1px, -2px, -2px) !important;
+    gap: clamp(0.8rem, 2vw, 1.5rem) !important;
   }
 
   .brand-earlybird-benefit-subtitle {

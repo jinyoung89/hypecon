@@ -175,17 +175,13 @@ function HomePage() {
               {/* 버튼 텍스트 */}
               <button 
                 onClick={handleTicketClick} 
-                className="home-btn-main hover:scale-105"
+                className="home-btn-main hover:scale-105 button-center-safari flex-column-safari"
                 style={{
                   width: '100%',
                   height: '100%',
                   position: 'absolute',
                   background: 'transparent',
                   border: 'none',
-                  textAlign: 'center',
-                  justifyContent: 'center',
-                  display: 'flex',
-                  flexDirection: 'column',
                   color: '#000',
                   fontSize: 'clamp(21.6px, 1.875vw, 36px)',
                   fontFamily: '"Noto Sans CJK KR", sans-serif',
@@ -266,6 +262,7 @@ function HomePage() {
           }}>
             <button 
               onClick={handleInfluencerClick} 
+              className="button-center-safari flex-column-safari"
               style={{
                 width: 'clamp(400px, 45.3vw, 869.84px)',
                 height: 'clamp(60px, 5.78vw, 111px)',
@@ -273,10 +270,6 @@ function HomePage() {
                 background: 'black',
                 color: 'white',
                 border: 'none',
-                textAlign: 'center',
-                justifyContent: 'center',
-                display: 'flex',
-                flexDirection: 'column',
                 fontSize: 'clamp(1.688rem, 2.34vw, 2.8125rem)',
                 fontFamily: 'Noto Sans, sans-serif',
                 fontWeight: '700',
@@ -290,6 +283,7 @@ function HomePage() {
             </button>
             <button 
               onClick={handleBuyerClick} 
+              className="button-center-safari flex-column-safari"
               style={{
                 width: 'clamp(400px, 45.3vw, 869.84px)',
                 height: 'clamp(60px, 5.78vw, 111px)',
@@ -297,10 +291,6 @@ function HomePage() {
                 background: '#00E5A8',
                 color: 'black',
                 border: 'none',
-                textAlign: 'center',
-                justifyContent: 'center',
-                display: 'flex',
-                flexDirection: 'column',
                 fontSize: 'clamp(1.688rem, 2.34vw, 2.8125rem)',
                 fontFamily: 'Noto Sans, sans-serif',
                 fontWeight: '700',
