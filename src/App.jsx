@@ -247,6 +247,7 @@ function Footer() {
         </div>
         
         {/* 소셜 미디어 아이콘 */}
+        {/* 
         <div style={{
           display: 'flex',
           justifyContent: 'center',
@@ -306,6 +307,7 @@ function Footer() {
             <img src={instagramIcon} alt="Instagram" style={{width:'40px', height:'40px', objectFit:'contain'}} />
           </a>
         </div>
+        */}
         
         {/* 연락처 정보 */}
         <div style={{
