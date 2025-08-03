@@ -568,7 +568,7 @@
 .ticket-price-table th {
   background: transparent;
   color: #000;
-  font-family: "Noto Sans CJK KR";
+  font-family: "Noto Sans KR", "Noto Sans", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: clamp(21.6px, (36/1920)*100vw, 36px);
   font-style: normal;
   font-weight: 700;
@@ -582,7 +582,7 @@
 
 .ticket-price-table td {
   color: #000;
-  font-family: "Noto Sans CJK KR";
+  font-family: "Noto Sans KR", "Noto Sans", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: clamp(19.2px, (32/1920)*100vw, 32px);
   font-style: normal;
   font-weight: 400;
@@ -611,7 +611,7 @@
 
 .ticket-price-note {
   color: #000;
-  font-family: "Noto Sans CJK KR";
+  font-family: "Noto Sans KR", "Noto Sans", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: clamp(14.4px, (24/1920)*100vw, 24px);
   font-style: normal;
   font-weight: 400;
@@ -623,7 +623,7 @@
 
 .ticket-price-note strong {
   color: #000;
-  font-family: "Noto Sans CJK KR";
+  font-family: "Noto Sans KR", "Noto Sans", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: clamp(19.2px, (32/1920)*100vw, 32px);
   font-style: normal;
   font-weight: 700;
@@ -633,7 +633,7 @@
 
 .ticket-refund-title {
   color: #000;
-  font-family: "Noto Sans CJK KR";
+  font-family: "Noto Sans KR", "Noto Sans", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: clamp(21.6px, (36/1920)*100vw, 36px);
   font-style: normal;
   font-weight: 700;
@@ -645,7 +645,7 @@
 
 .ticket-refund-intro {
   color: #000;
-  font-family: "Noto Sans CJK KR";
+  font-family: "Noto Sans KR", "Noto Sans", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: clamp(21.6px, (36/1920)*100vw, 36px);
   font-style: normal;
   font-weight: 400;
@@ -667,7 +667,7 @@
 
 .ticket-refund-list li {
   color: #000;
-  font-family: "Noto Sans CJK KR";
+  font-family: "Noto Sans KR", "Noto Sans", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: clamp(21.6px, (36/1920)*100vw, 36px);
   font-style: normal;
   font-weight: 400;
@@ -698,7 +698,7 @@
 
 .ticket-notes-title {
   color: #000;
-  font-family: "Noto Sans CJK KR";
+  font-family: "Noto Sans KR", "Noto Sans", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: clamp(21.6px, (36/1920)*100vw, 36px);
   font-style: normal;
   font-weight: 700;
@@ -720,7 +720,7 @@
 
 .ticket-notes-list li {
   color: #000;
-  font-family: "Noto Sans CJK KR";
+  font-family: "Noto Sans KR", "Noto Sans", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: clamp(21.6px, (36/1920)*100vw, 36px);
   font-style: normal;
   font-weight: 400;
@@ -747,7 +747,7 @@
 
 .ticket-booking-title {
   color: #000;
-  font-family: "Noto Sans CJK KR";
+  font-family: "Noto Sans KR", "Noto Sans", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: clamp(21.6px, (36/1920)*100vw, 36px);
   font-style: normal;
   font-weight: 700;
@@ -769,7 +769,7 @@
 
 .ticket-booking-list li {
   color: #000;
-  font-family: "Noto Sans CJK KR";
+  font-family: "Noto Sans KR", "Noto Sans", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: clamp(21.6px, (36/1920)*100vw, 36px);
   font-style: normal;
   font-weight: 400;
@@ -1474,7 +1474,7 @@
   }
 
   .ticket-card-header {
-    font-family: "Noto Sans CJK KR";
+    font-family: "Noto Sans KR", "Noto Sans", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: clamp(1.1rem, 4vw, 1.3rem);
     font-weight: 700;
     color: #000;
@@ -1488,7 +1488,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 0.8rem;
-    font-family: "Noto Sans CJK KR";
+    font-family: "Noto Sans KR", "Noto Sans", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, sans-serif;
   }
 
   .ticket-card-row:last-child {
@@ -1500,6 +1500,7 @@
     font-weight: 600;
     color: #333;
     margin-bottom: 0.3rem;
+    font-family: "Noto Sans KR", "Noto Sans", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, sans-serif;
   }
 
   .ticket-card-value {
@@ -1511,6 +1512,7 @@
     word-break: keep-all;
     overflow-wrap: break-word;
     word-wrap: break-word;
+    font-family: "Noto Sans KR", "Noto Sans", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, sans-serif;
   }
 
   /* 추천 박스 모바일 최적화 */

@@ -20,7 +20,7 @@ function ContactPage() {
       {/* CONTACT US 섹션 */}
       <section className="contact-hero-section">
         <div className="contact-hero-inner">
-          <h1 className="contact-hero-title">{t('contact.hero.title')}</h1>
+          <h1 className="hypecon-large-title hypecon-large-title--primary">{t('contact.hero.title')}</h1>
           <div className="contact-hero-subtitle">
             {t('contact.hero.subtitle').map((line, index) => (
               <p key={index}>

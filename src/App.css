@@ -1,7 +1,218 @@
 /* HYPECON - 워터밤 완전 복제 스타일 */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;700;900&family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900&family=Bebas+Neue&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
+
+/* 폰트 로딩 최적화 */
+body {
+  font-display: swap;
+}
+
+/* 폰트가 로드되지 않을 때를 대비한 fallback 스타일 */
+.font-loading-fallback {
+  font-family: 'Arial Black', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/* 사파리 폰트 호환성을 위한 전역 CSS */
+/* 모든 Noto Sans CJK KR을 사파리 호환 폰트로 대체 */
+* {
+  --noto-sans-fallback: "Noto Sans KR", "Noto Sans", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Malgun Gothic", sans-serif;
+  --bebas-neue-fallback: 'Bebas Neue', 'Arial Black', 'Helvetica', sans-serif;
+  --montserrat-fallback: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+}
+
+/* Noto Sans CJK KR이 포함된 모든 요소에 대한 보정 */
+[style*="Noto Sans CJK KR"],
+[class*="hero-title"],
+[class*="info-text"],
+[class*="benefit-"],
+[class*="criteria-"],
+[class*="schedule-"],
+[class*="apply-"],
+[class*="what-it-takes-"],
+[class*="faq-"],
+[class*="award-"],
+[class*="ticket-"],
+[class*="brand-"],
+[class*="exhibition-"],
+[class*="buyer-"],
+[class*="about-"],
+[class*="contact-"] {
+  font-family: var(--noto-sans-fallback) !important;
+}
+
+/* Bebas Neue가 포함된 모든 요소에 대한 보정 */
+[style*="Bebas Neue"],
+.hypecon-large-title,
+[class*="large-title"],
+[class*="style-awards-title"],
+[class*="what-it-takes-title"],
+[class*="faq-title"] {
+  font-family: var(--bebas-neue-fallback) !important;
+  font-display: swap !important;
+}
+
+/* 사파리 전용 강화 보정 */
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-appearance:none) {
+    /* 사파리에서 강제 폰트 적용 */
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    /* CSS에서 직접 정의된 Noto Sans CJK KR 오버라이드 */
+    .influencer-hero-main-title,
+    .award-hero-title,
+    .ticket-hero-main-title,
+    .brand-hero-main-title,
+    .exhibition-hero-main-title,
+    .buyer-hero-main-title,
+    .about-hero-main-title,
+    .contact-hero-main-title,
+    .home-hero-main-title {
+      font-family: var(--noto-sans-fallback) !important;
+    }
+    
+    /* 모든 텍스트 요소들에 대한 포괄적 보정 */
+    .influencer-info-text,
+    .influencer-info-subtext,
+    .influencer-benefit-title,
+    .influencer-benefit-list li,
+    .influencer-criteria-title,
+    .influencer-apply-title,
+    .influencer-schedule-title,
+    .influencer-what-it-takes-text-group,
+    .influencer-what-it-takes-ending {
+      font-family: var(--noto-sans-fallback) !important;
+    }
+    
+    /* Award 페이지 */
+    .award-style-awards-text,
+    .award-overview-title,
+    .award-category-title,
+    .award-category-description {
+      font-family: var(--noto-sans-fallback) !important;
+    }
+    
+    /* Ticket 페이지 */
+    .ticket-hero-title,
+    .ticket-info-text,
+    .ticket-info-subtext {
+      font-family: var(--noto-sans-fallback) !important;
+    }
+    
+    /* Brand 페이지 */
+    .brand-hero-title,
+    .brand-info-text,
+    .brand-info-subtext {
+      font-family: var(--noto-sans-fallback) !important;
+    }
+    
+    /* Exhibition 페이지 */
+    .exhibition-hero-title,
+    .exhibition-info-text,
+    .exhibition-info-subtext {
+      font-family: var(--noto-sans-fallback) !important;
+    }
+    
+    /* Buyer 페이지 */
+    .buyer-hero-title,
+    .buyer-info-text,
+    .buyer-info-subtext {
+      font-family: var(--noto-sans-fallback) !important;
+    }
+    
+    /* Bebas Neue 대형 타이틀들 */
+    .hypecon-large-title,
+    .award-style-awards-title,
+    .influencer-what-it-takes-title,
+    .influencer-faq-title,
+    .brand-large-title,
+    .exhibition-large-title,
+    .ticket-large-title,
+    .buyer-large-title,
+    .about-large-title {
+      font-family: var(--bebas-neue-fallback) !important;
+      font-display: swap !important;
+    }
+  }
+}
+
+/* 웹폰트 로딩 실패 시 시스템 폰트로 fallback */
+@font-face {
+  font-family: 'Noto Sans CJK KR Fallback';
+  src: local('Noto Sans KR'), 
+       local('Noto Sans'), 
+       local('-apple-system'), 
+       local('BlinkMacSystemFont'), 
+       local('Apple SD Gothic Neo'),
+       local('Malgun Gothic'),
+       local('sans-serif');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bebas Neue Fallback';
+  src: local('Bebas Neue'), 
+       local('Arial Black'), 
+       local('Helvetica'),
+       local('Arial'),
+       local('sans-serif');
+  font-display: swap;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+@font-face {
+  font-family: 'Montserrat Fallback';
+  src: local('Montserrat'), 
+       local('-apple-system'), 
+       local('BlinkMacSystemFont'),
+       local('Helvetica Neue'),
+       local('Arial'),
+       local('sans-serif');
+  font-display: swap;
+}
+
+/* 극한의 사파리 호환성을 위한 마지막 보정 */
+/* 모든 div, p, span, h1-h6 태그에 대한 보정 */
+div, p, span, h1, h2, h3, h4, h5, h6, li, a, button {
+  font-family: inherit !important;
+}
+
+/* CSS 변수를 사용한 스마트 폰트 교체 */
+:root {
+  --font-primary: "Noto Sans KR", "Noto Sans", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-title: 'Bebas Neue', 'Arial Black', 'Helvetica', sans-serif;
+  --font-english: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* 사파리에서 폰트 렌더링 강제 개선 */
+@supports (-webkit-appearance: none) and (not (appearance: none)) {
+  /* 이것은 사파리에서만 작동 */
+  * {
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    text-rendering: optimizeLegibility !important;
+  }
+  
+  /* 모든 텍스트 요소에 강제 폰트 적용 */
+  body, body * {
+    font-family: var(--font-primary) !important;
+  }
+  
+  /* 타이틀 요소들에만 Bebas Neue 적용 */
+  .hypecon-large-title,
+  [class*="large-title"],
+  [class*="awards-title"],
+  [class*="what-it-takes-title"],
+  [class*="faq-title"] {
+    font-family: var(--font-title) !important;
+  }
+}
 
 :root {
   /* HYPECON 공식 팔레트 */
@@ -1055,6 +1266,7 @@ body {
   margin-bottom: clamp(2rem, 3.13vw, 3rem);
   text-transform: uppercase;
   font-family: 'Bebas Neue', sans-serif;
+  font-display: swap;
   line-height: clamp(5.28rem, (176/1920)*100vw, 11rem);
   text-align: center;
   letter-spacing: clamp(-0.27rem, (-9/1920)*100vw, -0.56rem);

@@ -26,19 +26,6 @@
   text-align: center;
 }
 
-.contact-hero-title {
-  color: #00E5A8;
-  text-align: center;
-  font-family: "Bebas Neue";
-  font-size: clamp(6rem, (200/1920)*100vw, 200px);
-  font-style: normal;
-  font-weight: 400;
-  line-height: 82%;
-  letter-spacing: clamp(-0.3rem, (-10/1920)*100vw, -10px);
-  margin-bottom: clamp(2rem, 3.13vw, 3rem);
-  text-transform: uppercase;
-}
-
 .contact-hero-subtitle {
   max-width: clamp(600px, 62.5vw, 800px);
   margin: 0 auto;
@@ -61,13 +48,6 @@
 @media (max-width: 900px) {
   .contact-hero-section {
     padding: 5rem 0;
-  }
-  
-  .contact-hero-title {
-    font-size: clamp(3.5rem, 8vw, 5rem);
-    line-height: 82%;
-    letter-spacing: clamp(-0.2rem, -0.8vw, -3px);
-    margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
   }
   
   .contact-hero-subtitle p {
@@ -106,13 +86,6 @@
     padding: 5rem 0;
   }
   
-  .contact-hero-title {
-    font-size: clamp(2.5rem, 10vw, 3.5rem);
-    line-height: 82%;
-    letter-spacing: clamp(-0.15rem, -1vw, -2px);
-    margin-bottom: clamp(1rem, 5vw, 2rem);
-  }
-  
   .contact-hero-subtitle p {
     font-size: clamp(0.9rem, 2vw, 1.1rem);
     line-height: 1.4;
@@ -149,13 +122,6 @@
     padding: 5rem 0;
   }
   
-  .contact-hero-title {
-    font-size: clamp(2.5rem, 8vw, 4rem);
-    line-height: 82%;
-    letter-spacing: clamp(-0.15rem, -0.8vw, -2px);
-    margin-bottom: clamp(1rem, 4vw, 2rem);
-  }
-  
   .contact-hero-subtitle p {
     font-size: clamp(0.9rem, 2vw, 1.1rem);
     line-height: 1.4;
@@ -165,13 +131,6 @@
 @media (max-width: 480px) {
   .contact-hero-section {
     padding: 5rem 0;
-  }
-  
-  .contact-hero-title {
-    font-size: clamp(2rem, 10vw, 3rem);
-    line-height: 82%;
-    letter-spacing: clamp(-0.1rem, -1vw, -1.5px);
-    margin-bottom: clamp(0.8rem, 5vw, 1.5rem);
   }
   
   .contact-hero-subtitle p {
