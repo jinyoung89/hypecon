@@ -222,6 +222,20 @@ function AwardPage() {
         </div>
       </section>
 
+      {/* 컨택 섹션 */}
+      <section className="award-contact-section">
+        <div className="award-contact-inner">
+          <div className="award-contact-content">
+            <span className="award-contact-question">{t('award.contact.question')}</span>
+            <span className="award-contact-divider">|</span>
+            <div className="award-contact-details">
+              <span className="award-contact-email">{t('award.contact.email')}</span>
+              <span className="award-contact-phone">{t('award.contact.phone')}</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 추가 섹션은 여기에 구현 */}
     </div>
   );

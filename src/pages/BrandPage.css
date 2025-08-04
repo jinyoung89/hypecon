@@ -66,7 +66,7 @@
   letter-spacing: clamp(-1.4px, (-2.8/1920)*100vw, -2.8px);
   padding: 0 clamp(24px, 2.08vw, 32px);
   word-break: keep-all;
-  white-space: pre-line;
+  white-space: pre-wrap;
   word-wrap: break-word;
   width: clamp(500px, 75vw, 1400px);
   height: clamp(96.5px, 16.77vw, 322px);
@@ -133,7 +133,7 @@
   line-height: 1.4;
   color: var(--color-white);
   margin: 0;
-  white-space: pre-line;
+  white-space: pre-wrap;
   word-wrap: break-word;
   text-align: center;
   font-style: normal;
@@ -262,7 +262,7 @@
   line-height: clamp(31.2px, (52/1920)*100vw, 52px);
   letter-spacing: clamp(-0.96px, (-1.6/1920)*100vw, -1.6px);
   margin: 0;
-  white-space: pre-line;
+  white-space: pre-wrap;
   word-wrap: break-word;
   word-break: keep-all;
 }
@@ -409,7 +409,7 @@
   border-bottom: 1px solid #000;
   border-left: none;
   border-right: none;
-  white-space: pre-line;
+  white-space: pre-wrap;
   word-break: keep-all;
 }
 
@@ -436,7 +436,7 @@
   border-right: none;
   text-align: center;
   background: #fff;
-  white-space: pre-line;
+  white-space: pre-wrap;
   word-break: keep-all;
   vertical-align: middle;
   font-family: "Noto Sans CJK KR";
@@ -570,7 +570,7 @@
   margin-bottom: clamp(8px, (15/1920)*100vw, 15px);
   position: relative;
   padding-left: clamp(20px, (35/1920)*100vw, 35px);
-  white-space: pre-line;
+  white-space: pre-wrap;
   word-break: keep-all;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -702,7 +702,7 @@
   font-weight: 500;
   line-height: clamp(36px, (60/1920)*100vw, 60px);
   letter-spacing: clamp(-0.96px, (-1.6/1920)*100vw, -1.6px);
-  white-space: pre-line;
+  white-space: pre-wrap;
   word-break: keep-all;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -756,7 +756,7 @@
   margin-bottom: clamp(8px, (15/1920)*100vw, 15px);
   position: relative;
   padding-left: clamp(20px, (35/1920)*100vw, 35px);
-  white-space: pre-line;
+  white-space: pre-wrap;
   word-break: keep-all;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -1553,7 +1553,7 @@
   height: clamp(200px, 18.49vw, 355px);
   position: relative;
   border-radius: clamp(15px, 1.56vw, 30px);
-  border: 2px solid #000;
+  border: 1px solid #000;
   background: #fff;
   display: flex;
   align-items: flex-start;
@@ -2105,9 +2105,197 @@
       font-weight: 400;
       color: #000;
       line-height: 1.4;
-      white-space: pre-line;
+      white-space: pre-wrap;
       word-break: keep-all;
       overflow-wrap: break-word;
       word-wrap: break-word;
     }
   } 
+
+/* 코너부스혜택 섹션 */
+.brand-booth-corner-benefits-title {
+  color: #000;
+  text-align: left;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(24px, (40/1920)*100vw, 40px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
+  margin: clamp(20px, (40/1920)*100vw, 40px) auto clamp(10px, (20/1920)*100vw, 20px);
+  display: block;
+  width: clamp(655px, (1310/1920)*100vw, 1310px);
+  max-width: 100%;
+  align-self: flex-start;
+}
+
+.brand-booth-corner-benefits-table-container {
+  width: clamp(655px, (1310/1920)*100vw, 1310px);
+  max-width: 100%;
+  align-self: flex-start;
+  margin: 0 auto clamp(20px, (40/1920)*100vw, 40px);
+}
+
+.brand-booth-corner-benefits-table {
+  width: clamp(300px, (600/1920)*100vw, 600px);
+  height: clamp(95.5px, (191/1920)*100vw, 191px);
+  border-collapse: collapse;
+  border: 1px solid #000;
+  margin: 0;
+}
+
+.brand-booth-corner-benefits-table tbody tr {
+  height: clamp(31.8px, (63.67/1920)*100vw, 63.67px);
+  border-bottom: 1px solid #000;
+}
+
+.brand-booth-corner-benefits-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.brand-booth-corner-benefits-table td {
+  padding: clamp(8px, (16/1920)*100vw, 16px) clamp(12px, (24/1920)*100vw, 24px);
+  text-align: center;
+  vertical-align: middle;
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(16.8px, (28/1920)*100vw, 28px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: clamp(20px, (34/1920)*100vw, 34px);
+  letter-spacing: clamp(-0.84px, (-1.4/1920)*100vw, -1.4px);
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.brand-booth-corner-benefits-table td:first-child {
+  width: 50%;
+  border-right: none;
+}
+
+.brand-booth-corner-benefits-table td:last-child {
+  width: 50%;
+  border-left: none;
+}
+
+
+/* 계약 해지 및 자동 취소 규정 섹션 */
+.brand-booth-termination-title {
+  color: #000;
+  text-align: left;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(24px, (40/1920)*100vw, 40px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
+  margin: clamp(20px, (40/1920)*100vw, 40px) auto clamp(10px, (20/1920)*100vw, 20px);
+  display: block;
+  width: clamp(655px, (1310/1920)*100vw, 1310px);
+  max-width: 100%;
+  align-self: flex-start;
+}
+
+.brand-booth-termination-list {
+  width: clamp(655px, (1310/1920)*100vw, 1310px);
+  max-width: 100%;
+  align-self: flex-start;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto clamp(20px, (40/1920)*100vw, 40px);
+}
+
+.brand-booth-termination-list li {
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(29.4px, (49/1920)*100vw, 49px);
+  letter-spacing: clamp(-0.96px, (-1.6/1920)*100vw, -1.6px);
+  margin-bottom: clamp(8px, (15/1920)*100vw, 15px);
+  position: relative;
+  padding-left: clamp(20px, (35/1920)*100vw, 35px);
+  white-space: pre-wrap;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.brand-booth-termination-list li:before {
+  content: '•';
+  color: #000;
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+}
+
+
+.brand-booth-termination-list li:nth-child(3):before {
+  content: '';
+}
+
+
+/* 주의사항 섹션 */
+.brand-booth-caution-title {
+  color: #000;
+  text-align: left;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(21.6px, (36/1920)*100vw, 36px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: clamp(24px, (40/1920)*100vw, 40px);
+  letter-spacing: clamp(-1.08px, (-1.8/1920)*100vw, -1.8px);
+  margin: clamp(20px, (40/1920)*100vw, 40px) auto clamp(10px, (20/1920)*100vw, 20px);
+  display: block;
+  width: clamp(655px, (1310/1920)*100vw, 1310px);
+  max-width: 100%;
+  align-self: flex-start;
+}
+
+.brand-booth-caution-list {
+  width: clamp(655px, (1310/1920)*100vw, 1310px);
+  max-width: 100%;
+  align-self: flex-start;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto clamp(20px, (40/1920)*100vw, 40px);
+}
+
+.brand-booth-caution-list li {
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(29.4px, (49/1920)*100vw, 49px);
+  letter-spacing: clamp(-0.96px, (-1.6/1920)*100vw, -1.6px);
+  margin-bottom: clamp(8px, (15/1920)*100vw, 15px);
+  position: relative;
+  padding-left: 0;
+  white-space: pre-wrap;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+
+.brand-booth-caution-note {
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(14.4px, (24/1920)*100vw, 24px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(21.6px, (36/1920)*100vw, 36px);
+  letter-spacing: clamp(-0.72px, (-1.2/1920)*100vw, -1.2px);
+  margin: 0 auto clamp(20px, (40/1920)*100vw, 40px);
+  width: clamp(655px, (1310/1920)*100vw, 1310px);
+  max-width: 100%;
+  text-align: left;
+  white-space: pre-wrap;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}

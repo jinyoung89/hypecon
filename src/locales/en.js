@@ -348,75 +348,88 @@ const en = {
         boothTypes: {
           title: 'Booth Types',
           notice: '*All fees are exclusive of VAT.',
+          usdNotice: '*USD amounts are based on the August 2025 exchange rate and are for reference only. Actual payment may vary due to exchange rate fluctuations. Payment is accepted in KRW or USD.',
           labels: {
             earlyPrice: 'Early Bird Special',
-            regularPrice: 'Regular Price'
+            regularPrice: 'Regular Price',
+            earlyPriceLabel: 'Early Bird Special:',
+            regularPriceLabel: 'Regular Price:',
+            noteLabel: 'Notes:'
           },
           independent: {
             title: 'Space-only Booth',
             description: 'Customizable setup, available from 4 booths or more',
-            earlyPrice: '₩2,600,000',
-            regularPrice: '₩3,200,000',
+            earlyPrice: '$ 1,858',
+            regularPrice: '$ 2,287',
             alt: 'Independent Booth Image'
           },
           basic: {
             title: 'Standard Booth',
-            earlyPrice: '₩3,400,000',
-            regularPrice: '₩4,000,000',
+            earlyPrice: '$ 2,430',
+            regularPrice: '$ 2,859',
             alt: 'Standard Booth Image'
           },
           artwall: {
-            title: 'Art Wall Type (2 Booth)',
-            earlyPrice: '₩5,800,000',
-            regularPrice: '₩7,000,000',
+            title: 'Art Wall Type (2 Booths)',
+            earlyPrice: '$ 4,145',
+            regularPrice: '$ 5,003',
             alt: 'Art Wall Booth Image'
           },
           acrylic4: {
-            title: 'Art Wall Type (4 Booth)',
-            earlyPrice: '11,280,000',
-            regularPrice: '13,600,000',
+            title: 'Art Wall Type (4 Booths)',
+            earlyPrice: '$ 8,004',
+            regularPrice: '$ 9,719',
             alt: 'Acrylic Booth 4 Units Image'
           },
           acrylic6: {
-            title: 'Art Wall Type (6 Booth)',
-            earlyPrice: '₩16,800,000',
-            regularPrice: '₩20,400,000',
+            title: 'Art Wall Type (6 Booths)',
+            earlyPrice: '$ 12,006',
+            regularPrice: '$ 14,579',
             alt: 'Acrylic Booth 6 Units Image'
           },
           acrylic8: {
-            title: 'Art Wall Type (8 Booth)',
-            earlyPrice: '₩22,000,000',
-            regularPrice: '₩26,800,000',
+            title: 'Art Wall Type (8 Booths)',
+            earlyPrice: '$ 15,722',
+            regularPrice: '$ 19,152',
             alt: 'Acrylic Booth 8 Units Image'
           }
         },
         table: {
           headers: ['Booth Type', 'Quantity', 'Early Bird Special\n<span class="vat-text">Excl. VAT</span>', 'Regular Price\n<span class="vat-text">Excl. VAT</span>', 'Notes'],
           rows: [
-            ['Independent Booth', '4+ booths', '₩2.6M', '₩3.2M', 'Free construction'],
-            ['Basic Booth (Octa)', '1 booth', '₩3.4M', '₩4.0M', 'Single booth application only'],
-            ['Acrylic Booth', '2 booths', '₩5.8M', '₩7.0M', ''],
-            ['', '4 booths', '₩11.2M', '₩13.6M', ''],
-            ['', '6 booths', '₩16.8M', '₩20.4M', ''],
-            ['', '8 booths', '₩22.0M', '₩26.8M', '']
+            ['Space-only Booth', 'Minimum 4 booths', '$ 1,858', '$ 2,287', 'Fully customizable construction'],
+            ['Standard Booth (Shell Scheme)', '1 booth', '$ 2,430', '$ 2,859', 'Single booth only'],
+            ['Art Wall Booth', '2 booths', '$ 4,145', '$ 5,003', ''],
+            ['', '4 booths', '$ 8,004', '$ 9,719', ''],
+            ['', '6 booths', '$ 12,006', '$ 14,579', ''],
+            ['', '8 booths', '$ 15,722', '$ 19,152', '']
           ]
         },
-        tableNote: '※ Basic 1 booth size: 3M X 3M',
+        tableNote: '※ Standard booth size: 3m x 3m',
         basicIncluded: 'Basic Included Items',
         basicIncludedItems: [
-          'Info Desk',
-          'Chair provided (1 set per company)',
-          'Booth fixtures (floor, lighting)',
-          '1kw power supply',
-          'Outlet installation (1 per company)',
+          '1 set of info desk and chair (per exhibitor)',
+          'Booth fixtures (flooring, lighting)',
+          '1kW of electricity',
+          'Outlet installation (1 per exhibitor)',
           'Booth signage',
           'Pytex (carpet)'
         ],
         additionalCostTitle: 'Additional Cost Information',
         additionalCostItems: [
-          'Utility Costs: Additional electricity, additional lighting, internet, additional signage, etc. must be applied for separately and paid\n(detailed items will be provided separately after participation confirmation)',
-          'Corner Booth Additional Cost: ₩300,000 per booth (VAT excluded)\n(Corner allocation prioritized by first-come-first-served/number of booths/brand category)'
+          'Additional facility charges: Additional electricity, lighting, internet, and signage must be requested separately\nand will incur additional fees.\n(Detailed items and prices will be provided after participation is confirmed.)',
+          'Corner Booth Additional Cost: 300,000 KRW per booth (approx. USD 215, excluding VAT)\n(Corner booths will be assigned based on application order, number of booths, and brand category.)'
         ],
+        cornerBenefits: {
+          title: 'Corner Booth Benefits',
+          table: {
+            rows: [
+              ['First 10 teams', '1 corner booth free'],
+              ['4 or more booths', '1 corner booth free'],
+              ['6+ booths', '2 corner booths free']
+            ]
+          }
+        },
         additionalCost: {
           title: 'Additional Costs',
           items: [
@@ -442,14 +455,27 @@ const en = {
           items: [
             'If the deposit (50%) is not paid within 7 days of the contract date, the application will be automatically canceled.',
             'If the remaining balance (50%) is not paid within 60 days of the contract date, the contract will be automatically terminated.',
-            '→ Any deposit already paid will not be refunded.'
+            '→ The deposit already paid will not be refunded.'
           ]
+        },
+        cautionSimple: {
+          title: 'Important Notes',
+          items: [
+            '· All fees are exclusive of VAT.',
+            '· Corner booths are prioritized for multi-booth applicants and early registrants.',
+            '· Booth locations may be adjusted based on the brand\'s category and style.'
+          ],
+          note: '※ Brands that violate intellectual property rights or operate without proper licensing,\nincluding those selling unauthorized wholesale products, may be restricted from participation.\nAll legal responsibility lies with the participant. The organizer assumes no liability.'
         }
       },
       refund: {
         title: 'Refund Policy',
+        labels: {
+          conditionLabel: 'Condition:',
+          refundLabel: 'Refund details:'
+        },
         table: {
-          headers: ['Category', 'Condition', 'Refund'],
+          headers: ['Category', 'Condition', 'Refund Details'],
           rows: [
             ['100% Refund', 'Up to 90 days before the event (by Nov 21, 2025)', '100% refund of deposit and balance'],
             ['Partial Refund', 'Cancellation 89–60 days before the event\n(Nov 22 – Dec 20, 2025)', '50% refund of total amount paid\n<span class="small-text">(if balance is unpaid, 50% of deposit will be refunded)</span>'],
@@ -513,7 +539,7 @@ const en = {
           {
             title: 'Balance Payment',
             details: [
-              'Pay within 60 days from the date of invoice receipt'
+              'Full payment is due within 60 days of invoice receipt'
             ],
             notes: [
               'Assigned booth will be automatically canceled if the balance is not paid'
@@ -538,7 +564,8 @@ const en = {
         ]
       },
       payment: {
-        title: 'Payment Information',
+        title: 'Apply Now',
+        subtitle: 'Payment Instructions',
         deposit: {
           title: 'Deposit (50% of total participation fee)',
           desc: 'Due within 7 days from the date of invoice receipt after participation is confirmed'
@@ -636,13 +663,14 @@ const en = {
     },
     price: {
       title: 'Ticket Prices & Benefits',
+      usdNotice: '*USD amounts are based on the August 2025 exchange rate and are for reference only. Actual payment may vary due to exchange rate fluctuations. Payment is accepted in KRW or USD.',
       table: {
         headers: ['Ticket Types', 'Ticket Prices', 'Benefits'],
         rows: [
-          ['Early Bird Phase 1', '₩12,000', 'Exhibition + Experience + Photo Zones access + Priority merchandise purchase'],
-          ['Early Bird Phase 2', '₩15,000', 'Exhibition + Experience + Photo Zones access'],
-          ['Group Tickets (20+ persons)', '₩12,000', 'Same benefits (conditions apply)'],
-          ['On-site Purchase', '₩20,000', 'Exhibition + Experience Zones access only']
+          ['Early Bird Phase 1', '$ 8.6', 'Exhibition + Experience + Photo Zones access + Priority merchandise purchase'],
+          ['Early Bird Phase 2', '$ 10.8', 'Exhibition + Experience + Photo Zones access'],
+          ['Group Tickets (20+ persons)', '$ 8.6', 'Same benefits (conditions apply)'],
+          ['On-site Purchase', '$ 14.3', 'Exhibition + Experience Zones access only']
         ]
       },
       note: '※ Limited tickets! Early Bird may sell out fast.\nCheck official Instagram & website for updates.'
@@ -668,11 +696,15 @@ const en = {
     booking: {
       title: 'Ticket Booking Procedure',
       list: [
-        'Click the [Book Now] button once ticket sales open',
+        'Click the [Apply Now] button once ticket sales open',
         'Select the desired date and ticket category',
         'Complete the payment and receive your mobile ticket via SMS and email',
         'Present the QR code at the entrance for seamless entry on the event day'
       ]
+    },
+    earlyBird: {
+      buttonText: 'Reserve Phase 1 Early Bird Tickets',
+      description: 'Early Bird tickets are scheduled to open in October 2025.'
     }
   },
   
@@ -813,7 +845,8 @@ const en = {
           'Submit self-introduction or portfolio (optional)',
           'Individual notification after review by the operating team'
         ],
-        button: 'Apply Now'
+        button: 'Apply Now',
+        note: '※ Selection results will be announced individually via email after registration.'
       },
       contact: {
         title: 'Contact',
@@ -947,10 +980,10 @@ const en = {
     benefits: {
       title: 'Winner Benefits',
       items: [
-        'Award trophy & prize money + official winner content publication',
-        'Profile/interview feature in partner magazines',
-        'YouTube highlight video / official SNS clip distribution',
-        'Priority brand collaboration recommendations / report inclusion'
+        'Award trophy & prize money, plus official winner announcement content',
+        'Feature in partner magazine (profile/interview)',
+        'Highlight video on YouTube & official social media clips',
+        'Priority brand collaboration offers & inclusion in post-event report'
       ]
     },
     participation: {
@@ -981,6 +1014,11 @@ const en = {
           a: 'Official trophy and award recognition\n• Exposure in HYPECON content and press\n• Interview feature in partner online magazine\n• Priority for brand collaboration opportunities'
         }
       ]
+    },
+    contact: {
+      question: 'Awards Team / Inquiry',
+      email: 'hello@hypeconweek.com',
+      phone: '+82-2-567-5109 (HYPECON Awards Team)'
     }
   },
   contact: {

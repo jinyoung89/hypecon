@@ -163,9 +163,12 @@ function InfluencerPage() {
           {/* 참여 신청하기 버튼 */}
           <div className="influencer-apply-button-container">
             <button className="influencer-apply-button" onClick={handleInfluencerApply}>{t('influencer.info.apply.button')}</button>
+            <p className="influencer-apply-note">
+              {t('influencer.info.apply.note')}
+            </p>
           </div>
 
-         
+
     {/* 선정 기준 & 주의사항 */}
     <div className="influencer-criteria-section">
             <h3 className="influencer-criteria-title">{t('influencer.info.criteria.title')}</h3>

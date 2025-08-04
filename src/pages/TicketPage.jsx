@@ -4,7 +4,7 @@ import ticketImg from '../assets/images/ticket.png';
 import { useLanguage } from '../contexts/LanguageContext';
 
 function TicketPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   
   return (
     <div className="ticket-page-root">
@@ -127,6 +127,16 @@ function TicketPage() {
         <div className="ticket-price-inner">
           <div className="ticket-price-header">
             <h2 className="ticket-price-title">{t('ticket.price.title')}</h2>
+            {language === 'EN' && (
+              <p className="ticket-price-usd-notice" style={{
+                marginTop: 'clamp(1rem, 2vw, 1.5rem)',
+                fontSize: 'clamp(0.9rem, 1.5vw, 1.1rem)',
+                color: '#666',
+                textAlign: 'center'
+              }}>
+                {t('ticket.price.usdNotice')}
+              </p>
+            )}
           </div>
           <div className="ticket-price-box">
             <div className="ticket-price-table-container">
@@ -235,10 +245,10 @@ function TicketPage() {
             className="ticket-new-button"
             onClick={() => window.open('https://docs.google.com/forms/d/1qloDsLH1ODQeTmSJQoUrPKQ1fGNs5yi6vw1gbh-IYfM/edit', '_blank')}
           >
-            얼리버드 티켓 1차 예매
+            {t('ticket.earlyBird.buttonText')}
           </button>
           <p className="ticket-new-text">
-            얼리버드 티켓은 2025년 10월 중 오픈 예정입니다.
+            {t('ticket.earlyBird.description')}
           </p>
         </div>
       </section>

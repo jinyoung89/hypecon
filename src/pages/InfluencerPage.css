@@ -101,7 +101,7 @@
 
 .influencer-info-content {
   max-width: clamp(600px, 62.5vw, 800px);
-  margin: 0 auto;
+  margin: clamp(10px, (20/1920)*100vw, 20px) auto 0;
 }
 
 .influencer-info-text {
@@ -166,7 +166,7 @@
 
 .influencer-invite-content {
   max-width: none;
-  margin: 0 auto;
+  margin: clamp(10px, (20/1920)*100vw, 20px) auto 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -204,7 +204,7 @@
   width: clamp(578.5px, (1157/1920)*100vw, 1157px);
   height: clamp(324px, (648/1920)*100vw, 648px);
   flex-shrink: 0;
-  margin: 0 auto;
+  margin: clamp(10px, (20/1920)*100vw, 20px) auto 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -282,7 +282,7 @@
 
 .influencer-benefit-content {
   max-width: clamp(600px, 62.5vw, 800px);
-  margin: 0 auto;
+  margin: clamp(10px, (20/1920)*100vw, 20px) auto 0;
   text-align: center;
 }
 
@@ -431,7 +431,7 @@
 .influencer-contact-list {
   list-style: none;
   padding: 0;
-  margin: 0 auto;
+  margin: clamp(10px, (20/1920)*100vw, 20px) auto 0;
   display: flex;
   flex-direction: column;
   gap: clamp(0.8rem, 1.04vw, 1rem);
@@ -505,7 +505,7 @@
   border-radius: 60px;
   border: none;
   padding: clamp(0.8rem, 1.56vw, 1.2rem) clamp(1rem, 2.08vw, 2rem);
-  margin: 0 auto;
+  margin: clamp(10px, (20/1920)*100vw, 20px) auto 0;
   font-family: 'Noto Sans', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
   text-align: center;
   display: flex;
@@ -552,7 +552,7 @@
 
 .influencer-what-it-takes-content {
   max-width: clamp(800px, 70vw, 1200px);
-  margin: 0 auto;
+  margin: clamp(10px, (20/1920)*100vw, 20px) auto 0;
   text-align: start;
 }
 
@@ -1062,3 +1062,19 @@
     padding: 0 0.3rem;
   }
 } 
+
+.influencer-apply-note {
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: clamp(14.4px, (24/1920)*100vw, 24px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: clamp(36px, (60/1920)*100vw, 60px);
+  letter-spacing: clamp(-0.72px, (-1.2/1920)*100vw, -1.2px);
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1400px;
+  width: 100%;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}

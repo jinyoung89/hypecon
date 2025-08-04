@@ -6,6 +6,7 @@ import booth2Img from '../assets/images/booth2.png';
 import booth3Img from '../assets/images/booth3.png';
 import booth4Img from '../assets/images/booth4.png';
 import booth5Img from '../assets/images/booth5.png';
+import booth6Img from '../assets/images/booth6.png';
 import process01 from '../assets/images/process_01.png';
 import process02 from '../assets/images/process_02.png';
 import process03 from '../assets/images/process_03.png';
@@ -47,7 +48,7 @@ const BoothSection = ({ title, description, image, altText, earlyPrice, regularP
 };
 
 function BrandPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <div className="brand-page-root">
@@ -123,6 +124,9 @@ function BrandPage() {
         <div className="brand-booth-type-inner">
           <h2 className="brand-booth-type-title">{t('brand.booth.boothTypes.title')}</h2>
           <p className="brand-booth-type-notice">{t('brand.booth.boothTypes.notice')}</p>
+          {language === 'EN' && (
+            <p className="brand-booth-type-notice">{t('brand.booth.boothTypes.usdNotice')}</p>
+          )}
           <h3 className="brand-booth-type-subtitle">{t('brand.booth.boothTypes.independent.title')}</h3>
           <p className="brand-booth-type-desc">{t('brand.booth.boothTypes.independent.description')}</p>
           <div className="brand-booth-type-image">
@@ -179,7 +183,7 @@ function BrandPage() {
         {/* 아크릴 부스 섹션 */}
         <BoothSection
         title={t('brand.booth.boothTypes.acrylic6.title')}
-        image={booth4Img}
+        image={booth5Img}
         altText={t('brand.booth.boothTypes.acrylic6.alt')}
         earlyPrice={t('brand.booth.boothTypes.acrylic6.earlyPrice')}
         regularPrice={t('brand.booth.boothTypes.acrylic6.regularPrice')}
@@ -188,9 +192,9 @@ function BrandPage() {
       />
 
 
-<BoothSection
+    <BoothSection
         title={t('brand.booth.boothTypes.acrylic8.title')}
-        image={booth5Img}
+        image={booth6Img}
         altText={t('brand.booth.boothTypes.acrylic8.alt')}
         earlyPrice={t('brand.booth.boothTypes.acrylic8.earlyPrice')}
         regularPrice={t('brand.booth.boothTypes.acrylic8.regularPrice')}
@@ -201,7 +205,7 @@ function BrandPage() {
       {/* 부스 타입 및 참가비 안내 섹션 */}
       <section className="brand-booth-section">
         <div className="brand-booth-inner">
-          <h2 className="brand-booth-title" style={{color: "#E1F800"}}>{t('brand.booth.title')}</h2>
+        <h2 className="brand-booth-title" style={{color: "#E1F800"}}>{t('brand.booth.title')}</h2>
           
           <div className="brand-booth-table-container">
             <table className="brand-booth-table" style={{background: "transparent"}}>
@@ -269,16 +273,16 @@ function BrandPage() {
                       {boothType} - {row[1]}
                     </div>
                     <div className="booth-card-row">
-                      <span className="booth-card-label">얼리버드 특가:</span>
+                      <span className="booth-card-label">{t('brand.booth.boothTypes.labels.earlyPriceLabel')}</span>
                       <span className="booth-card-value early-bird">{row[2]}</span>
                     </div>
                     <div className="booth-card-row">
-                      <span className="booth-card-label">정가:</span>
+                      <span className="booth-card-label">{t('brand.booth.boothTypes.labels.regularPriceLabel')}</span>
                       <span className="booth-card-value">{row[3]}</span>
                     </div>
                     {row[4] && (
                       <div className="booth-card-row">
-                        <span className="booth-card-label">비고:</span>
+                        <span className="booth-card-label">{t('brand.booth.boothTypes.labels.noteLabel')}</span>
                         <span className="booth-card-value">{row[4]}</span>
                       </div>
                     )}
@@ -286,10 +290,18 @@ function BrandPage() {
                 );
               })}
             </div>
-            
+
+      
+
             <p className="brand-booth-table-note">
               {t('brand.booth.tableNote')}
             </p>
+
+            {language === 'EN' && (
+              <p className="brand-booth-table-note">
+                {t('brand.booth.boothTypes.usdNotice')}
+              </p>
+            )}
             
             <h3 className="brand-booth-basic-included">
               {t('brand.booth.basicIncluded')}
@@ -310,6 +322,50 @@ function BrandPage() {
                 <li key={index}>{item}</li>
               ))}
             </ul>
+
+            <h3 className="brand-booth-corner-benefits-title">
+              {t('brand.booth.cornerBenefits.title')}
+            </h3>
+            
+            <div className="brand-booth-corner-benefits-table-container">
+              <table className="brand-booth-corner-benefits-table">
+                <tbody>
+                  {t('brand.booth.cornerBenefits.table.rows').map((row, index) => (
+                    <tr key={index}>
+                      <td>{row[0]}</td>
+                      <td>{row[1]}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <h3 className="brand-booth-termination-title">
+              {t('brand.booth.termination.title')}
+            </h3>
+            
+            <ul className="brand-booth-termination-list">
+              {t('brand.booth.termination.items').map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+
+            <h3 className="brand-booth-caution-title">
+              {t('brand.booth.cautionSimple.title')}
+            </h3>
+            
+            <ul className="brand-booth-caution-list">
+              {t('brand.booth.cautionSimple.items').map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+            
+            <p className="brand-booth-caution-note">
+              {t('brand.booth.cautionSimple.note')}
+            </p>
+
+
+            
           </div>
           
         </div>
@@ -348,11 +404,11 @@ function BrandPage() {
                     {row[0]}
                   </div>
                   <div className="refund-card-row">
-                    <span className="refund-card-label">조건:</span>
+                    <span className="refund-card-label">{t('brand.refund.labels.conditionLabel')}</span>
                     <span className="refund-card-value" dangerouslySetInnerHTML={{__html: row[1]}}></span>
                   </div>
                   <div className="refund-card-row">
-                    <span className="refund-card-label">환불 내용:</span>
+                    <span className="refund-card-label">{t('brand.refund.labels.refundLabel')}</span>
                     <span className="refund-card-value" dangerouslySetInnerHTML={{__html: row[2]}}></span>
                   </div>
                 </div>
