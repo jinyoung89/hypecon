@@ -1,271 +1,393 @@
 /* AboutPage 반응형 및 공통 스타일 */
 
-:root {
-  --hypecon-pink: #00E5A8;
-  --hypecon-teal: #00E5A8;
-}
-
-/* 모바일 가로 스크롤 방지 */
-.about-page-root {
-  overflow-x: hidden;
+.about-section {
   width: 100%;
-  max-width: 100%;
+  box-sizing: border-box;
 }
 
-/* 히어로 섹션 */
-.about-section-intro {
-  position: relative;
-  width: 100%;
-  min-height: clamp(427px, (854/1920)*100vw, 854px);
-  height: clamp(427px, (854/1920)*100vw, 854px);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-/* WHY BRANDS CHOOSE HYPECON 섹션 */
-.about-section-why {
-  min-height: clamp(600px, 62.5vw, 1200px);
-  background: var(--hypecon-dark);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: clamp(2rem, 5vw, 4rem) 0;
-}
-
-.about-why-title {
-  font-size: clamp(6.75rem, (180/1920)*100vw, 11.25rem);
-  line-height: clamp(5.53rem, (147.6/1920)*100vw, 9.23rem);
-  color: #E1F800;
-  text-align: center;
-  font-family: 'Bebas Neue, sans-serif';
-  font-weight: 400;
-  letter-spacing: clamp(-0.5rem, -0.52vw, -0.625rem);
-  margin-bottom: clamp(1.5rem, 2.08vw, 2.5rem);
-  word-wrap: break-word;
-}
-
-.about-why-desc {
-  width: clamp(400px, 48.13vw, 924px);
-  height: clamp(60px, 6.09vw, 117px);
-  text-align: center;
-  color: white;
-  font-size: clamp(1.35rem, (36/1920)*100vw, 2.25rem);
-  font-family: 'Noto Sans, sans-serif';
-  font-weight: 500;
-  line-height: clamp(1.69rem, (45/1920)*100vw, 2.81rem);
-  word-wrap: break-word;
-}
-
-/* Z세대 경험 섹션 - 완전 재작성 */
-.about-section-experience {
-  padding: clamp(2rem, 5vw, 4rem) 0;
+/* 공통 여백 섹션 */
+.about-spacing-section {
   background: white;
-  min-height: clamp(564px, (1128/1920)*100vw, 1128px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  height: clamp(120px, (240/1920)*100vw, 240px);
   width: 100%;
   margin: 0;
+  padding: 0;
 }
 
-/* 배지 스타일 */
-.about-experience-badge {
-  width: clamp(480px, (960/1920)*100vw, 960px);
-  height: clamp(60px, (120/1920)*100vw, 120px);
-  border-radius: 60px;
-  background: #000000 !important;
-  color: #00E5A8 !important;
-  font-size: clamp(1.35rem, (36/1920)*100vw, 2.25rem);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  word-break: keep-all;
-  overflow-wrap: break-word;
-  margin-bottom: clamp(49.5px, (99/1920)*100vw, 99px);
-}
-
-/* 타이틀 스타일 */
-.about-experience-title {
-  width: clamp(300px, 55.83vw, 1072px);
-  height: auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: var(--hypecon-dark);
-  font-family: 'Noto Sans, sans-serif';
-  font-size: clamp(2.25rem, (60/1920)*100vw, 3.75rem);
-  font-weight: 700;
-  line-height: clamp(1.8rem, 2.6vw, 3.125rem);
-  word-wrap: break-word;
-  white-space: nowrap;
-  margin-bottom: clamp(1rem, 2vw, 2rem);
-}
-
-/* 설명 스타일 */
-.about-experience-desc {
-  width: clamp(300px, 80vw, 1600px);
-  height: auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: var(--hypecon-dark);
-  font-family: 'Noto Sans, sans-serif';
-  font-size: clamp(1.2rem, (32/1920)*100vw, 2rem);
-  font-weight: 700;
-  line-height: clamp(1.8rem, 2.6vw, 3.125rem);
-  word-wrap: break-word;
-  white-space: pre-line;
-  word-break: keep-all;
-  overflow-wrap: break-word;
-  margin-bottom: clamp(2rem, 4vw, 3rem);
-  min-height: auto;
-  overflow: visible;
-}
-
-/* 카드 컨테이너 */
-.about-experience-cards {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: clamp(1rem, 2vw, 2rem);
-  padding: 0 clamp(1rem, 3vw, 2rem);
-}
-
-/* 개별 카드 */
-.about-card {
-  width: clamp(123.5px, (247/1920)*100vw, 247px);
-  height: clamp(123.5px, (247/1920)*100vw, 247px);
-  border-radius: 50%;
-  padding: clamp(1rem, 2vw, 2rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-weight: 700;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-}
-
-.about-card-dark {
-  background: black;
-}
-
-.about-card-main {
-  background: #00E5A8;
-}
-
-.about-card-title {
-  font-size: clamp(1rem, (32/1920)*100vw, 2rem);
-  font-weight: 700;
-  line-height: clamp(1.2rem, (38.4/1920)*100vw, 2.4rem);
-  margin-bottom: clamp(0.5rem, 1vw, 1rem);
-  white-space: pre-line;
-  word-break: keep-all;
-}
-
-.about-card-dark .about-card-title {
-  color: #00E5A8;
-}
-
-.about-card-main .about-card-title {
-  color: black;
-}
-
-.about-card-desc {
-  font-size: clamp(0.75rem, (24/1920)*100vw, 1.5rem);
-  font-weight: 400;
-  line-height: clamp(0.9rem, (28.8/1920)*100vw, 1.8rem);
-  white-space: pre-line;
-  word-break: keep-all;
-}
-
-.about-card-dark .about-card-desc {
-  color: white;
-}
-
-.about-card-main .about-card-desc {
-  color: black;
-}
-
-/* 도파민 섹션 */
-.about-2col-section {
-  width: 100%;
-  height: auto;
-  min-height: clamp(900px, (1800/1920)*100vw, 1800px);
+/* Z세대 주목 섹션 스타일 */
+.about-gray-section {
   background: #F2F2F2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: clamp(2rem, 4vw, 4rem) 0;
-  overflow: visible;
+  height: clamp(460px, (920/1920)*100vw, 920px);
+  width: 100%;
   margin: 0;
-}
-
-/* 글로벌 브랜드 어필 섹션 */
-.about-global-section {
-  padding: clamp(2rem, 5vw, 4rem) 0;
-  background: #00E5A8;
-  min-height: clamp(300px, 40vw, 600px);
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative !important;
-  z-index: 10 !important;
-  width: 100%;
-  margin: 0;
 }
 
-.about-global-desc {
+.about-text-container {
   text-align: center;
-  color: black;
-  font-size: clamp(1.2rem, 2.5vw, 2rem);
-  font-family: 'Noto Sans, sans-serif';
-  font-weight: 400;
-  line-height: 1.6;
-  word-wrap: break-word;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
   max-width: clamp(600px, 80vw, 1200px);
   padding: 0 clamp(1rem, 3vw, 2rem);
 }
 
-/* 카드 컨테이너 */
+.about-description-text {
+  color: black;
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-family: 'Noto Sans CJK KR, sans-serif';
+  font-weight: 400;
+  line-height: clamp(27px, (45/1920)*100vw, 45px);
+  white-space: pre-line;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* 상단 소개 섹션 추가 스타일 */
+.about-intro-container {
+  width: clamp(300px, 56.41vw, 1083px);
+  height: clamp(150px, 16.61vw, 319px);
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: clamp(0.5rem, 2vw, 2rem);
+  max-width: 90vw;
+}
+
+.about-intro-main-text {
+  color: #FFF;
+  font-size: clamp(28px, (56/1920)*100vw, 56px);
+  font-family: 'Noto Sans', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  line-height: clamp(36px, (73/1920)*100vw, 73px);
+  letter-spacing: clamp(-1.4px, (-2.8/1920)*100vw, -2.8px);
+  word-wrap: break-word;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  white-space: pre-line;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.about-intro-sub-text {
+  color: white;
+  font-size: clamp(18px, (36/1920)*100vw, 36px);
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  line-height: clamp(24px, (48/1920)*100vw, 48px);
+  word-wrap: break-word;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  white-space: pre-line;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.about-section-intro {
+  min-height: clamp(427px, (854/1920)*100vw, 854px);
+  background: var(--hypecon-dark);
+  color: var(--hypecon-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5rem;
+  text-align: left;
+  padding-top: 100px;
+}
+
+.about-section-why {
+  background: var(--hypecon-dark);
+  color: var(--hypecon-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  text-align: center;
+  height: clamp(600px, (1200/1920)*100vw, 1200px);
+}
+
+.about-why-desc {
+  width: clamp(462px, (924/1920)*100vw, 924px);
+  height: clamp(112.43px, (224.86/1920)*100vw, 224.86px);
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: clamp(1.35rem, (36/1920)*100vw, 2.25rem);
+  font-family: 'Noto Sans CJK KR, sans-serif';
+  font-weight: 400;
+  line-height: clamp(1.69rem, (45/1920)*100vw, 2.81rem);
+  white-space: pre-line;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.about-section-experience {
+  background: var(--hypecon-white);
+  color: var(--hypecon-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  text-align: center;
+  min-height: clamp(564px, (1128/1920)*100vw, 1128px);
+}
+
+.about-experience-badge {
+  background: #000000 !important;
+  color: #00E5A8 !important;
+  width: clamp(480px, (960/1920)*100vw, 960px);
+  height: clamp(60px, (120/1920)*100vw, 120px);
+  border-radius: 60px;
+  font-size: clamp(1.35rem, (36/1920)*100vw, 2.25rem);
+  font-weight: 600;
+  margin-bottom: clamp(49.5px, (99/1920)*100vw, 99px);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.about-experience-badge span {
+  color: #00E5A8 !important;
+}
+
+.about-experience-title {
+  font-size: clamp(1.95rem, (52/1920)*100vw, 3.25rem);
+  font-weight: 400;
+  margin-bottom: 1rem;
+  line-height: 50px;
+  letter-spacing: -1.56px;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.about-experience-desc {
+  font-size: clamp(1.2rem, (32/1920)*100vw, 2rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: -0.96px;
+  word-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-experience-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+  margin-top: 1.5rem;
+}
+
+.about-card {
+  width: clamp(123.5px, (247/1920)*100vw, 247px);
+  height: clamp(123.5px, (247/1920)*100vw, 247px);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  font-weight: 700;
+  font-size: 1.08rem;
+  padding: 1.1rem 0.7rem;
+  line-height: 1.25;
+  text-align: center;
+  border: none;
+  white-space: pre-line;
+  margin: 0 0.2rem 0.7rem 0.2rem;
+}
+
+.about-card-dark {
+  background: var(--hypecon-dark);
+  color: var(--hypecon-white);
+}
+
+.about-card-main {
+  background: var(--hypecon-purple);
+  color: var(--hypecon-dark);
+}
+
+.about-card-title {
+  font-weight: 900;
+  font-size: clamp(1rem, (32/1920)*100vw, 2rem);
+  margin-bottom: 0.3rem;
+  line-height: clamp(1.2rem, (38.4/1920)*100vw, 2.4rem);
+  color: inherit;
+}
+
+.about-card-main .about-card-title {
+  color: var(--hypecon-dark);
+}
+
+.about-card-dark .about-card-title {
+  color: var(--hypecon-purple);
+}
+
+.about-card-desc {
+  font-weight: 500;
+  font-size: clamp(0.75rem, (24/1920)*100vw, 1.5rem);
+  line-height: clamp(0.9rem, (28.8/1920)*100vw, 1.8rem);
+  color: inherit;
+}
+
+.about-2col-section {
+  width: 100%;
+  background: #f7f7f7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 3.5rem 2.5rem;
+  gap: 0.1rem;
+}
+
+/* 도파민 섹션 전용 스타일 */
+.about-dopamine-section {
+  width: 100%;
+  height: auto;
+  background: #F2F2F2;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 2vw, 2rem);
+  padding: clamp(2rem, 4vw, 4rem) 0;
+  overflow: visible;
+}
+
+.about-dopamine-top {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: clamp(150px, (300/1920)*100vw, 300px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(0.5rem, 1vw, 1rem) clamp(1rem, 3vw, 2rem);
+  margin: 0 auto;
+  gap: clamp(2rem, 4vw, 4rem);
+  max-width: clamp(600px, (1200/1920)*100vw, 1200px);
+}
+
+.about-dopamine-text {
+  flex: 1;
+  width: auto;
+  max-width: clamp(225px, (450/1920)*100vw, 450px);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
+  gap: clamp(0.5rem, 1vw, 1rem);
+}
+
+.about-dopamine-title {
+  color: black;
+  font-size: clamp(1.575rem, (42/1920)*100vw, 2.625rem);
+  font-family: 'Noto Sans, sans-serif';
+  font-weight: 400;
+  line-height: clamp(1.89rem, (50.4/1920)*100vw, 3.15rem);
+  word-wrap: break-word;
+  white-space: pre-line;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  display: block;
+  text-align: left;
+}
+
+.about-dopamine-strong1 {
+  color: black;
+  font-size: clamp(2.325rem, (62/1920)*100vw, 3.875rem);
+  font-family: 'Noto Sans, sans-serif';
+  font-weight: 700;
+  line-height: clamp(2.79rem, (74.4/1920)*100vw, 4.65rem);
+  word-wrap: break-word;
+  white-space: pre-line;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  display: block;
+  text-align: left;
+}
+
+.about-dopamine-strong2 {
+  color: black;
+  font-size: clamp(3.225rem, (86/1920)*100vw, 5.375rem);
+  font-family: 'Noto Sans, sans-serif';
+  font-weight: 700;
+  line-height: clamp(3.87rem, (103.2/1920)*100vw, 6.45rem);
+  word-wrap: break-word;
+  white-space: pre-line;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  display: block;
+  text-align: left;
+}
+
+.about-dopamine-image {
+  width: clamp(234px, (468/1920)*100vw, 468px);
+  height: clamp(147px, (294/1920)*100vw, 294px);
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: #f0f0f0;
+}
+
+.about-dopamine-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .about-cards-container {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: clamp(1rem, 2vw, 2rem);
   margin-top: clamp(2rem, 4vw, 4rem);
   padding: 0 clamp(2rem, 4vw, 3rem);
 }
 
-/* 카드 아이템 */
 .about-card-item {
   width: clamp(600px, 66.15vw, 1270px);
   height: clamp(80px, 7.64vw, 146.64px);
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-/* 카드 제목 박스 */
 .about-card-title-box {
-  width: clamp(200px, 18.23vw, 350px);
-  height: clamp(80px, 7.81vw, 150px);
+  width: clamp(150.5px, (301/1920)*100vw, 301px);
+  height: clamp(75px, (150/1920)*100vw, 150px);
   padding: clamp(1rem, 1.56vw, 1.875rem) clamp(1rem, 2.5vw, 3rem);
   background: black;
   border-radius: 30px;
-  border: 2px solid black;
+  border: 0 solid #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -273,401 +395,389 @@
   gap: clamp(1rem, 1.56vw, 1.875rem);
 }
 
-/* 카드 제목 텍스트 */
 .about-card-title-text {
   text-align: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
-  font-size: clamp(1rem, 1.88vw, 2.25rem);
-  font-family: 'Noto Sans, sans-serif';
-  font-weight: 700;
-  line-height: clamp(1.2rem, 2.08vw, 2.5rem);
+  color: #00E5A8;
+  font-size: clamp(19.2px, (32/1920)*100vw, 32px);
+  font-family: "Noto Sans CJK KR", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  line-height: clamp(24px, (40/1920)*100vw, 40px);
+  letter-spacing: -0.96px;
   word-wrap: break-word;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* 카드 내용 박스 */
 .about-card-content-box {
-  width: clamp(400px, 45.52vw, 874px);
-  height: clamp(80px, 7.81vw, 150px);
-  background: white;
+  width: clamp(323.5px, (647/1920)*100vw, 647px);
+  height: clamp(75px, (150/1920)*100vw, 150px);
+  background: #FFF;
   border-radius: 30px;
-  border: 2px solid black;
+  border: 0 solid #000;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: clamp(1rem, 1.35vw, 1.625rem) clamp(2rem, 5.31vw, 6.375rem);
   margin-left: clamp(1rem, 2vw, 2rem);
 }
 
-/* 카드 내용 텍스트 */
 .about-card-content-text {
   justify-content: center;
   display: flex;
   flex-direction: column;
-  color: black;
-  font-size: clamp(0.8rem, 1.67vw, 2rem);
-  font-family: 'Noto Sans, sans-serif';
-  font-weight: 500;
-  line-height: clamp(1.2rem, 2.6vw, 3.125rem);
+  color: #000;
+  font-size: clamp(14.4px, (24/1920)*100vw, 24px);
+  font-family: "Noto Sans CJK KR", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: clamp(19.8px, (33/1920)*100vw, 33px);
+  letter-spacing: -0.72px;
+  text-align: center;
   word-wrap: break-word;
 }
 
-/* 모바일 최적화 */
+.about-global-section {
+  background: black;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(2rem, 5vw, 4rem) 0;
+  text-align: center;
+  height: clamp(380px, (760/1920)*100vw, 760px);
+  width: 100%;
+  margin: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.about-global-content {
+  width: 100%;
+  max-width: clamp(600px, 80vw, 1200px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-global-desc {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: clamp(1.35rem, (36/1920)*100vw, 2.25rem);
+  font-family: 'Noto Sans, sans-serif';
+  font-weight: 500;
+  line-height: clamp(1.6rem, 2.08vw, 2.5rem);
+  word-wrap: break-word;
+  max-width: clamp(600px, 80vw, 1200px);
+  padding: 0 clamp(1rem, 3vw, 2rem);
+  text-align: center;
+}
+
+.about-global-desc span {
+  color: #111;
+}
+
+/* 768px 이하 모바일 최적화 - 강력한 우선순위 */
 @media (max-width: 768px) {
-  /* 상단 소개 섹션 모바일 */
+  /* 전체 섹션 모바일 최적화 */
+  .about-section {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 상단 소개 섹션 */
   .about-section-intro {
     height: auto !important;
-    min-height: clamp(600px, 80vw, 800px) !important;
+    min-height: clamp(427px, (854/1920)*100vw, 854px) !important;
     padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem) !important;
+    flex-direction: column !important;
+    text-align: center !important;
   }
-  
-  .about-section-intro > div {
+
+  /* 모바일에서 상단 소개 섹션 스타일 추가 */
+  .about-intro-container {
     width: 100% !important;
     height: auto !important;
     align-items: center !important;
     text-align: center !important;
     gap: clamp(1rem, 3vw, 2rem) !important;
+    max-width: 85vw !important;
   }
   
-  .about-section-intro > div > span {
+  .about-intro-main-text {
+    font-size: clamp(28px, (56/1920)*100vw, 56px) !important;
+    line-height: clamp(36px, (73/1920)*100vw, 73px) !important;
     text-align: center !important;
-  }
-  
-  .about-section-intro > div > span:nth-child(1) {
-    font-size: clamp(1.2rem, 5vw, 2.5rem) !important;
-    line-height: clamp(1.4rem, 5.5vw, 2.8rem) !important;
-  }
-  
-  .about-section-intro > div > span:nth-child(3) {
-    font-size: clamp(0.9rem, 3vw, 1.8rem) !important;
-    line-height: clamp(1.1rem, 3.5vw, 2rem) !important;
-  }
-  
-  .about-section-intro > div > span:nth-child(4) {
-    font-size: clamp(0.8rem, 2.5vw, 1.2rem) !important;
-    line-height: clamp(1rem, 2.8vw, 1.4rem) !important;
-    margin-bottom: clamp(1.5rem, 4vw, 2.5rem) !important;
-  }
-  
-  /* WHY BRANDS CHOOSE HYPECON 섹션 모바일 */
-  .about-section-why {
-    height: auto !important;
-    min-height: clamp(400px, 60vw, 600px) !important;
-    padding: clamp(2rem, 4vw, 3rem) 0 !important;
-  }
-  
-  .about-why-title {
-    font-size: clamp(2rem, 8vw, 4rem) !important;
-    line-height: clamp(1.8rem, 7vw, 3.5rem) !important;
-  }
-  
-  .about-why-desc {
-    width: 100% !important;
-    height: auto !important;
-    font-size: clamp(1rem, 3vw, 1.5rem) !important;
-    line-height: clamp(1.3rem, 3.5vw, 1.8rem) !important;
-  }
-  
-  /* Z세대 경험 섹션 모바일 */
-  .about-section-experience {
-    min-height: clamp(800px, (1600/1920)*100vw, 1600px) !important;
-    height: auto !important;
-    padding: clamp(3rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem) !important;
-    flex-direction: column !important;
-  }
-  
-  .about-experience-badge {
-    width: 100% !important;
-    max-width: clamp(480px, (960/1920)*100vw, 960px) !important;
-    height: clamp(60px, (120/1920)*100vw, 120px) !important;
-    padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 3vw, 1.5rem) !important;
-    font-size: clamp(1rem, 3vw, 1.5rem) !important;
-    line-height: clamp(1.3rem, 3.5vw, 1.8rem) !important;
-    margin-bottom: clamp(2rem, 5vw, 3rem) !important;
-    text-align: center !important;
-    overflow: visible !important;
-    background: #000000 !important;
-    color: #00E5A8 !important;
     white-space: pre-line !important;
     word-break: keep-all !important;
     overflow-wrap: break-word !important;
+  }
+  
+  .about-intro-sub-text {
+    font-size: clamp(18px, (36/1920)*100vw, 36px) !important;
+    line-height: clamp(24px, (48/1920)*100vw, 48px) !important;
+    text-align: center !important;
+    white-space: pre-line !important;
+    word-break: keep-all !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* WHY BRANDS CHOOSE HYPECON 섹션 */
+  .about-section-why {
+    height: auto !important;
+    min-height: clamp(400px, 60vw, 600px) !important;
+    padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem) !important;
+    flex-direction: column !important;
+  }
+
+  .about-why-desc {
+    width: 100% !important;
+    height: auto !important;
+    font-size: clamp(1.2rem, 4vw, 2rem) !important;
+    line-height: clamp(1.5rem, 4.5vw, 2.5rem) !important;
+    padding: 0 clamp(1rem, 3vw, 2rem) !important;
+    text-align: center !important;
+  }
+
+  /* Z세대 경험 소비 강조 섹션 */
+  .about-section-experience {
+    padding: clamp(2rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem) !important;
+    flex-direction: column !important;
+  }
+
+  .about-experience-badge {
+    background: #000000 !important;
+    color: #00E5A8 !important;
+    width: 100% !important;
+    max-width: clamp(480px, (960/1920)*100vw, 960px) !important;
+    height: clamp(60px, (120/1920)*100vw, 120px) !important;
+    font-size: clamp(0.8rem, 3vw, 1.2rem) !important;
+    padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 3vw, 1.5rem) !important;
+    margin-bottom: clamp(1.5rem, 4vw, 2.5rem) !important;
+    text-align: center !important;
     border-radius: clamp(30px, 8vw, 60px) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-  }
-  
-  .about-experience-title {
-    width: 100% !important;
-    height: auto !important;
-    font-size: clamp(1.5rem, 4vw, 2.5rem) !important;
-    line-height: clamp(1.8rem, 4.5vw, 2.8rem) !important;
-  }
-  
-  .about-experience-desc {
-    width: 90% !important;
-    max-width: 350px !important;
-    height: auto !important;
-    font-size: clamp(0.8rem, 3vw, 1.2rem) !important;
-    line-height: clamp(1.3rem, 3.5vw, 1.8rem) !important;
     white-space: pre-line !important;
     word-break: keep-all !important;
     overflow-wrap: break-word !important;
-    margin-bottom: clamp(2rem, 5vw, 3rem) !important;
-    text-align: center !important;
     overflow: visible !important;
   }
-  
-  .about-experience-cards {
-    width: 100vw !important;
-    padding: 0 clamp(1rem, 3vw, 2rem) !important;
-    gap: clamp(2rem, 4vw, 3rem) !important;
-  }
-  
-  .about-card {
+
+  .about-experience-title {
     width: 100% !important;
     height: auto !important;
-    min-height: clamp(150px, 20vw, 250px) !important;
-    padding: clamp(1rem, 2vw, 2rem) !important;
-    border-radius: clamp(15px, 2vw, 25px) !important;
-    background: white !important;
-    border: 2px solid black !important;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+    font-size: clamp(0.9rem, 3.5vw, 1.5rem) !important;
+    font-weight: 400 !important;
+    line-height: 50px !important;
+    letter-spacing: -1.56px !important;
+    margin-bottom: clamp(0.5rem, 2vw, 1rem) !important;
+    text-align: center !important;
   }
-  
-  .about-card-dark {
-    background: #00E5A8 !important;
-  }
-  
-  .about-card-main {
-    background: black !important;
-  }
-  
-  .about-card-title {
-    font-size: clamp(1rem, 3vw, 1.5rem) !important;
-    line-height: clamp(1.2rem, 3.5vw, 1.8rem) !important;
+
+  .about-experience-desc {
+    width: 100% !important;
+    height: auto !important;
+    font-size: clamp(0.5rem, 3vw, 0.8rem) !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 50px !important;
+    letter-spacing: -0.96px !important;
     white-space: normal !important;
-    overflow: visible !important;
-    text-overflow: unset !important;
-    width: 100% !important;
-    color: black !important;
+    margin-bottom: clamp(1rem, 3vw, 2rem) !important;
     text-align: center !important;
   }
-  
-  .about-card-dark .about-card-title {
-    color: #00E5A8 !important;
+
+  /* 카드 섹션 모바일 최적화 */
+  .about-experience-cards {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: clamp(0.5rem, 2vw, 1rem) !important;
+    padding: 0 clamp(1rem, 3vw, 2rem) !important;
+    justify-content: center !important;
   }
-  
-  .about-card-main .about-card-title {
-    color: black !important;
+
+  .about-card {
+    width: clamp(120px, 25vw, 150px) !important;
+    height: clamp(120px, 25vw, 150px) !important;
+    min-height: auto !important;
+    padding: clamp(0.8rem, 2vw, 1.1rem) clamp(0.5rem, 1.5vw, 0.7rem) !important;
+    border-radius: 50% !important;
+    text-align: center !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
-  
+
+  .about-card-title {
+    font-size: clamp(0.8rem, 3vw, 1.08rem) !important;
+    line-height: clamp(1rem, 3.5vw, 1.3rem) !important;
+    margin-bottom: clamp(0.2rem, 1vw, 0.3rem) !important;
+    text-align: center !important;
+  }
+
   .about-card-desc {
-    font-size: clamp(0.8rem, 2.5vw, 1.2rem) !important;
-    line-height: clamp(1.2rem, 3vw, 1.5rem) !important;
-    width: 100% !important;
+    font-size: clamp(0.7rem, 2.5vw, 0.85rem) !important;
+    line-height: clamp(0.9rem, 3vw, 1.1rem) !important;
     text-align: center !important;
   }
-  
-  .about-card-dark .about-card-desc {
-    color: white !important;
-  }
-  
-  .about-card-main .about-card-desc {
-    color: black !important;
-  }
-  
-  /* 도파민 섹션 모바일 */
+
+  /* 도파민 쇼핑+콘텐츠 스타일 페어 섹션 */
   .about-2col-section {
     height: auto !important;
-    min-height: clamp(1600px, 200vw, 2500px) !important;
+    min-height: clamp(1200px, 150vw, 2000px) !important;
     padding: clamp(2rem, 4vw, 3rem) 0 !important;
-  }
-  
-  .about-2col-section > div:first-child {
+    overflow: visible !important;
     flex-direction: column !important;
-    height: auto !important;
-    gap: clamp(1.5rem, 3vw, 2rem) !important;
   }
-  
-  .about-2col-section > div:first-child > div:first-child {
-    align-items: center !important;
-    text-align: center !important;
+
+  /* 도파민 섹션 모바일 대응 */
+  .about-dopamine-section {
     height: auto !important;
-    gap: clamp(0.8rem, 2vw, 1.5rem) !important;
+    padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 3vw, 2rem) !important;
+    gap: clamp(2rem, 5vw, 3rem) !important;
   }
-  
-  .about-2col-section > div:first-child > div:first-child > span {
+
+  .about-dopamine-top {
+    flex-direction: column !important;
+    gap: clamp(1.5rem, 4vw, 2.5rem) !important;
+    min-height: auto !important;
+    padding: clamp(1rem, 3vw, 2rem) !important;
+    max-width: 100% !important;
+  }
+
+  .about-dopamine-text {
     width: 100% !important;
-    height: auto !important;
-    font-size: clamp(1.5rem, 6vw, 3rem) !important;
-    line-height: clamp(1.8rem, 6.5vw, 3.5rem) !important;
+    max-width: 100% !important;
+    order: 1 !important;
     text-align: center !important;
     align-items: center !important;
+    gap: clamp(0.8rem, 2vw, 1.2rem) !important;
   }
-  
-  .about-2col-section > div:first-child > div:last-child {
+
+  .about-dopamine-title {
+    font-size: clamp(1.2rem, 4vw, 2rem) !important;
+    line-height: clamp(1.5rem, 4.5vw, 2.3rem) !important;
+    text-align: center !important;
+  }
+
+  .about-dopamine-strong1 {
+    font-size: clamp(1.8rem, 6vw, 3rem) !important;
+    line-height: clamp(2rem, 6.5vw, 3.3rem) !important;
+    text-align: center !important;
+  }
+
+  .about-dopamine-strong2 {
+    font-size: clamp(2.2rem, 7vw, 4rem) !important;
+    line-height: clamp(2.5rem, 7.5vw, 4.3rem) !important;
+    text-align: center !important;
+  }
+
+  .about-dopamine-image {
     width: 100% !important;
     max-width: clamp(280px, 80vw, 400px) !important;
     height: clamp(180px, 50vw, 250px) !important;
+    order: 2 !important;
+    margin: 0 auto !important;
   }
-  
-  .about-2col-section > div:last-child {
-    gap: clamp(1.5rem, 3vw, 2rem) !important;
-    padding: 0 clamp(1rem, 3vw, 2rem) !important;
-  }
-  
-  .about-2col-section > div:last-child > div {
-    width: 100% !important;
-    height: auto !important;
-    flex-direction: column !important;
-    gap: clamp(1rem, 2vw, 1.5rem) !important;
-    background: white !important;
-    border-radius: 20px !important;
-    border: 2px solid black !important;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
-    padding: clamp(1rem, 2vw, 1.5rem) !important;
-  }
-  
-  .about-2col-section > div:last-child > div > div:first-child {
-    width: 100% !important;
-    height: auto !important;
-    min-height: clamp(50px, 12vw, 60px) !important;
-    padding: clamp(0.8rem, 2vw, 1rem) !important;
-    max-width: 100% !important;
-    border-radius: 15px !important;
-    border: none !important;
-  }
-  
-  .about-2col-section > div:last-child > div > div:first-child > div {
-    font-size: clamp(1rem, 3vw, 1.5rem) !important;
-    line-height: clamp(1.2rem, 3.5vw, 1.8rem) !important;
-    word-wrap: break-word !important;
-    white-space: normal !important;
-    overflow: visible !important;
-    text-overflow: unset !important;
-    color: black !important;
-    text-align: center !important;
-  }
-  
-  .about-2col-section > div:last-child > div > div:last-child {
-    width: 100% !important;
-    height: auto !important;
-    min-height: clamp(60px, 15vw, 80px) !important;
-    margin-left: 0 !important;
-    padding: clamp(1rem, 2vw, 1.5rem) !important;
-    max-width: 100% !important;
-    background: transparent !important;
-    border: none !important;
-    border-radius: 0 !important;
-  }
-  
-  .about-2col-section > div:last-child > div > div:last-child > div {
-    font-size: clamp(0.8rem, 2.5vw, 1.2rem) !important;
-    line-height: clamp(1.2rem, 3vw, 1.5rem) !important;
-    text-align: center !important;
-  }
-  
-  /* 글로벌 섹션 모바일 */
-  .about-global-section {
-    padding: clamp(2rem, 4vw, 3rem) 0 !important;
-    min-height: clamp(200px, 50vw, 400px) !important;
-  }
-  
-  .about-global-desc {
-    font-size: clamp(1rem, 3vw, 1.5rem) !important;
-    line-height: 1.6 !important;
+
+  /* 카드 컨테이너 */
+  .about-cards-container {
+    gap: clamp(1.5rem, 4vw, 2.5rem) !important;
+    margin-top: clamp(2rem, 5vw, 3rem) !important;
     padding: 0 clamp(1rem, 3vw, 2rem) !important;
   }
 
-  /* 카드 컨테이너 모바일 */
-  .about-cards-container {
-    gap: clamp(2rem, 4vw, 3rem) !important;
-    padding: 0 clamp(1rem, 3vw, 2rem) !important;
-    width: 100vw !important;
-  }
-  
-  /* 카드 아이템 모바일 */
+  /* 카드 아이템 - 세로 배치 강화 */
   .about-card-item {
     width: 100% !important;
     height: auto !important;
+    min-height: clamp(120px, 30vw, 200px) !important;
     flex-direction: column !important;
-    gap: clamp(1rem, 2vw, 1.5rem) !important;
-    padding: clamp(1rem, 2vw, 1.5rem) !important;
-    max-width: 100% !important;
-    background: white !important;
-    border-radius: 20px !important;
-    border: 2px solid black !important;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+    gap: clamp(1rem, 3vw, 2rem) !important;
+    align-items: center !important;
   }
-  
-  /* 카드 제목 박스 모바일 */
+
+  /* 카드 제목 박스 */
   .about-card-title-box {
     width: 100% !important;
+    max-width: clamp(250px, 70vw, 400px) !important;
     height: auto !important;
-    min-height: clamp(50px, 12vw, 60px) !important;
-    padding: clamp(0.8rem, 2vw, 1rem) !important;
-    max-width: 100% !important;
-    border-radius: 15px !important;
-    border: none !important;
+    min-height: clamp(60px, 15vw, 100px) !important;
+    padding: clamp(1rem, 3vw, 1.5rem) !important;
+    border-radius: clamp(20px, 5vw, 25px) !important;
+    order: 1 !important;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
-  
-  /* 카드 제목 박스 모바일 (홀수) */
-  .about-card-title-box:nth-child(odd) {
-    background: #00E5A8 !important;
-  }
-  
-  /* 카드 제목 박스 모바일 (짝수) */
-  .about-card-title-box:nth-child(even) {
-    background: #E1F800 !important;
-  }
-  
-  /* 카드 제목 텍스트 모바일 */
+
   .about-card-title-text {
-    font-size: clamp(1rem, 3vw, 1.5rem) !important;
-    line-height: clamp(1.2rem, 3.5vw, 1.8rem) !important;
+    font-size: clamp(1rem, 4vw, 1.5rem) !important;
+    line-height: clamp(1.2rem, 4.5vw, 1.8rem) !important;
     white-space: normal !important;
-    overflow: visible !important;
-    text-overflow: unset !important;
-    width: 100% !important;
-    color: black !important;
     text-align: center !important;
   }
-  
-  /* 카드 내용 박스 모바일 */
+
+  /* 카드 내용 박스 */
   .about-card-content-box {
     width: 100% !important;
     height: auto !important;
-    min-height: clamp(60px, 15vw, 80px) !important;
+    min-height: clamp(80px, 20vw, 120px) !important;
+    padding: clamp(1rem, 3vw, 1.5rem) !important;
+    border-radius: clamp(20px, 5vw, 25px) !important;
     margin-left: 0 !important;
-    padding: clamp(1rem, 2vw, 1.5rem) !important;
-    max-width: 100% !important;
-    background: transparent !important;
-    border: none !important;
-    border-radius: 0 !important;
-  }
-  
-  /* 카드 내용 텍스트 모바일 */
-  .about-card-content-text {
-    font-size: clamp(0.8rem, 2.5vw, 1.2rem) !important;
-    line-height: clamp(1.2rem, 3vw, 1.5rem) !important;
-    width: 100% !important;
+    order: 2 !important;
     text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .about-card-content-text {
+    font-size: clamp(0.9rem, 3.5vw, 1.2rem) !important;
+    line-height: clamp(1.2rem, 4vw, 1.6rem) !important;
+    text-align: center !important;
+  }
+
+  /* 글로벌 브랜드 어필 섹션 */
+  .about-global-section {
+    padding: clamp(2rem, 6vw, 3rem) clamp(1rem, 3vw, 2rem) !important;
+    height: auto !important;
+    min-height: clamp(200px, 50vw, 400px) !important;
+    flex-direction: column !important;
+  }
+
+  .about-global-desc {
+    font-size: clamp(1.2rem, 4vw, 1.8rem) !important;
+    line-height: clamp(1.5rem, 4.5vw, 2.2rem) !important;
+    text-align: center !important;
+    padding: 0 !important;
   }
 }
 
 @media (max-width: 480px) {
-  .about-section-intro > div > span:nth-child(1) {
-    font-size: clamp(1rem, 4vw, 2rem) !important;
-    line-height: clamp(1.2rem, 4.5vw, 2.3rem) !important;
+  .about-intro-main-text {
+    font-size: clamp(28px, (56/1920)*100vw, 56px) !important;
+    line-height: clamp(36px, (73/1920)*100vw, 73px) !important;
   }
   
-  .about-section-intro > div > span:nth-child(3) {
-    font-size: clamp(0.8rem, 2.5vw, 1.5rem) !important;
-    line-height: clamp(1rem, 3vw, 1.7rem) !important;
+  .about-intro-sub-text {
+    font-size: clamp(18px, (36/1920)*100vw, 36px) !important;
+    line-height: clamp(24px, (48/1920)*100vw, 48px) !important;
   }
   
   .about-why-title {
@@ -675,18 +785,39 @@
     line-height: clamp(1.3rem, 5.5vw, 2.5rem) !important;
   }
   
-  .about-2col-section > div:first-child > div:first-child > span {
-    font-size: clamp(1.2rem, 5vw, 2.5rem) !important;
-    line-height: clamp(1.5rem, 5.5vw, 2.8rem) !important;
+  .about-card {
+    width: 120px !important;
+    height: 120px !important;
+    font-size: 0.9rem !important;
+    padding: 0.7rem 0.2rem !important;
+    margin: 0 0.2rem 1rem 0.2rem;
   }
   
-  .about-2col-section > div:last-child > div > div:first-child > div {
-    font-size: clamp(0.8rem, 2.5vw, 1.1rem) !important;
-    line-height: clamp(1rem, 3vw, 1.3rem) !important;
+  .about-experience-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
   }
   
-  .about-2col-section > div:last-child > div > div:last-child > div {
-    font-size: clamp(0.7rem, 2vw, 1rem) !important;
-    line-height: clamp(1rem, 2.5vw, 1.2rem) !important;
+  .about-card-title {
+    font-size: 0.82rem !important;
+  }
+  
+  .about-card-desc {
+    font-size: 0.68rem !important;
+  }
+  
+  .about-global-desc {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    line-height: 1.3;
+  }
+  
+  .about-global-section {
+    padding: 1.5rem 0.5rem !important;
+  }
+  
+  .about-global-content {
+    width: 85% !important;
+    max-width: 350px !important;
   }
 } 

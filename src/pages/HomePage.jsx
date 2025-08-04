@@ -492,58 +492,6 @@ function HomePage() {
         padding: 0
       }} />
 
-     
-
-      {/* 애니메이션 CSS */}
-      <style>{`
-        @keyframes float {
-          0% { transform: translate(0, 0); }
-          100% { transform: translate(100px, 100px); }
-        }
-        @keyframes pattern-move {
-          0% { transform: translate(0, 0); }
-          100% { transform: translate(60px, 60px); }
-        }
-        .hover\\:scale-105:hover {
-          transform: scale(1.05);
-        }
-        .hover\\:text-gray-700:hover {
-          color: #374151;
-        }
-        
-        /* 이미지 오버레이 호버 효과 */
-        .image-overlay:hover .overlay-text {
-          color: var(--hypecon-main) !important;
-        }
-        .image-overlay:hover .overlay-underline {
-          background: var(--hypecon-main) !important;
-        }
-        
-        /* 모바일 최적화 */
-        @media (max-width: 768px) {
-          .container {
-            grid-template-columns: 1fr !important;
-          }
-          
-          /* 모바일에서 터치 영역 확대 */
-          button {
-            min-height: 48px !important;
-          }
-          
-          /* 모바일에서 텍스트 줄바꿈 최적화 */
-          h1, h2, h3, p {
-            word-break: keep-all;
-            overflow-wrap: break-word;
-          }
-        }
-        
-        /* 태블릿 최적화 */
-        @media (min-width: 769px) and (max-width: 1024px) {
-          .container {
-            gap: 2rem !important;
-          }
-        }
-      `}</style>
     </div>
   );
 }
