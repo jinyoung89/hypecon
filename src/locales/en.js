@@ -409,7 +409,8 @@ const en = {
         labels: {
           earlyPrice: 'Early Bird Special',
           regularPrice: 'Regular Price',
-          vatExcluded: 'Excl. VAT'
+          vatExcluded: 'Excl. VAT',
+          independentBoothSeparate: '*Independent booth fees are separate'
         },
         boothTypes: {
           title: 'Booth Types',

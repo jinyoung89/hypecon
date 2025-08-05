@@ -329,7 +329,7 @@ function BrandPage() {
                     <th>{t('brand.booth.boothTypeTable.headers.type')}</th>
                     <th>{t('brand.booth.boothTypeTable.headers.subtype')}</th>
                     <th>{t('brand.booth.boothTypeTable.headers.quantity')}</th>
-                    <th>{t('brand.booth.boothTypeTable.headers.constructionFee')}<br/><span style={{fontSize: 'clamp(12px, (24/1920)*100vw, 24px)', fontWeight: 400}}>{t('brand.booth.labels.vatExcluded')}</span></th>
+                    <th>{t('brand.booth.boothTypeTable.headers.constructionFee')}<br/><span style={{fontSize: 'clamp(12px, (24/1920)*100vw, 24px)', fontWeight: 400}}>{t('brand.booth.labels.independentBoothSeparate')}</span></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -382,7 +382,7 @@ function BrandPage() {
                 </div>
                 
                 <div className="premium-booth-card-note">
-                  <span style={{fontSize: 'clamp(12px, (24/1920)*100vw, 24px)', fontWeight: 400}}>{t('brand.booth.labels.vatExcluded')}</span>
+                  <span style={{fontSize: 'clamp(12px, (24/1920)*100vw, 24px)', fontWeight: 400}}>{t('brand.booth.labels.independentBoothSeparate')}</span>
                 </div>
               </div>
             </div>

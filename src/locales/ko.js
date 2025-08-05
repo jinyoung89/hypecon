@@ -401,7 +401,8 @@ const ko = {
       labels: {
         earlyPrice: '얼리버드 특가',
         regularPrice: '정가',
-        vatExcluded: 'VAT별도'
+        vatExcluded: 'VAT별도',
+        independentBoothSeparate: '*독립부스 출품료 별도'
       },
       boothTypes: {
         title: '부스타입',
