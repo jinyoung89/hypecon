@@ -119,7 +119,7 @@ function BrandPage() {
         </div>
       </section>
 
-      {/* 부스 타입 섹션 */}
+      {/* 부스 타입 섹션 - 주석처리됨
       <section className="brand-booth-type-section">
         <div className="brand-booth-type-inner">
           <h2 className="brand-booth-type-title">{t('brand.booth.boothTypes.title')}</h2>
@@ -145,12 +145,12 @@ function BrandPage() {
             </div>
           </div>
           <div className="brand-booth-type-content">
-            {/* 부스 타입 내용 */}
+            부스 타입 내용
           </div>
         </div>
       </section>
 
-      {/* 기본부스 섹션 */}
+      기본부스 섹션
       <BoothSection
         title={t('brand.booth.boothTypes.basic.title')}
         image={booth2Img}
@@ -160,7 +160,7 @@ function BrandPage() {
         isGrayBackground={true}
       />
 
-      {/* 아트월 부스 섹션 */}
+      아트월 부스 섹션
       <BoothSection
         title={t('brand.booth.boothTypes.artwall.title')}
         image={booth3Img}
@@ -180,7 +180,7 @@ function BrandPage() {
         isGrayBackground={true}
       />
 
-        {/* 아크릴 부스 섹션 */}
+        아크릴 부스 섹션
         <BoothSection
         title={t('brand.booth.boothTypes.acrylic6.title')}
         image={booth5Img}
@@ -201,117 +201,207 @@ function BrandPage() {
         isGrayBackground={true}
          
       />
+      */}
 
       {/* 부스 타입 및 참가비 안내 섹션 */}
       <section className="brand-booth-section">
         <div className="brand-booth-inner">
         <h2 className="brand-booth-title" style={{color: "#E1F800"}}>{t('brand.booth.title')}</h2>
           
-          <div className="brand-booth-table-container">
-            <table className="brand-booth-table" style={{background: "transparent"}}>
-              <thead>
-                <tr>
-                  {t('brand.booth.table.headers').map((header, index) => (
-                    <th key={index} dangerouslySetInnerHTML={{__html: header}}></th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td rowSpan="1">{t('brand.booth.table.rows')[0][0]}</td>
-                  <td>{t('brand.booth.table.rows')[0][1]}</td>
-                  <td>{t('brand.booth.table.rows')[0][2]}</td>
-                  <td>{t('brand.booth.table.rows')[0][3]}</td>
-                  <td>{t('brand.booth.table.rows')[0][4]}</td>
-                </tr>
-                <tr>
-                  <td rowSpan="1">{t('brand.booth.table.rows')[1][0]}</td>
-                  <td>{t('brand.booth.table.rows')[1][1]}</td>
-                  <td>{t('brand.booth.table.rows')[1][2]}</td>
-                  <td>{t('brand.booth.table.rows')[1][3]}</td>
-                  <td>{t('brand.booth.table.rows')[1][4]}</td>
-                </tr>
-                <tr>
-                  <td rowSpan="4">{t('brand.booth.table.rows')[2][0]}</td>
-                  <td>{t('brand.booth.table.rows')[2][1]}</td>
-                  <td>{t('brand.booth.table.rows')[2][2]}</td>
-                  <td>{t('brand.booth.table.rows')[2][3]}</td>
-                  <td>{t('brand.booth.table.rows')[2][4]}</td>
-                </tr>
-                <tr>
-                  <td>{t('brand.booth.table.rows')[3][1]}</td>
-                  <td>{t('brand.booth.table.rows')[3][2]}</td>
-                  <td>{t('brand.booth.table.rows')[3][3]}</td>
-                  <td>{t('brand.booth.table.rows')[3][4]}</td>
-                </tr>
-                <tr>
-                  <td>{t('brand.booth.table.rows')[4][1]}</td>
-                  <td>{t('brand.booth.table.rows')[4][2]}</td>
-                  <td>{t('brand.booth.table.rows')[4][3]}</td>
-                  <td>{t('brand.booth.table.rows')[4][4]}</td>
-                </tr>
-                <tr>
-                  <td>{t('brand.booth.table.rows')[5][1]}</td>
-                  <td>{t('brand.booth.table.rows')[5][2]}</td>
-                  <td>{t('brand.booth.table.rows')[5][3]}</td>
-                  <td>{t('brand.booth.table.rows')[5][4]}</td>
-                </tr>
-              </tbody>
-            </table>
-            
-            {/* 모바일용 카드 레이아웃 */}
-            <div className="brand-booth-table-mobile">
-              {t('brand.booth.table.rows').map((row, index) => {
-                let boothType = row[0];
-                if (!boothType && index >= 3 && index <= 5) {
-                  boothType = t('brand.booth.table.rows')[2][0]; // 아크릴 부스
-                }
-                
-                return (
-                  <div key={index} className="booth-card">
-                    <div className="booth-card-header">
-                      {boothType} - {row[1]}
-                    </div>
-                    <div className="booth-card-row">
-                      <span className="booth-card-label">{t('brand.booth.boothTypes.labels.earlyPriceLabel')}</span>
-                      <span className="booth-card-value early-bird">{row[2]}</span>
-                    </div>
-                    <div className="booth-card-row">
-                      <span className="booth-card-label">{t('brand.booth.boothTypes.labels.regularPriceLabel')}</span>
-                      <span className="booth-card-value">{row[3]}</span>
-                    </div>
-                    {row[4] && (
-                      <div className="booth-card-row">
-                        <span className="booth-card-label">{t('brand.booth.boothTypes.labels.noteLabel')}</span>
-                        <span className="booth-card-value">{row[4]}</span>
-                      </div>
-                    )}
+        <div className="brand-booth-table-container">
+          <p className="brand-booth-table-note text-left">
+          {t('brand.booth.boothSizeNote.independent')}
+          </p>
+
+        
+         
+            <div className="brand-booth-type-table-container">
+              <div className="brand-booth-type-table">
+                <div className="brand-booth-type-table-border"></div>
+                <div className="brand-booth-type-table-vertical-line"></div>
+                <div className="brand-booth-type-table-horizontal-line"></div>
+                <div className="brand-booth-type-table-header">{t('brand.booth.boothTypeTable.headers.type')}</div>
+                <div className="brand-booth-type-table-booth-name">{t('brand.booth.boothTypeTable.independent.name')}</div>
+                <div className="brand-booth-type-table-early-price-container">
+                  <span className="brand-booth-type-table-early-price-title">{t('brand.booth.labels.earlyPrice')}</span><br/>
+                  <span className="brand-booth-type-table-vat-note">{t('brand.booth.labels.vatExcluded')}</span>
+                </div>
+                <div className="brand-booth-type-table-early-price-value">{t('brand.booth.boothTypeTable.independent.earlyPrice')}</div>
+                <div className="brand-booth-type-table-regular-price-container">
+                  <span className="brand-booth-type-table-early-price-title">{t('brand.booth.labels.regularPrice')}</span><br/>
+                  <span className="brand-booth-type-table-vat-note">{t('brand.booth.labels.vatExcluded')}</span>
+                </div>
+                <div className="brand-booth-type-table-regular-price-value">{t('brand.booth.boothTypeTable.independent.regularPrice')}</div>
+              </div>
+              
+              {/* 모바일용 카드 레이아웃 */}
+              <div className="brand-booth-type-table-mobile">
+                <div className="booth-type-card">
+                  <div className="booth-type-card-header">{t('brand.booth.boothTypeTable.independent.name')}</div>
+                  <div className="booth-type-card-row">
+                    <span className="booth-type-card-label">{t('brand.booth.labels.earlyPrice')}</span>
+                    <span className="booth-type-card-value">{t('brand.booth.boothTypeTable.independent.earlyPrice')}</span>
                   </div>
-                );
-              })}
+                  <div className="booth-type-card-row">
+                    <span className="booth-type-card-label">{t('brand.booth.labels.regularPrice')}</span>
+                    <span className="booth-type-card-value">{t('brand.booth.boothTypeTable.independent.regularPrice')}</span>
+                  </div>
+                  <div className="booth-type-card-note">
+                    <span style={{fontSize: 'clamp(12px, (20/1920)*100vw, 20px)', fontWeight: 400}}>{t('brand.booth.labels.vatExcluded')}</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
       
 
-            <p className="brand-booth-table-note">
-              {t('brand.booth.tableNote')}
+            <ul className="brand-booth-basic-list">
+              {t('brand.booth.boothTypeTable.independent.details').map((detail, index) => (
+                <li key={index} dangerouslySetInnerHTML={{
+                  __html: detail.replace(t('brand.booth.boothTypeTable.independent.twoBoothsText'), `<span style="font-weight: 700;">${t('brand.booth.boothTypeTable.independent.twoBoothsText')}</span>`)
+                                  .replace(t('brand.booth.boothTypeTable.independent.areaOnlyText'), `<span style="font-weight: 700;">${t('brand.booth.boothTypeTable.independent.areaOnlyText')}</span>`)
+                }}></li>
+              ))}
+            </ul>
+            
+            {/* 조립 부스 타입 표 와 내용 */}
+            <p className="brand-booth-table-note text-left">
+            {t('brand.booth.boothSizeNote.assembly')}
             </p>
+            
+            <div className="brand-booth-type-table-container">
+              <div className="brand-booth-type-table">
+                <div className="brand-booth-type-table-border"></div>
+                <div className="brand-booth-type-table-vertical-line"></div>
+                <div className="brand-booth-type-table-horizontal-line"></div>
+                <div className="brand-booth-type-table-header">{t('brand.booth.boothTypeTable.headers.type')}</div>
+                <div className="brand-booth-type-table-booth-name">{t('brand.booth.boothTypeTable.assembly.name')}</div>
+                <div className="brand-booth-type-table-early-price-container">
+                  <span className="brand-booth-type-table-early-price-title">{t('brand.booth.labels.earlyPrice')}</span><br/>
+                  <span className="brand-booth-type-table-vat-note">{t('brand.booth.labels.vatExcluded')}</span>
+                </div>
+                <div className="brand-booth-type-table-early-price-value">{t('brand.booth.boothTypeTable.assembly.earlyPrice')}</div>
+                <div className="brand-booth-type-table-regular-price-container">
+                  <span className="brand-booth-type-table-early-price-title">{t('brand.booth.labels.regularPrice')}</span><br/>
+                  <span className="brand-booth-type-table-vat-note">{t('brand.booth.labels.vatExcluded')}</span>
+                </div>
+                <div className="brand-booth-type-table-regular-price-value">{t('brand.booth.boothTypeTable.assembly.regularPrice')}</div>
+              </div>
+              
+              {/* 모바일용 카드 레이아웃 */}
+              <div className="brand-booth-type-table-mobile">
+                <div className="booth-type-card">
+                  <div className="booth-type-card-header">{t('brand.booth.boothTypeTable.assembly.name')}</div>
+                  <div className="booth-type-card-row">
+                    <span className="booth-type-card-label">{t('brand.booth.labels.earlyPrice')}</span>
+                    <span className="booth-type-card-value">{t('brand.booth.boothTypeTable.assembly.earlyPrice')}</span>
+                  </div>
+                  <div className="booth-type-card-row">
+                    <span className="booth-type-card-label">{t('brand.booth.labels.regularPrice')}</span>
+                    <span className="booth-type-card-value">{t('brand.booth.boothTypeTable.assembly.regularPrice')}</span>
+                  </div>
+                  <div className="booth-type-card-note">
+                    <span style={{fontSize: 'clamp(12px, (20/1920)*100vw, 20px)', fontWeight: 400}}>{t('brand.booth.labels.vatExcluded')}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <ul className="brand-booth-basic-list">
+              {t('brand.booth.boothTypeTable.assembly.details').map((detail, index) => (
+                <li key={index} dangerouslySetInnerHTML={{
+                  __html: detail.replace(t('brand.booth.boothTypeTable.assembly.facilitiesText'), `<span style="font-weight: 700;">${t('brand.booth.boothTypeTable.assembly.facilitiesText')}</span>`)
+                                  .replace(t('brand.booth.boothTypeTable.assembly.singleBoothText'), `<span style="font-weight: 700;">${t('brand.booth.boothTypeTable.assembly.singleBoothText')}</span>`)
+                }}></li>
+              ))}
+            </ul>
+
+
+            {/* 프리미엄부스 타입 표 와 내용 */}
+            <p className="brand-booth-table-note text-left">
+            {t('brand.booth.boothSizeNote.premium')}
+            </p>
+            
+            <div className="brand-premium-booth-table-container">
+              <table className="brand-premium-booth-table">
+                <thead>
+                  <tr>
+                    <th>{t('brand.booth.boothTypeTable.headers.type')}</th>
+                    <th>{t('brand.booth.boothTypeTable.headers.subtype')}</th>
+                    <th>{t('brand.booth.boothTypeTable.headers.quantity')}</th>
+                    <th>{t('brand.booth.boothTypeTable.headers.constructionFee')}<br/><span style={{fontSize: 'clamp(12px, (24/1920)*100vw, 24px)', fontWeight: 400}}>{t('brand.booth.labels.vatExcluded')}</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowSpan="4" className="booth-type">{t('brand.booth.boothTypeTable.premium.name')}</td>
+                    <td rowSpan="2" className="booth-subtype">{t('brand.booth.boothTypeTable.premium.blockBooth')}</td>
+                    <td className="booth-info">{t('brand.booth.boothTypeTable.premium.booth2')}</td>
+                    <td className="booth-info">{t('brand.booth.boothTypeTable.premium.prices.block2')}</td>
+                  </tr>
+                  <tr>
+                    <td className="booth-info">{t('brand.booth.boothTypeTable.premium.booth4')}</td>
+                    <td className="booth-info">{t('brand.booth.boothTypeTable.premium.prices.block4')}</td>
+                  </tr>
+                  <tr>
+                    <td rowSpan="2" className="booth-subtype">{t('brand.booth.boothTypeTable.premium.lightBooth')}</td>
+                    <td className="booth-info">{t('brand.booth.boothTypeTable.premium.booth2')}</td>
+                    <td className="booth-info">{t('brand.booth.boothTypeTable.premium.prices.light2')}</td>
+                  </tr>
+                  <tr>
+                    <td className="booth-info">{t('brand.booth.boothTypeTable.premium.booth4')}</td>
+                    <td className="booth-info">{t('brand.booth.boothTypeTable.premium.prices.light4')}</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              {/* 모바일용 카드 레이아웃 */}
+              <div className="brand-premium-booth-table-mobile">
+                <div className="premium-booth-card">
+                  <div className="premium-booth-card-header">{t('brand.booth.boothTypeTable.premium.name')} - {t('brand.booth.boothTypeTable.premium.blockBooth')}</div>
+                  <div className="premium-booth-card-row">
+                    <span className="premium-booth-card-label">{t('brand.booth.boothTypeTable.premium.booth2')}</span>
+                    <span className="premium-booth-card-value">{t('brand.booth.boothTypeTable.premium.prices.block2')}</span>
+                  </div>
+                  <div className="premium-booth-card-row">
+                    <span className="premium-booth-card-label">{t('brand.booth.boothTypeTable.premium.booth4')}</span>
+                    <span className="premium-booth-card-value">{t('brand.booth.boothTypeTable.premium.prices.block4')}</span>
+                  </div>
+                </div>
+                
+                <div className="premium-booth-card">
+                  <div className="premium-booth-card-header">{t('brand.booth.boothTypeTable.premium.name')} - {t('brand.booth.boothTypeTable.premium.lightBooth')}</div>
+                  <div className="premium-booth-card-row">
+                    <span className="premium-booth-card-label">{t('brand.booth.boothTypeTable.premium.booth2')}</span>
+                    <span className="premium-booth-card-value">{t('brand.booth.boothTypeTable.premium.prices.light2')}</span>
+                  </div>
+                  <div className="premium-booth-card-row">
+                    <span className="premium-booth-card-label">{t('brand.booth.boothTypeTable.premium.booth4')}</span>
+                    <span className="premium-booth-card-value">{t('brand.booth.boothTypeTable.premium.prices.light4')}</span>
+                  </div>
+                </div>
+                
+                <div className="premium-booth-card-note">
+                  <span style={{fontSize: 'clamp(12px, (24/1920)*100vw, 24px)', fontWeight: 400}}>{t('brand.booth.labels.vatExcluded')}</span>
+                </div>
+              </div>
+            </div>
+
+            <ul className="brand-booth-basic-list">
+              {t('brand.booth.boothTypeTable.premium.details').map((detail, index) => (
+                <li key={index} dangerouslySetInnerHTML={{
+                  __html: detail.replace(t('brand.booth.boothTypeTable.premium.constructionFeeText'), `<span style="font-weight: 700;">${t('brand.booth.boothTypeTable.premium.constructionFeeText')}</span>`)
+                                  .replace(t('brand.booth.boothTypeTable.premium.separateChargeText'), `<span style="font-weight: 700;">${t('brand.booth.boothTypeTable.premium.separateChargeText')}</span>`)
+                }}></li>
+              ))}
+            </ul>
+
 
             {language === 'EN' && (
               <p className="brand-booth-table-note">
                 {t('brand.booth.boothTypes.usdNotice')}
               </p>
             )}
-            
-            <h3 className="brand-booth-basic-included">
-              {t('brand.booth.basicIncluded')}
-            </h3>
-            
-            <ul className="brand-booth-basic-list">
-              {t('brand.booth.basicIncludedItems').map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
             
             <h3 className="brand-booth-additional-cost-title">
               {t('brand.booth.additionalCostTitle')}
@@ -339,6 +429,10 @@ function BrandPage() {
                 </tbody>
               </table>
             </div>
+
+            <ul className="brand-booth-basic-list">
+              <li>{t('brand.booth.cornerBenefits.additionalCost')}</li>
+            </ul>
 
             <h3 className="brand-booth-termination-title">
               {t('brand.booth.termination.title')}

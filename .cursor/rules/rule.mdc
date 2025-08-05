@@ -3,128 +3,378 @@ description:
 globs: 
 alwaysApply: true
 ---
+# HYPECON 프론트엔드 개발 규칙
 
-# Your rule content
+## 1. 디자인 기준 및 변환 공식
 
+### 기준 해상도
+- **Desktop 기준**: 1920px
+- **디자인 툴**: Figma
 
-# Your rule content
-# Size Conversion Rule for Figma Design
-
-Size Conversion Rule for Figma Design
-1. 디자인 사이즈 기준
-기준 해상도: 1920px (Desktop)
-
-2. 변환 공식
-▸ 폰트
-clamp(최소 rem, (피그마값 / 1920) * 100vw, 최대 rem)
-최소값(rem): 피그마 값의 60%
-최대값(rem): 피그마 값 동일
-▸ 크기
-clamp(최소 px, (피그마값 / 1920) * 100vw, 최대 px)
-최소값(px): 피그마 값의 50%
-최대값(px): 피그마 값 동일
-
-3. 모바일 대응 전략
-▸ 대응 해상도 구분
-Desktop: 1280px 이상
-Tablet: 768px ~ 1279px
-Mobile: 767px 이하
-▸ 주요 대응 방침
-vw 단위를 사용해 해상도에 따라 자동 축소
-clamp로 최소/최대값을 제한해 요소 붕괴 방지
-폰트는 Mobile 기준 최대 60%까지 축소
-버튼 최소 높이: 40px 이상
-여백: clamp(8px, xvw, 16px) 형태 사용
-레이아웃: Desktop은 복수열, Mobile은 단일열 정렬
-이미지 및 아이콘은 max-width: 100% 사용, SVG는 viewBox 기준 scaling
-모바일 우선 설계: 핵심 정보는 상단 배치, scroll 최소화
-
-4. 범용적 버튼 너비 룰
-▸ 기본 원칙
-웹(Desktop/Tablet): width: 100%, max-width: clamp(480px, (960/1920)100vw, 960px)로 최대 너비 제한
-모바일: width: 100%로 화면 너비에 맞춤
-모든 해상도에서 화면을 벗어나지 않도록 보장
-▸ 적용 대상
-섹션 제목 버튼 (예: 브랜드 큐레이션 기준, 일정 안내, 신청 방법 등)
-카드형 제목 요소
-기타 고정 너비가 필요한 UI 요소
-▸ 구현 방식
-width: 100% (모바일 대응)
-max-width: clamp(480px, (960/1920)100vw, 960px) (웹 최대 너비 제한)
-이 방식으로 모든 해상도에서 적절한 크기 보장
-
-5. 텍스트 처리
-텍스트는 언어 관리 시스템을 사용
-텍스트가 추가되었을 경우 시스템에 등록하고 번역을 반드시 추가할 것
-
-6. 색상 사용
-공통 색상 변수로만 관리
-정의된 색상 외에는 사용 금지
-
-7. 텍스트 줄바꿈 처리 규칙
-텍스트의 문단이 깨지지 않게 주의 / \n 문자를 기준으로 텍스트를 분할하여 각 줄에 <br /> 태그 추가
-문단 유지: pre-line으로 \n 문자를 기준으로 줄바꿈이 유지됨
-word-break: keep-all;
-overflow-wrap: break-word;
-word-wrap: break-word;
-
-8. 스타일 규칙
-▸ 반응형 패딩
-Desktop: padding: 0.7rem 1.5rem
-Tablet: clamp(10px, (16/1920)100vw, 16px) clamp(20px, (32/1920)100vw, 32px)
-Mobile: padding: 0.6rem 1rem
-▸ 반응형 폰트 크기
-Desktop: clamp(18px, (30/1920)100vw, 30px)
-Tablet: clamp(16px, (24/1920)100vw, 24px)
-Mobile: clamp(0.9rem, 3vw, 1.1rem)
-▸ 반응형 높이
-모든 해상도: clamp(60px, (120/1920)100vw, 120px) (최소 60px 보장)
-
-## 9. 사파리 폰트 호환성 규칙
-
-### ▸ 기본 원칙
-- 모든 웹폰트에는 반드시 fallback 폰트 추가
-- 복잡한 fallback 체인 지양, 간단한 fallback 사용
-- 사파리에서 지원하지 않는 폰트명 사용 금지
-
-### ▸ 폰트 선언 규칙
-**Bebas Neue (타이틀용)**
+### 변환 공식
 ```css
-font-family: 'Bebas Neue', sans-serif;
+/* 폰트 크기 */
+font-size: clamp(최소px, (피그마값/1920)*100vw, 최대px);
+
+/* 요소 크기 */
+width: clamp(최소px, (피그마값/1920)*100vw, 최대px);
+height: clamp(최소px, (피그마값/1920)*100vw, 최대px);
+
+/* 여백 */
+padding: clamp(최소px, (피그마값/1920)*100vw, 최대px);
+margin: clamp(최소px, (피그마값/1920)*100vw, 최대px);
 ```
 
-**한글 우선 텍스트**
+## 2. 반응형 브레이크포인트 (3단계)
+
+### 해상도 구분
+- **Desktop**: 1024px 이상
+- **Tablet**: 768px ~ 1023px  
+- **Mobile**: 767px 이하
+
+### 미디어 쿼리 작성 순서 (Mobile-First)
 ```css
-font-family: "Noto Sans KR", "Noto Sans", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, sans-serif;
-```
+/* 기본 스타일 (Mobile) */
+.element {
+  /* Mobile 스타일 */
+  font-size: clamp(1rem, 4vw, 1.2rem);
+  padding: clamp(1rem, 3vw, 1.5rem);
+}
 
-**영문 우선 텍스트**
-```css
-font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
-```
+/* Tablet */
+@media (min-width: 768px) {
+  .element {
+    /* Tablet 스타일 */
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+    padding: clamp(1.5rem, 2vw, 2rem);
+  }
+}
 
-### ▸ 금지사항
-- `font-family: "Noto Sans CJK KR"` (존재하지 않는 폰트)
-- `font-family: "Bebas Neue"` (fallback 없음)
-- `font-family: 'Font', 'Arial Black', 'Helvetica', 'Arial', sans-serif` (복잡한 체인)
-
-### ▸ 공용 클래스 사용
-- 대형 타이틀은 반드시 `.hypecon-large-title` 클래스 사용
-- 페이지별 독자 타이틀 스타일 생성 금지
-- 일관된 폰트 경험을 위해 공용 스타일 우선 사용
-
-### ▸ 전역 CSS 변수 활용
-```css
-:root {
-  --font-primary: "Noto Sans KR", "Noto Sans", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-title: 'Bebas Neue', sans-serif;
-  --font-english: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+/* Desktop */
+@media (min-width: 1024px) {
+  .element {
+    /* Desktop 스타일 */
+    font-size: clamp(1.4rem, 1.5vw, 1.6rem);
+    padding: clamp(2rem, 1.5vw, 2.5rem);
+  }
 }
 ```
 
-### ▸ 사파리 테스트 필수
-- 폰트 관련 변경사항은 반드시 사파리에서 테스트
-- 특히 Bebas Neue와 Noto Sans 계열 폰트 확인 필수
-- 폰트 로딩 실패 시나리오 고려
+## 3. 폰트 사용 규칙
 
+### 기본 폰트 패밀리
+```css
+/* 한글 우선 텍스트 */
+font-family: "Noto Sans CJK KR", sans-serif;
 
+/* 중요 요소 (테이블, 폼 등) - 완전한 fallback */
+font-family: "Noto Sans KR", "Noto Sans", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, sans-serif;
+
+/* 영문 타이틀 */
+font-family: 'Bebas Neue', sans-serif;
+
+/* 영문 우선 텍스트 */
+font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+```
+
+### 공용 타이틀 클래스 사용
+```jsx
+/* 대형 타이틀 - 반드시 공용 클래스 사용 */
+<h1 className="hypecon-large-title hypecon-large-title--primary">
+<h2 className="hypecon-large-title hypecon-large-title--black">
+<h3 className="hypecon-large-title hypecon-large-title--white">
+```
+
+### 폰트 크기 조정 원칙
+- **Desktop**: 피그마 원본 사이즈
+- **Tablet**: 80-90% 크기
+- **Mobile**: 70-85% 크기
+- **히어로 섹션**: 축소 최소화 (가독성 우선)
+
+## 4. 모바일 최적화 전략
+
+### 레이아웃 변경 패턴
+```css
+/* Desktop - 가로 배치 */
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: clamp(2rem, 3vw, 4rem);
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .container {
+    gap: clamp(1.5rem, 2.5vw, 3rem);
+  }
+}
+
+/* Mobile - 세로 배치 */
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column !important;
+    gap: clamp(1rem, 3vw, 2rem) !important;
+    align-items: center !important;
+  }
+}
+```
+
+### 테이블 → 카드 변환
+```css
+/* Desktop/Tablet - 테이블 */
+.table-container .table {
+  display: table;
+}
+
+.table-container .card-layout {
+  display: none;
+}
+
+/* Mobile - 카드 */
+@media (max-width: 767px) {
+  .table-container .table {
+    display: none;
+  }
+  
+  .table-container .card-layout {
+    display: block;
+  }
+}
+```
+
+### 컨테이너 크기 조정 (3단계)
+```css
+/* Desktop */
+.section-container {
+  max-width: clamp(1200px, 80vw, 1400px);
+  padding: 0 clamp(2rem, 3vw, 3rem);
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .section-container {
+    max-width: clamp(800px, 90vw, 1000px);
+    padding: 0 clamp(1.5rem, 2.5vw, 2rem);
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .section-container {
+    max-width: clamp(320px, 95vw, 500px) !important;
+    padding: 0 clamp(1rem, 3vw, 1.5rem) !important;
+  }
+}
+```
+
+## 5. 컴포넌트별 스타일 가이드
+
+### 히어로 섹션
+```css
+/* 히어로 섹션 - 고정 높이 유지 */
+.hero-section {
+  height: clamp(427px, (854/1920)*100vw, 854px);
+  min-height: clamp(427px, (854/1920)*100vw, 854px);
+}
+
+/* 모든 해상도에서 동일한 높이 비율 유지 */
+@media (max-width: 767px) {
+  .hero-section {
+    height: clamp(427px, (854/1920)*100vw, 854px) !important;
+    min-height: clamp(427px, (854/1920)*100vw, 854px) !important;
+  }
+}
+```
+
+### 버튼 스타일
+```css
+.button {
+  /* 기본 크기 */
+  width: clamp(200px, (400/1920)*100vw, 400px);
+  height: clamp(50px, (100/1920)*100vw, 100px);
+  
+  /* 최소 터치 영역 보장 */
+  min-height: 44px;
+  
+  /* 반응형 패딩 */
+  padding: clamp(0.8rem, 1.5vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+}
+
+/* Mobile 버튼 최적화 */
+@media (max-width: 767px) {
+  .button {
+    width: clamp(200px, 85vw, 350px);
+    padding: clamp(0.8rem, 3vw, 1rem) clamp(1rem, 4vw, 1.5rem);
+  }
+}
+```
+
+### 텍스트 박스
+```css
+.text-box {
+  /* Desktop/Tablet */
+  width: clamp(600px, 60vw, 960px);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .text-box {
+    width: 100% !important;
+    max-width: clamp(300px, 95vw, 500px) !important;
+  }
+}
+```
+
+## 6. 텍스트 처리 규칙
+
+### 줄바꿈 및 문단 처리
+```css
+.text-content {
+  white-space: pre-line;        /* \n 문자 줄바꿈 유지 */
+  word-break: keep-all;         /* 단어 단위 줄바꿈 */
+  overflow-wrap: break-word;    /* 긴 단어 강제 줄바꿈 */
+  word-wrap: break-word;        /* IE 호환성 */
+}
+```
+
+### 다국어 텍스트 처리
+```jsx
+// 언어 시스템 사용 필수
+{t('section.title')}
+
+// 인라인 스타일로 텍스트 처리 적용
+<p style={{
+  whiteSpace: 'pre-line',
+  wordBreak: 'keep-all',
+  overflowWrap: 'break-word',
+  wordWrap: 'break-word'
+}}>
+  {t('section.content')}
+</p>
+```
+
+## 7. 색상 사용 규칙
+
+### CSS 변수 사용 필수
+```css
+:root {
+  --hypecon-main: #00E5A8;
+  --hypecon-dark: #000;
+  --hypecon-white: #FFF;
+  --hypecon-gray: #F2F2F2;
+  --hypecon-yellow: #E1F800;
+}
+
+/* 사용 예시 */
+.element {
+  background: var(--hypecon-main);
+  color: var(--hypecon-dark);
+}
+```
+
+### 하드코딩된 색상 금지
+```css
+/* ❌ 금지 */
+color: #00E5A8;
+background: #000;
+
+/* ✅ 권장 */
+color: var(--hypecon-main);
+background: var(--hypecon-dark);
+```
+
+## 8. 성능 및 최적화
+
+### CSS 우선순위
+```css
+/* Mobile 스타일에는 !important 사용 권장 */
+@media (max-width: 767px) {
+  .element {
+    font-size: clamp(1rem, 3vw, 1.2rem) !important;
+    padding: clamp(1rem, 3vw, 1.5rem) !important;
+  }
+}
+```
+
+### 이미지 최적화
+```css
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* SVG는 viewBox 기준 스케일링 */
+.svg-icon {
+  width: clamp(20px, 3vw, 40px);
+  height: auto;
+}
+```
+
+## 9. 코드 작성 가이드
+
+### 클래스명 규칙
+```css
+/* 페이지-섹션-요소 구조 */
+.ticket-hero-section
+.ticket-hero-title
+.ticket-info-content
+.ticket-price-table
+```
+
+### 재사용 가능한 컴포넌트 우선
+```jsx
+// ❌ 페이지별 독자 스타일
+<h1 className="about-main-title">
+
+// ✅ 공용 컴포넌트 사용
+<h1 className="hypecon-large-title hypecon-large-title--primary">
+```
+
+## 10. 품질 보증
+
+### 필수 테스트 환경
+- **Chrome**: 최신 버전
+- **Safari**: Desktop/Mobile
+- **Firefox**: 최신 버전
+- **모바일**: iOS Safari, Android Chrome
+
+### 체크리스트
+- [ ] 3단계 브레이크포인트에서 레이아웃 검증
+- [ ] 터치 영역 최소 44px 보장
+- [ ] 텍스트 가독성 확보
+- [ ] 이미지 반응형 처리
+- [ ] 폰트 로딩 실패 시나리오 고려
+- [ ] 색상 변수 사용
+- [ ] 다국어 텍스트 처리 적용
+
+## 11. 참고 모범 사례
+
+**TicketPage**를 표준 구현 사례로 참고하되, **3단계 브레이크포인트로 단순화**:
+- 올바른 폰트 패밀리 사용
+- 효과적인 모바일 최적화
+- 테이블→카드 변환 구현
+- 공용 클래스 적극 활용
+- 텍스트 처리 규칙 준수
+- **복잡한 5단계 대신 표준 3단계 적용**
+
+## 12. 브레이크포인트 마이그레이션 가이드
+
+### 기존 5단계 → 3단계 변환
+```css
+/* 기존 (복잡함) */
+@media (max-width: 900px)  /* 제거 */
+@media (max-width: 768px)  /* Mobile로 통합 */
+@media (max-width: 600px)  /* 제거 */
+@media (max-width: 480px)  /* 제거 */
+
+/* 새로운 (단순함) */
+@media (max-width: 767px)  /* Mobile */
+@media (min-width: 768px)  /* Tablet */
+@media (min-width: 1024px) /* Desktop */
+```
+
+### 단계별 전환
+1. **1단계**: 새 프로젝트는 3단계 적용
+2. **2단계**: 기존 페이지는 점진적 리팩토링
+3. **3단계**: 성능 및 유지보수성 개선

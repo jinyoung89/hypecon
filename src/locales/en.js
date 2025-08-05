@@ -344,7 +344,73 @@ const en = {
         ]
       },
       booth: {
-        title: 'Booth Types & Participation Fees',
+        title: 'Booth Types & Fees',
+        boothSizeNote: {
+          independent: '※ Standard booth size: 3M X 3M (Height limit: 4m)',
+          assembly: '※ Standard booth size: 3M X 3M',
+          premium: '※ Standard booth size: 3M X 3M'
+        },
+        boothTypeTable: {
+          headers: {
+            type: 'Booth Type',
+            subtype: 'Type',
+            quantity: 'Quantity',
+            constructionFee: 'Construction Fee'
+          },
+          independent: {
+            name: 'Independent Booth',
+            earlyPrice: '$2,000',
+            regularPrice: '$2,286',
+            twoBoothsText: '2 booths or more',
+            areaOnlyText: 'only the applied area',
+            details: [
+              'Minimum 2 booths or more can be applied.',
+              'Independent booths provide only the applied area.',
+              'Exhibition equipment and electrical work must be carried out through the exhibition hall\'s designated partner companies.',
+              'All exhibition materials and equipment must be safely installed according to fire safety regulations and general standards for building structural safety.',
+              'After the exhibition, all booth equipment must be restored to its original state before installation.'
+            ]
+          },
+          assembly: {
+            name: 'Assembly Booth',
+            earlyPrice: '$2,500',
+            regularPrice: '$3,000',
+            facilitiesText: 'booth facilities (wooden walls)',
+            singleBoothText: 'single booth (1 booth)',
+            details: [
+              'Assembly booths provide booth facilities (wooden walls) for the applied exhibition area.',
+              'Only single booth (1 booth) applications are accepted.',
+              'Exhibiting companies can freely display within the booth space as long as it does not violate regulations.',
+              'After the exhibition, all booth equipment must be restored to its original state before installation.'
+            ]
+          },
+          premium: {
+            name: 'Premium Booth',
+            blockBooth: 'Block Booth',
+            lightBooth: 'Light Booth',
+            booth2: '2 booths',
+            booth4: '4 booths',
+            constructionFeeText: 'construction costs',
+            separateChargeText: 'independent booth participation fees are separate',
+            prices: {
+              block2: '$2,714',
+              block4: '$3,429',
+              light2: '$3,429',
+              light4: '$3,857'
+            },
+            details: [
+              'The amount is for booth construction costs.',
+              'Can be selected separately after applying for an independent booth, and independent booth participation fees are separate.',
+              'The number of open sides (corners) will be finalized according to the layout of each exhibition.',
+              'If you wish to select a number of booths other than those specified above, please contact us for a quote.'
+            ]
+          }
+        },
+        labels: {
+          earlyPrice: 'Early Bird Special',
+          regularPrice: 'Regular Price',
+          vatExcluded: 'Excl. VAT'
+        },
         boothTypes: {
           title: 'Booth Types',
           notice: '*All fees are exclusive of VAT.',
@@ -417,8 +483,7 @@ const en = {
         ],
         additionalCostTitle: 'Additional Cost Information',
         additionalCostItems: [
-          'Additional facility charges: Additional electricity, lighting, internet, and signage must be requested separately\nand will incur additional fees.\n(Detailed items and prices will be provided after participation is confirmed.)',
-          'Corner Booth Additional Cost: 300,000 KRW per booth (approx. USD 215, excluding VAT)\n(Corner booths will be assigned based on application order, number of booths, and brand category.)'
+          'Additional facility charges: Additional electricity, lighting, internet, and signage must be requested separately and paid (detailed items will be provided after participation confirmation)'
         ],
         cornerBenefits: {
           title: 'Corner Booth Benefits',
@@ -428,7 +493,8 @@ const en = {
               ['4 or more booths', '1 corner booth free'],
               ['6+ booths', '2 corner booths free']
             ]
-          }
+          },
+          additionalCost: 'Corner Booth Additional Cost: $215 per booth (Excl. VAT) (Corner assignment is based on first-come-first-served/number of booths/brand category priority)'
         },
         additionalCost: {
           title: 'Additional Costs',
@@ -451,21 +517,22 @@ const en = {
           ]
         },
         termination: {
-          title: 'Contract Termination & Automatic Cancellation Policy',
+          title: 'Contract Cancellation and Automatic Termination Policy',
           items: [
-            'If the deposit (50%) is not paid within 7 days of the contract date, the application will be automatically canceled.',
-            'If the remaining balance (50%) is not paid within 60 days of the contract date, the contract will be automatically terminated.',
-            '→ The deposit already paid will not be refunded.'
+            'If the deposit (50%) is not paid within 7 days of the contract date, the application will be automatically cancelled.',
+            'If the balance (50%) is not paid within 60 days of the contract date, the contract will be automatically terminated.',
+            '→ The already paid deposit will not be refunded.'
           ]
         },
         cautionSimple: {
           title: 'Important Notes',
           items: [
-            '· All fees are exclusive of VAT.',
-            '· Corner booths are prioritized for multi-booth applicants and early registrants.',
-            '· Booth locations may be adjusted based on the brand\'s category and style.'
+            'All fees are exclusive of VAT.',
+            'Simple nailing and stapling on walls is allowed, but adhesives, paints, and lacquers cannot be used.',
+            'Corner booths are prioritized for multi-booth and first-come-first-served brands.',
+            'Booth locations may be adjusted based on participating brands\' categories and styles.'
           ],
-          note: '※ Brands that violate intellectual property rights or operate without proper licensing,\nincluding those selling unauthorized wholesale products, may be restricted from participation.\nAll legal responsibility lies with the participant. The organizer assumes no liability.'
+          note: '※ Brands that violate third-party intellectual property rights such as trademarks, copyrights, and portrait rights,\n   or those that do not have proper licenses and sell wholesale/retail distribution products may be restricted from participation.\n   All legal responsibility lies with the participant, and the organizers assume no liability whatsoever.'
         }
       },
       refund: {
