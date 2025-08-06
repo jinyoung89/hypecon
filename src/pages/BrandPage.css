@@ -2725,7 +2725,7 @@
   padding: clamp(0.8rem, 1.5vw, 1.2rem);
   text-align: center;
   font-weight: 700;
-  font-size: 36px;
+  font-size: clamp(18px, (36/1920)*100vw, 36px);
   border-bottom: 1px solid #000;
   border-right: 1px solid #000;
   line-height: 1;
@@ -2742,7 +2742,7 @@
 .brand-booth-simple-table td {
   padding: clamp(0.8rem, 1.5vw, 1.2rem);
   text-align: center;
-  font-size: 32px;
+  font-size: clamp(16px, (32/1920)*100vw, 32px);
   border-right: 1px solid #000;
   font-weight: 500;
 }
@@ -2768,11 +2768,11 @@
 .vat-excluded-text {
   color: #000;
   font-family: "Noto Sans CJK KR";
-  font-size: 24px;
+  font-size: clamp(12px, (24/1920)*100vw, 24px);
   font-style: normal;
   font-weight: 400;
-  line-height: 33px;
-  letter-spacing: -1.2px;
+  line-height: clamp(16px, (33/1920)*100vw, 33px);
+  letter-spacing: clamp(-0.6px, (-1.2/1920)*100vw, -1.2px);
 }
 
 .th-content {
@@ -2783,7 +2783,7 @@
 }
 
 .main-text {
-  font-size: 36px;
+  font-size: clamp(18px, (36/1920)*100vw, 36px);
   font-weight: 700;
   line-height: 1;
   margin-bottom: 2px;
