@@ -167,11 +167,11 @@ function TicketPage() {
                       {row[0]}
                     </div>
                     <div className="ticket-card-row">
-                      <span className="ticket-card-label">가격:</span>
+                      <span className="ticket-card-label">{t('ticket.price.labels.price')}:</span>
                       <span className="ticket-card-value">{row[1]}</span>
                     </div>
                     <div className="ticket-card-row">
-                      <span className="ticket-card-label">혜택:</span>
+                      <span className="ticket-card-label">{t('ticket.price.labels.benefits')}:</span>
                       <span className="ticket-card-value">{row[2]}</span>
                     </div>
                   </div>

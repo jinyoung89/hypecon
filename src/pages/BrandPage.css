@@ -470,7 +470,7 @@
 .brand-booth-table-note {
   font-size: clamp(14.4px, (24/1920)*100vw, 24px);
   color: #666;
-  text-align: right;
+  text-align: center;
   margin: clamp(8px, (12/1920)*100vw, 12px) 0 0 0;
   width: clamp(655px, (1310/1920)*100vw, 1310px);
   max-width: 100%;
@@ -792,8 +792,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: clamp(600px, (1200/1920)*100vw, 1200px);
-  height: clamp(600px, (1200/1920)*100vw, 1200px);
+  min-height: clamp(600px, (1280/1920)*100vw, 1280px);
 }
 
 .brand-earlybird-benefit-inner {
@@ -2705,4 +2704,97 @@
     padding-top: 0.5rem;
     border-top: 1px solid #eee;
   }
+}
+
+/* 간단한 부스 테이블 스타일 */
+.brand-booth-simple-table {
+  width: 100%;
+  max-width: clamp(400px, (800/1920)*100vw, 800px);
+  border-collapse: collapse;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin: clamp(1rem, 2vw, 2rem) 0;
+  font-family: "Noto Sans CJK KR";
+}
+
+.brand-booth-simple-table tr {
+  height: 120px;
+}
+
+.brand-booth-simple-table th {
+  padding: clamp(0.8rem, 1.5vw, 1.2rem);
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  line-height: 1;
+}
+
+.brand-booth-simple-table th:last-child {
+  border-right: none;
+}
+
+.brand-booth-simple-table th br {
+  line-height: 0;
+}
+
+.brand-booth-simple-table td {
+  padding: clamp(0.8rem, 1.5vw, 1.2rem);
+  text-align: center;
+  font-size: 32px;
+  border-right: 1px solid #000;
+  font-weight: 500;
+}
+
+.brand-booth-simple-table td:last-child {
+  border-right: none;
+}
+
+.brand-booth-simple-table td:first-child {
+  font-weight: 700;
+}
+
+.brand-booth-simple-table td:nth-child(2) {
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .brand-booth-simple-table {
+    display: none;
+  }
+}
+
+.vat-excluded-text {
+  color: #000;
+  font-family: "Noto Sans CJK KR";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: -1.2px;
+}
+
+.th-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  line-height: 1;
+}
+
+.main-text {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.brand-booth-simple-table th:nth-child(2),
+.brand-booth-simple-table td:nth-child(2) {
+  border-right: 1px solid transparent;
+  font-weight: 700;
+}
+
+.brand-booth-simple-table td:nth-child(2) {
+  font-weight: 700;
 }

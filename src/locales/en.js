@@ -344,7 +344,7 @@ const en = {
         ]
       },
       booth: {
-        title: 'Booth Types & Fees',
+        title: 'Participation & Fees',
         boothSizeNote: {
           independent: '※ Standard booth size: 3M X 3M (Height limit: 4m)',
           assembly: '※ Standard booth size: 3M X 3M',
@@ -358,30 +358,30 @@ const en = {
             constructionFee: 'Construction Fee'
           },
           independent: {
-            name: 'Independent Booth',
+            name: 'Space-only\nBooth',
             earlyPrice: '$2,000',
             regularPrice: '$2,286',
             twoBoothsText: '2 booths or more',
+            twoBoothsOnlyText: '2 booths',
             areaOnlyText: 'only the applied area',
             details: [
-              'Minimum 2 booths or more can be applied.',
-              'Independent booths provide only the applied area.',
-              'Exhibition equipment and electrical work must be carried out through the exhibition hall\'s designated partner companies.',
-              'All exhibition materials and equipment must be safely installed according to fire safety regulations and general standards for building structural safety.',
-              'After the exhibition, all booth equipment must be restored to its original state before installation.'
+              'A minimum of 2 booths must be reserved.',
+              'Space-only booths are provided as empty floor space corresponding to the reserved area.',
+              'All booth construction, including exhibition fixtures and electrical work, must be carried out by the exhibition hall\'s designated contractors.',
+              'All exhibition materials and equipment must be safely installed in compliance with fire safety laws, structural safety standards, and exhibition regulations.',
+              'After the exhibition, all booth installations must be dismantled and the space restored to its original condition.'
             ]
           },
           assembly: {
-            name: 'Assembly Booth',
+            name: 'Shell scheme\nbooths',
             earlyPrice: '$2,500',
             regularPrice: '$3,000',
             facilitiesText: 'booth facilities (wooden walls)',
             singleBoothText: 'single booth (1 booth)',
             details: [
-              'Assembly booths provide booth facilities (wooden walls) for the applied exhibition area.',
-              'Only single booth (1 booth) applications are accepted.',
-              'Exhibiting companies can freely display within the booth space as long as it does not violate regulations.',
-              'After the exhibition, all booth equipment must be restored to its original state before installation.'
+              'Shell scheme booths include basic structural components (wooden wall panels) installed according to the reserved booth size.',
+              'Exhibitors may freely design and display within the booth space, provided it complies with the exhibition regulations.',
+              'After the exhibition, all booth installations must be dismantled, and the area must be fully restored to its original condition prior to installation.'
             ]
           },
           premium: {
@@ -391,7 +391,7 @@ const en = {
             booth2: '2 booths',
             booth4: '4 booths',
             constructionFeeText: 'construction costs',
-            separateChargeText: 'independent booth participation fees are separate',
+            separateChargeText: 'Space-only Booth participation fees are separate',
             prices: {
               block2: '$2,714',
               block4: '$3,429',
@@ -400,14 +400,14 @@ const en = {
             },
             details: [
               'The amount is for booth construction costs.',
-              'Can be selected separately after applying for an independent booth, and independent booth participation fees are separate.',
+              'This option can be selected separately after applying for a space-only booth, and space-only booth participation fees are charged additionally.',
               'The number of open sides (corners) will be finalized according to the layout of each exhibition.',
-              'If you wish to select a number of booths other than those specified above, please contact us for a quote.'
+              'If you wish to apply for more than 4 booths, please indicate the quantity in the “Booth Quantity” section of the application form..'
             ]
           }
         },
         labels: {
-          earlyPrice: 'Early Bird Special',
+          earlyPrice: 'Early Bird Rate',
           regularPrice: 'Regular Price',
           vatExcluded: 'Excl. VAT',
           independentBoothSeparate: '*Independent booth fees are separate'
@@ -417,9 +417,9 @@ const en = {
           notice: '*All fees are exclusive of VAT.',
           usdNotice: '*USD amounts are based on the August 2025 exchange rate and are for reference only. Actual payment may vary due to exchange rate fluctuations. Payment is accepted in KRW or USD.',
           labels: {
-            earlyPrice: 'Early Bird Special',
+            earlyPrice: 'Early Bird Rate',
             regularPrice: 'Regular Price',
-            earlyPriceLabel: 'Early Bird Special:',
+            earlyPriceLabel: 'Early Bird Rate:',
             regularPriceLabel: 'Regular Price:',
             noteLabel: 'Notes:'
           },
@@ -490,12 +490,12 @@ const en = {
           title: 'Corner Booth Benefits',
           table: {
             rows: [
-              ['First 10 teams', '1 corner booth free'],
+              ['First 10 confirmed exhibitors', '1 corner booth free'],
               ['4 or more booths', '1 corner booth free'],
-              ['6+ booths', '2 corner booths free']
+              ['6 or more booths', '2 corner booths free']
             ]
           },
-          additionalCost: 'Corner Booth Additional Cost: $215 per booth (Excl. VAT) (Corner assignment is based on first-come-first-served/number of booths/brand category priority)'
+          additionalCost: 'Corner Booth Additional Cost: 300,000 KRW per booth (approx. USD 214, excluding VAT)   (Corner booths will be assigned based on application order, number of booths, and brand category.)'
         },
         additionalCost: {
           title: 'Additional Costs',
@@ -518,22 +518,22 @@ const en = {
           ]
         },
         termination: {
-          title: 'Contract Cancellation and Automatic Termination Policy',
+          title: 'Contract Termination & Automatic Cancellation Policy',
           items: [
             'If the deposit (50%) is not paid within 7 days of the contract date, the application will be automatically cancelled.',
-            'If the balance (50%) is not paid within 60 days of the contract date, the contract will be automatically terminated.',
-            '→ The already paid deposit will not be refunded.'
+            'If the remaining balance (50%) is not paid within 60 days of the contract date, the contract will be automatically terminated.',
+            '→ The deposit already paid will not be refunded.'
           ]
         },
         cautionSimple: {
           title: 'Important Notes',
           items: [
             'All fees are exclusive of VAT.',
-            'Simple nailing and stapling on walls is allowed, but adhesives, paints, and lacquers cannot be used.',
-            'Corner booths are prioritized for multi-booth and first-come-first-served brands.',
+            'Simple nailing and stapling on walls are allowed; however, the use of adhesives, paints, or lacquers is prohibited.',
+            'Corner booths are prioritized for multi-booth applicants and early registrants.',
             'Booth locations may be adjusted based on participating brands\' categories and styles.'
           ],
-          note: '※ Brands that violate third-party intellectual property rights such as trademarks, copyrights, and portrait rights,\n   or those that do not have proper licenses and sell wholesale/retail distribution products may be restricted from participation.\n   All legal responsibility lies with the participant, and the organizers assume no liability whatsoever.'
+          note: '※ Brands that violate intellectual property rights or operate without proper licensing,\nincluding those selling unauthorized wholesale products, may be restricted from participation.\nAll legal responsibilities lie with the participants, and the organizer assumes no liability.'
         }
       },
       refund: {
@@ -731,13 +731,17 @@ const en = {
     },
     price: {
       title: 'Ticket Prices & Benefits',
+      labels: {
+        price: 'Ticket Prices',
+        benefits: 'Benefits'
+      },
       usdNotice: '*USD amounts are based on the August 2025 exchange rate and are for reference only. Actual payment may vary due to exchange rate fluctuations. Payment is accepted in KRW or USD.',
       table: {
         headers: ['Ticket Types', 'Ticket Prices', 'Benefits'],
         rows: [
           ['Early Bird Phase 1', '$ 8.6', 'Exhibition + Experience + Photo Zones access + Priority merchandise purchase'],
-          ['Early Bird Phase 2', '$ 10.8', 'Exhibition + Experience + Photo Zones access'],
-          ['Group Tickets (20+ persons)', '$ 8.6', 'Same benefits (conditions apply)'],
+          ['Early Bird Phase 2', '$ 7', 'Exhibition + Experience + Photo Zones access'],
+          ['Group Tickets (20+ persons)', '$ 8.6', 'Exhibition + Experience + Photo Zones access'],
           ['On-site Purchase', '$ 14.3', 'Exhibition + Experience Zones access only']
         ]
       },
@@ -1084,7 +1088,7 @@ const en = {
       ]
     },
     contact: {
-      question: 'Awards Team / Inquiry',
+      question: 'Awards Team / Inquiries',
       email: 'hello@hypeconweek.com',
       phone: '+82-2-567-5109 (HYPECON Awards Team)'
     }

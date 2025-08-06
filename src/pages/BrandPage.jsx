@@ -208,31 +208,47 @@ function BrandPage() {
         <div className="brand-booth-inner">
         <h2 className="brand-booth-title" style={{color: "#E1F800"}}>{t('brand.booth.title')}</h2>
           
+
+        {language === 'EN' && (
+              <p className="brand-booth-table-note">
+                {t('brand.booth.boothTypes.usdNotice')}
+              </p>
+            )}
+
         <div className="brand-booth-table-container">
           <p className="brand-booth-table-note text-left">
           {t('brand.booth.boothSizeNote.independent')}
           </p>
 
         
-         
+          {/* 독립 부스 타입 표 와 내용 */}
             <div className="brand-booth-type-table-container">
-              <div className="brand-booth-type-table">
-                <div className="brand-booth-type-table-border"></div>
-                <div className="brand-booth-type-table-vertical-line"></div>
-                <div className="brand-booth-type-table-horizontal-line"></div>
-                <div className="brand-booth-type-table-header">{t('brand.booth.boothTypeTable.headers.type')}</div>
-                <div className="brand-booth-type-table-booth-name">{t('brand.booth.boothTypeTable.independent.name')}</div>
-                <div className="brand-booth-type-table-early-price-container">
-                  <span className="brand-booth-type-table-early-price-title">{t('brand.booth.labels.earlyPrice')}</span><br/>
-                  <span className="brand-booth-type-table-vat-note">{t('brand.booth.labels.vatExcluded')}</span>
-                </div>
-                <div className="brand-booth-type-table-early-price-value">{t('brand.booth.boothTypeTable.independent.earlyPrice')}</div>
-                <div className="brand-booth-type-table-regular-price-container">
-                  <span className="brand-booth-type-table-early-price-title">{t('brand.booth.labels.regularPrice')}</span><br/>
-                  <span className="brand-booth-type-table-vat-note">{t('brand.booth.labels.vatExcluded')}</span>
-                </div>
-                <div className="brand-booth-type-table-regular-price-value">{t('brand.booth.boothTypeTable.independent.regularPrice')}</div>
-              </div>
+              <table className="brand-booth-simple-table">
+                <thead>
+                  <tr>
+                    <th>{t('brand.booth.boothTypeTable.headers.type')}</th>
+                    <th>
+                      <div className="th-content">
+                        <div className="main-text">{t('brand.booth.labels.earlyPrice')}</div>
+                        <div className="vat-excluded-text">{t('brand.booth.labels.vatExcluded')}</div>
+                      </div>
+                    </th>
+                    <th>
+                      <div className="th-content">
+                        <div className="main-text">{t('brand.booth.labels.regularPrice')}</div>
+                        <div className="vat-excluded-text">{t('brand.booth.labels.vatExcluded')}</div>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{t('brand.booth.boothTypeTable.independent.name')}</td>
+                    <td>{t('brand.booth.boothTypeTable.independent.earlyPrice')}</td>
+                    <td>{t('brand.booth.boothTypeTable.independent.regularPrice')}</td>
+                  </tr>
+                </tbody>
+              </table>
               
               {/* 모바일용 카드 레이아웃 */}
               <div className="brand-booth-type-table-mobile">
@@ -256,12 +272,25 @@ function BrandPage() {
       
 
             <ul className="brand-booth-basic-list">
-              {t('brand.booth.boothTypeTable.independent.details').map((detail, index) => (
-                <li key={index} dangerouslySetInnerHTML={{
-                  __html: detail.replace(t('brand.booth.boothTypeTable.independent.twoBoothsText'), `<span style="font-weight: 700;">${t('brand.booth.boothTypeTable.independent.twoBoothsText')}</span>`)
-                                  .replace(t('brand.booth.boothTypeTable.independent.areaOnlyText'), `<span style="font-weight: 700;">${t('brand.booth.boothTypeTable.independent.areaOnlyText')}</span>`)
-                }}></li>
-              ))}
+              {t('brand.booth.boothTypeTable.independent.details').map((detail, index) => {
+                let processedDetail = detail;
+                
+                if (language === 'EN') {
+                  // 영어: "2 booths"만 굵게
+                  processedDetail = detail.replace(t('brand.booth.boothTypeTable.independent.twoBoothsOnlyText'), `<span style="font-weight: 700;">${t('brand.booth.boothTypeTable.independent.twoBoothsOnlyText')}</span>`)
+                                         .replace(t('brand.booth.boothTypeTable.independent.areaOnlyText'), `<span style="font-weight: 700;">${t('brand.booth.boothTypeTable.independent.areaOnlyText')}</span>`);
+                } else {
+                  // 한국어: "2부스 이상"과 "면적만 제공" 굵게
+                  processedDetail = detail.replace(t('brand.booth.boothTypeTable.independent.twoBoothsText'), `<span style="font-weight: 700;">${t('brand.booth.boothTypeTable.independent.twoBoothsText')}</span>`)
+                                         .replace(t('brand.booth.boothTypeTable.independent.areaOnlyText'), `<span style="font-weight: 700;">${t('brand.booth.boothTypeTable.independent.areaOnlyText')}</span>`);
+                }
+                
+                return (
+                  <li key={index} dangerouslySetInnerHTML={{
+                    __html: processedDetail
+                  }}></li>
+                );
+              })}
             </ul>
             
             {/* 조립 부스 타입 표 와 내용 */}
@@ -270,23 +299,32 @@ function BrandPage() {
             </p>
             
             <div className="brand-booth-type-table-container">
-              <div className="brand-booth-type-table">
-                <div className="brand-booth-type-table-border"></div>
-                <div className="brand-booth-type-table-vertical-line"></div>
-                <div className="brand-booth-type-table-horizontal-line"></div>
-                <div className="brand-booth-type-table-header">{t('brand.booth.boothTypeTable.headers.type')}</div>
-                <div className="brand-booth-type-table-booth-name">{t('brand.booth.boothTypeTable.assembly.name')}</div>
-                <div className="brand-booth-type-table-early-price-container">
-                  <span className="brand-booth-type-table-early-price-title">{t('brand.booth.labels.earlyPrice')}</span><br/>
-                  <span className="brand-booth-type-table-vat-note">{t('brand.booth.labels.vatExcluded')}</span>
-                </div>
-                <div className="brand-booth-type-table-early-price-value">{t('brand.booth.boothTypeTable.assembly.earlyPrice')}</div>
-                <div className="brand-booth-type-table-regular-price-container">
-                  <span className="brand-booth-type-table-early-price-title">{t('brand.booth.labels.regularPrice')}</span><br/>
-                  <span className="brand-booth-type-table-vat-note">{t('brand.booth.labels.vatExcluded')}</span>
-                </div>
-                <div className="brand-booth-type-table-regular-price-value">{t('brand.booth.boothTypeTable.assembly.regularPrice')}</div>
-              </div>
+              <table className="brand-booth-simple-table">
+                <thead>
+                  <tr>
+                    <th>{t('brand.booth.boothTypeTable.headers.type')}</th>
+                    <th>
+                      <div className="th-content">
+                        <div className="main-text">{t('brand.booth.labels.earlyPrice')}</div>
+                        <div className="vat-excluded-text">{t('brand.booth.labels.vatExcluded')}</div>
+                      </div>
+                    </th>
+                    <th>
+                      <div className="th-content">
+                        <div className="main-text">{t('brand.booth.labels.regularPrice')}</div>
+                        <div className="vat-excluded-text">{t('brand.booth.labels.vatExcluded')}</div>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{t('brand.booth.boothTypeTable.assembly.name')}</td>
+                    <td>{t('brand.booth.boothTypeTable.assembly.earlyPrice')}</td>
+                    <td>{t('brand.booth.boothTypeTable.assembly.regularPrice')}</td>
+                  </tr>
+                </tbody>
+              </table>
               
               {/* 모바일용 카드 레이아웃 */}
               <div className="brand-booth-type-table-mobile">
@@ -329,7 +367,12 @@ function BrandPage() {
                     <th>{t('brand.booth.boothTypeTable.headers.type')}</th>
                     <th>{t('brand.booth.boothTypeTable.headers.subtype')}</th>
                     <th>{t('brand.booth.boothTypeTable.headers.quantity')}</th>
-                    <th>{t('brand.booth.boothTypeTable.headers.constructionFee')}<br/><span style={{fontSize: 'clamp(12px, (24/1920)*100vw, 24px)', fontWeight: 400}}>{t('brand.booth.labels.independentBoothSeparate')}</span></th>
+                    <th>
+                      <div className="th-content">
+                        <div className="main-text">{t('brand.booth.boothTypeTable.headers.constructionFee')}</div>
+                        <div className="vat-excluded-text">{t('brand.booth.labels.independentBoothSeparate')}</div>
+                      </div>
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -397,11 +440,7 @@ function BrandPage() {
             </ul>
 
 
-            {language === 'EN' && (
-              <p className="brand-booth-table-note">
-                {t('brand.booth.boothTypes.usdNotice')}
-              </p>
-            )}
+        
             
             <h3 className="brand-booth-additional-cost-title">
               {t('brand.booth.additionalCostTitle')}
