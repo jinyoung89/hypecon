@@ -344,7 +344,7 @@ const en = {
         ]
       },
       booth: {
-        title: 'Participation & Fees',
+        title: 'Booth Types & Participation Fees',
         boothSizeNote: {
           independent: '※ Standard booth size: 3M X 3M (Height limit: 4m)',
           assembly: '※ Standard booth size: 3M X 3M',
@@ -410,7 +410,7 @@ const en = {
           earlyPrice: 'Early Bird Rate',
           regularPrice: 'Regular Price',
           vatExcluded: 'Excl. VAT',
-          independentBoothSeparate: '*Independent booth fees are separate'
+          independentBoothSeparate: '*Space-only Booth fees are separate'
         },
         boothTypes: {
           title: 'Booth Types',
@@ -740,7 +740,7 @@ const en = {
         headers: ['Ticket Types', 'Ticket Prices', 'Benefits'],
         rows: [
           ['Early Bird Phase 1', '$ 8.6', 'Exhibition + Experience + Photo Zones access + Priority merchandise purchase'],
-          ['Early Bird Phase 2', '$ 7', 'Exhibition + Experience + Photo Zones access'],
+          ['Early Bird Phase 2', '$ 10.7', 'Exhibition + Experience + Photo Zones access'],
           ['Group Tickets (20+ persons)', '$ 8.6', 'Exhibition + Experience + Photo Zones access'],
           ['On-site Purchase', '$ 14.3', 'Exhibition + Experience Zones access only']
         ]
