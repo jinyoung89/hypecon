@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- 메인 페이지 -->
+  <url>
+    <loc>https://jinyoung89.github.io/hypecon/</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ABOUT 페이지 -->
+  <url>
+    <loc>https://jinyoung89.github.io/hypecon/about</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- EXHIBITION 페이지 -->
+  <url>
+    <loc>https://jinyoung89.github.io/hypecon/exhibition</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- BRAND 페이지 -->
+  <url>
+    <loc>https://jinyoung89.github.io/hypecon/brand</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- TICKET 페이지 -->
+  <url>
+    <loc>https://jinyoung89.github.io/hypecon/ticket</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- BUYER 페이지 -->
+  <url>
+    <loc>https://jinyoung89.github.io/hypecon/buyer</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- INFLUENCER 페이지 -->
+  <url>
+    <loc>https://jinyoung89.github.io/hypecon/influencer</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- AWARD 페이지 -->
+  <url>
+    <loc>https://jinyoung89.github.io/hypecon/award</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- CONTACT 페이지 -->
+  <url>
+    <loc>https://jinyoung89.github.io/hypecon/contact</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset> 
